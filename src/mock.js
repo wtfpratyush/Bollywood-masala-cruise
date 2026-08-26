@@ -114,8 +114,39 @@ export const dining = {
 };
 
 export const heroImage = "https://images.unsplash.com/photo-1554254648-2d58a1bc3fd5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBjcnVpc2UlMjBzaGlwfGVufDB8fHx8MTc4Nzc0ODIwMXww&ixlib=rb-4.1.0&q=85";
-export const heroVideo = "/videos/hero-cruise.mp4";
-export const heroVideoFallback = "https://assets.mixkit.co/videos/40910/40910-720.mp4";
+export const heroVideo = "/videos/hero-passengers.mp4";
+export const heroVideoFallback = "https://assets.mixkit.co/videos/22597/22597-720.mp4";
+
+export const heroVideoScenes = [
+  {
+    id: "passengers",
+    label: "Onboard Deck & Cruising",
+    tag: "Deck Life",
+    video: "/videos/hero-passengers.mp4",
+    fallback: "https://assets.mixkit.co/videos/22597/22597-720.mp4",
+  },
+  {
+    id: "sailing",
+    label: "Cruise Ship Sailing",
+    tag: "Open Ocean",
+    video: "/videos/hero-cruise.mp4",
+    fallback: "https://assets.mixkit.co/videos/40910/40910-720.mp4",
+  },
+  {
+    id: "pool",
+    label: "Pool & Sun Activities",
+    tag: "Pool Deck",
+    video: "/videos/hero-pool.mp4",
+    fallback: "https://assets.mixkit.co/videos/40105/40105-720.mp4",
+  },
+  {
+    id: "party",
+    label: "Live DJ & Nightlife",
+    tag: "Entertainment",
+    video: "/videos/hero-party.mp4",
+    fallback: "https://assets.mixkit.co/videos/831/831-720.mp4",
+  },
+];
 
 export const contact = {
   phone: "+1 (561) 230-3800",

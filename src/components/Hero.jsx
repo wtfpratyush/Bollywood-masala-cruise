@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { ShieldCheck, Ticket, Headset, Play, Lock, Calendar, User, ChevronDown, ChefHat, BedDouble, Music, Users } from "lucide-react";
+import React, { useState, useEffect, useRef } from "react";
+import { ShieldCheck, Ticket, Headset, Play, Lock, Calendar, User, ChevronDown, ChefHat, BedDouble, Music, Users, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
-import { heroFeatures, cruiseOptions, featureStrip, heroImage, heroVideo, heroVideoFallback } from "../mock";
+import { heroFeatures, cruiseOptions, featureStrip, heroImage, heroVideo, heroVideoFallback, heroVideoScenes } from "../mock";
 import { Input } from "./ui/input";
 import { useToast } from "../hooks/use-toast";
 import {
@@ -116,21 +116,34 @@ const QuoteForm = () => {
 
 const Hero = () => {
   const [videoOpen, setVideoOpen] = useState(false);
+  const [activeSceneIndex, setActiveSceneIndex] = useState(0);
+  const videoRef = useRef(null);
+
+  const activeScene = heroVideoScenes[activeSceneIndex] || heroVideoScenes[0];
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.load();
+      videoRef.current.play().catch(() => {});
+    }
+  }, [activeSceneIndex]);
 
   return (
     <section id="home" className="relative overflow-hidden">
       {/* Full-bleed cruise video background */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <video
+          ref={videoRef}
+          key={activeScene.id}
           autoPlay
           loop
           muted
           playsInline
           poster={heroImage}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transition-opacity duration-700"
         >
-          <source src={`${process.env.PUBLIC_URL || ""}${heroVideo}`} type="video/mp4" />
-          <source src={heroVideoFallback} type="video/mp4" />
+          <source src={`${process.env.PUBLIC_URL || ""}${activeScene.video}`} type="video/mp4" />
+          <source src={activeScene.fallback} type="video/mp4" />
           <img src={heroImage} alt="Luxury cruise ship" className="w-full h-full object-cover" />
         </video>
         {/* Readability overlays */}
@@ -184,6 +197,33 @@ const Hero = () => {
                 </span>
                 Watch Video
               </button>
+            </div>
+
+            {/* Live Onboard Activity switcher */}
+            <div className="mt-7 pt-4 border-t border-gray-200/80">
+              <p className="text-[12px] font-bold text-gray-500 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                <Sparkles size={13} className="text-[#4b3df5]" /> Live Experience Views:
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {heroVideoScenes.map((scene, idx) => {
+                  const isActive = idx === activeSceneIndex;
+                  return (
+                    <button
+                      key={scene.id}
+                      type="button"
+                      onClick={() => setActiveSceneIndex(idx)}
+                      className={`text-[12px] font-semibold px-3 py-1.5 rounded-full transition-all flex items-center gap-1.5 shadow-sm ${
+                        isActive
+                          ? "bg-[#4b3df5] text-white shadow-indigo-500/30 scale-105"
+                          : "bg-white/90 backdrop-blur-sm text-gray-700 hover:bg-white hover:text-[#4b3df5] border border-gray-200"
+                      }`}
+                    >
+                      <span className={`w-1.5 h-1.5 rounded-full ${isActive ? "bg-white animate-ping" : "bg-[#4b3df5]"}`} />
+                      {scene.label}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           </div>
 
