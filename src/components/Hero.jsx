@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ShieldCheck, Ticket, Headset, Play, Lock, Calendar, User, ChevronDown, ChefHat, BedDouble, Music, Users } from "lucide-react";
 import { Link } from "react-router-dom";
-import { heroFeatures, cruiseOptions, featureStrip, heroImage } from "../mock";
+import { heroFeatures, cruiseOptions, featureStrip, heroImage, heroVideo, heroVideoFallback } from "../mock";
 import { Input } from "./ui/input";
 import { useToast } from "../hooks/use-toast";
 import {
@@ -119,12 +119,23 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative overflow-hidden">
-      {/* Full-bleed cruise background */}
-      <div className="absolute inset-0 z-0">
-        <img src={heroImage} alt="Luxury cruise ship" className="w-full h-full object-cover" />
+      {/* Full-bleed cruise video background */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster={heroImage}
+          className="w-full h-full object-cover"
+        >
+          <source src={`${process.env.PUBLIC_URL || ""}${heroVideo}`} type="video/mp4" />
+          <source src={heroVideoFallback} type="video/mp4" />
+          <img src={heroImage} alt="Luxury cruise ship" className="w-full h-full object-cover" />
+        </video>
         {/* Readability overlays */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/70 to-transparent lg:via-white/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-transparent to-white/30 lg:from-white/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent lg:via-white/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-white/40 lg:from-white/60" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 lg:pt-14 pb-6">
