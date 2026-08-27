@@ -163,17 +163,156 @@ export const aboutStats = [
   { value: "4.9", label: "Average Rating" },
 ];
 
-export const aboutIntro = {
+export const aboutStory = {
   eyebrow: "OUR STORY",
-  title: "Crafting Unforgettable Journeys at Sea",
-  body: "Masala Cruise was born from a simple idea \u2014 that a holiday at sea should feel like home, only more magical. For over a decade we have blended world-class hospitality with the warmth of Indian culture, creating all-inclusive voyages packed with entertainment, gourmet dining and once-in-a-lifetime destinations. Every detail, from the Bollywood nights to the sunrise deck walks, is designed to leave you with memories that sail far beyond the horizon.",
-  image: "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjBjcnVpc2UlMjBzaGlwfGVufDB8fHx8MTc4Nzc0ODIwMXww&ixlib=rb-4.1.0&q=85",
+  title: "The Journey of Bollywood Masala Cruise",
+  body: "The Bollywood Masala Cruise was born from a passion for Bollywood culture and a love for the high seas. Our founders envisioned a unique cruise experience that blends the vibrant energy of Bollywood with the luxury and adventure of a top-tier cruise. Since our first voyage, we've been dedicated to providing an all-inclusive, immersive experience filled with joy, excitement, and cultural richness. From themed parties to exclusive activities, we bring the magic of Bollywood to life at sea.",
+  body2: "Over the years, we have expanded our voyages across the most scenic waters of the Caribbean, the Bahamas, Alaska, and the Mediterranean. Every journey is curated to feel like a floating festival — bringing together families, friends, and Bollywood music lovers from across the globe for a once-in-a-lifetime vacation.",
+  images: [
+    {
+      src: "/images/about/story-1.jpg",
+      alt: "Guests celebrating in traditional Indian attire onboard Bollywood Masala Cruise",
+      caption: "Gala Celebrations & Festive Nights Onboard",
+    },
+    {
+      src: "/images/about/story-2.jpg",
+      alt: "Award ceremony and contest winners at Bollywood Masala Cruise stage",
+      caption: "Live Contests & Award Ceremonies",
+    },
+  ],
+  highlights: [
+    { title: "All-Inclusive Luxury", desc: "Premium oceanview staterooms, world-class amenities & 24/7 hospitality." },
+    { title: "Non-Stop Entertainment", desc: "Live Bollywood artists, celebrity DJs, garba/bhangra nights & dance workshops." },
+    { title: "Authentic Multi-Cuisine Dining", desc: "Authentic Indian vegetarian, non-veg, Jain & international gourmet menus." },
+    { title: "Family & Multi-Gen Friendly", desc: "Curated programs for kids, teens, adults, and seniors with complete safety." },
+  ],
 };
 
-export const aboutValues = [
-  { icon: "Anchor", title: "Our Mission", desc: "To make luxury cruising accessible, joyful and unforgettable for every guest who steps aboard." },
-  { icon: "Eye", title: "Our Vision", desc: "To be the most loved cruise experience that celebrates culture, connection and the open sea." },
-  { icon: "Heart", title: "Our Promise", desc: "All-inclusive pricing, no hidden charges and 24/7 care so you can simply relax and enjoy." },
+export const aboutCoreValues = {
+  eyebrow: "CORE VALUES",
+  title: "What's Important to Us",
+  subtitle: "Guided by our passion for hospitality, cultural joy, and sustainable ocean journeys.",
+  values: [
+    {
+      icon: "UserCheck",
+      title: "Exceptional Guest Experience",
+      shortDesc: "We prioritize delivering unforgettable moments and top-notch service",
+      fullDesc: "From the moment you inquire until you step off the gangway, our dedicated team ensures every stateroom, dining request, and private celebration is handled with perfection and warmth.",
+      tag: "5-Star Hospitality",
+    },
+    {
+      icon: "Sparkles",
+      title: "Cultural Celebration",
+      shortDesc: "We embrace, celebrate and reflect the rich heritage of Bollywood culture",
+      fullDesc: "We bring the vibrancy of Indian traditions, cinematic music, festive attire, and energetic dance to the high seas, creating a welcoming home for guests across generations.",
+      tag: "Rich Heritage",
+    },
+    {
+      icon: "Leaf",
+      title: "Sustainability & Responsibility",
+      shortDesc: "We promote eco-friendly practices for sustainable and responsible travel",
+      fullDesc: "We partner exclusively with modern cruise liners prioritizing energy efficiency, eco-safe waste management, single-use plastic reduction, and respect for local port communities.",
+      tag: "Eco-Conscious Travel",
+    },
+    {
+      icon: "ShieldCheck",
+      title: "Integrity & Transparency",
+      shortDesc: "All-inclusive upfront pricing with zero hidden charges or surprise fees",
+      fullDesc: "We believe in honest, straightforward travel planning. What we quote includes all your core stateroom, dining, and onboard entertainment experiences.",
+      tag: "100% Peace of Mind",
+    },
+  ],
+};
+
+export const aboutAgents = {
+  eyebrow: "AGENTS",
+  title: "We're Available to Give You the Experience of a Lifetime",
+  subtitle: "Have questions about itinerary dates, stateroom categories, group discounts, or custom celebration arrangements? Our friendly travel specialists are just a call away.",
+  agents: [
+    {
+      name: "Geeta Singla",
+      role: "AGENCY OWNER / TRAVEL EXPERT",
+      phone: "587-982-4004",
+      email: "gsingla@exotikexcursions.com",
+      image: "/images/agents/geeta-singla.jpg",
+      bio: "With over 15+ years of specialized luxury travel experience, Geeta leads our cruise division with a focus on custom group vacations, wedding/anniversary celebrations at sea, and VIP cabin itineraries.",
+      specialties: ["Group Bookings", "Luxury Suites", "Custom Itineraries", "Family Reunions"],
+      experience: "15+ Years Experience",
+    },
+    {
+      name: "Kamal Dhessi",
+      role: "TRAVEL EXPERT",
+      phone: "780-803-5270",
+      email: "kdhessi@exotikexcursions.com",
+      image: "/images/agents/kamal-dhessi.jpg",
+      bio: "Kamal is passionate about making every guest's journey seamless. She assists travelers with stateroom selection, dietary coordination, flight connections, and exclusive shore excursions.",
+      specialties: ["First-Time Cruisers", "Shore Excursions", "Dietary Needs", "Event Coordination"],
+      experience: "10+ Years Experience",
+    },
+  ],
+};
+
+export const aboutGalleryMoments = {
+  eyebrow: "GALLERY",
+  title: "Get a Glimpse of Our Cruise",
+  subtitle: "Relive the infectious excitement, vibrant performances, and unforgettable memories created aboard Bollywood Masala Cruise.",
+  photos: [
+    {
+      src: "/images/gallery/gallery-dance.jpg",
+      title: "Bollywood Stage Extravaganza",
+      category: "Stage Shows",
+      desc: "Live choreographed Bollywood dance performances with guest participation.",
+    },
+    {
+      src: "/images/gallery/gallery-night-deck.jpg",
+      title: "Starlight Neon Deck Party",
+      category: "Nightlife",
+      desc: "Open-air top deck dancing under the stars with celebrity DJs.",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1628336707631-68131ca720c3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwxfHxjcnVpc2UlMjBwYXJ0eXxlbnwwfHx8fDE3ODc3NDgyMzN8MA&ixlib=rb-4.1.0&q=85",
+      title: "Family & Friends Deck Fun",
+      category: "Celebration",
+      desc: "Multi-generational families dancing and celebrating together.",
+    },
+    {
+      src: "https://images.pexels.com/photos/24643916/pexels-photo-24643916.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      title: "Royal Gourmet Dining",
+      category: "Dining",
+      desc: "Multi-course authentic Indian culinary feasts curated by master chefs.",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwzfHxjb25jZXJ0JTIwbGlnaHRzfGVufDB8fHx8MTc4Nzc0ODIzM3ww&ixlib=rb-4.1.0&q=85",
+      title: "Live Concert & Singer Nights",
+      category: "Music",
+      desc: "Soulful acoustic melodies and high-tempo chartbuster anthems.",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1579592672790-39239b6cbc31?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwyfHxjcnVpc2UlMjBwb29sJTIwc3Vuc2V0fGVufDB8fHx8MTc4Nzc0ODIzM3ww&ixlib=rb-4.1.0&q=85",
+      title: "Sunset Ocean Deck Walk",
+      category: "Deck Life",
+      desc: "Breathtaking ocean sunsets and relaxing sea breeze moments.",
+    },
+    {
+      src: "/images/about/story-1.jpg",
+      title: "Festive Attire Showcase",
+      category: "Cultural",
+      desc: "Glamorous ethnic attire, Bollywood masquerade and gala evenings.",
+    },
+    {
+      src: "/images/about/story-2.jpg",
+      title: "Awards & Fun Games",
+      category: "Activities",
+      desc: "Interactive games, trivia contests and gift vouchers for winners.",
+    },
+  ],
+};
+
+export const aboutMilestones = [
+  { year: "2010", title: "The Maiden Voyage", desc: "Set sail with our very first Bollywood-themed sailing from Miami with 350 enthusiastic guests." },
+  { year: "2015", title: "Exotic Ports Added", desc: "Expanded itineraries to include the Bahamas, Key West, and Cozumel with full private deck bookings." },
+  { year: "2020", title: "Gourmet Culinary Elevation", desc: "Partnered with master Indian chefs for full dedicated multi-cuisine dining options." },
+  { year: "2025+", title: "50,000+ Happy Cruisers", desc: "Proudly recognized as the premier Indian cultural cruise experience worldwide." },
 ];
 
 export const allPackages = [
@@ -184,3 +323,6 @@ export const allPackages = [
   { tag: "MAY 2025", title: "Mexican Riviera", subtitle: "6 Nights | 4 Beach Destinations", price: "$849", image: "https://images.pexels.com/photos/33270055/pexels-photo-33270055.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", features: ["Luxury Stay", "All Meals Included", "Live Shows & DJ Nights", "Shore Excursions"] },
   { tag: "NOV 2025", title: "Dubai Cruise", subtitle: "5 Nights | 3 Gulf Destinations", price: "$999", image: "https://images.unsplash.com/photo-1554254464-7046778097bf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHw0fHxjcnVpc2UlMjBzaGlwfGVufDB8fHx8MTc4Nzc0ODI2Mnww&ixlib=rb-4.1.0&q=85", features: ["Luxury Stay", "All Meals Included", "Live Shows & DJ Nights", "Shore Excursions"] },
 ];
+
+export const aboutIntro = aboutStory;
+export const aboutValues = aboutCoreValues.values;
