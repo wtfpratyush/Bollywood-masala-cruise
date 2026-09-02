@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Play, Star } from "lucide-react";
 import { dining, testimonials } from "../mock";
 import {
@@ -32,40 +33,68 @@ const FoodTestimonials = () => {
           </div>
 
           {/* Testimonials */}
-          <div className="bg-[#f6f7fc] rounded-3xl p-7 lg:p-8">
-            <p className="text-[12px] font-bold tracking-[0.15em] text-[#4b3df5] mb-1">TESTIMONIALS</p>
-            <h3 className="text-[24px] sm:text-[28px] font-bold text-[#1a1a3a] mb-6">What Our Guests Have to Say</h3>
+          <div className="bg-[#f6f7fc] rounded-3xl p-5 sm:p-7 lg:p-8 flex flex-col justify-between">
+            <div>
+              <div className="flex items-center justify-between mb-4 sm:mb-6">
+                <div>
+                  <p className="text-[12px] font-bold tracking-[0.15em] text-[#4b3df5] mb-1">TESTIMONIALS</p>
+                  <h3 className="text-[22px] sm:text-[28px] font-bold text-[#1a1a3a]">What Our Guests Have to Say</h3>
+                </div>
+                {/* Mobile swipe hint badge */}
+                <span className="sm:hidden text-[11px] font-semibold text-[#4b3df5] bg-[#eeeafe] px-2.5 py-1 rounded-full whitespace-nowrap">
+                  Swipe →
+                </span>
+              </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              {testimonials.map((t, i) => (
-                <div key={i} className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
-                  <button
-                    onClick={() => setActive(t)}
-                    className="relative block w-full aspect-video group"
+              {/* Swipable on mobile, grid on tablet/desktop */}
+              <div className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth gap-3.5 pb-2 -mx-2 px-2 hide-scrollbar sm:grid sm:grid-cols-3 sm:overflow-visible sm:pb-0 sm:mx-0 sm:px-0 sm:gap-4">
+                {testimonials.map((t, i) => (
+                  <div
+                    key={i}
+                    className="shrink-0 w-[84%] sm:w-auto snap-center bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition-all"
                   >
-                    <img src={t.thumb} alt={t.name} className="w-full h-full object-cover" />
-                    <span className="absolute inset-0 bg-black/25 flex items-center justify-center">
-                      <span className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <Play size={16} fill="white" className="text-white ml-0.5" />
+                    <button
+                      onClick={() => setActive(t)}
+                      className="relative block w-full aspect-video group overflow-hidden"
+                      aria-label={`Watch testimonial by ${t.name}`}
+                    >
+                      <img
+                        src={t.thumb}
+                        alt={t.name}
+                        loading="lazy"
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <span className="absolute inset-0 bg-black/30 flex items-center justify-center transition-colors group-hover:bg-black/40">
+                        <span className="w-11 h-11 rounded-full bg-red-600 shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                          <Play size={18} fill="white" className="text-white ml-0.5" />
+                        </span>
                       </span>
-                    </span>
-                  </button>
-                  <div className="p-3">
-                    <p className="text-[11px] text-gray-600 leading-snug min-h-[45px]">“{t.quote}”</p>
-                    <div className="flex gap-0.5 mt-1">
-                      {Array.from({ length: t.rating }).map((_, s) => (
-                        <Star key={s} size={12} className="text-[#f5a623]" fill="#f5a623" />
-                      ))}
+                    </button>
+                    <div className="p-3.5 flex-1 flex flex-col justify-between">
+                      <p className="text-[12px] text-gray-700 leading-snug font-medium mb-2 line-clamp-2">
+                        “{t.quote}”
+                      </p>
+                      <div className="flex items-center justify-between pt-1 border-t border-gray-50">
+                        <span className="text-[11px] font-bold text-[#1a1a3a]">{t.name}</span>
+                        <div className="flex gap-0.5">
+                          {Array.from({ length: t.rating }).map((_, s) => (
+                            <Star key={s} size={11} className="text-[#f5a623]" fill="#f5a623" />
+                          ))}
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
 
-            <div className="flex justify-center mt-6">
-              <button className="rounded-lg border border-[#4b3df5]/40 px-6 py-2.5 text-[14px] font-semibold text-[#4b3df5] hover:bg-[#4b3df5] hover:text-white transition-all">
+            <div className="flex justify-center mt-5 sm:mt-6">
+              <Link
+                to="/testimonials"
+                className="rounded-xl border border-[#4b3df5]/40 px-6 py-2.5 text-[14px] font-semibold text-[#4b3df5] hover:bg-[#4b3df5] hover:text-white transition-all text-center"
+              >
                 View More Reviews
-              </button>
+              </Link>
             </div>
           </div>
         </div>

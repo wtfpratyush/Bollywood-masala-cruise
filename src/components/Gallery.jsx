@@ -14,15 +14,16 @@ const Gallery = () => {
         </div>
       </div>
 
-      {/* Full-bleed continuously moving track */}
+      {/* Full-bleed continuously moving track with square images */}
       <div className="relative">
         <div className="marquee-track gap-4">
           {loop.map((img, i) => (
-            <div key={i} className="shrink-0 w-40 sm:w-48 group">
-              <div className="overflow-hidden rounded-xl aspect-[3/4] shadow-md">
+            <div key={i} className="shrink-0 w-44 sm:w-56 md:w-60 group">
+              <div className="overflow-hidden rounded-2xl aspect-square shadow-md border border-gray-100 bg-gray-100">
                 <img
                   src={img.src}
                   alt={img.alt}
+                  loading="lazy"
                   decoding="async"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />

@@ -1,13 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Check, Ship, CircleDollarSign, Camera, Users } from "lucide-react";
 import { popularCruises, cruiseTrust } from "../mock";
 import { useToast } from "../hooks/use-toast";
 
 const trustIconMap = { Ship, CircleDollarSign, Camera, Users };
 
+const toSlug = (title) => title.toLowerCase().replace(/\s+/g, "-").replace(/[()]/g, "");
+
 const PopularCruises = () => {
   const { toast } = useToast();
-  const book = (title) => toast({ title: `Booking: ${title}`, description: "Our team will contact you to confirm your booking." });
+  const book = (title) =>
+    toast({ title: `Booking: ${title}`, description: "Our team will contact you to confirm your booking." });
 
   return (
     <section id="packages" className="bg-white pb-14">
@@ -18,16 +22,19 @@ const PopularCruises = () => {
               <p className="text-[13px] font-bold tracking-[0.15em] text-[#8b8bef] mb-1">POPULAR CRUISES</p>
               <h2 className="text-[28px] sm:text-[34px] font-bold text-white">Unforgettable Journeys Await</h2>
             </div>
-            <button className="self-start sm:self-auto rounded-lg border border-white/40 px-5 py-2.5 text-[14px] font-semibold text-white hover:bg-white hover:text-[#141452] transition-all whitespace-nowrap">
+            <Link
+              to="/packages"
+              className="self-start sm:self-auto rounded-lg border border-white/40 px-5 py-2.5 text-[14px] font-semibold text-white hover:bg-white hover:text-[#141452] transition-all whitespace-nowrap"
+            >
               View All Cruises
-            </button>
+            </Link>
           </div>
 
           <div className="grid md:grid-cols-2 gap-5">
             {popularCruises.map((c) => (
               <div key={c.title} className="bg-white rounded-2xl overflow-hidden flex flex-col sm:flex-row">
-                <div className="sm:w-[42%] relative">
-                  <img src={c.image} alt={c.title} className="w-full h-48 sm:h-full object-cover" />
+                <div className="sm:w-[42%] relative overflow-hidden">
+                  <img src={c.image} alt={c.title} className="w-full h-48 sm:h-full object-cover hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="flex-1 p-5">
                   <span className="inline-block text-[11px] font-bold tracking-wide text-[#4b3df5] bg-[#eeeafe] rounded-md px-2.5 py-1 mb-2">
@@ -42,19 +49,29 @@ const PopularCruises = () => {
                       </li>
                     ))}
                   </ul>
-                  <div className="flex items-end justify-between">
+                  <div className="flex items-end justify-between flex-wrap gap-2">
                     <div>
                       <p className="text-[24px] font-bold text-[#4b3df5] leading-none">
                         <span className="text-[14px] font-medium text-gray-500">From </span>{c.price}
                       </p>
                       <p className="text-[12px] text-gray-400">Per Person</p>
                     </div>
-                    <button
-                      onClick={() => book(c.title)}
-                      className="rounded-lg bg-[#f5a623] px-5 py-2.5 text-[14px] font-semibold text-white hover:bg-[#e5981a] transition-all"
-                    >
-                      Book Now
-                    </button>
+                    <div className="flex gap-2">
+                      {c.details && (
+                        <Link
+                          to={`/packages/${toSlug(c.title)}`}
+                          className="rounded-lg border border-[#4b3df5] px-4 py-2 text-[13px] font-semibold text-[#4b3df5] hover:bg-[#4b3df5] hover:text-white transition-all"
+                        >
+                          View Details
+                        </Link>
+                      )}
+                      <button
+                        onClick={() => book(c.title)}
+                        className="rounded-lg bg-[#f5a623] px-4 py-2 text-[13px] font-semibold text-white hover:bg-[#e5981a] transition-all"
+                      >
+                        Book Now
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>

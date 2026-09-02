@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./pages/About";
 import Packages from "./pages/Packages";
+import CruiseDetail from "./pages/CruiseDetail";
 import Onboard from "./pages/Onboard";
 import GalleryPage from "./pages/GalleryPage";
 import Testimonials from "./pages/Testimonials";
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/packages" element={<Packages />} />
+          <Route path="/packages/:slug" element={<CruiseDetail />} />
           <Route path="/onboard" element={<Onboard />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/testimonials" element={<Testimonials />} />

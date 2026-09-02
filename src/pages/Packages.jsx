@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Check, Ship, CircleDollarSign, Camera, Users } from "lucide-react";
 import Layout from "../components/Layout";
 import PageBanner from "../components/PageBanner";
@@ -7,9 +8,12 @@ import { useToast } from "../hooks/use-toast";
 
 const trustIconMap = { Ship, CircleDollarSign, Camera, Users };
 
+const toSlug = (title) => title.toLowerCase().replace(/\s+/g, "-").replace(/[()]/g, "");
+
 const Packages = () => {
   const { toast } = useToast();
-  const book = (title) => toast({ title: `Booking: ${title}`, description: "Our team will contact you to confirm your booking." });
+  const book = (title) =>
+    toast({ title: `Booking: ${title}`, description: "Our team will contact you to confirm your booking." });
 
   return (
     <Layout>
@@ -27,7 +31,9 @@ const Packages = () => {
               <div key={c.title} className="rounded-2xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-xl transition-all group">
                 <div className="relative h-52 overflow-hidden">
                   <img src={c.image} alt={c.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                  <span className="absolute top-3 left-3 text-[11px] font-bold tracking-wide text-white bg-[#4b3df5] rounded-md px-2.5 py-1">{c.tag}</span>
+                  <span className="absolute top-3 left-3 text-[11px] font-bold tracking-wide text-white bg-[#4b3df5] rounded-md px-2.5 py-1">
+                    {c.tag}
+                  </span>
                 </div>
                 <div className="p-5">
                   <h3 className="text-[20px] font-bold text-[#1a1a3a]">{c.title}</h3>
@@ -39,16 +45,29 @@ const Packages = () => {
                       </li>
                     ))}
                   </ul>
-                  <div className="flex items-end justify-between pt-2 border-t border-gray-100">
+                  <div className="flex items-end justify-between pt-2 border-t border-gray-100 flex-wrap gap-2">
                     <div>
                       <p className="text-[24px] font-bold text-[#4b3df5] leading-none">
                         <span className="text-[13px] font-medium text-gray-500">From </span>{c.price}
                       </p>
                       <p className="text-[12px] text-gray-400">Per Person</p>
                     </div>
-                    <button onClick={() => book(c.title)} className="rounded-lg bg-[#f5a623] px-5 py-2.5 text-[14px] font-semibold text-white hover:bg-[#e5981a] transition-all">
-                      Book Now
-                    </button>
+                    <div className="flex gap-2">
+                      {c.details && (
+                        <Link
+                          to={`/packages/${toSlug(c.title)}`}
+                          className="rounded-lg border border-[#4b3df5] px-4 py-2 text-[13px] font-semibold text-[#4b3df5] hover:bg-[#4b3df5] hover:text-white transition-all"
+                        >
+                          View Details
+                        </Link>
+                      )}
+                      <button
+                        onClick={() => book(c.title)}
+                        className="rounded-lg bg-[#f5a623] px-4 py-2.5 text-[13px] font-semibold text-white hover:bg-[#e5981a] transition-all"
+                      >
+                        Book Now
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
