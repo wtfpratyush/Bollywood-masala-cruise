@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+  <rect width="200" height="100" fill="#003580" rx="4"/>
+  <!-- Globe circle -->
+  <circle cx="38" cy="50" r="28" fill="none" stroke="white" stroke-width="2.5"/>
+  <ellipse cx="38" cy="50" rx="14" ry="28" fill="none" stroke="white" stroke-width="2"/>
+  <line x1="10" y1="50" x2="66" y2="50" stroke="white" stroke-width="2"/>
+  <line x1="14" y1="33" x2="62" y2="33" stroke="white" stroke-width="1.5"/>
+  <line x1="14" y1="67" x2="62" y2="67" stroke="white" stroke-width="1.5"/>
+  <!-- Wings -->
+  <path d="M22 38 Q10 30 5 28 Q12 35 18 42Z" fill="white"/>
+  <path d="M54 38 Q66 30 71 28 Q64 35 58 42Z" fill="white"/>
+  <!-- IATA text -->
+  <text x="82" y="58" font-family="Arial Black, sans-serif" font-size="26" font-weight="900" fill="white" letter-spacing="2">IATA</text>
+</svg>

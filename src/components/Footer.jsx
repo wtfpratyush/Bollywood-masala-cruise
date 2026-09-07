@@ -5,27 +5,22 @@ import { contact } from "../mock";
 const accreditations = [
   {
     name: "IATA",
-    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/IATA_logo.svg/200px-IATA_logo.svg.png",
+    src: "/images/accreditation/iata.svg",
     href: "https://www.iata.org",
   },
   {
     name: "CLIA",
-    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Cruise_Lines_International_Association_logo.svg/320px-Cruise_Lines_International_Association_logo.svg.png",
+    src: "/images/accreditation/clia.svg",
     href: "https://www.cruising.org",
   },
   {
-    name: "TICO",
-    src: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d9/TICO_logo.png/200px-TICO_logo.png",
-    href: "https://www.tico.ca",
-  },
-  {
     name: "TAFI",
-    src: "https://www.tafi.org.in/images/tafi-logo.png",
+    src: "/images/accreditation/tafi.svg",
     href: "https://www.tafi.org.in",
   },
   {
     name: "BBB Accredited Business",
-    src: "https://seal-canada.bbb.org/logo/rbhzbum/bbb-90348005.png",
+    src: "/images/accreditation/bbb.svg",
     href: "https://www.bbb.org",
   },
 ];

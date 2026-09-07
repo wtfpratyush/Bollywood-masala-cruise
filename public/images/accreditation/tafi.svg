@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 100">
+  <rect width="220" height="100" fill="#1e3a8a" rx="4"/>
+  <!-- Globe with wings -->
+  <circle cx="35" cy="50" r="24" fill="none" stroke="white" stroke-width="2"/>
+  <ellipse cx="35" cy="50" rx="12" ry="24" fill="none" stroke="white" stroke-width="1.5"/>
+  <line x1="11" y1="50" x2="59" y2="50" stroke="white" stroke-width="1.5"/>
+  <!-- Wings -->
+  <path d="M20 40 Q8 32 2 30 L10 40 Q14 44 20 46Z" fill="white"/>
+  <path d="M50 40 Q62 32 68 30 L60 40 Q56 44 50 46Z" fill="white"/>
+  <!-- TAFI text -->
+  <text x="76" y="44" font-family="Arial Black, sans-serif" font-size="22" font-weight="900" fill="white" letter-spacing="1">TAFI</text>
+  <text x="76" y="62" font-family="Arial, sans-serif" font-size="7.5" fill="#c0d8ff" letter-spacing="0.3">TRAVEL AGENTS FEDERATION</text>
+  <text x="76" y="74" font-family="Arial, sans-serif" font-size="7.5" fill="#c0d8ff" letter-spacing="0.3">OF INDIA</text>
+</svg>

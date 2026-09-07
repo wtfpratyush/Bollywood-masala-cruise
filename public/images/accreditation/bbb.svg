@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 100">
+  <rect width="220" height="100" fill="#006DAE" rx="4"/>
+  <!-- BBB shield shape -->
+  <path d="M22 15 L38 15 L44 22 L44 55 Q38 72 30 78 Q22 72 16 55 L16 22Z" fill="none" stroke="white" stroke-width="2.5"/>
+  <text x="21" y="52" font-family="Arial Black, sans-serif" font-size="18" font-weight="900" fill="white">BBB</text>
+  <!-- Accredited Business text -->
+  <text x="52" y="38" font-family="Arial Black, sans-serif" font-size="16" font-weight="900" fill="white">ACCREDITED</text>
+  <text x="52" y="58" font-family="Arial Black, sans-serif" font-size="16" font-weight="900" fill="white">BUSINESS</text>
+  <text x="52" y="76" font-family="Arial, sans-serif" font-size="9" fill="#c0e0ff">Better Business Bureau®</text>
+</svg>
