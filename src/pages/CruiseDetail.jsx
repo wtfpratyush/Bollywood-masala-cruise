@@ -239,25 +239,74 @@ const CruiseDetail = () => {
         {/* ── 2. ITINERARY ── */}
       </div>
 
-      <section id="cs-Itinerary" className="bg-[#4b3df5] py-14">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            label="WHERE WE'RE GOING"
-            title={`An unforgettable ${cruise.subtitle?.split("|")[0]?.trim()?.toLowerCase() || ""} of fun, excitement & Bollywood magic`}
-            light
-          />
+      <section
+        id="cs-Itinerary"
+        className="relative py-14 overflow-hidden"
+        style={
+          cruise.title === "Holi Cruise"
+            ? {
+                backgroundImage: `url('https://images.unsplash.com/photo-1547153760-18fc86324498?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600')`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }
+            : { backgroundColor: "#4b3df5" }
+        }
+      >
+        {/* Overlay: light white wash for Holi, dark for others */}
+        <div
+          className="absolute inset-0"
+          style={
+            cruise.title === "Holi Cruise"
+              ? { backgroundColor: "rgba(255,255,255,0.22)" }
+              : { backgroundColor: "rgba(0,0,0,0)" }
+          }
+        />
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className={`mb-8 text-center`}>
+            <p
+              className="text-[11px] font-black tracking-[0.22em] uppercase mb-1"
+              style={cruise.title === "Holi Cruise" ? { color: "#7c3aed" } : { color: "#fcd34d" }}
+            >
+              WHERE WE'RE GOING
+            </p>
+            <h2
+              className="text-[22px] sm:text-[28px] font-black leading-tight"
+              style={cruise.title === "Holi Cruise" ? { color: "#1a1a3a" } : { color: "#ffffff" }}
+            >
+              {cruise.title === "Holi Cruise"
+                ? "An unforgettable week of fun, excitement, and Bollywood magic"
+                : `An unforgettable ${cruise.subtitle?.split("|")[0]?.trim()?.toLowerCase() || ""} of fun, excitement & Bollywood magic`}
+            </h2>
+          </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 mt-6">
             {d.itinerary.map((stop) => (
               <div key={stop.day + stop.port} className="flex flex-col items-center group">
-                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-4 border-white/30 group-hover:border-amber-400 transition-all shadow-xl mb-3 shrink-0 bg-indigo-800">
+                <div
+                  className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-4 transition-all shadow-xl mb-3 shrink-0"
+                  style={
+                    cruise.title === "Holi Cruise"
+                      ? { borderColor: "rgba(255,255,255,0.8)" }
+                      : { borderColor: "rgba(255,255,255,0.3)" }
+                  }
+                >
                   <LazyImg
                     src={stop.image}
                     alt={stop.port}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
-                <p className="text-[11px] font-black text-amber-300 uppercase tracking-wider">{stop.day}</p>
-                <p className="text-[12px] font-semibold text-white text-center leading-snug mt-0.5">{stop.port}</p>
+                <p
+                  className="text-[11px] font-black uppercase tracking-wider"
+                  style={cruise.title === "Holi Cruise" ? { color: "#7c3aed" } : { color: "#fcd34d" }}
+                >
+                  {stop.day}
+                </p>
+                <p
+                  className="text-[12px] font-semibold text-center leading-snug mt-0.5"
+                  style={cruise.title === "Holi Cruise" ? { color: "#1a1a3a" } : { color: "#ffffff" }}
+                >
+                  {stop.port}
+                </p>
               </div>
             ))}
           </div>
