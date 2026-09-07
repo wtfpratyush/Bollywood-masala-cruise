@@ -62,8 +62,8 @@ const Footer = () => (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-5">
-            <a href="#" className="text-[#1877f2] hover:opacity-70 transition-opacity"><Facebook size={22} fill="#1877f2" strokeWidth={0} /></a>
-            <a href="#" className="text-[#e1306c] hover:opacity-70 transition-opacity"><Instagram size={22} /></a>
+            <a href="https://www.facebook.com/profile.php?id=61560687726948" target="_blank" rel="noopener noreferrer" className="text-[#1877f2] hover:opacity-70 transition-opacity"><Facebook size={22} fill="#1877f2" strokeWidth={0} /></a>
+            <a href="https://www.instagram.com/bollywoodmasalacruise/" target="_blank" rel="noopener noreferrer" className="text-[#e1306c] hover:opacity-70 transition-opacity"><Instagram size={22} /></a>
             <a href="#" className="text-[#ff0000] hover:opacity-70 transition-opacity"><Youtube size={24} fill="#ff0000" strokeWidth={0} /></a>
           </div>
 
