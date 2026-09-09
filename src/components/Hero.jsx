@@ -1,16 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
-import { ShieldCheck, Ticket, Headset, Play, Lock, Calendar, User, ChevronDown, ChefHat, BedDouble, Music, Users, Sparkles } from "lucide-react";
+import { ShieldCheck, Ticket, Headset, Play, ChefHat, BedDouble, Music, Users, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
-import { heroFeatures, cruiseOptions, featureStrip, heroImage, heroVideo, heroVideoFallback, heroVideoScenes } from "../mock";
-import { Input } from "./ui/input";
-import { useToast } from "../hooks/use-toast";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "./ui/select";
+import { heroFeatures, featureStrip, heroImage, heroVideoScenes } from "../mock";
 import {
   Dialog,
   DialogContent,
@@ -22,94 +13,39 @@ const iconMap = { ShieldCheck, Ticket, Headset };
 const featureIconMap = { ChefHat, BedDouble, Music, Users };
 
 const QuoteForm = () => {
-  const { toast } = useToast();
-  const [form, setForm] = useState({ name: "", email: "", mobile: "", cruise: "", date: "", guests: "" });
-
-  const submit = (e) => {
-    e.preventDefault();
-    if (!form.name || !form.email) {
-      toast({ title: "Please fill required fields", description: "Name and email are needed to get your quote." });
-      return;
+  useEffect(() => {
+    const scriptId = "msgsndr-form-embed";
+    let script = document.getElementById(scriptId);
+    if (!script) {
+      script = document.createElement("script");
+      script.id = scriptId;
+      script.src = "https://link.msgsndr.com/js/form_embed.js";
+      script.async = true;
+      document.body.appendChild(script);
     }
-    toast({ title: "Quote request received!", description: "Our cruise experts will reach out to you within 60 seconds." });
-    setForm({ name: "", email: "", mobile: "", cruise: "", date: "", guests: "" });
-  };
+  }, []);
 
   return (
-    <div className="w-full bg-white rounded-2xl shadow-2xl shadow-indigo-900/10 p-6 sm:p-7 border border-gray-100">
-      <h3 className="text-[26px] font-bold text-[#1a1a3a]">
-        Get a <span className="text-[#4b3df5]">Quick Quote</span>
-      </h3>
-      <p className="text-[14px] text-gray-500 mb-5">Set sail in less than 60 seconds</p>
-
-      <form onSubmit={submit} className="space-y-3">
-        <Input
-          placeholder="Your Name"
-          value={form.name}
-          onChange={(e) => setForm({ ...form, name: e.target.value })}
-          className="h-12 rounded-lg bg-gray-50 border-gray-200"
-        />
-        <Input
-          type="email"
-          placeholder="Email Address"
-          value={form.email}
-          onChange={(e) => setForm({ ...form, email: e.target.value })}
-          className="h-12 rounded-lg bg-gray-50 border-gray-200"
-        />
-        <div className="flex gap-2">
-          <div className="flex items-center gap-1 px-3 h-12 rounded-lg bg-gray-50 border border-gray-200 text-[15px] text-gray-600 shrink-0">
-            <span>🇮🇳</span> +91
-            <ChevronDown size={14} />
-          </div>
-          <Input
-            placeholder="Mobile Number"
-            value={form.mobile}
-            onChange={(e) => setForm({ ...form, mobile: e.target.value })}
-            className="h-12 rounded-lg bg-gray-50 border-gray-200"
-          />
-        </div>
-        <Select value={form.cruise} onValueChange={(v) => setForm({ ...form, cruise: v })}>
-          <SelectTrigger className="h-12 rounded-lg bg-gray-50 border-gray-200 text-gray-600">
-            <SelectValue placeholder="Select Cruise" />
-          </SelectTrigger>
-          <SelectContent>
-            {cruiseOptions.map((c) => (
-              <SelectItem key={c} value={c}>{c}</SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-        <div className="relative">
-          <Input
-            type="text"
-            placeholder="Travel Date"
-            value={form.date}
-            onChange={(e) => setForm({ ...form, date: e.target.value })}
-            onFocus={(e) => (e.target.type = "date")}
-            onBlur={(e) => { if (!e.target.value) e.target.type = "text"; }}
-            className="h-12 rounded-lg bg-gray-50 border-gray-200 pr-10"
-          />
-          <Calendar size={18} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
-        </div>
-        <div className="relative">
-          <Input
-            type="number"
-            placeholder="No. of Guests"
-            value={form.guests}
-            onChange={(e) => setForm({ ...form, guests: e.target.value })}
-            className="h-12 rounded-lg bg-gray-50 border-gray-200 pr-10"
-          />
-          <User size={18} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
-        </div>
-        <button
-          type="submit"
-          className="w-full h-12 rounded-lg bg-[#4b3df5] text-white font-semibold text-[16px] hover:bg-[#3d31d6] transition-all hover:-translate-y-0.5 shadow-lg shadow-indigo-500/30"
-        >
-          Get My Quote Now
-        </button>
-        <div className="flex items-center justify-center gap-1.5 text-[13px] text-gray-500 pt-1">
-          <Lock size={13} /> No hidden charges. 100% secure.
-        </div>
-      </form>
+    <div className="w-full bg-white rounded-2xl shadow-2xl shadow-indigo-900/10 p-2 sm:p-4 border border-gray-100 min-h-[640px] flex flex-col justify-center">
+      <iframe
+        src="https://api.leadconnectorhq.com/widget/form/8LYQHo3CuLbis8cNAyyD"
+        style={{ width: "100%", height: "100%", minHeight: "622px", border: "none", borderRadius: "8px" }}
+        id="inline-8LYQHo3CuLbis8cNAyyD"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="Contact form new website"
+        data-height="622"
+        data-layout-iframe-id="inline-8LYQHo3CuLbis8cNAyyD"
+        data-form-id="8LYQHo3CuLbis8cNAyyD"
+        data-cookie-consent="true"
+        data-cookie-consent-provider="auto"
+        title="Contact form new website"
+      />
     </div>
   );
 };
