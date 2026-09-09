@@ -35,8 +35,8 @@ const Contact = () => {
 
       <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-14">
-          {/* Info */}
-          <div>
+          {/* Info - appears below form on mobile, on left on desktop */}
+          <div className="order-2 lg:order-1">
             <p className="text-[13px] font-bold tracking-[0.15em] text-[#4b3df5] mb-3">GET IN TOUCH</p>
             <h2 className="text-[30px] sm:text-[36px] font-extrabold text-[#1a1a3a] leading-tight">We'd Love to Hear From You</h2>
             <p className="mt-4 text-[16px] text-gray-600 leading-relaxed">
@@ -57,8 +57,8 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Form */}
-          <div className="bg-[#f6f7fc] rounded-3xl p-4 sm:p-6 border border-gray-100 min-h-[640px] flex flex-col justify-center">
+          {/* Form - appears above info on mobile, on right on desktop */}
+          <div className="order-1 lg:order-2 bg-[#f6f7fc] rounded-3xl p-4 sm:p-6 border border-gray-100 min-h-[640px] flex flex-col justify-center">
             <iframe
               src="https://api.leadconnectorhq.com/widget/form/8LYQHo3CuLbis8cNAyyD"
               style={{ width: "100%", height: "100%", minHeight: "622px", border: "none", borderRadius: "8px" }}
