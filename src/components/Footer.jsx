@@ -9,7 +9,7 @@ const Footer = () => (
         <div className="flex items-center gap-5">
           <a href="https://www.facebook.com/profile.php?id=61560687726948" target="_blank" rel="noopener noreferrer" className="text-[#1877f2] hover:opacity-70 transition-opacity"><Facebook size={22} fill="#1877f2" strokeWidth={0} /></a>
           <a href="https://www.instagram.com/bollywoodmasalacruise/" target="_blank" rel="noopener noreferrer" className="text-[#e1306c] hover:opacity-70 transition-opacity"><Instagram size={22} /></a>
-          <a href="#" className="text-[#ff0000] hover:opacity-70 transition-opacity"><Youtube size={24} fill="#ff0000" strokeWidth={0} /></a>
+          <a href="https://www.youtube.com/@Bollywoodmasalacruise/shorts" target="_blank" rel="noopener noreferrer" className="text-[#ff0000] hover:opacity-70 transition-opacity" aria-label="YouTube"><Youtube size={24} fill="#ff0000" strokeWidth={0} /></a>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-2 sm:gap-6 text-[14px] text-gray-600">

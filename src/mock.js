@@ -413,8 +413,13 @@ export const heroVideoScenes = [
 export const contact = {
   phone: "+1 (561) 230-3800",
   email: "booking@masalacruise.com",
-  copyright: "\u00A9 2025 Masala Cruise.",
+  copyright: "© 2025 Masala Cruise.",
   rights: "All Rights Reserved.",
+  socials: {
+    facebook: "https://www.facebook.com/profile.php?id=61560687726948",
+    instagram: "https://www.instagram.com/bollywoodmasalacruise/",
+    youtube: "https://www.youtube.com/@Bollywoodmasalacruise/shorts",
+  },
 };
 
 
