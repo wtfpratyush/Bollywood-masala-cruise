@@ -34,7 +34,13 @@ const PopularCruises = () => {
             {popularCruises.map((c) => (
               <div key={c.title} className="bg-white rounded-2xl overflow-hidden flex flex-col sm:flex-row">
                 <div className="sm:w-[42%] relative overflow-hidden">
-                  <img src={c.image} alt={c.title} className="w-full h-48 sm:h-full object-cover hover:scale-105 transition-transform duration-500" />
+                  <img
+                    src={c.image}
+                    alt={c.title}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-48 sm:h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
                 <div className="flex-1 p-5">
                   <span className="inline-block text-[11px] font-bold tracking-wide text-[#4b3df5] bg-[#eeeafe] rounded-md px-2.5 py-1 mb-2">

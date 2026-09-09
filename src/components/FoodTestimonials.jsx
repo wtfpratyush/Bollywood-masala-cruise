@@ -19,7 +19,13 @@ const FoodTestimonials = () => {
           {/* Dining */}
           <div className="relative rounded-3xl overflow-hidden min-h-[300px] flex">
             <div className="absolute inset-0">
-              <img src={dining.image} alt="Dining" className="w-full h-full object-cover" />
+              <img
+                src={dining.image}
+                alt="Dining"
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover"
+              />
               <div className="absolute inset-0 bg-gradient-to-r from-[#2d1b8f]/95 via-[#2d1b8f]/80 to-transparent" />
             </div>
             <div className="relative z-10 p-7 lg:p-9 flex flex-col justify-center max-w-md">

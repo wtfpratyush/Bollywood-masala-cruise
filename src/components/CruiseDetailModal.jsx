@@ -163,7 +163,13 @@ const CruiseDetailModal = ({ cruise, onClose, onBook }) => {
               {d.itinerary.map((stop) => (
                 <div key={stop.day + stop.port} className="flex flex-col items-center group">
                   <div className="w-full aspect-square rounded-full overflow-hidden border-4 border-white/30 group-hover:border-amber-400 transition-all shadow-lg mb-3">
-                    <img src={stop.image} alt={stop.port} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img
+                      src={stop.image}
+                      alt={stop.port}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
                   </div>
                   <p className="text-[11px] font-black text-amber-300 uppercase tracking-wider">{stop.day}</p>
                   <p className="text-[12px] font-semibold text-white text-center leading-snug">{stop.port}</p>
@@ -181,7 +187,13 @@ const CruiseDetailModal = ({ cruise, onClose, onBook }) => {
                 return (
                   <div key={room.name} className={`flex flex-col sm:flex-row gap-0 rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all ${isLeft ? "" : "sm:flex-row-reverse"}`}>
                     <div className="sm:w-[45%] aspect-[4/3] sm:aspect-auto overflow-hidden bg-gray-100">
-                      <img src={room.image} alt={room.name} className="w-full h-full object-cover" />
+                      <img
+                        src={room.image}
+                        alt={room.name}
+                        loading="lazy"
+                        decoding="async"
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div className="flex-1 flex flex-col justify-center p-6 sm:p-8">
                       <h4 className="text-[20px] font-black text-[#1a1a3a] mb-2">{room.name}</h4>
@@ -229,7 +241,13 @@ const CruiseDetailModal = ({ cruise, onClose, onBook }) => {
             </div>
             <div className="flex flex-col sm:flex-row gap-5 mt-5 rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
               <div className="sm:w-[45%] aspect-[4/3] sm:aspect-auto overflow-hidden bg-gray-100">
-                <img src={d.diningImage} alt="Dining" className="w-full h-full object-cover" />
+                <img
+                  src={d.diningImage}
+                  alt="Dining"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="flex-1 flex flex-col justify-center p-6">
                 <p className="text-[15px] text-gray-600 leading-relaxed mb-5">{d.diningDesc}</p>
@@ -307,7 +325,13 @@ const CruiseDetailModal = ({ cruise, onClose, onBook }) => {
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
               {d.gallery.map((src, idx) => (
                 <div key={idx} className="group relative aspect-[4/3] rounded-xl overflow-hidden bg-gray-100 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
-                  <img src={src} alt={`Gallery ${idx + 1}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <img
+                    src={src}
+                    alt={`Gallery ${idx + 1}`}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all" />
                 </div>
               ))}

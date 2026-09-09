@@ -17,8 +17,10 @@ const BenefitsFaqFooter = () => {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1579592672790-39239b6cbc31?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwyfHxjcnVpc2UlMjBwb29sJTIwc3Vuc2V0fGVufDB8fHx8MTc4Nzc0ODIzM3ww&ixlib=rb-4.1.0&q=85"
+            src="https://images.unsplash.com/photo-1579592672790-39239b6cbc31?auto=format&fit=crop&w=1200&q=75"
             alt="Ocean"
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-[#1c3a63]/85" />
