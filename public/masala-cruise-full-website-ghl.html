@@ -1,0 +1,2391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bollywood Masala Cruise - An All-Inclusive Cruise Experience</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       RESET & BASE TOKENS (Scoped for GoHighLevel)
+       ========================================================================== */
+    #ghl-bmc-app {
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+      color: #1a1a3a;
+      background-color: #ffffff;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      width: 100%;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    #ghl-bmc-app *,
+    #ghl-bmc-app *::before,
+    #ghl-bmc-app *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    #ghl-bmc-app a {
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s ease;
+    }
+
+    #ghl-bmc-app button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+      outline: none;
+    }
+
+    #ghl-bmc-app img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .ghl-container {
+      max-width: 1280px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+
+    @media (min-width: 640px) {
+      .ghl-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+    }
+
+    /* Buttons */
+    .ghl-btn-primary {
+      background-color: #f5a623 !important;
+      color: #ffffff !important;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.6rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      box-shadow: 0 6px 20px rgba(245, 166, 35, 0.3);
+      transition: all 0.25s ease;
+    }
+    .ghl-btn-primary:hover {
+      background-color: #e5981a !important;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(245, 166, 35, 0.4);
+    }
+
+    .ghl-btn-secondary {
+      background-color: #4b3df5 !important;
+      color: #ffffff !important;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.6rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      box-shadow: 0 6px 20px rgba(75, 61, 245, 0.3);
+      transition: all 0.25s ease;
+    }
+    .ghl-btn-secondary:hover {
+      background-color: #3b2de0 !important;
+      transform: translateY(-2px);
+    }
+
+    .ghl-btn-outline {
+      background-color: #ffffff !important;
+      color: #1a1a3a !important;
+      border: 1px solid #e5e7eb !important;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.6rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      transition: all 0.25s ease;
+    }
+    .ghl-btn-outline:hover {
+      border-color: #4b3df5 !important;
+      color: #4b3df5 !important;
+    }
+
+    /* Section Subtitle & Headings */
+    .ghl-eyebrow {
+      font-size: 13px !important;
+      font-weight: 800 !important;
+      letter-spacing: 0.16em !important;
+      text-transform: uppercase !important;
+      color: #4b3df5;
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+
+    .ghl-heading {
+      font-size: 28px !important;
+      font-weight: 800 !important;
+      color: #1a1a3a;
+      line-height: 1.2 !important;
+    }
+    @media (min-width: 640px) {
+      .ghl-heading {
+        font-size: 36px !important;
+      }
+    }
+
+    /* ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== */
+    .ghl-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: #ffffff;
+      border-bottom: 1px solid #f3f4f6;
+      transition: all 0.3s ease;
+      width: 100%;
+    }
+    .ghl-header.scrolled {
+      background-color: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+    .ghl-header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+    .ghl-logo img {
+      height: 54px;
+      width: auto;
+      object-fit: contain;
+    }
+    .ghl-nav-links {
+      display: none;
+      align-items: center;
+      gap: 1.75rem;
+    }
+    @media (min-width: 1024px) {
+      .ghl-nav-links {
+        display: flex;
+      }
+    }
+    .ghl-nav-link {
+      font-size: 15px;
+      font-weight: 500;
+      color: #3a3a52;
+      position: relative;
+      padding: 0.25rem 0;
+    }
+    .ghl-nav-link:hover, .ghl-nav-link.active {
+      color: #4b3df5;
+    }
+    .ghl-nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #4b3df5;
+      border-radius: 99px;
+    }
+    .ghl-menu-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem;
+      color: #1a1a3a;
+      cursor: pointer;
+    }
+    @media (min-width: 1024px) {
+      .ghl-menu-toggle {
+        display: none;
+      }
+    }
+    .ghl-mobile-nav {
+      display: none;
+      background: #ffffff;
+      border-top: 1px solid #f3f4f6;
+      padding: 1rem 1.5rem 1.5rem;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .ghl-mobile-nav.open {
+      display: flex;
+    }
+    .ghl-mobile-nav .ghl-nav-link {
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #f9fafb;
+      font-size: 16px;
+    }
+
+    /* ==========================================================================
+       HERO SECTION WITH LIVE VIEWS & QUICK QUOTE FORM
+       ========================================================================== */
+    .ghl-hero-section {
+      position: relative;
+      overflow: hidden;
+      background-color: #fbfcff;
+      padding-top: 2rem;
+      padding-bottom: 2.5rem;
+    }
+    @media (min-width: 1024px) {
+      .ghl-hero-section {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+      }
+    }
+    .ghl-hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.18;
+      background-size: cover;
+      background-position: center;
+      background-image: url('https://images.unsplash.com/photo-1548574505-5e239809ee19?crop=entropy&cs=srgb&fm=jpg&q=80&w=1600');
+    }
+    .ghl-hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    @media (min-width: 1024px) {
+      .ghl-hero-grid {
+        grid-template-columns: 1.15fr 0.85fr;
+      }
+    }
+    .ghl-hero-title {
+      font-size: 38px !important;
+      line-height: 1.1 !important;
+      font-weight: 900 !important;
+      color: #1a1a3a;
+      margin-top: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+    @media (min-width: 640px) {
+      .ghl-hero-title {
+        font-size: 52px !important;
+      }
+    }
+    .ghl-hero-title span {
+      color: #4b3df5;
+    }
+    .ghl-hero-desc {
+      font-size: 16px;
+      color: #4b5563;
+      max-width: 500px;
+      line-height: 1.6;
+      margin-bottom: 1.75rem;
+    }
+    .ghl-hero-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .ghl-hero-feat-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .ghl-hero-feat-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #4b3df5;
+      font-size: 20px;
+    }
+    .ghl-hero-feat-text {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1a1a3a;
+      line-height: 1.2;
+    }
+    .ghl-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Live Experience Switcher */
+    .ghl-live-views {
+      padding-top: 1.25rem;
+      border-top: 1px solid #e5e7eb;
+    }
+    .ghl-live-views-title {
+      font-size: 12px;
+      font-weight: 800;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .ghl-live-views-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .ghl-live-pill {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 0.35rem 0.85rem;
+      border-radius: 99px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      color: #374151;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .ghl-live-pill.active {
+      background: #4b3df5;
+      color: #ffffff;
+      border-color: #4b3df5;
+      box-shadow: 0 4px 12px rgba(75, 61, 245, 0.25);
+    }
+    .ghl-live-pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #4b3df5;
+    }
+    .ghl-live-pill.active .ghl-live-pill-dot {
+      background: #ffffff;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.3); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    /* Quick Quote Card */
+    .ghl-quote-card {
+      background: #ffffff;
+      border-radius: 1.25rem;
+      box-shadow: 0 20px 40px rgba(20, 20, 82, 0.08);
+      border: 1px solid #f0f2f5;
+      padding: 1.75rem;
+      width: 100%;
+    }
+    .ghl-quote-card h3 {
+      font-size: 24px;
+      font-weight: 800;
+      color: #1a1a3a;
+      line-height: 1.2;
+    }
+    .ghl-quote-card h3 span {
+      color: #4b3df5;
+    }
+    .ghl-quote-card p {
+      font-size: 13px;
+      color: #6b7280;
+      margin-bottom: 1.25rem;
+    }
+    .ghl-form-group {
+      margin-bottom: 0.75rem;
+      position: relative;
+    }
+    .ghl-input, .ghl-select {
+      width: 100%;
+      height: 46px;
+      border-radius: 0.5rem;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      padding: 0 1rem;
+      font-size: 14px;
+      color: #1a1a3a;
+      outline: none;
+      transition: border-color 0.2s;
+      font-family: inherit;
+    }
+    .ghl-input:focus, .ghl-select:focus {
+      border-color: #4b3df5;
+      background: #ffffff;
+    }
+    .ghl-phone-group {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .ghl-phone-prefix {
+      height: 46px;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0 0.75rem;
+      font-size: 14px;
+      color: #4b5563;
+      white-space: nowrap;
+    }
+    .ghl-quote-submit {
+      width: 100%;
+      height: 48px;
+      border-radius: 0.5rem;
+      background: #4b3df5 !important;
+      color: #ffffff !important;
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(75, 61, 245, 0.3);
+      transition: all 0.2s;
+    }
+    .ghl-quote-submit:hover {
+      background: #3c2fe0 !important;
+      transform: translateY(-1px);
+    }
+    .ghl-secure-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      font-size: 12px;
+      color: #6b7280;
+      margin-top: 0.6rem;
+    }
+
+    /* Feature Strip */
+    .ghl-feature-strip {
+      max-width: 1140px;
+      margin: 1.5rem auto 0;
+      background: #ffffff;
+      border-radius: 1rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+      border: 1px solid #f0f2f5;
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 640px) {
+      .ghl-feature-strip {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .ghl-feature-strip {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    .ghl-strip-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      padding: 1.25rem;
+      border-bottom: 1px solid #f3f4f6;
+    }
+    @media (min-width: 640px) {
+      .ghl-strip-item {
+        border-bottom: none;
+        border-right: 1px solid #f3f4f6;
+      }
+      .ghl-strip-item:nth-child(2n) {
+        border-right: none;
+      }
+    }
+    @media (min-width: 1024px) {
+      .ghl-strip-item {
+        border-right: 1px solid #f3f4f6;
+      }
+      .ghl-strip-item:last-child {
+        border-right: none;
+      }
+    }
+    .ghl-strip-icon {
+      color: #4b3df5;
+      font-size: 28px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .ghl-strip-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #1a1a3a;
+    }
+    .ghl-strip-desc {
+      font-size: 12px;
+      color: #6b7280;
+      line-height: 1.35;
+      margin-top: 0.2rem;
+    }
+
+    /* ==========================================================================
+       GALLERY MARQUEE (Continuous loop)
+       ========================================================================== */
+    .ghl-gallery-section {
+      background: #ffffff;
+      padding: 3.5rem 0;
+      overflow: hidden;
+    }
+    .ghl-marquee-wrapper {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      margin-top: 2rem;
+    }
+    .ghl-marquee-track {
+      display: flex;
+      gap: 1.25rem;
+      width: max-content;
+      animation: ghlMarquee 35s linear infinite;
+    }
+    .ghl-marquee-track:hover {
+      animation-play-state: paused;
+    }
+    @keyframes ghlMarquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .ghl-marquee-item {
+      width: 220px;
+      height: 220px;
+      border-radius: 1rem;
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+      border: 1px solid #f3f4f6;
+    }
+    .ghl-marquee-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .ghl-marquee-item:hover img {
+      transform: scale(1.08);
+    }
+
+    /* ==========================================================================
+       POPULAR CRUISES SECTION
+       ========================================================================== */
+    .ghl-popular-section {
+      background: #ffffff;
+      padding-bottom: 4rem;
+    }
+    .ghl-popular-box {
+      background: #141452;
+      border-radius: 1.5rem;
+      padding: 2.5rem 1.5rem;
+    }
+    @media (min-width: 640px) {
+      .ghl-popular-box {
+        padding: 3rem 2.5rem;
+      }
+    }
+    .ghl-popular-header {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    @media (min-width: 640px) {
+      .ghl-popular-header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+    .ghl-popular-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .ghl-popular-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .ghl-cruise-card {
+      background: #ffffff;
+      border-radius: 1.1rem;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @media (min-width: 640px) {
+      .ghl-cruise-card {
+        flex-direction: row;
+      }
+    }
+    .ghl-cruise-card-img {
+      position: relative;
+      height: 200px;
+      width: 100%;
+      overflow: hidden;
+    }
+    @media (min-width: 640px) {
+      .ghl-cruise-card-img {
+        width: 42%;
+        height: auto;
+      }
+    }
+    .ghl-cruise-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+    .ghl-cruise-card:hover .ghl-cruise-card-img img {
+      transform: scale(1.06);
+    }
+    .ghl-cruise-card-body {
+      flex: 1;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .ghl-card-tag {
+      font-size: 11px;
+      font-weight: 800;
+      color: #4b3df5;
+      background: #eeeafe;
+      padding: 0.25rem 0.6rem;
+      border-radius: 0.35rem;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+      align-self: flex-start;
+    }
+    .ghl-card-title {
+      font-size: 21px;
+      font-weight: 800;
+      color: #1a1a3a;
+      line-height: 1.25;
+    }
+    .ghl-card-sub {
+      font-size: 13px;
+      color: #6b7280;
+      margin-top: 0.25rem;
+      margin-bottom: 1rem;
+    }
+    .ghl-card-features {
+      list-style: none;
+      margin-bottom: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .ghl-card-feature-li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 13px;
+      color: #374151;
+    }
+    .ghl-card-bottom {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid #f3f4f6;
+    }
+    .ghl-price-val {
+      font-size: 24px;
+      font-weight: 800;
+      color: #4b3df5;
+      line-height: 1;
+    }
+    .ghl-price-val small {
+      font-size: 14px;
+      font-weight: 500;
+      color: #6b7280;
+    }
+
+    /* Trust Badges */
+    .ghl-trust-badges {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+      padding-top: 0.5rem;
+    }
+    @media (min-width: 1024px) {
+      .ghl-trust-badges {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    .ghl-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+    .ghl-trust-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      flex-shrink: 0;
+      font-size: 20px;
+    }
+
+    /* ==========================================================================
+       ONBOARD EXPERIENCE
+       ========================================================================== */
+    .ghl-onboard-section {
+      background: #ffffff;
+      padding: 3rem 0;
+    }
+    .ghl-onboard-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    @media (min-width: 640px) {
+      .ghl-onboard-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .ghl-onboard-grid {
+        grid-template-columns: repeat(7, 1fr);
+      }
+    }
+    .ghl-onboard-card {
+      text-align: center;
+      transition: transform 0.25s;
+    }
+    .ghl-onboard-card:hover {
+      transform: translateY(-4px);
+    }
+    .ghl-onboard-icon-wrap {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #eeeafe;
+      color: #4b3df5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 0.75rem;
+      font-size: 28px;
+    }
+    .ghl-onboard-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: #1a1a3a;
+      margin-bottom: 0.2rem;
+    }
+    .ghl-onboard-desc {
+      font-size: 12px;
+      color: #6b7280;
+      line-height: 1.3;
+    }
+
+    /* ==========================================================================
+       PAST CRUISES
+       ========================================================================== */
+    .ghl-past-section {
+      background: #ffffff;
+      padding: 2.5rem 0 3.5rem;
+    }
+    .ghl-past-box {
+      background: #f6f7fc;
+      border-radius: 1.5rem;
+      padding: 2.5rem 1.5rem;
+    }
+    .ghl-past-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    @media (min-width: 640px) {
+      .ghl-past-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .ghl-past-grid {
+        grid-template-columns: repeat(7, 1fr);
+      }
+    }
+    .ghl-past-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .ghl-past-avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid #ffffff;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      margin-bottom: 0.75rem;
+    }
+    .ghl-past-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+    .ghl-past-item:hover .ghl-past-avatar img {
+      transform: scale(1.1);
+    }
+    .ghl-past-date {
+      font-size: 11px;
+      font-weight: 800;
+      color: #4b3df5;
+    }
+    .ghl-past-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1a1a3a;
+    }
+
+    /* ==========================================================================
+       DINING & TESTIMONIALS
+       ========================================================================== */
+    .ghl-food-testi-section {
+      background: #ffffff;
+      padding-bottom: 3.5rem;
+    }
+    .ghl-ft-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+    @media (min-width: 1024px) {
+      .ghl-ft-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .ghl-dining-card {
+      position: relative;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      min-height: 340px;
+      display: flex;
+      align-items: center;
+      padding: 2rem;
+      background: #2d1b8f;
+    }
+    .ghl-dining-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.45;
+    }
+    .ghl-dining-content {
+      position: relative;
+      z-index: 2;
+      max-width: 440px;
+    }
+    .ghl-testi-box {
+      background: #f6f7fc;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .ghl-testi-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    @media (min-width: 640px) {
+      .ghl-testi-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .ghl-testi-item {
+      background: #ffffff;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      border: 1px solid #f0f2f5;
+      display: flex;
+      flex-direction: column;
+    }
+    .ghl-testi-thumb {
+      position: relative;
+      height: 120px;
+      width: 100%;
+      cursor: pointer;
+    }
+    .ghl-testi-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .ghl-play-badge {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+    .ghl-play-circle {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #ef4444;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .ghl-testi-thumb:hover .ghl-play-circle {
+      transform: scale(1.1);
+    }
+    .ghl-testi-body {
+      padding: 1rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .ghl-testi-quote {
+      font-size: 12px;
+      color: #4b5563;
+      font-style: italic;
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+    }
+    .ghl-testi-stars {
+      color: #f5a623;
+      font-size: 12px;
+    }
+
+    /* ==========================================================================
+       BENEFITS STRIP
+       ========================================================================== */
+    .ghl-benefits-section {
+      position: relative;
+      overflow: hidden;
+      background: #1c3a63;
+      padding: 3rem 0;
+      color: #ffffff;
+    }
+    .ghl-benefits-bg {
+      position: absolute;
+      inset: 0;
+      opacity: 0.25;
+      background-size: cover;
+      background-position: center;
+      background-image: url('https://images.unsplash.com/photo-1579592672790-39239b6cbc31?crop=entropy&cs=srgb&fm=jpg&q=80&w=1600');
+    }
+    .ghl-benefits-inner {
+      position: relative;
+      z-index: 2;
+    }
+    .ghl-benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 2rem auto;
+    }
+    @media (min-width: 640px) {
+      .ghl-benefits-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .ghl-benefits-grid {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+    .ghl-benefit-box {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .ghl-benefit-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid #f5a623;
+      color: #f5a623;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 18px;
+    }
+
+    /* ==========================================================================
+       ABOUT STORY SECTION
+       ========================================================================== */
+    .ghl-about-section {
+      background: #ffffff;
+      padding: 4rem 0;
+      border-bottom: 1px solid #f3f4f6;
+    }
+    .ghl-about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    @media (min-width: 1024px) {
+      .ghl-about-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+      }
+    }
+    .ghl-about-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    @media (min-width: 640px) {
+      .ghl-about-stats {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    .ghl-stat-item {
+      background: #f6f7fc;
+      padding: 1.25rem;
+      border-radius: 0.75rem;
+      text-align: center;
+    }
+    .ghl-stat-num {
+      font-size: 28px;
+      font-weight: 900;
+      color: #4b3df5;
+    }
+    .ghl-stat-label {
+      font-size: 12px;
+      color: #6b7280;
+      margin-top: 0.25rem;
+    }
+
+    /* ==========================================================================
+       FAQ ACCORDION & ACCREDITATION
+       ========================================================================== */
+    .ghl-faq-section {
+      background: #ffffff;
+      padding: 4rem 0;
+    }
+    .ghl-faq-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    @media (min-width: 1024px) {
+      .ghl-faq-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+      }
+    }
+    .ghl-accordion-item {
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .ghl-accordion-btn {
+      width: 100%;
+      text-align: left;
+      padding: 1.2rem 0;
+      font-size: 15px;
+      font-weight: 600;
+      color: #1a1a3a;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      cursor: pointer;
+    }
+    .ghl-accordion-btn:hover {
+      color: #4b3df5;
+    }
+    .ghl-accordion-icon {
+      font-size: 18px;
+      color: #4b3df5;
+      transition: transform 0.3s;
+    }
+    .ghl-accordion-item.active .ghl-accordion-icon {
+      transform: rotate(180deg);
+    }
+    .ghl-accordion-content {
+      display: none;
+      padding-bottom: 1.2rem;
+      font-size: 14px;
+      color: #4b5563;
+      line-height: 1.6;
+    }
+    .ghl-accordion-item.active .ghl-accordion-content {
+      display: block;
+    }
+    .ghl-accred-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+    .ghl-accred-badge {
+      height: 54px;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.6rem;
+      font-weight: 800;
+      font-size: 15px;
+      color: #1a1a3a;
+      letter-spacing: 0.05em;
+    }
+
+    /* ==========================================================================
+       FOOTER
+       ========================================================================== */
+    .ghl-footer {
+      background: #ffffff;
+      border-top: 1px solid #f3f4f6;
+      padding: 2.5rem 0;
+    }
+    .ghl-footer-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      text-align: center;
+    }
+    @media (min-width: 1024px) {
+      .ghl-footer-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+    }
+    .ghl-social-links {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      font-size: 20px;
+    }
+    .ghl-footer-contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: 14px;
+      color: #4b5563;
+    }
+    @media (min-width: 640px) {
+      .ghl-footer-contacts {
+        flex-direction: row;
+        gap: 1.5rem;
+      }
+    }
+    .ghl-footer-contacts a:hover {
+      color: #4b3df5;
+    }
+
+    /* ==========================================================================
+       MODALS (Cruise Detail, Video Player)
+       ========================================================================== */
+    .ghl-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(4px);
+      z-index: 99999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .ghl-modal-overlay.open {
+      display: flex;
+    }
+    .ghl-modal-content {
+      background: #ffffff;
+      border-radius: 1.25rem;
+      max-width: 860px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    }
+    .ghl-modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.6);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      cursor: pointer;
+      z-index: 10;
+      transition: background 0.2s;
+    }
+    .ghl-modal-close:hover {
+      background: rgba(0,0,0,0.9);
+    }
+    .ghl-modal-banner {
+      height: 240px;
+      position: relative;
+    }
+    .ghl-modal-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .ghl-modal-banner-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 80%);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      color: #ffffff;
+    }
+    .ghl-modal-body {
+      padding: 1.75rem;
+    }
+
+    /* Floating Chat & WhatsApp */
+    .ghl-float-whatsapp {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      z-index: 9999;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: #25d366;
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 28px;
+      transition: transform 0.25s;
+    }
+    .ghl-float-whatsapp:hover {
+      transform: scale(1.08);
+    }
+
+    /* Toast Notification */
+    .ghl-toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #141452;
+      color: #ffffff;
+      padding: 16px 20px;
+      border-radius: 12px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+      border-left: 4px solid #f5a623;
+      z-index: 999999;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+      pointer-events: none;
+      max-width: 320px;
+    }
+    .ghl-toast.show {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .ghl-toast-title {
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    .ghl-toast-desc {
+      font-size: 12px;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+<div id="ghl-bmc-app">
+
+  <!-- =========================================================================
+       1. HEADER & NAVIGATION
+       ========================================================================= -->
+  <header class="ghl-header" id="ghl-header">
+    <div class="ghl-container">
+      <div class="ghl-header-inner">
+        <!-- Logo -->
+        <a href="#home" class="ghl-logo">
+          <img src="https://customer-assets-cm19k8pv.emergentagent.net/job_cruise-ui-rebuild/artifacts/sygz0ryx_6703ef1648d826625eaf84ea.png" alt="Bollywood Masala Cruise Logo" />
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="ghl-nav-links">
+          <a href="#home" class="ghl-nav-link active">Home</a>
+          <a href="#about" class="ghl-nav-link">About Us</a>
+          <a href="#packages" class="ghl-nav-link">Cruise Packages</a>
+          <a href="#onboard" class="ghl-nav-link">Onboard Experience</a>
+          <a href="#gallery" class="ghl-nav-link">Gallery</a>
+          <a href="#testimonials" class="ghl-nav-link">Testimonials</a>
+          <a href="#faq" class="ghl-nav-link">FAQ</a>
+          <a href="#quote-section" class="ghl-nav-link">Contact</a>
+        </nav>
+
+        <!-- CTA Button -->
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <a href="#quote-section" class="ghl-btn-primary" style="display: none;" id="ghl-header-cta">
+            Request Pricing
+          </a>
+          <button class="ghl-menu-toggle" id="ghl-menu-btn" aria-label="Toggle Navigation">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="ghl-mobile-nav" id="ghl-mobile-drawer">
+      <a href="#home" class="ghl-nav-link" onclick="ghlToggleMenu()">Home</a>
+      <a href="#about" class="ghl-nav-link" onclick="ghlToggleMenu()">About Us</a>
+      <a href="#packages" class="ghl-nav-link" onclick="ghlToggleMenu()">Cruise Packages</a>
+      <a href="#onboard" class="ghl-nav-link" onclick="ghlToggleMenu()">Onboard Experience</a>
+      <a href="#gallery" class="ghl-nav-link" onclick="ghlToggleMenu()">Gallery</a>
+      <a href="#testimonials" class="ghl-nav-link" onclick="ghlToggleMenu()">Testimonials</a>
+      <a href="#faq" class="ghl-nav-link" onclick="ghlToggleMenu()">FAQ</a>
+      <a href="#quote-section" class="ghl-btn-primary" style="text-align:center; margin-top: 0.5rem;" onclick="ghlToggleMenu()">Request Pricing</a>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. HERO SECTION WITH LIVE EXPERIENCE VIEWS & QUICK QUOTE FORM
+       ========================================================================= -->
+  <section id="home" class="ghl-hero-section">
+    <div class="ghl-hero-bg" id="ghl-hero-dynamic-bg"></div>
+
+    <div class="ghl-container">
+      <div class="ghl-hero-grid">
+        <!-- Left Text Content -->
+        <div>
+          <span class="ghl-eyebrow">WELCOME ABOARD</span>
+          <h1 class="ghl-hero-title">
+            An All-Inclusive<br />
+            <span>Cruise</span> Experience
+          </h1>
+          <p class="ghl-hero-desc">
+            Sail into a world of luxury, Bollywood entertainment, authentic multi-cuisine dining, and unforgettable moments. Everything you need for the perfect getaway — all in one place.
+          </p>
+
+          <!-- 3 Hero Highlights -->
+          <div class="ghl-hero-features">
+            <div class="ghl-hero-feat-item">
+              <div class="ghl-hero-feat-icon">🛡️</div>
+              <div class="ghl-hero-feat-text">
+                <p>Best Price</p>
+                <p>Guarantee</p>
+              </div>
+            </div>
+            <div class="ghl-hero-feat-item">
+              <div class="ghl-hero-feat-icon">🎟️</div>
+              <div class="ghl-hero-feat-text">
+                <p>All-Inclusive</p>
+                <p>Packages</p>
+              </div>
+            </div>
+            <div class="ghl-hero-feat-item">
+              <div class="ghl-hero-feat-icon">🎧</div>
+              <div class="ghl-hero-feat-text">
+                <p>24/7 Guest</p>
+                <p>Support</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="ghl-hero-actions">
+            <a href="#quote-section" class="ghl-btn-primary" style="padding: 0.9rem 2rem; font-size: 16px;">
+              Request Pricing
+            </a>
+            <button type="button" class="ghl-btn-outline" onclick="ghlOpenVideoModal()" style="padding: 0.9rem 1.75rem; font-size: 16px;">
+              <span style="width: 28px; height: 28px; border-radius: 50%; background: #4b3df5; color: white; display: inline-flex; align-items: center; justify-content: center; font-size: 12px; margin-right: 4px;">▶</span>
+              Watch Video
+            </button>
+          </div>
+
+          <!-- Live Experience Views Switcher -->
+          <div class="ghl-live-views">
+            <div class="ghl-live-views-title">
+              <span>✨</span> Live Experience Views:
+            </div>
+            <div class="ghl-live-views-pills">
+              <button class="ghl-live-pill active" onclick="ghlSwitchHeroScene(0, this)">
+                <span class="ghl-live-pill-dot"></span> Onboard Deck Life
+              </button>
+              <button class="ghl-live-pill" onclick="ghlSwitchHeroScene(1, this)">
+                <span class="ghl-live-pill-dot"></span> Open Ocean Sailing
+              </button>
+              <button class="ghl-live-pill" onclick="ghlSwitchHeroScene(2, this)">
+                <span class="ghl-live-pill-dot"></span> Pool Deck Celebrations
+              </button>
+              <button class="ghl-live-pill" onclick="ghlSwitchHeroScene(3, this)">
+                <span class="ghl-live-pill-dot"></span> Live Bollywood DJ Nights
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Quick Quote Card -->
+        <div id="quote-section">
+          <div class="ghl-quote-card">
+            <h3>Get a <span>Quick Quote</span></h3>
+            <p>Set sail in less than 60 seconds</p>
+
+            <form id="ghl-quick-quote-form" onsubmit="ghlSubmitQuote(event)">
+              <div class="ghl-form-group">
+                <input type="text" id="quote-name" class="ghl-input" placeholder="Your Name *" required />
+              </div>
+              <div class="ghl-form-group">
+                <input type="email" id="quote-email" class="ghl-input" placeholder="Email Address *" required />
+              </div>
+              <div class="ghl-form-group ghl-phone-group">
+                <div class="ghl-phone-prefix">
+                  <span>🇮🇳</span> +91
+                </div>
+                <input type="tel" id="quote-phone" class="ghl-input" placeholder="Mobile Number" />
+              </div>
+              <div class="ghl-form-group">
+                <select id="quote-cruise" class="ghl-select">
+                  <option value="">Select Cruise Destination</option>
+                  <option value="Caribbean Cruise">Caribbean Cruise (7 Nights)</option>
+                  <option value="Hot Cruise (Bahamas)">Hot Cruise - Bahamas (5 Nights)</option>
+                  <option value="Alaska Cruise">Alaska Cruise</option>
+                  <option value="Mediterranean Cruise">Mediterranean Cruise</option>
+                  <option value="Dubai Cruise">Dubai Cruise</option>
+                </select>
+              </div>
+              <div class="ghl-form-group">
+                <input type="text" id="quote-date" class="ghl-input" placeholder="Preferred Travel Date (e.g. Dec 2025)" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" />
+              </div>
+              <div class="ghl-form-group">
+                <input type="number" id="quote-guests" class="ghl-input" placeholder="No. of Guests" min="1" max="20" />
+              </div>
+              <button type="submit" class="ghl-quote-submit">
+                Get My Quote Now
+              </button>
+              <div class="ghl-secure-badge">
+                <span>🔒</span> No hidden charges. 100% secure.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 4-Item Strip -->
+      <div class="ghl-feature-strip">
+        <div class="ghl-strip-item">
+          <div class="ghl-strip-icon">👨‍🍳</div>
+          <div>
+            <p class="ghl-strip-title">Premium Dining</p>
+            <p class="ghl-strip-desc">World-class multi-cuisine for every palate</p>
+          </div>
+        </div>
+        <div class="ghl-strip-item">
+          <div class="ghl-strip-icon">🛏️</div>
+          <div>
+            <p class="ghl-strip-title">Luxurious Stay</p>
+            <p class="ghl-strip-desc">Spacious oceanview & balcony staterooms</p>
+          </div>
+        </div>
+        <div class="ghl-strip-item">
+          <div class="ghl-strip-icon">🎵</div>
+          <div>
+            <p class="ghl-strip-title">Endless Entertainment</p>
+            <p class="ghl-strip-desc">Live shows, Bollywood DJs & celebrity parties</p>
+          </div>
+        </div>
+        <div class="ghl-strip-item">
+          <div class="ghl-strip-icon">👨‍👩‍👧‍👦</div>
+          <div>
+            <p class="ghl-strip-title">Fun for Everyone</p>
+            <p class="ghl-strip-desc">Curated activities for all age groups</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. SEAMLESS MARQUEE GALLERY SECTION
+       ========================================================================= -->
+  <section id="gallery" class="ghl-gallery-section">
+    <div class="ghl-container" style="text-align: center;">
+      <span class="ghl-eyebrow">GALLERY</span>
+      <h2 class="ghl-heading">A Glimpse of Life Onboard</h2>
+    </div>
+
+    <div class="ghl-marquee-wrapper">
+      <div class="ghl-marquee-track">
+        <!-- Set 1 -->
+        <div class="ghl-marquee-item"><img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?crop=entropy&cs=srgb&fm=jpg&q=80&w=500" alt="Cruise Deck Life" loading="lazy" /></div>
+        <div class="ghl-marquee-item"><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?crop=entropy&cs=srgb&fm=jpg&q=80&w=500" alt="Bollywood Party" loading="lazy" /></div>
+        <div class="ghl-marquee-item"><img src="https://images.unsplash.com/photo-1503095396549-807759245b35?crop=entropy&cs=srgb&fm=jpg&q=80&w=500" alt="Live Stage Dance" loading="lazy" /></div>
+        <div class="ghl-marquee-item"><img src="https://images.unsplash.com/photo-1579592672790-39239b6cbc31?crop=entropy&cs=srgb&fm=jpg&q=80&w=500" alt="Poolside Sunset" loading="lazy" /></div>
+        <div class="ghl-marquee-item"><img src="https://images.pexels.com/photos/24643916/pexels-photo-24643916.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Caribbean Destination" loading="lazy" /></div>
+        <div class="ghl-marquee-item"><img src="https://images.unsplash.com/photo-1599640842225-85d111c60e6b?crop=entropy&cs=srgb&fm=jpg&q=80&w=500" alt="Cruise Ship Sailing" loading="lazy" /></div>
+        <div class="ghl-marquee-item"><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?crop=entropy&cs=srgb&fm=jpg&q=80&w=500" alt="Delicious Indian Dining" loading="lazy" /></div>
+
+        <!-- Set 2 (Duplicate for smooth infinite marquee) -->
+        <div class="ghl-marquee-item"><img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?crop=entropy&cs=srgb&fm=jpg&q=80&w=500" alt="Cruise Deck Life" loading="lazy" /></div>
+        <div class="ghl-marquee-item"><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?crop=entropy&cs=srgb&fm=jpg&q=80&w=500" alt="Bollywood Party" loading="lazy" /></div>
+        <div class="ghl-marquee-item"><img src="https://images.unsplash.com/photo-1503095396549-807759245b35?crop=entropy&cs=srgb&fm=jpg&q=80&w=500" alt="Live Stage Dance" loading="lazy" /></div>
+        <div class="ghl-marquee-item"><img src="https://images.unsplash.com/photo-1579592672790-39239b6cbc31?crop=entropy&cs=srgb&fm=jpg&q=80&w=500" alt="Poolside Sunset" loading="lazy" /></div>
+        <div class="ghl-marquee-item"><img src="https://images.pexels.com/photos/24643916/pexels-photo-24643916.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Caribbean Destination" loading="lazy" /></div>
+        <div class="ghl-marquee-item"><img src="https://images.unsplash.com/photo-1599640842225-85d111c60e6b?crop=entropy&cs=srgb&fm=jpg&q=80&w=500" alt="Cruise Ship Sailing" loading="lazy" /></div>
+        <div class="ghl-marquee-item"><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?crop=entropy&cs=srgb&fm=jpg&q=80&w=500" alt="Delicious Indian Dining" loading="lazy" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. POPULAR CRUISES SECTION
+       ========================================================================= -->
+  <section id="packages" class="ghl-popular-section">
+    <div class="ghl-container">
+      <div class="ghl-popular-box">
+        
+        <!-- Header -->
+        <div class="ghl-popular-header">
+          <div>
+            <p style="font-size: 13px; font-weight: 800; letter-spacing: 0.15em; color: #8b8bef; margin-bottom: 4px;">POPULAR CRUISES</p>
+            <h2 style="font-size: 32px; font-weight: 800; color: #ffffff; line-height: 1.2;">Unforgettable Journeys Await</h2>
+          </div>
+          <a href="#quote-section" class="ghl-btn-outline" style="background: transparent !important; color: #ffffff !important; border-color: rgba(255,255,255,0.4) !important;">
+            View All Itineraries
+          </a>
+        </div>
+
+        <!-- 2 Cruise Cards -->
+        <div class="ghl-popular-grid">
+          
+          <!-- Card 1: Caribbean Cruise -->
+          <div class="ghl-cruise-card">
+            <div class="ghl-cruise-card-img">
+              <img src="https://images.unsplash.com/photo-1599640842225-85d111c60e6b?crop=entropy&cs=srgb&fm=jpg&q=80&w=600" alt="Caribbean Cruise" />
+            </div>
+            <div class="ghl-cruise-card-body">
+              <div>
+                <span class="ghl-card-tag">DEC 2025</span>
+                <h3 class="ghl-card-title">Caribbean Cruise</h3>
+                <p class="ghl-card-sub">7 Nights | 5 Exotic Destinations</p>
+                <ul class="ghl-card-features">
+                  <li class="ghl-card-feature-li"><span style="color:#4b3df5; font-weight:bold;">✔</span> Luxury Stay Included</li>
+                  <li class="ghl-card-feature-li"><span style="color:#4b3df5; font-weight:bold;">✔</span> All Meals & Indian Buffet</li>
+                  <li class="ghl-card-feature-li"><span style="color:#4b3df5; font-weight:bold;">✔</span> Live Bollywood Shows & DJ Nights</li>
+                  <li class="ghl-card-feature-li"><span style="color:#4b3df5; font-weight:bold;">✔</span> Shore Excursions & Island Fun</li>
+                </ul>
+              </div>
+              <div class="ghl-card-bottom">
+                <div>
+                  <p class="ghl-price-val"><small>From </small>$899</p>
+                  <p style="font-size: 12px; color: #9ca3af;">Per Person</p>
+                </div>
+                <div style="display: flex; gap: 0.5rem;">
+                  <button type="button" class="ghl-btn-outline" style="padding: 0.5rem 0.9rem; font-size: 13px;" onclick="ghlOpenCruiseModal('caribbean')">
+                    View Details
+                  </button>
+                  <button type="button" class="ghl-btn-primary" style="padding: 0.5rem 1rem; font-size: 13px;" onclick="ghlBookCruise('Caribbean Cruise')">
+                    Book Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Bahamas Cruise -->
+          <div class="ghl-cruise-card">
+            <div class="ghl-cruise-card-img">
+              <img src="https://images.unsplash.com/photo-1583157048761-ac1dba033233?crop=entropy&cs=srgb&fm=jpg&q=80&w=600" alt="Hot Cruise Bahamas" />
+            </div>
+            <div class="ghl-cruise-card-body">
+              <div>
+                <span class="ghl-card-tag">MAR 2025</span>
+                <h3 class="ghl-card-title">Hot Cruise (Bahamas)</h3>
+                <p class="ghl-card-sub">5 Nights | 3 Exotic Destinations</p>
+                <ul class="ghl-card-features">
+                  <li class="ghl-card-feature-li"><span style="color:#4b3df5; font-weight:bold;">✔</span> Luxury Oceanview Staterooms</li>
+                  <li class="ghl-card-feature-li"><span style="color:#4b3df5; font-weight:bold;">✔</span> Pool Deck Garba & Bollywood Nights</li>
+                  <li class="ghl-card-feature-li"><span style="color:#4b3df5; font-weight:bold;">✔</span> Private Island Beach BBQ Night</li>
+                  <li class="ghl-card-feature-li"><span style="color:#4b3df5; font-weight:bold;">✔</span> Dedicated Kids & Teen Clubs</li>
+                </ul>
+              </div>
+              <div class="ghl-card-bottom">
+                <div>
+                  <p class="ghl-price-val"><small>From </small>$799</p>
+                  <p style="font-size: 12px; color: #9ca3af;">Per Person</p>
+                </div>
+                <div style="display: flex; gap: 0.5rem;">
+                  <button type="button" class="ghl-btn-outline" style="padding: 0.5rem 0.9rem; font-size: 13px;" onclick="ghlOpenCruiseModal('bahamas')">
+                    View Details
+                  </button>
+                  <button type="button" class="ghl-btn-primary" style="padding: 0.5rem 1rem; font-size: 13px;" onclick="ghlBookCruise('Hot Cruise (Bahamas)')">
+                    Book Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 4 Trust Badges -->
+        <div class="ghl-trust-badges">
+          <div class="ghl-trust-item">
+            <div class="ghl-trust-icon">🚢</div>
+            <div>
+              <p style="font-size: 14px; font-weight: 700; color: #ffffff;">All-Inclusive Packages</p>
+              <p style="font-size: 12px; color: rgba(255,255,255,0.6);">Meals, drinks & activities</p>
+            </div>
+          </div>
+          <div class="ghl-trust-item">
+            <div class="ghl-trust-icon">💲</div>
+            <div>
+              <p style="font-size: 14px; font-weight: 700; color: #ffffff;">No Hidden Charges</p>
+              <p style="font-size: 12px; color: rgba(255,255,255,0.6);">100% transparent pricing</p>
+            </div>
+          </div>
+          <div class="ghl-trust-item">
+            <div class="ghl-trust-icon">📸</div>
+            <div>
+              <p style="font-size: 14px; font-weight: 700; color: #ffffff;">Flexible Booking</p>
+              <p style="font-size: 12px; color: rgba(255,255,255,0.6);">Easy date changes & refunds</p>
+            </div>
+          </div>
+          <div class="ghl-trust-item">
+            <div class="ghl-trust-icon">👥</div>
+            <div>
+              <p style="font-size: 14px; font-weight: 700; color: #ffffff;">Trusted by 50K+</p>
+              <p style="font-size: 12px; color: rgba(255,255,255,0.6);">Happy cruisers worldwide</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. ONBOARD EXPERIENCE ACTIVITIES
+       ========================================================================= -->
+  <section id="onboard" class="ghl-onboard-section">
+    <div class="ghl-container">
+      <div style="text-align: center;">
+        <span class="ghl-eyebrow">ONBOARD EXPERIENCE</span>
+        <h2 class="ghl-heading">All This and More Awaits You Onboard!</h2>
+      </div>
+
+      <div class="ghl-onboard-grid">
+        <div class="ghl-onboard-card">
+          <div class="ghl-onboard-icon-wrap">👣</div>
+          <p class="ghl-onboard-name">Mindful Walks</p>
+          <p class="ghl-onboard-desc">Scenic ocean sunrise walks</p>
+        </div>
+        <div class="ghl-onboard-card">
+          <div class="ghl-onboard-icon-wrap">🎵</div>
+          <p class="ghl-onboard-name">Antakshari</p>
+          <p class="ghl-onboard-desc">Sing along to Bollywood hits</p>
+        </div>
+        <div class="ghl-onboard-card">
+          <div class="ghl-onboard-icon-wrap">🎲</div>
+          <p class="ghl-onboard-name">Tambola</p>
+          <p class="ghl-onboard-desc">Fun games & exciting prizes</p>
+        </div>
+        <div class="ghl-onboard-card">
+          <div class="ghl-onboard-icon-wrap">💃</div>
+          <p class="ghl-onboard-name">Dance Showcase</p>
+          <p class="ghl-onboard-desc">Celebrity performances</p>
+        </div>
+        <div class="ghl-onboard-card">
+          <div class="ghl-onboard-icon-wrap">🎉</div>
+          <p class="ghl-onboard-name">Bollywood Party</p>
+          <p class="ghl-onboard-desc">Dance under open skies</p>
+        </div>
+        <div class="ghl-onboard-card">
+          <div class="ghl-onboard-icon-wrap">🎤</div>
+          <p class="ghl-onboard-name">Open Mic & Karaoke</p>
+          <p class="ghl-onboard-desc">Show off your vocal talent</p>
+        </div>
+        <div class="ghl-onboard-card">
+          <div class="ghl-onboard-icon-wrap">🎮</div>
+          <p class="ghl-onboard-name">Games Night</p>
+          <p class="ghl-onboard-desc">Classic family tournaments</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. PAST CRUISES SECTION
+       ========================================================================= -->
+  <section class="ghl-past-section">
+    <div class="ghl-container">
+      <div class="ghl-past-box">
+        <div style="text-align: center;">
+          <span class="ghl-eyebrow">PAST CRUISES</span>
+          <h2 class="ghl-heading" style="font-size: 30px !important;">Memories That Sailed Beyond the Horizon</h2>
+        </div>
+
+        <div class="ghl-past-grid">
+          <div class="ghl-past-item">
+            <div class="ghl-past-avatar">
+              <img src="https://images.pexels.com/photos/5022610/pexels-photo-5022610.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Alaska Cruise" />
+            </div>
+            <p class="ghl-past-date">JAN 2025</p>
+            <p class="ghl-past-title">Alaska Cruise</p>
+          </div>
+          <div class="ghl-past-item">
+            <div class="ghl-past-avatar">
+              <img src="https://images.unsplash.com/photo-1511316695145-4992006ffddb?crop=entropy&cs=srgb&fm=jpg&w=300" alt="Mediterranean Cruise" />
+            </div>
+            <p class="ghl-past-date">MAR 2025</p>
+            <p class="ghl-past-title">Medit Cruise</p>
+          </div>
+          <div class="ghl-past-item">
+            <div class="ghl-past-avatar">
+              <img src="https://images.pexels.com/photos/33270055/pexels-photo-33270055.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Mexican Cruise" />
+            </div>
+            <p class="ghl-past-date">APR 2025</p>
+            <p class="ghl-past-title">Mexican Cruise</p>
+          </div>
+          <div class="ghl-past-item">
+            <div class="ghl-past-avatar">
+              <img src="https://images.unsplash.com/photo-1554254464-7046778097bf?crop=entropy&cs=srgb&fm=jpg&w=300" alt="Glacier Cruise" />
+            </div>
+            <p class="ghl-past-date">MAY 2025</p>
+            <p class="ghl-past-title">Glacier Cruise</p>
+          </div>
+          <div class="ghl-past-item">
+            <div class="ghl-past-avatar">
+              <img src="https://images.pexels.com/photos/29146142/pexels-photo-29146142.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Bahamas Voyage" />
+            </div>
+            <p class="ghl-past-date">DEC 2024</p>
+            <p class="ghl-past-title">Bahamas Voyage</p>
+          </div>
+          <div class="ghl-past-item">
+            <div class="ghl-past-avatar">
+              <img src="https://images.unsplash.com/photo-1554254648-2d58a1bc3fd5?crop=entropy&cs=srgb&fm=jpg&w=300" alt="Scenic Alaska" />
+            </div>
+            <p class="ghl-past-date">MAY 2024</p>
+            <p class="ghl-past-title">Scenic Alaska</p>
+          </div>
+          <div class="ghl-past-item">
+            <div class="ghl-past-avatar">
+              <img src="https://images.unsplash.com/photo-1583157048761-ac1dba033233?crop=entropy&cs=srgb&fm=jpg&w=300" alt="Dubai Cruise" />
+            </div>
+            <p class="ghl-past-date">NOV 2024</p>
+            <p class="ghl-past-title">Dubai Cruise</p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="#quote-section" class="ghl-btn-outline" style="border-color: #4b3df5 !important; color: #4b3df5 !important;">
+            Inquire About Upcoming Voyages
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. FOOD & DINING + GUEST TESTIMONIALS
+       ========================================================================= -->
+  <section id="testimonials" class="ghl-food-testi-section">
+    <div class="ghl-container">
+      <div class="ghl-ft-grid">
+        
+        <!-- Dining Spotlight -->
+        <div class="ghl-dining-card">
+          <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?crop=entropy&cs=srgb&fm=jpg&q=80&w=800" alt="Indian Dining Feast" />
+          <div class="ghl-dining-content">
+            <p style="font-size: 12px; font-weight: 800; letter-spacing: 0.15em; color: #f5a623; margin-bottom: 0.5rem;">FOOD &amp; DINING</p>
+            <h3 style="font-size: 30px; font-weight: 800; color: #ffffff; line-height: 1.2;">Delicious Multi-Cuisine Dining Options</h3>
+            <p style="font-size: 14px; color: rgba(255,255,255,0.85); margin-top: 0.75rem; line-height: 1.6;">
+              Enjoy an extensive variety of meals onboard, including authentic North &amp; South Indian vegetarian, Jain delicacies, live chaat counters, and international gourmet feasts.
+            </p>
+            <a href="#quote-section" class="ghl-btn-primary" style="margin-top: 1.5rem;">
+              Explore Dining Menus
+            </a>
+          </div>
+        </div>
+
+        <!-- Video Testimonials -->
+        <div class="ghl-testi-box">
+          <div>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <div>
+                <span class="ghl-eyebrow">TESTIMONIALS</span>
+                <h3 class="ghl-heading" style="font-size: 26px !important;">What Our Guests Have to Say</h3>
+              </div>
+            </div>
+
+            <div class="ghl-testi-grid">
+              <!-- Review 1 -->
+              <div class="ghl-testi-item">
+                <div class="ghl-testi-thumb" onclick="ghlOpenVideoModal()">
+                  <img src="https://images.pexels.com/photos/39191539/pexels-photo-39191539.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Rajesh & Priya" />
+                  <div class="ghl-play-badge"><span class="ghl-play-circle">▶</span></div>
+                </div>
+                <div class="ghl-testi-body">
+                  <p class="ghl-testi-quote">“The best vacation ever! The food, the garba nights and Bollywood parties were phenomenal.”</p>
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: 11px; font-weight: 700; color: #1a1a3a;">Rajesh &amp; Priya</span>
+                    <span class="ghl-testi-stars">★★★★★</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Review 2 -->
+              <div class="ghl-testi-item">
+                <div class="ghl-testi-thumb" onclick="ghlOpenVideoModal()">
+                  <img src="https://images.unsplash.com/photo-1556745753-b2904692b3cd?crop=entropy&cs=srgb&fm=jpg&w=400" alt="Anita Sharma" />
+                  <div class="ghl-play-badge"><span class="ghl-play-circle">▶</span></div>
+                </div>
+                <div class="ghl-testi-body">
+                  <p class="ghl-testi-quote">“Unforgettable trip! The Bollywood artists made it truly feel like a festival at sea.”</p>
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: 11px; font-weight: 700; color: #1a1a3a;">Anita Sharma</span>
+                    <span class="ghl-testi-stars">★★★★★</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Review 3 -->
+              <div class="ghl-testi-item">
+                <div class="ghl-testi-thumb" onclick="ghlOpenVideoModal()">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=srgb&fm=jpg&w=400" alt="Vikram Patel" />
+                  <div class="ghl-play-badge"><span class="ghl-play-circle">▶</span></div>
+                </div>
+                <div class="ghl-testi-body">
+                  <p class="ghl-testi-quote">“Took my parents for their 30th anniversary. Exceptional service and heartwarming hospitality!”</p>
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: 11px; font-weight: 700; color: #1a1a3a;">Vikram Patel</span>
+                    <span class="ghl-testi-stars">★★★★★</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 1.5rem;">
+            <a href="#quote-section" class="ghl-btn-outline" style="border-color: #4b3df5 !important; color: #4b3df5 !important;">
+              Read More Cruiser Stories
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       8. EXCLUSIVE BENEFITS BAR
+       ========================================================================= -->
+  <section class="ghl-benefits-section">
+    <div class="ghl-benefits-bg"></div>
+    <div class="ghl-container ghl-benefits-inner">
+      <h2 style="text-align: center; font-size: 26px; font-weight: 800;">
+        Book Now and Get Exclusive Onboard Benefits!
+      </h2>
+
+      <div class="ghl-benefits-grid">
+        <div class="ghl-benefit-box">
+          <div class="ghl-benefit-icon">💵</div>
+          <div>
+            <p style="font-size: 14px; font-weight: 700;">$100 USD</p>
+            <p style="font-size: 12px; color: rgba(255,255,255,0.7);">Onboard Credit</p>
+          </div>
+        </div>
+        <div class="ghl-benefit-box">
+          <div class="ghl-benefit-icon">🏷️</div>
+          <div>
+            <p style="font-size: 14px; font-weight: 700;">$50 OFF</p>
+            <p style="font-size: 12px; color: rgba(255,255,255,0.7);">Next Voyage</p>
+          </div>
+        </div>
+        <div class="ghl-benefit-box">
+          <div class="ghl-benefit-icon">📶</div>
+          <div>
+            <p style="font-size: 14px; font-weight: 700;">Free WiFi</p>
+            <p style="font-size: 12px; color: rgba(255,255,255,0.7);">Throughout Ship</p>
+          </div>
+        </div>
+        <div class="ghl-benefit-box">
+          <div class="ghl-benefit-icon">⭐</div>
+          <div>
+            <p style="font-size: 14px; font-weight: 700;">Priority</p>
+            <p style="font-size: 12px; color: rgba(255,255,255,0.7);">VIP Boarding</p>
+          </div>
+        </div>
+        <div class="ghl-benefit-box">
+          <div class="ghl-benefit-icon">🏝️</div>
+          <div>
+            <p style="font-size: 14px; font-weight: 700;">Exclusive</p>
+            <p style="font-size: 12px; color: rgba(255,255,255,0.7);">Shore Deals</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center;">
+        <a href="#quote-section" class="ghl-btn-primary" style="padding: 0.85rem 2.25rem;">
+          Claim Your Benefits Today
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       9. ABOUT STORY & CORE VALUES
+       ========================================================================= -->
+  <section id="about" class="ghl-about-section">
+    <div class="ghl-container">
+      <div class="ghl-about-grid">
+        <div>
+          <span class="ghl-eyebrow">OUR STORY</span>
+          <h2 class="ghl-heading">The Journey of Bollywood Masala Cruise</h2>
+          <p style="font-size: 16px; color: #374151; margin-top: 1rem; line-height: 1.7;">
+            The Bollywood Masala Cruise was born from a passion for Indian cultural celebrations and a love for the open sea. Our founders envisioned an extraordinary luxury holiday that blends the joyous energy of Bollywood music, authentic regional cuisines, and top-tier hospitality on world-class liners.
+          </p>
+          <p style="font-size: 14px; color: #6b7280; margin-top: 0.75rem; line-height: 1.6;">
+            Every voyage is curated to feel like a floating festival — bringing together families, friends, and Bollywood enthusiasts across the globe for an unforgettable experience.
+          </p>
+
+          <div class="ghl-about-stats">
+            <div class="ghl-stat-item">
+              <div class="ghl-stat-num">15+</div>
+              <div class="ghl-stat-label">Years of Experience</div>
+            </div>
+            <div class="ghl-stat-item">
+              <div class="ghl-stat-num">50K+</div>
+              <div class="ghl-stat-label">Happy Cruisers</div>
+            </div>
+            <div class="ghl-stat-item">
+              <div class="ghl-stat-num">120+</div>
+              <div class="ghl-stat-label">Exotic Ports</div>
+            </div>
+            <div class="ghl-stat-item">
+              <div class="ghl-stat-num">4.9★</div>
+              <div class="ghl-stat-label">Guest Rating</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <img src="https://images.pexels.com/photos/24643916/pexels-photo-24643916.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Cruise Celebration" style="border-radius: 1.5rem; box-shadow: 0 15px 35px rgba(0,0,0,0.1);" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       10. FAQ ACCORDION & ACCREDITATIONS
+       ========================================================================= -->
+  <section id="faq" class="ghl-faq-section">
+    <div class="ghl-container">
+      <div class="ghl-faq-grid">
+        
+        <!-- FAQ Accordion -->
+        <div>
+          <span class="ghl-eyebrow">FREQUENTLY ASKED QUESTIONS</span>
+          <h2 class="ghl-heading" style="font-size: 30px !important; margin-bottom: 1.5rem;">Have Questions? We Have Answers.</h2>
+
+          <div id="ghl-accordion">
+            <div class="ghl-accordion-item active">
+              <button type="button" class="ghl-accordion-btn" onclick="ghlToggleFaq(this)">
+                <span>What is included in the all-inclusive cruise package?</span>
+                <span class="ghl-accordion-icon">▼</span>
+              </button>
+              <div class="ghl-accordion-content" style="display: block;">
+                Our packages cover your luxury ocean accommodation, all daily meals (including breakfast, lunch, high tea, and dinner featuring authentic Indian vegetarian, Jain &amp; non-vegetarian buffets), access to all Bollywood theme parties, DJ nights, and onboard activities.
+              </div>
+            </div>
+
+            <div class="ghl-accordion-item">
+              <button type="button" class="ghl-accordion-btn" onclick="ghlToggleFaq(this)">
+                <span>Is there medical assistance available onboard?</span>
+                <span class="ghl-accordion-icon">▼</span>
+              </button>
+              <div class="ghl-accordion-content">
+                Yes, every cruise ship is equipped with a modern medical center staffed with certified doctors and nurses available 24/7 for any consultations or emergencies.
+              </div>
+            </div>
+
+            <div class="ghl-accordion-item">
+              <button type="button" class="ghl-accordion-btn" onclick="ghlToggleFaq(this)">
+                <span>What are the check-in and boarding procedures?</span>
+                <span class="ghl-accordion-icon">▼</span>
+              </button>
+              <div class="ghl-accordion-content">
+                Online check-in opens 21 days before departure. At the port terminal, you will need a valid passport, boarding pass, and required travel visas. Boarding typically commences 3-4 hours prior to departure.
+              </div>
+            </div>
+
+            <div class="ghl-accordion-item">
+              <button type="button" class="ghl-accordion-btn" onclick="ghlToggleFaq(this)">
+                <span>Can I bring children and elderly family members?</span>
+                <span class="ghl-accordion-icon">▼</span>
+              </button>
+              <div class="ghl-accordion-content">
+                Absolutely! Our voyages are designed for multi-generational families. We have dedicated kids clubs, teen lounges, family game nights, and full wheelchair accessibility throughout the ship.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accreditations -->
+        <div>
+          <span class="ghl-eyebrow">WE'RE PROUDLY ACCREDITED BY</span>
+          <h3 style="font-size: 20px; font-weight: 800; color: #1a1a3a; margin-top: 0.5rem; margin-bottom: 1.25rem;">
+            Official Industry Partners &amp; Affiliations
+          </h3>
+          <p style="font-size: 14px; color: #6b7280; line-height: 1.6;">
+            We maintain the highest standards of safety, licensing, and professional cruise certifications across major global maritime bodies.
+          </p>
+
+          <div class="ghl-accred-box">
+            <div class="ghl-accred-badge">IATA Accredited</div>
+            <div class="ghl-accred-badge">CLIA Member</div>
+            <div class="ghl-accred-badge">IATO Verified</div>
+            <div class="ghl-accred-badge">TAFI Partner</div>
+            <div class="ghl-accred-badge">BBB A+ Rated</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       11. FOOTER
+       ========================================================================= -->
+  <footer class="ghl-footer">
+    <div class="ghl-container">
+      <div class="ghl-footer-inner">
+        <!-- Socials -->
+        <div class="ghl-social-links">
+          <a href="#" style="color: #1877f2;" aria-label="Facebook">📘</a>
+          <a href="#" style="color: #e1306c;" aria-label="Instagram">📸</a>
+          <a href="#" style="color: #ff0000;" aria-label="YouTube">▶️</a>
+        </div>
+
+        <!-- Phone & Email -->
+        <div class="ghl-footer-contacts">
+          <a href="tel:+15612303800">📞 +1 (561) 230-3800</a>
+          <a href="mailto:booking@masalacruise.com">✉️ booking@masalacruise.com</a>
+        </div>
+
+        <!-- Legal -->
+        <div style="font-size: 13px; color: #9ca3af;">
+          <p>&copy; 2025 Bollywood Masala Cruise.</p>
+          <p>All Rights Reserved. Built for GoHighLevel.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       12. FLOATING WHATSAPP & LIVE CHAT WIDGET
+       ========================================================================= -->
+  <a href="https://wa.me/15612303800" target="_blank" rel="noopener noreferrer" class="ghl-float-whatsapp" aria-label="Chat on WhatsApp">
+    💬
+  </a>
+
+  <!-- =========================================================================
+       13. CRUISE DETAIL MODAL
+       ========================================================================= -->
+  <div id="ghl-cruise-modal" class="ghl-modal-overlay">
+    <div class="ghl-modal-content">
+      <button type="button" class="ghl-modal-close" onclick="ghlCloseCruiseModal()">✕</button>
+      
+      <div class="ghl-modal-banner">
+        <img id="ghl-modal-banner-img" src="" alt="Cruise Banner" />
+        <div class="ghl-modal-banner-overlay">
+          <span id="ghl-modal-tag" style="background:#f5a623; color:#fff; font-size:11px; font-weight:800; padding:3px 8px; border-radius:4px; display:inline-block; margin-bottom:4px; width:fit-content;"></span>
+          <h2 id="ghl-modal-title" style="font-size:28px; font-weight:900; line-height:1.2;"></h2>
+          <p id="ghl-modal-dates" style="font-size:13px; opacity:0.9;"></p>
+        </div>
+      </div>
+
+      <div class="ghl-modal-body">
+        <h4 style="font-size:16px; font-weight:700; color:#1a1a3a; margin-bottom:0.5rem;">Itinerary &amp; Highlights</h4>
+        <p id="ghl-modal-desc" style="font-size:14px; color:#4b5563; line-height:1.6; margin-bottom:1.5rem;"></p>
+
+        <h4 style="font-size:16px; font-weight:700; color:#1a1a3a; margin-bottom:0.5rem;">What's Included</h4>
+        <ul id="ghl-modal-included" style="display:grid; grid-template-columns:repeat(2, 1fr); gap:0.5rem; list-style:none; font-size:13px; color:#374151; margin-bottom:1.75rem;">
+          <li>✔ Luxury Stateroom</li>
+          <li>✔ All Meals &amp; Indian Buffet</li>
+          <li>✔ Bollywood Night Parties</li>
+          <li>✔ Dedicated Kids Club</li>
+        </ul>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid #e5e7eb; padding-top:1.25rem;">
+          <div>
+            <p style="font-size:12px; color:#6b7280;">Starting from</p>
+            <p id="ghl-modal-price" style="font-size:26px; font-weight:900; color:#4b3df5;"></p>
+          </div>
+          <button type="button" class="ghl-btn-primary" onclick="ghlBookFromModal()">
+            Confirm Booking
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       14. VIDEO PLAYER MODAL
+       ========================================================================= -->
+  <div id="ghl-video-modal" class="ghl-modal-overlay">
+    <div class="ghl-modal-content" style="max-width: 720px; background: #000000; overflow: hidden;">
+      <button type="button" class="ghl-modal-close" onclick="ghlCloseVideoModal()">✕</button>
+      <div style="position: relative; padding-bottom: 56.25%; height: 0;">
+        <iframe id="ghl-video-frame" style="position: absolute; top:0; left: 0; width: 100%; height: 100%; border:0;" src="" title="Cruise Experience Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       15. TOAST NOTIFICATION
+       ========================================================================= -->
+  <div id="ghl-toast" class="ghl-toast">
+    <div id="ghl-toast-title" class="ghl-toast-title">Success</div>
+    <div id="ghl-toast-desc" class="ghl-toast-desc">Your request has been received.</div>
+  </div>
+
+</div>
+
+<!-- ===========================================================================
+     JAVASCRIPT LOGIC (Vanilla JS, 100% compatible with GoHighLevel)
+     =========================================================================== -->
+<script>
+  // Mobile Nav Toggle
+  function ghlToggleMenu() {
+    var drawer = document.getElementById('ghl-mobile-drawer');
+    if (drawer) {
+      drawer.classList.toggle('open');
+    }
+  }
+  var menuBtn = document.getElementById('ghl-menu-btn');
+  if (menuBtn) {
+    menuBtn.addEventListener('click', ghlToggleMenu);
+  }
+
+  // Sticky Header scroll effect
+  window.addEventListener('scroll', function() {
+    var header = document.getElementById('ghl-header');
+    if (header) {
+      if (window.scrollY > 20) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }
+  });
+
+  // Hero Live Scenes Switcher
+  var heroImages = [
+    "https://images.unsplash.com/photo-1548574505-5e239809ee19?crop=entropy&cs=srgb&fm=jpg&q=80&w=1600",
+    "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?crop=entropy&cs=srgb&fm=jpg&q=80&w=1600",
+    "https://images.unsplash.com/photo-1579592672790-39239b6cbc31?crop=entropy&cs=srgb&fm=jpg&q=80&w=1600",
+    "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?crop=entropy&cs=srgb&fm=jpg&q=80&w=1600"
+  ];
+  function ghlSwitchHeroScene(idx, btn) {
+    var bg = document.getElementById('ghl-hero-dynamic-bg');
+    if (bg && heroImages[idx]) {
+      bg.style.backgroundImage = "url('" + heroImages[idx] + "')";
+    }
+    var pills = document.querySelectorAll('.ghl-live-pill');
+    pills.forEach(function(p) { p.classList.remove('active'); });
+    if (btn) btn.classList.add('active');
+  }
+
+  // Toast Notification
+  function ghlShowToast(title, desc) {
+    var toast = document.getElementById('ghl-toast');
+    var tTitle = document.getElementById('ghl-toast-title');
+    var tDesc = document.getElementById('ghl-toast-desc');
+    if (toast && tTitle && tDesc) {
+      tTitle.textContent = title;
+      tDesc.textContent = desc;
+      toast.classList.add('show');
+      setTimeout(function() {
+        toast.classList.remove('show');
+      }, 4000);
+    } else {
+      alert(title + "\n" + desc);
+    }
+  }
+
+  // Quick Quote Form Submit
+  function ghlSubmitQuote(e) {
+    e.preventDefault();
+    var name = document.getElementById('quote-name').value;
+    var email = document.getElementById('quote-email').value;
+    var cruise = document.getElementById('quote-cruise').value;
+
+    ghlShowToast("Quote Request Received!", "Thank you, " + name + "! Our cruise specialists will reach out to you within 60 seconds.");
+    document.getElementById('ghl-quick-quote-form').reset();
+  }
+
+  // Booking action
+  function ghlBookCruise(title) {
+    ghlShowToast("Booking Inquiry: " + title, "Our reservations team will contact you to secure your stateroom.");
+    var quoteSection = document.getElementById('quote-section');
+    if (quoteSection) {
+      quoteSection.scrollIntoView({ behavior: 'smooth' });
+      var cruiseSelect = document.getElementById('quote-cruise');
+      if (cruiseSelect) {
+        cruiseSelect.value = title.indexOf('Caribbean') !== -1 ? "Caribbean Cruise" : "Hot Cruise (Bahamas)";
+      }
+    }
+  }
+
+  // FAQ Accordion
+  function ghlToggleFaq(btn) {
+    var item = btn.parentElement;
+    var allItems = document.querySelectorAll('.ghl-accordion-item');
+    var isActive = item.classList.contains('active');
+    
+    allItems.forEach(function(el) {
+      el.classList.remove('active');
+      var c = el.querySelector('.ghl-accordion-content');
+      if (c) c.style.display = 'none';
+    });
+
+    if (!isActive) {
+      item.classList.add('active');
+      var content = item.querySelector('.ghl-accordion-content');
+      if (content) content.style.display = 'block';
+    }
+  }
+
+  // Cruise Data for Modal
+  var cruiseData = {
+    caribbean: {
+      tag: "DEC 2025",
+      title: "Caribbean Cruise (Norwegian Escape)",
+      dates: "DEC 23, 2026 – DEC 30, 2026",
+      price: "$899 / Person",
+      banner: "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+      desc: "Join us for a 7-night Bollywood-themed cruise aboard the Norwegian Escape, filled with celebrity entertainment, pool deck parties, and stunning ports: Port Canaveral, Puerto Plata, St. Thomas, Tortola, and Great Stirrup Cay Bahamas."
+    },
+    bahamas: {
+      tag: "MAR 2025",
+      title: "Hot Cruise - Bahamas (Norwegian Sky)",
+      dates: "MAR 14, 2025 – MAR 19, 2025",
+      price: "$799 / Person",
+      banner: "https://images.unsplash.com/photo-1548574505-5e239809ee19?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+      desc: "5 nights of pure Bollywood magic sailing through the crystal-clear waters of the Bahamas from Miami to Nassau, Great Stirrup Cay, and Key West. Dance, dine, and soak in the sun under the stars!"
+    }
+  };
+
+  var currentModalCruise = "";
+  function ghlOpenCruiseModal(key) {
+    var data = cruiseData[key];
+    if (!data) return;
+    currentModalCruise = data.title;
+    document.getElementById('ghl-modal-banner-img').src = data.banner;
+    document.getElementById('ghl-modal-tag').textContent = data.tag;
+    document.getElementById('ghl-modal-title').textContent = data.title;
+    document.getElementById('ghl-modal-dates').textContent = "📅 " + data.dates;
+    document.getElementById('ghl-modal-desc').textContent = data.desc;
+    document.getElementById('ghl-modal-price').textContent = data.price;
+    document.getElementById('ghl-cruise-modal').classList.add('open');
+  }
+
+  function ghlCloseCruiseModal() {
+    document.getElementById('ghl-cruise-modal').classList.remove('open');
+  }
+
+  function ghlBookFromModal() {
+    ghlCloseCruiseModal();
+    ghlBookCruise(currentModalCruise);
+  }
+
+  // Video Player Modal
+  function ghlOpenVideoModal() {
+    var modal = document.getElementById('ghl-video-modal');
+    var frame = document.getElementById('ghl-video-frame');
+    if (modal && frame) {
+      frame.src = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1";
+      modal.classList.add('open');
+    }
+  }
+
+  function ghlCloseVideoModal() {
+    var modal = document.getElementById('ghl-video-modal');
+    var frame = document.getElementById('ghl-video-frame');
+    if (modal && frame) {
+      frame.src = "";
+      modal.classList.remove('open');
+    }
+  }
+
+  // Close modals when clicking outside content
+  window.addEventListener('click', function(e) {
+    var cruiseModal = document.getElementById('ghl-cruise-modal');
+    var videoModal = document.getElementById('ghl-video-modal');
+    if (e.target === cruiseModal) ghlCloseCruiseModal();
+    if (e.target === videoModal) ghlCloseVideoModal();
+  });
+</script>
+</body>
+</html>
+ 
