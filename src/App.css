@@ -34,14 +34,24 @@
 
 /* Infinite marquee ("train") scroll for gallery */
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
 }
 .marquee-track {
   display: flex;
   width: max-content;
   animation: marquee 40s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 .marquee-track:hover {
   animation-play-state: paused;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  content-visibility: auto;
 }

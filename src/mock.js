@@ -202,7 +202,7 @@ export const pastCruises = [
   { date: "MAR 2025", title: "Medit Cruise", image: "https://images.unsplash.com/photo-1511316695145-4992006ffddb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwyfHxjcnVpc2UlMjBzaGlwfGVufDB8fHx8MTc4Nzc0ODI2Mnww&ixlib=rb-4.1.0&q=85" },
   { date: "APR 2025", title: "Mexican Cruise", image: "https://images.pexels.com/photos/33270055/pexels-photo-33270055.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" },
   { date: "MAY 2025", title: "Alaska Cruise", image: "https://images.unsplash.com/photo-1554254464-7046778097bf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHw0fHxjcnVpc2UlMjBzaGlwfGVufDB8fHx8MTc4Nzc0ODI2Mnww&ixlib=rb-4.1.0&q=85" },
-  { date: "DEC 2025", title: "Cruise", image: "https://images.pexels.com/photos/29146142/pexels-photo-29146142.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" },
+  { date: "DEC 2025", title: "Bahamas Cruise", image: "https://images.pexels.com/photos/29146142/pexels-photo-29146142.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" },
   { date: "MAY 2024", title: "Alaska Cruise", image: "https://images.unsplash.com/photo-1554254648-2d58a1bc3fd5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBjcnVpc2UlMjBzaGlwfGVufDB8fHx8MTc4Nzc0ODIwMXww&ixlib=rb-4.1.0&q=85" },
   { date: "NOV 2024", title: "Dubai Cruise", image: "https://images.unsplash.com/photo-1583157048761-ac1dba033233?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwzfHxjcnVpc2UlMjBzaGlwJTIwb2NlYW58ZW58MHx8fHwxNzg3NzQ4MjA3fDA&ixlib=rb-4.1.0&q=85" },
 ];
