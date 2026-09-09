@@ -219,18 +219,138 @@ export const testimonials = [
   {
     name: "Anita Sharma",
     thumb: "https://img.youtube.com/vi/RRW6GZKJ8lg/hqdefault.jpg",
-    quote: "REAL, FUN Feedback for HMT 2.0 Bollywood Masala Cruise",
+    quote: "Unbelievable experience, the Indian food and entertainment were 10/10!",
     rating: 5,
     video: "https://www.youtube.com/embed/RRW6GZKJ8lg",
     link: "https://www.youtube.com/shorts/RRW6GZKJ8lg?feature=share"
   },
   {
-    name: "Vikram Patel",
+    name: "Vikram & Family",
     thumb: "https://img.youtube.com/vi/0wxp2QyJLZs/hqdefault.jpg",
-    quote: "REAL, FUN Feedback for HMT 2.0 Bollywood Masala Cruise",
+    quote: "The Bollywood night deck party and garba were absolute highlights!",
     rating: 5,
     video: "https://www.youtube.com/embed/0wxp2QyJLZs",
     link: "https://www.youtube.com/shorts/0wxp2QyJLZs?feature=share"
+  },
+  {
+    name: "Sanjay & Neha",
+    thumb: "https://img.youtube.com/vi/74xpoSbSWj8/hqdefault.jpg",
+    quote: "Best family vacation ever! Non-stop music, luxury rooms, and great vibes.",
+    rating: 5,
+    video: "https://www.youtube.com/embed/74xpoSbSWj8",
+    link: "https://www.youtube.com/shorts/74xpoSbSWj8?feature=share"
+  },
+  {
+    name: "Pooja & Amit",
+    thumb: "https://img.youtube.com/vi/ti995Kz3rtg/hqdefault.jpg",
+    quote: "From morning chai to midnight DJ sets, Masala Cruise exceeded everything!",
+    rating: 5,
+    video: "https://www.youtube.com/embed/ti995Kz3rtg",
+    link: "https://www.youtube.com/shorts/ti995Kz3rtg?feature=share"
+  },
+  {
+    name: "Rohan & Sneha",
+    thumb: "https://img.youtube.com/vi/OUJd9KOAXiA/hqdefault.jpg",
+    quote: "Celebrated our anniversary onboard. The hospitality was truly royal!",
+    rating: 5,
+    video: "https://www.youtube.com/embed/OUJd9KOAXiA",
+    link: "https://www.youtube.com/shorts/OUJd9KOAXiA?feature=share"
+  },
+  {
+    name: "Kavita & Group",
+    thumb: "https://img.youtube.com/vi/ybEE9zg_g9I/hqdefault.jpg",
+    quote: "Our group of 14 had the time of our lives. We are booking again next year!",
+    rating: 5,
+    video: "https://www.youtube.com/embed/ybEE9zg_g9I",
+    link: "https://www.youtube.com/shorts/ybEE9zg_g9I?feature=share"
+  },
+  {
+    name: "Manish & Divya",
+    thumb: "https://img.youtube.com/vi/jjxm-Igkslo/hqdefault.jpg",
+    quote: "Pure Bollywood magic in the middle of the ocean! Highly recommend.",
+    rating: 5,
+    video: "https://www.youtube.com/embed/jjxm-Igkslo",
+    link: "https://www.youtube.com/shorts/jjxm-Igkslo?feature=share"
+  },
+  {
+    name: "Arjun & Ritu",
+    thumb: "https://img.youtube.com/vi/i6-uF6o2h9Q/hqdefault.jpg",
+    quote: "The food options, vegetarian delicacies, and live performances were unmatched!",
+    rating: 5,
+    video: "https://www.youtube.com/embed/i6-uF6o2h9Q",
+    link: "https://www.youtube.com/shorts/i6-uF6o2h9Q?feature=share"
+  },
+  {
+    name: "Deepak & Swati",
+    thumb: "https://img.youtube.com/vi/Ux1uG0wPhak/hqdefault.jpg",
+    quote: "Never experienced a themed cruise with this level of detail and excitement.",
+    rating: 5,
+    video: "https://www.youtube.com/embed/Ux1uG0wPhak",
+    link: "https://www.youtube.com/shorts/Ux1uG0wPhak?feature=share"
+  },
+  {
+    name: "Aakash & Megha",
+    thumb: "https://img.youtube.com/vi/NnSOdThRIVQ/hqdefault.jpg",
+    quote: "So much fun for both kids and grandparents. Truly memorable voyage!",
+    rating: 5,
+    video: "https://www.youtube.com/embed/NnSOdThRIVQ",
+    link: "https://www.youtube.com/shorts/NnSOdThRIVQ?feature=share"
+  },
+  {
+    name: "Gaurav & Simran",
+    thumb: "https://img.youtube.com/vi/cy0A09JE1j0/hqdefault.jpg",
+    quote: "The open mic, karaoke and dance battles made every evening electric!",
+    rating: 5,
+    video: "https://www.youtube.com/embed/cy0A09JE1j0",
+    link: "https://www.youtube.com/shorts/cy0A09JE1j0?feature=share"
+  },
+  {
+    name: "Sunil & Rekha",
+    thumb: "https://img.youtube.com/vi/-yL5eq1B2MU/hqdefault.jpg",
+    quote: "Stress-free booking, fabulous ports, and outstanding entertainment onboard.",
+    rating: 5,
+    video: "https://www.youtube.com/embed/-yL5eq1B2MU",
+    link: "https://www.youtube.com/shorts/-yL5eq1B2MU?feature=share"
+  },
+  {
+    name: "Varun & Anjali",
+    thumb: "https://img.youtube.com/vi/SpcEiuFDnYo/hqdefault.jpg",
+    quote: "Such a vibrant atmosphere! Bollywood songs 24/7 and luxurious cruise cabins.",
+    rating: 5,
+    video: "https://www.youtube.com/embed/SpcEiuFDnYo",
+    link: "https://www.youtube.com/shorts/SpcEiuFDnYo?feature=share"
+  },
+  {
+    name: "Naveen & Tanvi",
+    thumb: "https://img.youtube.com/vi/hL6v2Dt8OEQ/hqdefault.jpg",
+    quote: "Loved every single moment. The staff took care of every small detail!",
+    rating: 5,
+    video: "https://www.youtube.com/embed/hL6v2Dt8OEQ",
+    link: "https://www.youtube.com/shorts/hL6v2Dt8OEQ?feature=share"
+  },
+  {
+    name: "Karan & Isha",
+    thumb: "https://img.youtube.com/vi/TebzXQV3VyQ/hqdefault.jpg",
+    quote: "The themed dress nights and pool deck garba were unforgettable!",
+    rating: 5,
+    video: "https://www.youtube.com/embed/TebzXQV3VyQ",
+    link: "https://www.youtube.com/shorts/TebzXQV3VyQ?feature=share"
+  },
+  {
+    name: "Vivek & Preeti",
+    thumb: "https://img.youtube.com/vi/Q8xrXkMgHg4/hqdefault.jpg",
+    quote: "Everything was perfectly curated. Can't wait for the next Masala voyage!",
+    rating: 5,
+    video: "https://www.youtube.com/embed/Q8xrXkMgHg4",
+    link: "https://www.youtube.com/shorts/Q8xrXkMgHg4?feature=share"
+  },
+  {
+    name: "Harish & Geeta",
+    thumb: "https://img.youtube.com/vi/tX_gHKlDqKg/hqdefault.jpg",
+    quote: "World-class cruise ship with authentic Desi hospitality. 5 stars all the way!",
+    rating: 5,
+    video: "https://www.youtube.com/embed/tX_gHKlDqKg",
+    link: "https://www.youtube.com/shorts/tX_gHKlDqKg?feature=share"
   },
 ];
 

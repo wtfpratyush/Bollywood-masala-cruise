@@ -48,7 +48,7 @@ const FoodTestimonials = () => {
 
               {/* Swipable on mobile, grid on tablet/desktop */}
               <div className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth gap-3.5 pb-2 -mx-2 px-2 hide-scrollbar sm:grid sm:grid-cols-3 sm:overflow-visible sm:pb-0 sm:mx-0 sm:px-0 sm:gap-4">
-                {testimonials.map((t, i) => (
+                {testimonials.slice(0, 3).map((t, i) => (
                   <div
                     key={i}
                     className="shrink-0 w-[84%] sm:w-auto snap-center bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition-all"

@@ -10,8 +10,6 @@ import {
   DialogTitle,
 } from "../components/ui/dialog";
 
-const allReviews = [...testimonials, ...testimonials];
-
 const Testimonials = () => {
   const [active, setActive] = useState(null);
 
@@ -27,7 +25,7 @@ const Testimonials = () => {
       <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {allReviews.map((t, i) => (
+            {testimonials.map((t, i) => (
               <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all">
                 <button onClick={() => setActive(t)} className="relative block w-full aspect-video group">
                   <img src={t.thumb} alt={t.name} className="w-full h-full object-cover" />
