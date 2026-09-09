@@ -208,9 +208,30 @@ export const pastCruises = [
 ];
 
 export const testimonials = [
-  { name: "Rajesh & Priya", thumb: "https://images.pexels.com/photos/39191539/pexels-photo-39191539.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", quote: "REAL, FUN Feedback for HMT 2.0 Bollywood Masala Cruise", rating: 5, video: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
-  { name: "Anita Sharma", thumb: "https://images.unsplash.com/photo-1556745753-b2904692b3cd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHw0fHxjdXN0b21lciUyMGZlZWRiYWNrfGVufDB8fHx8MTc4Nzc0ODMwN3ww&ixlib=rb-4.1.0&q=85", quote: "REAL, FUN Feedback for HMT 2.0 Bollywood Masala Cruise", rating: 5, video: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
-  { name: "Vikram Patel", thumb: "https://images.pexels.com/photos/39191539/pexels-photo-39191539.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", quote: "REAL, FUN Feedback for HMT 2.0 Bollywood Masala Cruise", rating: 5, video: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
+  {
+    name: "Rajesh & Priya",
+    thumb: "https://img.youtube.com/vi/fBtenbhqcrQ/hqdefault.jpg",
+    quote: "REAL, FUN Feedback for HMT 2.0 Bollywood Masala Cruise",
+    rating: 5,
+    video: "https://www.youtube.com/embed/fBtenbhqcrQ",
+    link: "https://www.youtube.com/shorts/fBtenbhqcrQ?feature=share"
+  },
+  {
+    name: "Anita Sharma",
+    thumb: "https://img.youtube.com/vi/RRW6GZKJ8lg/hqdefault.jpg",
+    quote: "REAL, FUN Feedback for HMT 2.0 Bollywood Masala Cruise",
+    rating: 5,
+    video: "https://www.youtube.com/embed/RRW6GZKJ8lg",
+    link: "https://www.youtube.com/shorts/RRW6GZKJ8lg?feature=share"
+  },
+  {
+    name: "Vikram Patel",
+    thumb: "https://img.youtube.com/vi/0wxp2QyJLZs/hqdefault.jpg",
+    quote: "REAL, FUN Feedback for HMT 2.0 Bollywood Masala Cruise",
+    rating: 5,
+    video: "https://www.youtube.com/embed/0wxp2QyJLZs",
+    link: "https://www.youtube.com/shorts/0wxp2QyJLZs?feature=share"
+  },
 ];
 
 export const benefits = [

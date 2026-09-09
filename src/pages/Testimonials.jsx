@@ -53,13 +53,19 @@ const Testimonials = () => {
       </section>
 
       <Dialog open={!!active} onOpenChange={(o) => !o && setActive(null)}>
-        <DialogContent className="max-w-3xl p-0 overflow-hidden bg-black border-0">
+        <DialogContent className="max-w-[380px] sm:max-w-[420px] p-0 overflow-hidden bg-black border-0 rounded-2xl">
           <DialogHeader className="sr-only">
             <DialogTitle>Guest Testimonial</DialogTitle>
           </DialogHeader>
-          <div className="aspect-video w-full">
+          <div className="w-full aspect-[9/16] max-h-[85vh] bg-black">
             {active && (
-              <iframe className="w-full h-full" src={active.video} title={active.name} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+              <iframe
+                className="w-full h-full"
+                src={`${active.video}?autoplay=1&rel=0`}
+                title={active.name}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
             )}
           </div>
         </DialogContent>
