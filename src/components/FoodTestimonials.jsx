@@ -75,7 +75,7 @@ const FoodTestimonials = () => {
                         “{t.quote}”
                       </p>
                       <div className="flex items-center justify-between pt-1 border-t border-gray-50">
-                        <span className="text-[11px] font-bold text-[#1a1a3a]">{t.name}</span>
+                        <span className="text-[11px] font-semibold text-gray-400">Verified Guest</span>
                         <div className="flex gap-0.5">
                           {Array.from({ length: t.rating }).map((_, s) => (
                             <Star key={s} size={11} className="text-[#f5a623]" fill="#f5a623" />

@@ -36,13 +36,15 @@ const Testimonials = () => {
                   </span>
                 </button>
                 <div className="p-5">
-                  <div className="flex gap-0.5 mb-2">
-                    {Array.from({ length: t.rating }).map((_, s) => (
-                      <Star key={s} size={14} className="text-[#f5a623]" fill="#f5a623" />
-                    ))}
+                  <div className="flex items-center justify-between mb-2.5">
+                    <div className="flex gap-0.5">
+                      {Array.from({ length: t.rating }).map((_, s) => (
+                        <Star key={s} size={14} className="text-[#f5a623]" fill="#f5a623" />
+                      ))}
+                    </div>
+                    <span className="text-[12px] font-semibold text-gray-400">Verified Guest</span>
                   </div>
                   <p className="text-[14px] text-gray-600 leading-snug">“{t.quote}”</p>
-                  <p className="mt-3 text-[14px] font-semibold text-[#1a1a3a]">{t.name}</p>
                 </div>
               </div>
             ))}
