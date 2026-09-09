@@ -1,25 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import Layout from "../components/Layout";
 import PageBanner from "../components/PageBanner";
-import { Input } from "../components/ui/input";
-import { Textarea } from "../components/ui/textarea";
-import { useToast } from "../hooks/use-toast";
 import { contact } from "../mock";
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
-
-  const submit = (e) => {
-    e.preventDefault();
-    if (!form.name || !form.email) {
-      toast({ title: "Please fill required fields", description: "Name and email are needed so we can reach you." });
-      return;
+  useEffect(() => {
+    const scriptId = "msgsndr-form-embed";
+    let script = document.getElementById(scriptId);
+    if (!script) {
+      script = document.createElement("script");
+      script.id = scriptId;
+      script.src = "https://link.msgsndr.com/js/form_embed.js";
+      script.async = true;
+      document.body.appendChild(script);
     }
-    toast({ title: "Message sent!", description: "Thanks for reaching out \u2014 our team will respond shortly." });
-    setForm({ name: "", email: "", phone: "", message: "" });
-  };
+  }, []);
 
   const info = [
     { icon: Phone, label: "Call Us", value: contact.phone, href: `tel:${contact.phone}` },
@@ -62,18 +58,26 @@ const Contact = () => {
           </div>
 
           {/* Form */}
-          <div className="bg-[#f6f7fc] rounded-3xl p-7 sm:p-8 border border-gray-100">
-            <h3 className="text-[24px] font-bold text-[#1a1a3a] mb-1">Send us a Message</h3>
-            <p className="text-[14px] text-gray-500 mb-5">Fill in the form and we'll get back to you.</p>
-            <form onSubmit={submit} className="space-y-3">
-              <Input placeholder="Your Name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} className="h-12 rounded-lg bg-white border-gray-200" />
-              <Input type="email" placeholder="Email Address" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className="h-12 rounded-lg bg-white border-gray-200" />
-              <Input placeholder="Phone Number" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} className="h-12 rounded-lg bg-white border-gray-200" />
-              <Textarea placeholder="Your Message" rows={5} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} className="rounded-lg bg-white border-gray-200" />
-              <button type="submit" className="w-full h-12 rounded-lg bg-[#4b3df5] text-white font-semibold text-[16px] hover:bg-[#3d31d6] transition-all hover:-translate-y-0.5 shadow-lg shadow-indigo-500/30">
-                Send Message
-              </button>
-            </form>
+          <div className="bg-[#f6f7fc] rounded-3xl p-4 sm:p-6 border border-gray-100 min-h-[640px] flex flex-col justify-center">
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/form/8LYQHo3CuLbis8cNAyyD"
+              style={{ width: "100%", height: "100%", minHeight: "622px", border: "none", borderRadius: "8px" }}
+              id="inline-8LYQHo3CuLbis8cNAyyD"
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="Contact form new website"
+              data-height="622"
+              data-layout-iframe-id="inline-8LYQHo3CuLbis8cNAyyD"
+              data-form-id="8LYQHo3CuLbis8cNAyyD"
+              data-cookie-consent="true"
+              data-cookie-consent-provider="auto"
+              title="Contact form new website"
+            />
           </div>
         </div>
       </section>
