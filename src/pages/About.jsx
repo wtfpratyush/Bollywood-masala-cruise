@@ -502,7 +502,7 @@ const About = () => {
             Ready to Experience the Magic of Bollywood at Sea?
           </h2>
           <p className="text-[16px] text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            Staterooms are filling fast for our upcoming Caribbean and Bahamas voyages. Lock in early bird pricing and all-inclusive perks today.
+            Staterooms are filling fast for our upcoming Caribbean and Bahamas voyages. Lock in early bird pricing and signature perks today.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 pt-2">

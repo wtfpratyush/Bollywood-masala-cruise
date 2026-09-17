@@ -65,8 +65,8 @@ const Hero = () => {
           <div className="reveal z-10">
             <p className="text-[13px] font-bold tracking-[0.15em] text-[#4b3df5] mb-3">WELCOME ABOARD</p>
             <h1 className="text-[40px] sm:text-[52px] lg:text-[56px] leading-[1.05] font-extrabold text-[#1a1a3a]">
-              An All-Inclusive<br />
-              <span className="text-[#4b3df5]">Cruise</span> Experience
+              A Signature<br />
+              <span className="text-[#4b3df5]">Bollywood Cruise</span> Experience
             </h1>
             <p className="mt-5 text-[16px] text-gray-600 max-w-md leading-relaxed">
               Sail into a world of luxury, entertainment, and unforgettable moments. Everything you need for the perfect getaway — all in one place.

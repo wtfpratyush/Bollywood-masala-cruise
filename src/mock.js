@@ -13,7 +13,7 @@ export const navLinks = [
 
 export const heroFeatures = [
   { icon: "ShieldCheck", title: "Best Price", subtitle: "Guarantee" },
-  { icon: "Ticket", title: "All-Inclusive", subtitle: "Packages" },
+  { icon: "Ticket", title: "Signature", subtitle: "Packages" },
   { icon: "Headset", title: "24/7 Guest", subtitle: "Support" },
 ];
 
@@ -42,7 +42,7 @@ export const galleryImages = [
   { src: "/images/gallery/679a8cc62ee48554e2c2e4a4.jpeg", alt: "Onboard Fun and Memories" },
   { src: "/images/gallery/66998871763d6d76ad01c07d.webp", alt: "Bollywood Dance Showcase" },
   { src: "/images/gallery/679a8d050d9c754a05a6694b.jpeg", alt: "Deck Experience" },
-  { src: "/images/gallery/66998880763d6d69a601c07e.webp", alt: "Live Music Night" },
+  { src: "/images/gallery/66998880763d6d69a601c07e.webp", alt: "Bollywood DJ Night" },
   { src: "/images/gallery/679a33c6714dc02b0d0f2278.jpeg", alt: "Cruise Moments" },
   { src: "/images/gallery/66998e36fe542b2ec2454dcf.webp", alt: "Cruise Party Celebration" },
   { src: "/images/gallery/679a8d052ee4855ceec2e4d4.jpeg", alt: "Happy Cruisers" },
@@ -55,13 +55,13 @@ export const popularCruises = [
     tag: "DEC 2026",
     title: "Caribbean Cruise",
     subtitle: "7 Nights | 5 Exotic Destinations",
-    features: ["Luxury Stay", "All Meals Included", "Live Shows & DJ Nights", "Shore Excursions"],
+    features: ["Luxury Stay", "All Meals Included", "Live Shows & DJ Nights", "Bollywood Parties"],
     price: "$899",
-    image: "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?auto=format&fit=crop&w=800&q=75",
+    image: "/images/cruises/caribbean-cruise.jpg",
     details: {
       dates: "DEC 23, 2026 – DEC 30, 2026",
       ship: "Norwegian Escape",
-      banner: "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?auto=format&fit=crop&w=1200&q=75",
+      banner: "/images/cruises/caribbean-cruise.jpg",
       tagline: "Join us for a 7-night Bollywood-themed cruise aboard the Norwegian Escape, filled with entertainment, adventure, and stunning Caribbean destinations!",
       included: ["Meals", "Accommodation", "Entertainment", "Activities"],
       itinerary: [
@@ -106,26 +106,26 @@ export const popularCruises = [
         "/images/about/story-2.jpg",
       ],
       faqs: [
-        { q: "What are the room options and their prices?", a: "We offer Inside Rooms, Balcony Rooms, and Club Balcony Suites. Prices vary based on room type and group size. Contact our agents for personalized pricing." },
-        { q: "Is there medical assistance available onboard?", a: "Yes, every cruise has a fully equipped medical center staffed with qualified doctors and nurses available 24/7 for any emergencies." },
+        { q: "What are the room options and their prices?", a: "We offer Inside Rooms, Balcony Rooms, and Club Balcony Suites. Prices vary based on room type and the number of guests in one room. Contact our agents for personalized pricing." },
+        { q: "Are special dietary requirements or Jain meals available?", a: "Yes, our onboard dining includes dedicated vegetarian, vegan, and Jain-friendly meal options curated with authentic Indian flavors." },
         { q: "What are the check-in and boarding procedures?", a: "Check-in typically opens 3-4 hours before departure. You'll need a valid passport, booking confirmation, and online check-in completed in advance." },
-        { q: "Are there any additional costs I should be aware of?", a: "Our packages are all-inclusive covering meals, entertainment and activities. Optional extras like premium beverages, spa treatments and shore excursions may carry additional charges." },
-        { q: "Can I bring children on the cruise?", a: "Absolutely! Our cruises are family-friendly with dedicated kids' clubs, age-appropriate activities and entertainment for guests of all ages." },
+        { q: "Are there any additional costs I should be aware of?", a: "Our packages cover accommodations, delicious daily buffet meals, Bollywood parties, and onboard entertainment. Gratuities, drink packages, specialty dining, spa treatments, ship service charges, and shore excursions are extra and carry additional charges." },
+        { q: "Can I bring children on the cruise?", a: "Yes! Our cruises are family-friendly with dedicated kids' programs and activities. Please note that children must be at least 6 months of age at the time of sailing." },
       ],
     },
   },
   {
     tag: "MAR 2027",
     title: "Holi Cruise",
-    subtitle: "5 Nights | 3 Exotic Destinations",
-    features: ["Luxury Stay", "All Meals Included", "Live Shows & DJ Nights", "Shore Excursions"],
+    subtitle: "8 Nights | 3 Exotic Destinations",
+    features: ["Luxury Stay", "All Meals Included", "Live Shows & DJ Nights", "Holi Celebration at Sea"],
     price: "$799",
     image: "https://images.unsplash.com/photo-1583157048761-ac1dba033233?auto=format&fit=crop&w=800&q=75",
     details: {
       dates: "MAR 13, 2027 – MAR 21, 2027",
-      ship: "Norwegian Sky",
+      ship: "Norwegian Bliss",
       banner: "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=1200&q=75",
-      tagline: "An unforgettable week of fun, excitement, and Bollywood magic — celebrating Holi at sea!",
+      tagline: "An unforgettable 8-night voyage of fun, excitement, and Bollywood magic aboard the Norwegian Bliss — celebrating Holi at sea!",
       included: ["Meals", "Accommodation", "Entertainment", "Activities"],
       itinerary: [
         { day: "Day 1", port: "New York City, USA", image: "https://images.unsplash.com/photo-1490644658840-3f2e3f8c5625?auto=format&fit=crop&w=400&q=75" },
@@ -170,20 +170,20 @@ export const popularCruises = [
         "https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=600&q=75",
       ],
       faqs: [
-        { q: "What are the room options and their prices?", a: "We offer Inside Rooms, Balcony Rooms, and Club Balcony Suites. Prices vary based on room type and group size. Contact our agents for personalized pricing." },
-        { q: "Is there medical assistance available onboard?", a: "Yes, every cruise has a fully equipped medical center staffed with qualified doctors and nurses available 24/7 for any emergencies." },
+        { q: "What are the room options and their prices?", a: "We offer Inside Rooms, Balcony Rooms, and Club Balcony Suites. Prices vary based on room type and the number of guests in one room. Contact our agents for personalized pricing." },
+        { q: "Are special dietary requirements or Jain meals available?", a: "Yes, our onboard dining includes dedicated vegetarian, vegan, and Jain-friendly meal options curated with authentic Indian flavors." },
         { q: "What are the check-in and boarding procedures?", a: "Check-in typically opens 3-4 hours before departure. You'll need a valid passport, booking confirmation, and online check-in completed in advance." },
-        { q: "Are there any additional costs I should be aware of?", a: "Our packages are all-inclusive covering meals, entertainment and activities. Optional extras like premium beverages, spa treatments and shore excursions may carry additional charges." },
-        { q: "Can I bring children on the cruise?", a: "Absolutely! Our cruises are family-friendly with dedicated kids' clubs, age-appropriate activities and entertainment for guests of all ages." },
+        { q: "Are there any additional costs I should be aware of?", a: "Our packages cover accommodations, delicious daily buffet meals, Bollywood parties, and onboard entertainment. Gratuities, drink packages, specialty dining, spa treatments, ship service charges, and shore excursions are extra and carry additional charges." },
+        { q: "Can I bring children on the cruise?", a: "Yes! Our cruises are family-friendly with dedicated kids' programs and activities. Please note that children must be at least 6 months of age at the time of sailing." },
       ],
     },
   },
 ];
 
 export const cruiseTrust = [
-  { icon: "Ship", title: "All-Inclusive Packages", desc: "Meals, drinks & activities" },
+  { icon: "Ship", title: "Curated Packages", desc: "Meals, parties & entertainment" },
   { icon: "CircleDollarSign", title: "No Hidden Charges", desc: "Transparent pricing" },
-  { icon: "Camera", title: "Flexible Booking", desc: "Easy changes & refunds" },
+  { icon: "Camera", title: "Hassle-Free Booking", desc: "Dedicated agent support" },
   { icon: "Users", title: "Trusted by Thousands", desc: "Happy cruisers worldwide" },
 ];
 
@@ -299,7 +299,7 @@ export const testimonials = [
   {
     name: "Gaurav & Simran",
     thumb: "https://img.youtube.com/vi/cy0A09JE1j0/hqdefault.jpg",
-    quote: "The open mic, karaoke and dance battles made every evening electric!",
+    quote: "The open mic, karaoke and dance battles made the entertainment electric!",
     rating: 5,
     video: "https://www.youtube.com/embed/cy0A09JE1j0",
     link: "https://www.youtube.com/shorts/cy0A09JE1j0?feature=share"
@@ -357,16 +357,210 @@ export const testimonials = [
 export const benefits = [
   { icon: "CircleDollarSign", title: "$100 USD", subtitle: "Onboard Credit" },
   { icon: "Tag", title: "$50 OFF", subtitle: "Next Voyage" },
-  { icon: "Wifi", title: "Free WiFi", subtitle: "Onboard" },
+  { icon: "Wifi", title: "WiFi Access", subtitle: "Select Sailings" },
   { icon: "BadgeCheck", title: "Priority", subtitle: "Boarding" },
   { icon: "ShieldCheck", title: "Exclusive", subtitle: "Shore Deals" },
 ];
 
+export const accreditations = [
+  { name: "CLIA Master Cruise Counsellor", logo: "/images/accreditations/clia.png" },
+  { name: "ACTA Association of Canadian Travel Agencies", logo: "/images/accreditations/acta.png" },
+  { name: "IATA Accredited Travel Agent", logo: "/images/accreditations/iata.png" },
+  { name: "BBB Accredited Business", logo: "/images/accreditations/bbb.png" },
+];
+
 export const faqs = [
-  { q: "Is there medical assistance available onboard?", a: "Yes, every cruise has a fully equipped medical center staffed with qualified doctors and nurses available 24/7 for any emergencies or health concerns." },
-  { q: "What are the check-in and boarding procedures?", a: "Check-in typically opens 3-4 hours before departure. You'll need a valid passport, your booking confirmation, and to complete online check-in in advance for a smooth boarding experience." },
-  { q: "Are there any additional costs I should be aware of?", a: "Our packages are all-inclusive covering meals, entertainment and activities. Optional extras like premium beverages, spa treatments and shore excursions may carry additional charges." },
-  { q: "Can I bring children on the cruise?", a: "Absolutely! Our cruises are family-friendly with dedicated kids' clubs, age-appropriate activities and entertainment for guests of all ages." },
+  // Onboard Experience
+  {
+    category: "Onboard Experience",
+    featured: true,
+    q: "What is Bollywood Masala Cruise (BMC)?",
+    a: "Bollywood Masala Cruise is a premier private Indian Bollywood-themed group entertainment experience (bringing together 300–500 guests) hosted aboard world-class luxury cruise liners.",
+  },
+  {
+    category: "Onboard Experience",
+    featured: true,
+    q: "What entertainment and activities are provided by BMC?",
+    a: "Guests enjoy exclusive Bollywood-themed dance parties, celebrity DJ nights, Mehndi ceremonies, Antakshari competitions, interactive family games, Bingo, Open Mic talent showcases, and cultural dance workshops.",
+  },
+  {
+    category: "Onboard Experience",
+    featured: true,
+    q: "What is included in the cruise package price?",
+    a: "Your package includes stateroom accommodations, daily meals (including authentic Indian buffets & international cuisine), shipboard theatre shows, pool deck access, fitness facilities, and exclusive VIP access to all private Bollywood Masala Cruise events and entertainment.",
+  },
+  {
+    category: "Onboard Experience",
+    featured: false,
+    q: "Do you charter the entire cruise ship?",
+    a: "No, this is a standard luxury cruise sailing. Our Bollywood Masala Cruise group is a private group of 300–500 guests enjoying exclusive private venues and activities aboard the ship amongst other international cruise travellers.",
+  },
+  {
+    category: "Onboard Experience",
+    featured: false,
+    q: "Will there be other general public on the ship?",
+    a: "Yes, there will be general cruise passengers on the ship, but our private Bollywood Masala Cruise venues, parties, dance floors, and themed events are strictly restricted to BMC badge holders.",
+  },
+  {
+    category: "Onboard Experience",
+    featured: true,
+    q: "Why should we book with your agency rather than directly with the cruise line or online portals?",
+    a: "Only bookings made directly through our agency (Exotik Excursions) provide official access passes to private Bollywood Masala Cruise events, Bollywood DJ nights, Indian dining coordination, and exclusive group onboard bonuses.",
+  },
+  {
+    category: "Onboard Experience",
+    featured: false,
+    q: "If we book through a 3rd party or cruise line directly, can we still attend BMC events?",
+    a: "No. All bookings must be completed through our agency in order to be registered as part of the Bollywood Masala Cruise group and receive credentials for private BMC events.",
+  },
+
+  // Food & Dining
+  {
+    category: "Food & Dining",
+    featured: true,
+    q: "Do you offer Indian, Jain, Vegetarian, Non-Vegetarian & Halal food?",
+    a: "Yes! Delicious authentic Indian food is served alongside diverse international multi-cuisine options throughout the sailing, including dedicated Vegetarian, Non-Vegetarian, Jain-friendly, and Halal options.",
+  },
+  {
+    category: "Food & Dining",
+    featured: false,
+    q: "Are specialty restaurants included in the cruise fare?",
+    a: "Complimentary buffet and main dining rooms are fully included. Specialty dining venues (such as steakhouses, teppanyaki, and Italian restaurants) are available à la carte for an additional charge.",
+  },
+  {
+    category: "Food & Dining",
+    featured: false,
+    q: "Can we purchase beverage or liquor packages (soft or hard drinks)?",
+    a: "Yes! You can purchase unlimited drink packages covering alcoholic or non-alcoholic beverages, or simply buy individual beverages à la carte onboard.",
+  },
+  {
+    category: "Food & Dining",
+    featured: false,
+    q: "Do we need to buy drinking water on the ship?",
+    a: "No. Filtered drinking water and iced water stations are freely accessible at buffet areas and restaurants. Bottled water packages can also be purchased if preferred.",
+  },
+
+  // Booking & Payments
+  {
+    category: "Booking & Payments",
+    featured: true,
+    q: "How do I make a booking?",
+    a: "Simply share your full legal name, contact number, and email address with our team. We will send you a secure profile registration link to select your preferred stateroom and finalize your reservation.",
+  },
+  {
+    category: "Booking & Payments",
+    featured: true,
+    q: "How much is the deposit and is it refundable?",
+    a: "The deposit is $350 per person. If you cancel prior to the final payment deadline, the deposit amount is preserved as a future travel credit with our agency.",
+  },
+  {
+    category: "Booking & Payments",
+    featured: false,
+    q: "What are the cancellation policies?",
+    a: "Prior to the final payment date, your deposit is available as a future travel credit. After final payment is made, standard cruise line cancellation policies apply.",
+  },
+  {
+    category: "Booking & Payments",
+    featured: false,
+    q: "When is the last day I can book by?",
+    a: "Stateroom categories and group allocations sell out quickly. We recommend booking as soon as possible for the best rates and ideal room selection.",
+  },
+  {
+    category: "Booking & Payments",
+    featured: true,
+    q: "How do I make sure your agency is genuine and licensed?",
+    a: "Exotik Excursions is a fully registered and licensed travel agency in British Columbia, Canada with over 10 years of trusted industry service (and 3 years of BMC), accredited by IATA, CLIA, and the BBB.",
+  },
+  {
+    category: "Booking & Payments",
+    featured: false,
+    q: "Are group rates or discounts available if I bring family and friends?",
+    a: "Yes! We specialize in custom multi-room family reunions, anniversaries, and group getaways with dedicated agent support and group coordination.",
+  },
+
+  // Rooms & Suites
+  {
+    category: "Rooms & Suites",
+    featured: false,
+    q: "How is the stateroom location assigned?",
+    a: "Your specific stateroom category (Inside, Oceanview, Balcony, or Suite) and exact deck location are selected and confirmed at the time of booking.",
+  },
+  {
+    category: "Rooms & Suites",
+    featured: false,
+    q: "How big is the ship and how many guests can it hold?",
+    a: "We sail aboard modern mega-liners (such as Norwegian Bliss) with a capacity of approximately 4,000–5,000 passengers, featuring multiple pools, waterslides, Broadway theatre, and casinos.",
+  },
+  {
+    category: "Rooms & Suites",
+    featured: false,
+    q: "What general activities does the cruise ship offer?",
+    a: "Beyond BMC events, the ship offers Broadway-style stage shows, comedy clubs, trivia contests, kids' clubs, swimming pools, waterslides, and a full-service spa.",
+  },
+  {
+    category: "Rooms & Suites",
+    featured: false,
+    q: "Is WiFi available on the ship?",
+    a: "Yes, limited WiFi minutes are included on select promotional sailings, and unlimited high-speed satellite WiFi packages can be purchased onboard.",
+  },
+
+  // Kids & Family
+  {
+    category: "Kids & Family",
+    featured: true,
+    q: "Are kids free or do they get a discounted rate?",
+    a: "Children and additional guests booked as the 3rd and 4th passengers in the same stateroom qualify for substantially discounted cruise fares.",
+  },
+  {
+    category: "Kids & Family",
+    featured: true,
+    q: "Is there a minimum age limit for cruising?",
+    a: "Yes, infants must be at least 6 months of age at the time of sailing.",
+  },
+
+  // Health & Safety / Logistics
+  {
+    category: "Health & Safety",
+    featured: false,
+    q: "Do you provide wheelchair or accessibility assistance?",
+    a: "Yes! The ship is fully accessible with elevator access across all public decks and accessible staterooms. Guests are welcome to bring personal wheelchairs or mobility devices.",
+  },
+  {
+    category: "Health & Safety",
+    featured: false,
+    q: "Do you sell travel insurance and how much does it cost?",
+    a: "Yes, we provide comprehensive travel and medical insurance. Cost is determined based on total trip price, traveler age, and medical history.",
+  },
+  {
+    category: "Booking & Payments",
+    featured: true,
+    q: "Does the cruise fare include port fees, taxes, and gratuities?",
+    a: "Government taxes and port fees are included in your cruise package. Standard shipboard gratuities ($20 USD per person per day) are additional and billed to your onboard account.",
+  },
+  {
+    category: "Booking & Payments",
+    featured: false,
+    q: "Where does the ship depart from and what are the ports?",
+    a: "Departures are from major convenient homeports (such as Orlando/Port Canaveral or New York depending on the sailing date), with port stops including Nassau, Great Stirrup Cay, and the Caribbean.",
+  },
+  {
+    category: "Booking & Payments",
+    featured: false,
+    q: "Can you also book air tickets and pre/post-cruise hotel stays for us?",
+    a: "Yes! We are a full-service travel agency and can arrange your complete journey including flights, pre-cruise/post-cruise hotel stays, and ground transfers.",
+  },
+  {
+    category: "Booking & Payments",
+    featured: false,
+    q: "Can I arrive in the port city on the same morning the cruise departs?",
+    a: "We strongly advise arriving at least one day before embarkation to avoid any flight delay or luggage issues that could cause you to miss ship departure.",
+  },
+  {
+    category: "Booking & Payments",
+    featured: false,
+    q: "Do you sell shore excursions?",
+    a: "Yes, our travel experts assist in recommending and booking top-rated shore excursions at each destination port.",
+  },
 ];
 
 export const dining = {
@@ -411,8 +605,8 @@ export const heroVideoScenes = [
 ];
 
 export const contact = {
-  phone: "+1 (561) 230-3800",
-  email: "booking@masalacruise.com",
+  phone: "587-982-4004",
+  email: "bookings@exotikexcursions.com",
   copyright: "© 2025 Masala Cruise.",
   rights: "All Rights Reserved.",
   socials: {
@@ -433,7 +627,7 @@ export const aboutStats = [
 export const aboutStory = {
   eyebrow: "OUR STORY",
   title: "The Journey of Bollywood Masala Cruise",
-  body: "The Bollywood Masala Cruise was born from a passion for Bollywood culture and a love for the high seas. Our founders envisioned a unique cruise experience that blends the vibrant energy of Bollywood with the luxury and adventure of a top-tier cruise. Since our first voyage, we've been dedicated to providing an all-inclusive, immersive experience filled with joy, excitement, and cultural richness. From themed parties to exclusive activities, we bring the magic of Bollywood to life at sea.",
+  body: "The Bollywood Masala Cruise was born from a passion for Bollywood culture and a love for the high seas. Our founders envisioned a unique cruise experience that blends the vibrant energy of Bollywood with the luxury and adventure of a top-tier cruise. Since our first voyage, we've been dedicated to providing a vibrant, immersive experience filled with joy, excitement, and cultural richness. From themed parties to exclusive activities, we bring the magic of Bollywood to life at sea.",
   body2: "Over the years, we have expanded our voyages across the most scenic waters of the Caribbean, the Bahamas, Alaska, and the Mediterranean. Every journey is curated to feel like a floating festival — bringing together families, friends, and Bollywood music lovers from across the globe for a once-in-a-lifetime vacation.",
   images: [
     {
@@ -448,7 +642,7 @@ export const aboutStory = {
     },
   ],
   highlights: [
-    { title: "All-Inclusive Luxury", desc: "Premium oceanview staterooms, world-class amenities & 24/7 hospitality." },
+    { title: "Signature Luxury", desc: "Comfortable staterooms, authentic dining & warm hospitality." },
     { title: "Non-Stop Entertainment", desc: "Live Bollywood artists, celebrity DJs, garba/bhangra nights & dance workshops." },
     { title: "Authentic Multi-Cuisine Dining", desc: "Authentic Indian vegetarian, non-veg, Jain & international gourmet menus." },
     { title: "Family & Multi-Gen Friendly", desc: "Curated programs for kids, teens, adults, and seniors with complete safety." },
@@ -484,7 +678,7 @@ export const aboutCoreValues = {
     {
       icon: "ShieldCheck",
       title: "Integrity & Transparency",
-      shortDesc: "All-inclusive upfront pricing with zero hidden charges or surprise fees",
+      shortDesc: "Transparent upfront pricing with zero hidden charges or surprise fees",
       fullDesc: "We believe in honest, straightforward travel planning. What we quote includes all your core stateroom, dining, and onboard entertainment experiences.",
       tag: "100% Peace of Mind",
     },
@@ -583,12 +777,12 @@ export const aboutMilestones = [
 ];
 
 export const allPackages = [
-  { tag: "DEC 2025", title: "Caribbean Cruise", subtitle: "7 Nights | 5 Exotic Destinations", price: "$899", image: "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjBjcnVpc2UlMjBzaGlwfGVufDB8fHx8MTc4Nzc0ODIwMXww&ixlib=rb-4.1.0&q=85", features: ["Luxury Stay", "All Meals Included", "Live Shows & DJ Nights", "Shore Excursions"] },
-  { tag: "MAR 2025", title: "Hot Cruise (Bahamas)", subtitle: "5 Nights | 3 Exotic Destinations", price: "$799", image: "https://images.unsplash.com/photo-1583157048761-ac1dba033233?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwzfHxjcnVpc2UlMjBzaGlwJTIwb2NlYW58ZW58MHx8fHwxNzg3NzQ4MjA3fDA&ixlib=rb-4.1.0&q=85", features: ["Luxury Stay", "All Meals Included", "Live Shows & DJ Nights", "Shore Excursions"] },
-  { tag: "JAN 2025", title: "Alaska Cruise", subtitle: "8 Nights | 6 Glacier Ports", price: "$1099", image: "https://images.pexels.com/photos/5022610/pexels-photo-5022610.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", features: ["Glacier Views", "All Meals Included", "Live Shows & DJ Nights", "Shore Excursions"] },
-  { tag: "APR 2025", title: "Mediterranean Cruise", subtitle: "10 Nights | 7 Coastal Cities", price: "$1299", image: "https://images.unsplash.com/photo-1511316695145-4992006ffddb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwyfHxjcnVpc2UlMjBzaGlwfGVufDB8fHx8MTc4Nzc0ODI2Mnww&ixlib=rb-4.1.0&q=85", features: ["Luxury Stay", "All Meals Included", "Live Shows & DJ Nights", "Shore Excursions"] },
-  { tag: "MAY 2025", title: "Mexican Riviera", subtitle: "6 Nights | 4 Beach Destinations", price: "$849", image: "https://images.pexels.com/photos/33270055/pexels-photo-33270055.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", features: ["Luxury Stay", "All Meals Included", "Live Shows & DJ Nights", "Shore Excursions"] },
-  { tag: "NOV 2025", title: "Dubai Cruise", subtitle: "5 Nights | 3 Gulf Destinations", price: "$999", image: "https://images.unsplash.com/photo-1554254464-7046778097bf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHw0fHxjcnVpc2UlMjBzaGlwfGVufDB8fHx8MTc4Nzc0ODI2Mnww&ixlib=rb-4.1.0&q=85", features: ["Luxury Stay", "All Meals Included", "Live Shows & DJ Nights", "Shore Excursions"] },
+  { tag: "DEC 2025", title: "Caribbean Cruise", subtitle: "7 Nights | 5 Exotic Destinations", price: "$899", image: "/images/cruises/caribbean-cruise.jpg", features: ["Luxury Stay", "All Meals Included", "Live Shows & DJ Nights", "Bollywood Parties"] },
+  { tag: "MAR 2025", title: "Holi Cruise (Bahamas)", subtitle: "8 Nights | 3 Exotic Destinations", price: "$799", image: "https://images.unsplash.com/photo-1583157048761-ac1dba033233?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwzfHxjcnVpc2UlMjBzaGlwJTIwb2NlYW58ZW58MHx8fHwxNzg3NzQ4MjA3fDA&ixlib=rb-4.1.0&q=85", features: ["Luxury Stay", "All Meals Included", "Live Shows & DJ Nights", "Holi Celebrations"] },
+  { tag: "JAN 2025", title: "Alaska Cruise", subtitle: "8 Nights | 6 Glacier Ports", price: "$1099", image: "https://images.pexels.com/photos/5022610/pexels-photo-5022610.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", features: ["Glacier Views", "All Meals Included", "Live Shows & DJ Nights", "Bollywood Parties"] },
+  { tag: "APR 2025", title: "Mediterranean Cruise", subtitle: "10 Nights | 7 Coastal Cities", price: "$1299", image: "https://images.unsplash.com/photo-1511316695145-4992006ffddb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwyfHxjcnVpc2UlMjBzaGlwfGVufDB8fHx8MTc4Nzc0ODI2Mnww&ixlib=rb-4.1.0&q=85", features: ["Luxury Stay", "All Meals Included", "Live Shows & DJ Nights", "Bollywood Parties"] },
+  { tag: "MAY 2025", title: "Mexican Riviera", subtitle: "6 Nights | 4 Beach Destinations", price: "$849", image: "https://images.pexels.com/photos/33270055/pexels-photo-33270055.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", features: ["Luxury Stay", "All Meals Included", "Live Shows & DJ Nights", "Bollywood Parties"] },
+  { tag: "NOV 2025", title: "Dubai Cruise", subtitle: "5 Nights | 3 Gulf Destinations", price: "$999", image: "https://images.unsplash.com/photo-1554254464-7046778097bf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHw0fHxjcnVpc2UlMjBzaGlwfGVufDB8fHx8MTc4Nzc0ODI2Mnww&ixlib=rb-4.1.0&q=85", features: ["Luxury Stay", "All Meals Included", "Live Shows & DJ Nights", "Bollywood Parties"] },
 ];
 
 export const aboutIntro = aboutStory;

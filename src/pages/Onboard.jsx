@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import {
   Footprints, Music2, Dices, Drama, PartyPopper, Mic, Gamepad2,
   ChefHat, Waves, Sunset, Sparkles, Users, Star, Heart, Camera,
-  Clock, MapPin, Shield, Wifi, BedDouble, Coffee, Wind
+  Clock, MapPin, Wifi, BedDouble, Coffee, Wind
 } from "lucide-react";
 
 /* ─── Inline lazy image with shimmer ─── */
@@ -43,7 +43,7 @@ const Stars = ({ n = 5 }) => (
 const activities = [
   { icon: "🪷", name: "Mehndi Night", desc: "Adorn your hands with beautiful henna art and bond with fellow travellers." },
   { icon: "🎵", name: "Antakshari", desc: "Sing your heart out in this beloved Bollywood song competition." },
-  { icon: "🎲", name: "Tambola", desc: "Try your luck with exciting prizes up for grabs every evening." },
+  { icon: "🎲", name: "Tambola", desc: "Try your luck with exciting prizes up for grabs during scheduled game sessions." },
   { icon: "💃", name: "Dance Showcase", desc: "Watch incredible choreographed Bollywood performances by talented artists." },
   { icon: "🎉", name: "Bollywood Party", desc: "Dance the night away under the stars to your favourite Bollywood beats." },
   { icon: "🎤", name: "Open Mic & Karaoke", desc: "Step on stage and show off your singing talent in front of a live crowd." },
@@ -88,13 +88,12 @@ const diningOptions = [
 
 const amenities = [
   { icon: BedDouble, title: "Luxury Cabins", desc: "Spacious inside rooms, balcony rooms, and premium suites with ocean views." },
-  { icon: Wifi, title: "Onboard WiFi", desc: "Stay connected with high-speed internet available across the ship." },
-  { icon: Coffee, title: "24/7 Room Service", desc: "Cravings at midnight? Our team is always ready to serve you." },
-  { icon: Shield, title: "Medical Centre", desc: "Fully equipped medical facility with doctors and nurses on duty round the clock." },
+  { icon: Wifi, title: "Onboard WiFi", desc: "Limited WiFi minutes included on select sailings, with options to upgrade to unlimited plans." },
+  { icon: Coffee, title: "Room Service", desc: "Provided directly by the cruise ship (additional charges apply per cruise line policy)." },
   { icon: Wind, title: "Spa & Wellness", desc: "Rejuvenate with massages, yoga sessions, and a relaxing steam room." },
   { icon: Camera, title: "Photo & Video", desc: "Professional photographers capture your memories throughout the voyage." },
   { icon: Users, title: "Kids' Club", desc: "Dedicated activities and supervision for children of all ages." },
-  { icon: MapPin, title: "Shore Excursions", desc: "Guided tours and experiences at every destination port we visit." },
+  { icon: MapPin, title: "Shore Excursions", desc: "Explore ports on your own — book excursions directly with the cruise line or recommended suppliers." },
 ];
 
 const schedule = [
@@ -104,7 +103,7 @@ const schedule = [
   { time: "1:00 PM", event: "Lunch Service", icon: "🍽️", type: "dining" },
   { time: "3:00 PM", event: "Tambola / Antakshari", icon: "🎲", type: "fun" },
   { time: "5:30 PM", event: "Sunset Cocktail Hour", icon: "🌇", type: "social" },
-  { time: "7:30 PM", event: "Gala Dinner & Live Music", icon: "🎶", type: "dining" },
+  { time: "7:30 PM", event: "Gala Dinner & Bollywood Melodies", icon: "🎶", type: "dining" },
   { time: "9:30 PM", event: "Bollywood Dance Party / Show", icon: "💃", type: "fun" },
   { time: "11:30 PM", event: "Late Night Chai & Snacks", icon: "🍹", type: "dining" },
 ];
@@ -119,7 +118,7 @@ const typeColors = {
 const testimonials = [
   { name: "Sanjay & Kavitha", avatar: "https://i.pravatar.cc/80?img=15", rating: 5, text: "The Bollywood party on night 3 was absolutely electric. The DJ kept the crowd going till 2 AM! Best cruise experience we've ever had." },
   { name: "Priya Mehta", avatar: "https://i.pravatar.cc/80?img=47", rating: 5, text: "Mehndi night was so beautifully organised. Made so many friends. The food was out of this world — especially the chai bar!" },
-  { name: "Rohan Verma", avatar: "https://i.pravatar.cc/80?img=12", rating: 5, text: "Tambola at sea — who knew?! We won a prize too. Every evening had something amazing planned. Truly unforgettable." },
+  { name: "Rohan Verma", avatar: "https://i.pravatar.cc/80?img=12", rating: 5, text: "Tambola at sea — who knew?! We won a prize too. The curated entertainment lineup was amazing. Truly unforgettable." },
   { name: "Ananya S.", avatar: "https://i.pravatar.cc/80?img=25", rating: 5, text: "Sunrise yoga on the deck with the ocean breeze is something I'll never forget. Perfectly balanced between relaxation and non-stop fun." },
   { name: "Deepak Nair", avatar: "https://i.pravatar.cc/80?img=11", rating: 5, text: "The live comedy show had us in tears of laughter. Everything was so well curated — felt like a 5-star Bollywood festival at sea!" },
   { name: "Meera Iyer", avatar: "https://i.pravatar.cc/80?img=44", rating: 5, text: "My parents joined us and they absolutely loved the garba on deck. The crew made every single person feel so special and welcome." },
@@ -253,12 +252,12 @@ const Onboard = () => {
                 Nights at Sea Like<br />You've Never Seen Before
               </h2>
               <p className="text-[15px] text-white/70 leading-relaxed mb-7">
-                As the sun dips below the horizon, the ship transforms into an electric celebration of Bollywood. From live bands 
-                playing your favourite tracks to breathtaking dance performances, mehndi ceremonies, garba on the deck, and DJ nights 
-                that go past midnight — our evenings are nothing short of legendary.
+                As the sun dips below the horizon, the ship comes alive with vibrant Bollywood entertainment. From energetic DJ 
+                sets spinning your favourite tracks to breathtaking dance performances, mehndi celebrations, garba on the deck, and themed 
+                parties — our curated events create an unforgettable celebration at sea.
               </p>
               <ul className="space-y-3 mb-8">
-                {["Live Bollywood Band Every Evening", "Guest DJ Sets & Dance Floor", "Mehndi & Sangeet Night", "Garba Under the Open Sky", "Comedy & Talent Shows", "Special Theme Nights"].map((f) => (
+                {["Bollywood DJ Nights & Dance Floor", "Special Guest Performances", "Mehndi & Sangeet Celebrations", "Garba Under the Open Sky", "Comedy & Talent Shows", "Themed Bollywood Parties"].map((f) => (
                   <li key={f} className="flex items-center gap-3 text-[14px] text-white/80">
                     <span className="w-5 h-5 rounded-full bg-amber-400/20 text-amber-300 flex items-center justify-center shrink-0 text-[10px] font-black">✓</span>
                     {f}

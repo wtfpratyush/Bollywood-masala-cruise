@@ -121,9 +121,9 @@ const CruiseDetailModal = ({ cruise, onClose, onBook }) => {
 
           {/* ── 1. Overview ── */}
           <div id="cruise-section-Overview" className="px-5 sm:px-8 py-8 border-b border-gray-100">
-            <SectionTitle label="WHAT YOU GET" title="An All-Inclusive Cruise Experience" />
+            <SectionTitle label="WHAT YOU GET" title="A Complete Cruise Experience" />
             <p className="text-[15px] text-gray-600 text-center max-w-2xl mx-auto leading-relaxed mb-8">
-              When we say all-inclusive, we mean it! Whatever package you sign up for ensures you enjoy every moment worry-free. Enjoy sumptuous meals, unwind in luxurious accommodations, and have fun with endless entertainment and activities. Get ready to make unforgettable memories—everything's taken care of, so you can simply relax and enjoy!
+              Whatever package you choose ensures you enjoy every moment worry-free. Enjoy delicious meals, unwind in comfortable accommodations, and have fun with non-stop Bollywood entertainment, themed DJ parties, and daytime activities!
             </p>
             {/* Included icons grid */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
@@ -293,7 +293,7 @@ const CruiseDetailModal = ({ cruise, onClose, onBook }) => {
             <div className="absolute inset-0 bg-black/70" />
             <div className="relative z-10">
               <h3 className="text-[26px] font-black text-white mb-2">Book Now!</h3>
-              <p className="text-[14px] text-white/80 mb-6">Ready for the adventure of a lifetime? Book your all-inclusive cruise now and sail into unforgettable experiences!</p>
+              <p className="text-[14px] text-white/80 mb-6">Ready for the adventure of a lifetime? Reserve your cruise package now and sail into unforgettable experiences!</p>
               <button
                 onClick={onBook}
                 className="rounded-xl bg-[#f5a623] px-8 py-3.5 text-[16px] font-bold text-white hover:bg-[#e5981a] transition-all shadow-xl"

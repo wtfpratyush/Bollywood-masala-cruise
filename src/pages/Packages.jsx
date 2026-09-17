@@ -38,7 +38,7 @@ const Packages = () => {
               Featured Cruise Packages
             </h2>
             <p className="mt-3 text-[15px] text-gray-600 leading-relaxed">
-              Reserve your stateroom for our upcoming signature sailings. All-inclusive luxury, authentic Indian multi-cuisine dining, and non-stop Bollywood entertainment.
+              Reserve your stateroom for our upcoming signature sailings. Comfortable staterooms, authentic Indian multi-cuisine dining, and non-stop Bollywood entertainment.
             </p>
           </div>
 
@@ -74,7 +74,7 @@ const Packages = () => {
                         {c.title}
                       </h3>
                       <span className="text-[12px] font-semibold text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full whitespace-nowrap">
-                        {c.subtitle.split("|")[0]?.trim() || "All-Inclusive"}
+                        {c.subtitle.split("|")[0]?.trim() || "Featured Voyage"}
                       </span>
                     </div>
                     <p className="text-[14px] text-gray-500 mb-5">{c.subtitle}</p>

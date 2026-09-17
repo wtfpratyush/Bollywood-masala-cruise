@@ -197,11 +197,9 @@ const CruiseDetail = () => {
 
         {/* ── 1. OVERVIEW ── */}
         <section id="cs-Overview" className="py-14 border-b border-gray-100">
-          <SectionHeading label="WHAT YOU GET" title="An All-Inclusive Cruise Experience" />
+          <SectionHeading label="WHAT YOU GET" title="A Complete Cruise Experience" />
           <p className="text-[15px] text-gray-600 text-center max-w-2xl mx-auto leading-relaxed mb-10">
-            When we say all-inclusive, we mean it! Whatever package you sign up for ensures you enjoy every moment worry-free.
-            Enjoy sumptuous meals, unwind in luxurious accommodations, and have fun with endless entertainment and activities.
-            Get ready to make unforgettable memories—everything's taken care of, so you can simply relax and enjoy!
+            Enjoy delicious meals, unwind in comfortable staterooms, and immerse yourself in unforgettable Bollywood entertainment, DJ nights, and daytime activities. Everything is curated so you can simply relax and make memories!
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 mb-10">
             {[
@@ -449,7 +447,7 @@ const CruiseDetail = () => {
         <div className="relative z-10 max-w-xl mx-auto px-4">
           <h2 className="text-[28px] sm:text-[34px] font-black text-white mb-3">Book Now!</h2>
           <p className="text-[14px] text-white/80 mb-7 leading-relaxed">
-            Ready for the adventure of a lifetime? Book your all-inclusive cruise now and sail into unforgettable experiences!
+            Ready for the adventure of a lifetime? Reserve your cruise package now and sail into unforgettable experiences!
           </p>
           <button
             onClick={book}
