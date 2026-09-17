@@ -1,8 +1,10 @@
-/* Global app styles - no center alignment for natural reading flow */
+html, body, #root, .App {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
 
 .App {
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
 /* Custom scrollbar */

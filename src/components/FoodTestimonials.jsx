@@ -13,11 +13,13 @@ const FoodTestimonials = () => {
   const [active, setActive] = useState(null);
 
   return (
-    <section id="testimonials" className="bg-white pb-14">
+    <section id="testimonials" className="bg-white pb-14 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-6">
-          {/* Dining */}
-          <div className="relative rounded-3xl overflow-hidden min-h-[300px] flex">
+        <div className="grid lg:grid-cols-2 gap-6 items-stretch">
+          
+          {/* Dining Banner */}
+          <div className="relative rounded-3xl overflow-hidden min-h-[320px] sm:min-h-[340px] flex flex-col justify-center">
+            {/* Background Image & Multi-layer Overlay for complete text readability on all screens */}
             <div className="absolute inset-0">
               <img
                 src={dining.image}
@@ -26,25 +28,40 @@ const FoodTestimonials = () => {
                 decoding="async"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#2d1b8f]/95 via-[#2d1b8f]/80 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-[#1c1055]/95 via-[#2d1b8f]/90 to-[#2d1b8f]/60 sm:to-transparent" />
             </div>
-            <div className="relative z-10 p-7 lg:p-9 flex flex-col justify-center max-w-md">
-              <p className="text-[12px] font-bold tracking-[0.15em] text-[#f5a623] mb-2">FOOD &amp; DINING</p>
-              <h3 className="text-[26px] sm:text-[30px] font-bold text-white leading-tight">{dining.title}</h3>
-              <p className="text-[14px] text-white/80 mt-3 leading-relaxed">{dining.desc}</p>
-              <button className="mt-6 self-start rounded-lg bg-[#f5a623] px-6 py-3 text-[15px] font-semibold text-white hover:bg-[#e5981a] transition-all hover:-translate-y-0.5">
+
+            {/* Content Container - Constrained and wrapped safely for phone screens */}
+            <div className="relative z-10 p-6 sm:p-8 lg:p-9 flex flex-col justify-center max-w-full sm:max-w-md">
+              <p className="text-[12px] font-bold tracking-[0.15em] text-[#f5a623] mb-2 uppercase">
+                FOOD &amp; DINING
+              </p>
+              <h3 className="text-[24px] sm:text-[28px] lg:text-[30px] font-bold text-white leading-tight">
+                {dining.title}
+              </h3>
+              <p className="text-[13.5px] sm:text-[14px] text-white/90 mt-3 leading-relaxed break-words">
+                {dining.desc}
+              </p>
+              <Link
+                to="/onboard"
+                className="mt-6 self-start inline-flex items-center justify-center rounded-xl bg-[#f5a623] px-6 py-3 text-[14px] sm:text-[15px] font-bold text-white hover:bg-[#e5981a] shadow-md transition-all hover:-translate-y-0.5 active:scale-95"
+              >
                 Explore Dining
-              </button>
+              </Link>
             </div>
           </div>
 
           {/* Testimonials */}
-          <div className="bg-[#f6f7fc] rounded-3xl p-5 sm:p-7 lg:p-8 flex flex-col justify-between">
+          <div className="bg-[#f6f7fc] rounded-3xl p-5 sm:p-7 lg:p-8 flex flex-col justify-between overflow-hidden">
             <div>
               <div className="flex items-center justify-between mb-4 sm:mb-6">
                 <div>
-                  <p className="text-[12px] font-bold tracking-[0.15em] text-[#4b3df5] mb-1">TESTIMONIALS</p>
-                  <h3 className="text-[22px] sm:text-[28px] font-bold text-[#1a1a3a]">What Our Guests Have to Say</h3>
+                  <p className="text-[12px] font-bold tracking-[0.15em] text-[#4b3df5] mb-1 uppercase">
+                    TESTIMONIALS
+                  </p>
+                  <h3 className="text-[22px] sm:text-[26px] font-bold text-[#1a1a3a] leading-snug">
+                    What Our Guests Have to Say
+                  </h3>
                 </div>
                 {/* Mobile swipe hint badge */}
                 <span className="sm:hidden text-[11px] font-semibold text-[#4b3df5] bg-[#eeeafe] px-2.5 py-1 rounded-full whitespace-nowrap">
@@ -53,15 +70,15 @@ const FoodTestimonials = () => {
               </div>
 
               {/* Swipable on mobile, grid on tablet/desktop */}
-              <div className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth gap-3.5 pb-2 -mx-2 px-2 hide-scrollbar sm:grid sm:grid-cols-3 sm:overflow-visible sm:pb-0 sm:mx-0 sm:px-0 sm:gap-4">
+              <div className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth gap-3 pb-2 hide-scrollbar sm:grid sm:grid-cols-3 sm:overflow-visible sm:pb-0 sm:gap-4">
                 {testimonials.slice(0, 3).map((t, i) => (
                   <div
                     key={i}
-                    className="shrink-0 w-[84%] sm:w-auto snap-center bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition-all"
+                    className="shrink-0 w-[82%] sm:w-auto snap-center bg-white rounded-2xl overflow-hidden shadow-xs border border-gray-100 flex flex-col hover:shadow-md transition-all"
                   >
                     <button
                       onClick={() => setActive(t)}
-                      className="relative block w-full aspect-video group overflow-hidden"
+                      className="relative block w-full aspect-video group overflow-hidden cursor-pointer"
                       aria-label={`Watch testimonial by ${t.name}`}
                     >
                       <img
