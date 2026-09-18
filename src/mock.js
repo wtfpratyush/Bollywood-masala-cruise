@@ -75,9 +75,9 @@ export const popularCruises = [
         { day: "Day 8", port: "Orlando, Port Canaveral", image: "https://images.unsplash.com/photo-1566438480900-0609be27a4be?auto=format&fit=crop&w=400&q=75" },
       ],
       rooms: [
-        { name: "Inside Room", desc: "Cozy and comfortable, the inside room offers all essential amenities for a relaxing stay.", image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=600&q=75" },
-        { name: "Balcony Room", desc: "Enjoy stunning ocean views and fresh sea breezes from your private balcony.", image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=75" },
-        { name: "Club Balcony Suite", desc: "Priority boarding and departure, dedicated entertainment seating, and more.", image: "https://images.unsplash.com/photo-1631049552057-403cdb8f0658?auto=format&fit=crop&w=600&q=75" },
+        { name: "Inside Room", desc: "Cozy and comfortable, the inside room offers all essential amenities for a relaxing stay.", image: "/images/rooms/inside-room.png" },
+        { name: "Balcony Room", desc: "Enjoy stunning ocean views and fresh sea breezes from your private balcony.", image: "/images/rooms/balcony-room.png" },
+        { name: "Club Balcony Suite", desc: "Priority boarding and departure, dedicated entertainment seating, and more.", image: "/images/rooms/club-balcony-suite.png" },
       ],
       activities: [
         { icon: "🪷", name: "Mehndi Night", desc: "Adorn your hands with beautiful henna designs" },
