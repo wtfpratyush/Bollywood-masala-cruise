@@ -124,7 +124,7 @@ export const popularCruises = [
     details: {
       dates: "MAR 13, 2027 – MAR 21, 2027",
       ship: "Norwegian Bliss",
-      banner: "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=1200&q=75",
+      banner: "/images/cruises/holi-cruise-banner.png",
       tagline: "An unforgettable 8-night voyage of fun, excitement, and Bollywood magic aboard the Norwegian Bliss — celebrating Holi at sea!",
       included: ["Meals", "Accommodation", "Entertainment", "Activities"],
       itinerary: [
@@ -139,9 +139,9 @@ export const popularCruises = [
         { day: "Day 9", port: "New York City, USA", image: "https://images.unsplash.com/photo-1490644658840-3f2e3f8c5625?auto=format&fit=crop&w=400&q=75" },
       ],
       rooms: [
-        { name: "Inside Room", desc: "Cozy and comfortable, the inside room offers all essential amenities for a relaxing stay.", image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=600&q=75" },
-        { name: "Balcony Room", desc: "Enjoy stunning ocean views and fresh sea breezes from your private balcony.", image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=75" },
-        { name: "Club Balcony Suite", desc: "Priority boarding and departure, dedicated entertainment seating, and more.", image: "https://images.unsplash.com/photo-1631049552057-403cdb8f0658?auto=format&fit=crop&w=600&q=75" },
+        { name: "Inside Room", desc: "Cozy and comfortable, the inside room offers all essential amenities for a relaxing stay.", price: "USD 1225 pp", image: "/images/rooms/inside-room.png" },
+        { name: "Balcony Room", desc: "Enjoy stunning ocean views and fresh sea breezes from your private balcony", price: "USD 1475 pp", image: "/images/rooms/balcony-room.png" },
+        { name: "Club Balcony Suite", desc: "Priority boarding and departure, dedicated entertainment seating, and more", price: "USD 1600 pp", image: "/images/rooms/club-balcony-suite.png" },
       ],
       activities: [
         { icon: "🌺", name: "Pool Deck Garba", desc: "Dance garba under the open sky on the pool deck" },

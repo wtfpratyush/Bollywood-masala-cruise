@@ -243,7 +243,7 @@ const CruiseDetail = () => {
         style={
           cruise.title === "Holi Cruise"
             ? {
-                backgroundImage: `url('https://images.unsplash.com/photo-1547153760-18fc86324498?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600')`,
+                backgroundImage: `url('/images/cruises/holi-itinerary-bg.jpg')`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }
@@ -327,10 +327,15 @@ const CruiseDetail = () => {
                 </div>
                 <div className="flex-1 flex flex-col justify-center p-7 sm:p-10">
                   <h3 className="text-[22px] font-black text-[#1a1a3a] mb-3">{room.name}</h3>
-                  <p className="text-[14px] text-gray-500 leading-relaxed mb-6">{room.desc}</p>
+                  <p className="text-[14px] text-gray-500 leading-relaxed mb-3">{room.desc}</p>
+                  {room.price && (
+                    <p className="text-[14px] font-medium text-gray-600 mb-6">
+                      Pricing Starts From <span className="font-black text-[#1a1a3a]">{room.price}</span>
+                    </p>
+                  )}
                   <button
                     onClick={book}
-                    className="self-start rounded-xl bg-[#f5a623] px-6 py-3 text-[14px] font-bold text-white hover:bg-[#e5981a] transition-all"
+                    className="self-start rounded-xl bg-[#f5a623] px-6 py-3 text-[14px] font-bold text-white hover:bg-[#e5981a] transition-all shadow-md hover:shadow-lg"
                   >
                     Request Pricing
                   </button>

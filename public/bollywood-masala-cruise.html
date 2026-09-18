@@ -1060,7 +1060,7 @@
       padding: 3.5rem 0;
     }
     .itinerary-section.holi-bg {
-      background-image: url('https://images.unsplash.com/photo-1547153760-18fc86324498?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600');
+      background-image: url('/images/cruises/holi-itinerary-bg.jpg');
       background-size: cover;
       background-position: center;
     }
@@ -2900,7 +2900,7 @@
         dates: "MAR 13, 2027 – MAR 21, 2027",
         ship: "Norwegian Bliss",
         price: "$799",
-        banner: "https://images.unsplash.com/photo-1548574505-5e239809ee19?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
+        banner: "/images/cruises/holi-cruise-banner.png",
         tagline: "An unforgettable week of fun, excitement, and Bollywood magic — celebrating Holi at sea!",
         itineraryBg: "holi-bg",
         itinerary: [
@@ -2915,9 +2915,9 @@
           { day: "Day 9", port: "New York City, USA", img: "https://images.unsplash.com/photo-1490644658840-3f2e3f8c5625?crop=entropy&cs=srgb&fm=jpg&w=300" }
         ],
         rooms: [
-          { name: "Inside Room", desc: "Cozy and comfortable, offering all essential amenities for a relaxing stay.", img: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?crop=entropy&cs=srgb&fm=jpg&w=600" },
-          { name: "Balcony Room", desc: "Enjoy stunning ocean views and fresh sea breezes from your private veranda.", img: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?crop=entropy&cs=srgb&fm=jpg&w=600" },
-          { name: "Club Balcony Suite", desc: "Priority boarding, dedicated entertainment seating, and spacious luxury.", img: "https://images.unsplash.com/photo-1631049552057-403cdb8f0658?crop=entropy&cs=srgb&fm=jpg&w=600" }
+          { name: "Inside Room", desc: "Cozy and comfortable, the inside room offers all essential amenities for a relaxing stay.", price: "USD 1225 pp", img: "/images/rooms/inside-room.png" },
+          { name: "Balcony Room", desc: "Enjoy stunning ocean views and fresh sea breezes from your private balcony", price: "USD 1475 pp", img: "/images/rooms/balcony-room.png" },
+          { name: "Club Balcony Suite", desc: "Priority boarding and departure, dedicated entertainment seating, and more", price: "USD 1600 pp", img: "/images/rooms/club-balcony-suite.png" }
         ]
       }
     };
@@ -3113,7 +3113,8 @@
                   </div>
                   <div style="padding: 1.75rem;">
                     <h3 style="font-size: 1.375rem; font-weight: 800; color: var(--text-dark);">${room.name}</h3>
-                    <p style="font-size: 0.9375rem; color: var(--text-muted); margin: 0.5rem 0 1.25rem;">${room.desc}</p>
+                    <p style="font-size: 0.9375rem; color: var(--text-muted); margin: 0.5rem 0 ${room.price ? '0.5rem' : '1.25rem'};">${room.desc}</p>
+                    ${room.price ? `<p style="font-size: 0.9375rem; font-weight: 600; color: #4b5563; margin-bottom: 1.25rem;">Pricing Starts From <strong style="font-weight: 800; color: var(--text-dark);">${room.price}</strong></p>` : ''}
                     <button class="btn btn-secondary" onclick="showToast('Pricing Request', 'Thank you! An agent will call you.')">Request Pricing</button>
                   </div>
                 </div>

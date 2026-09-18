@@ -197,7 +197,12 @@ const CruiseDetailModal = ({ cruise, onClose, onBook }) => {
                     </div>
                     <div className="flex-1 flex flex-col justify-center p-6 sm:p-8">
                       <h4 className="text-[20px] font-black text-[#1a1a3a] mb-2">{room.name}</h4>
-                      <p className="text-[14px] text-gray-500 leading-relaxed mb-5">{room.desc}</p>
+                      <p className="text-[14px] text-gray-500 leading-relaxed mb-2">{room.desc}</p>
+                      {room.price && (
+                        <p className="text-[13px] font-medium text-gray-600 mb-4">
+                          Pricing Starts From <span className="font-black text-[#1a1a3a]">{room.price}</span>
+                        </p>
+                      )}
                       <button onClick={onBook} className="self-start rounded-xl bg-[#f5a623] px-5 py-2.5 text-[13px] font-bold text-white hover:bg-[#e5981a] transition-all">
                         Request Pricing
                       </button>
