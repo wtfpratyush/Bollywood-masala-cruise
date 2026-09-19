@@ -14,7 +14,7 @@ const ChatWidgets = () => {
     <>
       {/* WhatsApp float */}
       <a
-        href="https://wa.me/15612303800"
+        href="https://wa.me/15879824004"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-24 right-5 z-40 w-14 h-14 rounded-full bg-[#25d366] shadow-lg flex items-center justify-center hover:scale-105 transition-transform"
