@@ -1,23 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Phone, Mail, Clock } from "lucide-react";
 import Layout from "../components/Layout";
 import PageBanner from "../components/PageBanner";
 import { contact } from "../mock";
+import QuickQuoteForm from "../components/QuickQuoteForm";
 
 const Contact = () => {
-  useEffect(() => {
-    const scriptId = "msgsndr-form-embed";
-    const existingScript = document.getElementById(scriptId);
-    if (existingScript) {
-      existingScript.remove();
-    }
-    const script = document.createElement("script");
-    script.id = scriptId;
-    script.src = "https://link.msgsndr.com/js/form_embed.js";
-    script.async = true;
-    document.body.appendChild(script);
-  }, []);
-
   const info = [
     { icon: Phone, label: "Call Us", value: contact.phone, href: `tel:${contact.phone}` },
     { icon: Mail, label: "Email Us", value: contact.email, href: `mailto:${contact.email}` },
@@ -34,9 +22,9 @@ const Contact = () => {
       />
 
       <section className="bg-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-14">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           {/* Info - appears below form on mobile, on left on desktop */}
-          <div className="order-2 lg:order-1">
+          <div className="order-2 lg:order-1 lg:col-span-5">
             <p className="text-[13px] font-bold tracking-[0.15em] text-[#4b3df5] mb-3">GET IN TOUCH</p>
             <h2 className="text-[30px] sm:text-[36px] font-extrabold text-[#1a1a3a] leading-tight">We'd Love to Hear From You</h2>
             <p className="mt-4 text-[16px] text-gray-600 leading-relaxed">
@@ -70,26 +58,10 @@ const Contact = () => {
           </div>
 
           {/* Form - appears above info on mobile, on right on desktop */}
-          <div className="order-1 lg:order-2 bg-[#f6f7fc] rounded-3xl p-4 sm:p-6 border border-gray-100 min-h-[640px] flex flex-col justify-center overflow-hidden">
-            <iframe
-              src="https://api.leadconnectorhq.com/widget/form/8LYQHo3CuLbis8cNAyyD"
-              style={{ width: "100%", height: "100%", minHeight: "626px", border: "none", borderRadius: "0px" }}
-              id="inline-8LYQHo3CuLbis8cNAyyD"
-              data-layout="{'id':'INLINE'}"
-              data-trigger-type="alwaysShow"
-              data-trigger-value=""
-              data-activation-type="alwaysActivated"
-              data-activation-value=""
-              data-deactivation-type="neverDeactivate"
-              data-deactivation-value=""
-              data-form-name="Contact form new website"
-              data-height="626"
-              data-layout-iframe-id="inline-8LYQHo3CuLbis8cNAyyD"
-              data-form-id="8LYQHo3CuLbis8cNAyyD"
-              data-cookie-consent="true"
-              data-cookie-consent-provider="auto"
-              title="Contact form new website"
-            />
+          <div className="order-1 lg:order-2 lg:col-span-7 flex lg:justify-end">
+            <div className="w-full max-w-[620px]">
+              <QuickQuoteForm />
+            </div>
           </div>
         </div>
       </section>

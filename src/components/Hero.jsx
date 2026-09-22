@@ -1,49 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { ShieldCheck, Ticket, Headset, ChefHat, BedDouble, Music, Users, Sparkles, HeartHandshake, UserCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { heroFeatures, featureStrip, heroImage } from "../mock";
+import QuickQuoteForm from "./QuickQuoteForm";
 
 const iconMap = { ShieldCheck, Ticket, Headset, Sparkles, HeartHandshake, UserCheck };
 const featureIconMap = { ChefHat, BedDouble, Music, Users };
-
-const QuoteForm = () => {
-  useEffect(() => {
-    const scriptId = "msgsndr-form-embed";
-    const existingScript = document.getElementById(scriptId);
-    if (existingScript) {
-      existingScript.remove();
-    }
-    const script = document.createElement("script");
-    script.id = scriptId;
-    script.src = "https://link.msgsndr.com/js/form_embed.js";
-    script.async = true;
-    document.body.appendChild(script);
-  }, []);
-
-  return (
-    <div className="w-full bg-white rounded-2xl shadow-2xl shadow-indigo-900/10 p-2 sm:p-4 border border-gray-100 min-h-[640px] flex flex-col justify-center overflow-hidden">
-      <iframe
-        src="https://api.leadconnectorhq.com/widget/form/8LYQHo3CuLbis8cNAyyD"
-        style={{ width: "100%", height: "100%", minHeight: "626px", border: "none", borderRadius: "0px" }}
-        id="inline-8LYQHo3CuLbis8cNAyyD"
-        data-layout="{'id':'INLINE'}"
-        data-trigger-type="alwaysShow"
-        data-trigger-value=""
-        data-activation-type="alwaysActivated"
-        data-activation-value=""
-        data-deactivation-type="neverDeactivate"
-        data-deactivation-value=""
-        data-form-name="Contact form new website"
-        data-height="626"
-        data-layout-iframe-id="inline-8LYQHo3CuLbis8cNAyyD"
-        data-form-id="8LYQHo3CuLbis8cNAyyD"
-        data-cookie-consent="true"
-        data-cookie-consent-provider="auto"
-        title="Contact form new website"
-      />
-    </div>
-  );
-};
 
 const Hero = () => {
   return (
@@ -60,12 +22,12 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-white/30" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 lg:pt-14 pb-6">
-        <div className="grid lg:grid-cols-2 gap-8 items-center relative">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 lg:pt-12 pb-6">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center relative">
           {/* Left text */}
-          <div className="reveal z-10">
+          <div className="reveal z-10 lg:col-span-6 xl:col-span-6">
             <p className="text-[13px] font-bold tracking-[0.15em] text-[#4b3df5] mb-3">WELCOME ABOARD</p>
-            <h1 className="text-[40px] sm:text-[52px] lg:text-[56px] leading-[1.05] font-extrabold text-[#1a1a3a]">
+            <h1 className="text-[40px] sm:text-[50px] lg:text-[54px] leading-[1.05] font-extrabold text-[#1a1a3a]">
               A Signature<br />
               <span className="text-[#4b3df5]">Bollywood Cruise</span> Experience
             </h1>
@@ -73,7 +35,7 @@ const Hero = () => {
               Sail into a world of luxury, entertainment, and unforgettable moments. Everything you need for the perfect getaway — all in one place.
             </p>
 
-            <div className="mt-7 flex flex-wrap gap-6">
+            <div className="mt-7 flex flex-wrap gap-5 sm:gap-6">
               {heroFeatures.map((f) => {
                 const Icon = iconMap[f.icon];
                 return (
@@ -93,7 +55,7 @@ const Hero = () => {
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 to="/contact"
-                className="inline-flex items-center rounded-lg bg-[#f5a623] px-7 py-3.5 text-[16px] font-semibold text-white shadow-lg shadow-orange-500/25 hover:bg-[#e5981a] transition-all hover:-translate-y-0.5"
+                className="inline-flex items-center rounded-xl bg-[#f5a623] px-8 py-3.5 text-[16px] font-bold text-white shadow-lg shadow-orange-500/25 hover:bg-[#e5981a] transition-all hover:-translate-y-0.5"
               >
                 Request Pricing
               </Link>
@@ -101,9 +63,9 @@ const Hero = () => {
           </div>
 
           {/* Right form */}
-          <div className="relative flex lg:justify-end">
-            <div className="w-full lg:max-w-[400px]">
-              <QuoteForm />
+          <div className="relative flex lg:justify-end lg:col-span-6 xl:col-span-6">
+            <div className="w-full max-w-[560px]">
+              <QuickQuoteForm />
             </div>
           </div>
         </div>
