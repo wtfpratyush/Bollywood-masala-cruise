@@ -567,6 +567,7 @@ export const dining = {
 };
 
 export const heroImage = "/images/hero-cruise-ship.jpg";
+export const heroImageMobile = "/images/hero-cruise-ship-mobile.jpg";
 export const heroVideo = "/videos/hero-passengers.mp4";
 export const heroVideoFallback = "https://assets.mixkit.co/videos/22597/22597-720.mp4";
 

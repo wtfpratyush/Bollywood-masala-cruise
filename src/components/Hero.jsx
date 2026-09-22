@@ -11,7 +11,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import { heroFeatures, featureStrip, heroImage } from "../mock";
+import { heroFeatures, featureStrip, heroImage, heroImageMobile } from "../mock";
 import QuickQuoteForm from "./QuickQuoteForm";
 
 const iconMap = {
@@ -31,13 +31,16 @@ const featureIconMap = {
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-[640px] lg:min-h-[720px] flex flex-col justify-between overflow-hidden">
-      {/* Background Image - 100% Vivid, unobstructed cruise ship */}
+      {/* Background Image - Responsive (Portrait orientation on phone, Landscape on desktop) */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <img
-          src={heroImage}
-          alt="Luxury Bollywood Masala Cruise Ship sailing at sunset"
-          className="w-full h-full object-cover object-[center_45%] sm:object-[center_50%] lg:object-[center_50%] select-none"
-        />
+        <picture>
+          <source media="(min-width: 640px)" srcSet={heroImage} />
+          <img
+            src={heroImageMobile}
+            alt="Luxury Bollywood Masala Cruise Ship sailing at sunset"
+            className="w-full h-full object-cover object-[center_35%] sm:object-[center_50%] select-none"
+          />
+        </picture>
       </div>
 
       {/* Main Hero Content Area */}
