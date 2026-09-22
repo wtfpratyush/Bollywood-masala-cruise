@@ -15,10 +15,10 @@ const QuickQuoteForm = ({ className = "" }) => {
   }, []);
 
   return (
-    <div className={`w-full bg-white rounded-3xl shadow-2xl shadow-indigo-900/10 p-2 sm:p-4 border border-gray-100 min-h-[640px] flex flex-col justify-center overflow-hidden ${className}`}>
+    <div className={`w-full bg-white rounded-3xl shadow-2xl shadow-indigo-900/10 p-2 sm:p-4 border border-gray-100 min-h-[640px] flex flex-col justify-center overflow-hidden transition-all ${className}`}>
       <iframe
         src="https://api.leadconnectorhq.com/widget/form/8LYQHo3CuLbis8cNAyyD"
-        style={{ width: "100%", height: "100%", minHeight: "626px", border: "none", borderRadius: "0px" }}
+        style={{ width: "100%", height: "100%", minHeight: "626px", border: "none", borderRadius: "0px", display: "block" }}
         id="inline-8LYQHo3CuLbis8cNAyyD"
         data-layout="{'id':'INLINE'}"
         data-trigger-type="alwaysShow"
