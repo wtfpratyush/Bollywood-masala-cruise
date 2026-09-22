@@ -154,12 +154,12 @@ const testimonials = [
 ];
 
 const galleryItems = [
-  { src: "https://images.unsplash.com/photo-1628336707631-68131ca720c3?crop=entropy&cs=srgb&fm=jpg&q=80&w=700", label: "Bollywood Party Night" },
-  { src: "https://images.unsplash.com/photo-1503095396549-807759245b35?crop=entropy&cs=srgb&fm=jpg&q=80&w=700", label: "Live Stage Performance" },
-  { src: "https://images.pexels.com/photos/24643916/pexels-photo-24643916.jpeg?auto=compress&cs=tinysrgb&w=700", label: "Gourmet Dining" },
-  { src: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?crop=entropy&cs=srgb&fm=jpg&q=80&w=700", label: "Concert Lights" },
-  { src: "https://images.unsplash.com/photo-1579592672790-39239b6cbc31?crop=entropy&cs=srgb&fm=jpg&q=80&w=700", label: "Pool Deck at Sunset" },
-  { src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=srgb&fm=jpg&q=80&w=700", label: "Ocean Views" },
+  { src: "/images/gallery/679a385f2ee48503a4c25175.jpeg", label: "Mehndi & Sangeet Celebrations" },
+  { src: "/images/gallery/66998871763d6d76ad01c07d.webp", label: "Pool Deck DJ Vibes" },
+  { src: "/images/gallery/679a8d050d9c754a05a6694b.jpeg", label: "Gourmet Cruise Dining" },
+  { src: "/images/gallery/6699888ab998f5e924d1a252.webp", label: "Deck Party Magic" },
+  { src: "/images/gallery/669984145f2569065123e031.jpeg", label: "Sunset Ocean Deck" },
+  { src: "/images/gallery/679a8cc62ee48554e2c2e4a4.jpeg", label: "Celebrations at Sea" },
 ];
 
 /* ════════════════════════════════════════════════════════ */
@@ -316,10 +316,10 @@ const Onboard = () => {
             </div>
             <div className="lg:w-1/2 grid grid-cols-2 gap-4">
               {[
-                "https://images.unsplash.com/photo-1628336707631-68131ca720c3?crop=entropy&cs=srgb&fm=jpg&q=80&w=600",
-                "https://images.unsplash.com/photo-1503095396549-807759245b35?crop=entropy&cs=srgb&fm=jpg&q=80&w=600",
-                "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?crop=entropy&cs=srgb&fm=jpg&q=80&w=600",
-                "https://images.unsplash.com/photo-1579592672790-39239b6cbc31?crop=entropy&cs=srgb&fm=jpg&q=80&w=600",
+                "/images/gallery/gallery-dance.jpg",
+                "/images/gallery/gallery-night-deck.jpg",
+                "/images/gallery/66998865f3f1c46064f40c3c.webp",
+                "/images/gallery/66998877f3f1c49f6af40c40.webp",
               ].map((src, i) => (
                 <div key={i} className={`rounded-2xl overflow-hidden bg-gray-800 ${i === 0 ? "row-span-2 h-64 lg:h-auto" : "h-36"}`}>
                   <LazyImg src={src} alt={`Night ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
