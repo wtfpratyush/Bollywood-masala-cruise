@@ -1,6 +1,28 @@
 import React, { useState } from "react";
-import { X, Star, ChevronDown, Phone, Ship, Calendar, MapPin, Utensils, BedDouble, Zap, Image as ImageIcon } from "lucide-react";
+import {
+  X, Star, ChevronDown, Phone, Ship, Calendar, MapPin, Utensils, BedDouble, Zap,
+  Image as ImageIcon, Music, Sparkles, Music2, Drama, PartyPopper, Mic, Trophy, Palette, Sun
+} from "lucide-react";
 import { Link } from "react-router-dom";
+
+const activityIconMap = {
+  "Mehndi": Sparkles,
+  "Antakshari": Music2,
+  "Dance Showcase & Workshops": Drama,
+  "Bollywood Dance Party": PartyPopper,
+  "Bollywood Party": PartyPopper,
+  "Open Mic & Karaoke": Mic,
+  "Games & Fun": Trophy,
+  "Holi Celebration": Palette,
+  "Sunrise Deck Walk": Sun,
+  "Sparkles": Sparkles,
+  "Music2": Music2,
+  "Drama": Drama,
+  "PartyPopper": PartyPopper,
+  "Mic": Mic,
+  "Trophy": Trophy,
+  "Palette": Palette,
+};
 
 const StarRating = ({ count = 5 }) => (
   <span className="flex gap-0.5">
@@ -128,17 +150,22 @@ const CruiseDetailModal = ({ cruise, onClose, onBook }) => {
             {/* Included icons grid */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
               {[
-                { icon: "🍽️", label: "Meals", sub: "Feast on delicious Indian veg and non-veg meals" },
-                { icon: "🛏️", label: "Accommodation", sub: "Relax in your luxurious room" },
-                { icon: "🎶", label: "Entertainment", sub: "Endless entertainment" },
-                { icon: "🎭", label: "Activities", sub: "Exciting activities like game shows" },
-              ].map((item) => (
-                <div key={item.label} className="flex flex-col items-center text-center p-4 rounded-2xl border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/30 transition-all">
-                  <span className="text-3xl mb-2">{item.icon}</span>
-                  <p className="text-[14px] font-bold text-[#1a1a3a]">{item.label}</p>
-                  <p className="text-[11px] text-gray-500 mt-0.5 leading-tight">{item.sub}</p>
-                </div>
-              ))}
+                { icon: Utensils, label: "Meals", sub: "Feast on delicious Indian veg and non-veg meals" },
+                { icon: BedDouble, label: "Accommodation", sub: "Relax in your luxurious room" },
+                { icon: Music, label: "Entertainment", sub: "Endless entertainment" },
+                { icon: Sparkles, label: "Activities", sub: "Exciting activities like game shows" },
+              ].map((item) => {
+                const Icon = item.icon;
+                return (
+                  <div key={item.label} className="flex flex-col items-center text-center p-4 rounded-2xl border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/30 transition-all group">
+                    <div className="w-10 h-10 rounded-xl bg-indigo-50 text-[#4b3df5] flex items-center justify-center mb-2 group-hover:scale-110 group-hover:bg-[#4b3df5] group-hover:text-white transition-all duration-300">
+                      <Icon size={20} />
+                    </div>
+                    <p className="text-[14px] font-bold text-[#1a1a3a]">{item.label}</p>
+                    <p className="text-[11px] text-gray-500 mt-0.5 leading-tight">{item.sub}</p>
+                  </div>
+                );
+              })}
             </div>
             <div className="flex flex-wrap gap-3 justify-center">
               <button
@@ -228,13 +255,18 @@ const CruiseDetailModal = ({ cruise, onClose, onBook }) => {
                 </h3>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3.5">
-                {d.activities.map((act) => (
-                  <div key={act.name} className="flex flex-col items-center justify-center text-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-4 hover:bg-white/20 transition-all shadow-sm">
-                    <span className="text-3xl mb-2 flex items-center justify-center">{act.icon}</span>
-                    <p className="text-[13px] font-bold text-white text-center leading-snug">{act.name}</p>
-                    <p className="text-[11px] text-white/75 mt-1 leading-tight text-center">{act.desc}</p>
-                  </div>
-                ))}
+                {d.activities.map((act) => {
+                  const Icon = activityIconMap[act.icon] || activityIconMap[act.name] || Sparkles;
+                  return (
+                    <div key={act.name} className="flex flex-col items-center justify-center text-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-4 hover:bg-white/20 transition-all shadow-sm group">
+                      <div className="w-10 h-10 rounded-xl bg-white/15 text-amber-300 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform duration-300">
+                        <Icon size={20} />
+                      </div>
+                      <p className="text-[13px] font-bold text-white text-center leading-snug">{act.name}</p>
+                      <p className="text-[11px] text-white/75 mt-1 leading-tight text-center">{act.desc}</p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>

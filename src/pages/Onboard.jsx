@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 import {
   Footprints, Music2, Dices, Drama, PartyPopper, Mic, Gamepad2,
   ChefHat, Waves, Sunset, Sparkles, Users, Star, Heart, Camera,
-  Clock, MapPin, Wifi, BedDouble, Coffee, Wind
+  Clock, MapPin, Wifi, BedDouble, Coffee, Wind, Utensils, UtensilsCrossed,
+  Sun, Sunrise, Anchor, Trophy, Music, Palette, Check
 } from "lucide-react";
 
 /* ─── Inline lazy image with shimmer ─── */
@@ -41,13 +42,13 @@ const Stars = ({ n = 5 }) => (
 
 /* ─── Data ─── */
 const activities = [
-  { icon: "🪷", name: "Mehndi", desc: "Enjoy the culture" },
-  { icon: "🎵", name: "Antakshari", desc: "Sing your heart out in this beloved Bollywood song competition." },
-  { icon: "💃", name: "Dance Showcase & Workshops", desc: "Watch incredible Bollywood performances and learn dance steps in fun workshops." },
-  { icon: "🎉", name: "Bollywood Party", desc: "Dance the moment away under the stars to your favourite Bollywood beats." },
-  { icon: "🎤", name: "Open Mic & Karaoke", desc: "Step on stage and show off your singing talent in front of a live crowd." },
-  { icon: "🏆", name: "Games & Fun", desc: "Watch & participate in fun challenges and interactive games with friends." },
-  { icon: "🌅", name: "Sunrise Deck Walk", desc: "Start your mornings with a peaceful scenic walk on the open deck." },
+  { icon: Sparkles, name: "Mehndi", desc: "Enjoy the culture" },
+  { icon: Music2, name: "Antakshari", desc: "Sing your heart out in this beloved Bollywood song competition." },
+  { icon: Drama, name: "Dance Showcase & Workshops", desc: "Watch incredible Bollywood performances and learn dance steps in fun workshops." },
+  { icon: PartyPopper, name: "Bollywood Party", desc: "Dance the moment away under the stars to your favourite Bollywood beats." },
+  { icon: Mic, name: "Open Mic & Karaoke", desc: "Step on stage and show off your singing talent in front of a live crowd." },
+  { icon: Trophy, name: "Games & Fun", desc: "Watch & participate in fun challenges and interactive games with friends." },
+  { icon: Sunrise, name: "Sunrise Deck Walk", desc: "Start your mornings with a peaceful scenic walk on the open deck." },
 ];
 
 const diningOptions = [
@@ -96,42 +97,42 @@ const schedule = [
     time: "Morning",
     event: "Deck Walk & Morning Ocean Views",
     desc: "Start your morning with scenic open-deck views, fresh sea breeze, and peaceful relaxation.",
-    icon: "🌅",
+    icon: Sunrise,
     type: "wellness",
   },
   {
     time: "Breakfast",
     event: "Breakfast Buffet Spread",
     desc: "Savour fresh Indian breakfast items, continental favorites, and morning beverages.",
-    icon: "🍳",
+    icon: UtensilsCrossed,
     type: "dining",
   },
   {
     time: "Mid-Day",
     event: "Poolside Relaxation & Deck Fun",
     desc: "Lounge by the pool deck, enjoy the music, and take in the vibrant cruise atmosphere.",
-    icon: "🏊",
+    icon: Waves,
     type: "fun",
   },
   {
     time: "Lunch",
     event: "Multi-Cuisine Lunch Buffet",
     desc: "Feast on authentic vegetarian and non-vegetarian Indian dishes and global specialties.",
-    icon: "🍽️",
+    icon: ChefHat,
     type: "dining",
   },
   {
     time: "Afternoon",
     event: "Antakshari & Afternoon Leisure",
     desc: "Sing your favorite Bollywood hits in friendly musical sessions and enjoy quality downtime.",
-    icon: "🎵",
+    icon: Music,
     type: "social",
   },
   {
     time: "Evening",
     event: "Sunset Views & Dinner Service",
     desc: "Catch the golden hour over the ocean followed by a delicious multi-course dinner spread.",
-    icon: "🌇",
+    icon: Sunset,
     type: "dining",
   },
 ];
@@ -183,16 +184,21 @@ const Onboard = () => {
             subtitle="Every day at sea is packed with handpicked experiences that blend Bollywood magic with unforgettable fun."
           />
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
-            {activities.map((act) => (
-              <div
-                key={act.name}
-                className="group flex flex-col items-center justify-center text-center p-5 sm:p-6 rounded-2xl border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-              >
-                <span className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300 flex items-center justify-center">{act.icon}</span>
-                <p className="text-[14px] sm:text-[15px] font-bold text-[#1a1a3a] mb-1 text-center leading-snug">{act.name}</p>
-                <p className="text-[12px] text-gray-500 leading-snug text-center">{act.desc}</p>
-              </div>
-            ))}
+            {activities.map((act) => {
+              const Icon = act.icon;
+              return (
+                <div
+                  key={act.name}
+                  className="group flex flex-col items-center justify-center text-center p-5 sm:p-6 rounded-2xl border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-indigo-50 text-[#4b3df5] flex items-center justify-center mb-3 group-hover:scale-110 group-hover:bg-[#4b3df5] group-hover:text-white transition-all duration-300">
+                    <Icon size={24} />
+                  </div>
+                  <p className="text-[14px] sm:text-[15px] font-bold text-[#1a1a3a] mb-1 text-center leading-snug">{act.name}</p>
+                  <p className="text-[12px] text-gray-500 leading-snug text-center">{act.desc}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -213,12 +219,15 @@ const Onboard = () => {
             <div className="space-y-4 sm:space-y-5">
               {schedule.map((item, idx) => {
                 const isLeft = idx % 2 === 0;
+                const Icon = item.icon;
                 return (
                   <div key={item.event} className={`flex gap-4 items-center sm:items-stretch ${isLeft ? "sm:flex-row" : "sm:flex-row-reverse"}`}>
                     {/* Content card */}
                     <div className={`flex-1 flex ${isLeft ? "sm:justify-end" : "sm:justify-start"}`}>
-                      <div className={`flex items-start gap-3 bg-white rounded-2xl border px-5 py-3.5 shadow-sm max-w-sm w-full hover:shadow-md transition-all ${typeColors[item.type]}`}>
-                        <span className="text-2xl mt-0.5 shrink-0">{item.icon}</span>
+                      <div className={`flex items-start gap-3.5 bg-white rounded-2xl border px-5 py-4 shadow-sm max-w-sm w-full hover:shadow-md transition-all ${typeColors[item.type]}`}>
+                        <div className="w-10 h-10 rounded-xl bg-indigo-50 text-[#4b3df5] flex items-center justify-center shrink-0 mt-0.5">
+                          <Icon size={20} />
+                        </div>
                         <div>
                           <p className="text-[11px] font-black tracking-widest uppercase opacity-60 mb-0.5">{item.time}</p>
                           <p className="text-[14px] font-bold text-[#1a1a3a] mb-1">{item.event}</p>
@@ -241,8 +250,9 @@ const Onboard = () => {
           </div>
 
           <div className="mt-8 text-center">
-            <p className="text-[12px] sm:text-[13px] text-gray-500 max-w-xl mx-auto bg-white border border-gray-100 rounded-full py-2 px-5 shadow-sm inline-block">
-              ✨ <span className="font-semibold text-gray-700">Sample Day:</span> Specific entertainment, theme parties, and timings vary by itinerary and are announced daily onboard.
+            <p className="text-[12px] sm:text-[13px] text-gray-500 max-w-xl mx-auto bg-white border border-gray-100 rounded-full py-2 px-5 shadow-sm inline-flex items-center gap-1.5">
+              <Sparkles size={15} className="text-amber-500 shrink-0" />
+              <span><strong className="text-gray-700">Sample Day:</strong> Specific entertainment, theme parties, and timings vary by itinerary and are announced daily onboard.</span>
             </p>
           </div>
         </div>
@@ -402,17 +412,22 @@ const Onboard = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {[
-              { num: "5,000+", label: "Happy Cruisers", icon: "😄" },
-              { num: "10+", label: "Cruises Organised", icon: "🚢" },
-              { num: "15+", label: "Destinations Visited", icon: "🗺️" },
-              { num: "4.9 / 5", label: "Average Rating", icon: "⭐" },
-            ].map((s) => (
-              <div key={s.label} className="flex flex-col items-center">
-                <span className="text-4xl mb-3">{s.icon}</span>
-                <p className="text-[36px] font-black text-white leading-none">{s.num}</p>
-                <p className="text-[13px] text-white/70 mt-1">{s.label}</p>
-              </div>
-            ))}
+              { num: "5,000+", label: "Happy Cruisers", icon: Users },
+              { num: "10+", label: "Cruises Organised", icon: Anchor },
+              { num: "15+", label: "Destinations Visited", icon: MapPin },
+              { num: "4.9 / 5", label: "Average Rating", icon: Star },
+            ].map((s) => {
+              const Icon = s.icon;
+              return (
+                <div key={s.label} className="flex flex-col items-center">
+                  <div className="w-12 h-12 rounded-2xl bg-white/15 backdrop-blur-sm text-amber-300 flex items-center justify-center mb-3">
+                    <Icon size={26} />
+                  </div>
+                  <p className="text-[36px] font-black text-white leading-none">{s.num}</p>
+                  <p className="text-[13px] text-white/70 mt-1">{s.label}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

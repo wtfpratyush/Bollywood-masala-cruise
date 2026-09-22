@@ -2,10 +2,30 @@ import React, { useState, useRef, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import {
   ArrowLeft, Star, ChevronDown, Phone, Ship, Calendar, Check,
+  Utensils, BedDouble, Music, Sparkles, Music2, Drama, PartyPopper, Mic, Trophy, Palette, Sun
 } from "lucide-react";
 import Layout from "../components/Layout";
 import { popularCruises, allPackages } from "../mock";
 import { useToast } from "../hooks/use-toast";
+
+const activityIconMap = {
+  "Mehndi": Sparkles,
+  "Antakshari": Music2,
+  "Dance Showcase & Workshops": Drama,
+  "Bollywood Dance Party": PartyPopper,
+  "Bollywood Party": PartyPopper,
+  "Open Mic & Karaoke": Mic,
+  "Games & Fun": Trophy,
+  "Holi Celebration": Palette,
+  "Sunrise Deck Walk": Sun,
+  "Sparkles": Sparkles,
+  "Music2": Music2,
+  "Drama": Drama,
+  "PartyPopper": PartyPopper,
+  "Mic": Mic,
+  "Trophy": Trophy,
+  "Palette": Palette,
+};
 
 /* ── Lazy background section: only sets bg-image when in viewport ── */
 const LazyBgSection = ({ imageUrl, className, children, id }) => {
@@ -203,20 +223,25 @@ const CruiseDetail = () => {
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 mb-10">
             {[
-              { icon: "🍽️", label: "Meals", sub: "Feast on delicious Indian veg and non-veg meals" },
-              { icon: "🛏️", label: "Accommodation", sub: "Relax in your luxurious room" },
-              { icon: "🎶", label: "Entertainment", sub: "Endless entertainment all day long" },
-              { icon: "🎭", label: "Activities", sub: "Exciting games, shows & experiences" },
-            ].map((item) => (
-              <div
-                key={item.label}
-                className="flex flex-col items-center text-center p-5 rounded-2xl border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/30 transition-all shadow-sm"
-              >
-                <span className="text-4xl mb-3">{item.icon}</span>
-                <p className="text-[15px] font-bold text-[#1a1a3a]">{item.label}</p>
-                <p className="text-[12px] text-gray-500 mt-1 leading-snug">{item.sub}</p>
-              </div>
-            ))}
+              { icon: Utensils, label: "Meals", sub: "Feast on delicious Indian veg and non-veg meals" },
+              { icon: BedDouble, label: "Accommodation", sub: "Relax in your luxurious room" },
+              { icon: Music, label: "Entertainment", sub: "Endless entertainment all day long" },
+              { icon: Sparkles, label: "Activities", sub: "Exciting games, shows & experiences" },
+            ].map((item) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={item.label}
+                  className="flex flex-col items-center text-center p-5 rounded-2xl border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/30 transition-all shadow-sm group"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-indigo-50 text-[#4b3df5] flex items-center justify-center mb-3 group-hover:scale-110 group-hover:bg-[#4b3df5] group-hover:text-white transition-all duration-300">
+                    <Icon size={24} />
+                  </div>
+                  <p className="text-[15px] font-bold text-[#1a1a3a]">{item.label}</p>
+                  <p className="text-[12px] text-gray-500 mt-1 leading-snug">{item.sub}</p>
+                </div>
+              );
+            })}
           </div>
           <div className="flex flex-wrap gap-3 justify-center">
             <button
@@ -362,16 +387,21 @@ const CruiseDetail = () => {
             </h2>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-            {d.activities.map((act) => (
-              <div
-                key={act.name}
-                className="flex flex-col items-center justify-center text-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 hover:bg-white/20 transition-all shadow-sm"
-              >
-                <span className="text-4xl mb-3 flex items-center justify-center">{act.icon}</span>
-                <p className="text-[14px] font-bold text-white text-center leading-snug">{act.name}</p>
-                <p className="text-[12px] text-white/75 mt-1 leading-snug text-center">{act.desc}</p>
-              </div>
-            ))}
+            {d.activities.map((act) => {
+              const Icon = activityIconMap[act.icon] || activityIconMap[act.name] || Sparkles;
+              return (
+                <div
+                  key={act.name}
+                  className="flex flex-col items-center justify-center text-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 hover:bg-white/20 transition-all shadow-sm group"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-white/15 text-amber-300 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+                    <Icon size={24} />
+                  </div>
+                  <p className="text-[14px] font-bold text-white text-center leading-snug">{act.name}</p>
+                  <p className="text-[12px] text-white/75 mt-1 leading-snug text-center">{act.desc}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </LazyBgSection>
