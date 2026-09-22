@@ -183,13 +183,14 @@ const Onboard = () => {
             title="All This and More Awaits You on Our Itinerary!"
             subtitle="Every day at sea is packed with handpicked experiences that blend Bollywood magic with unforgettable fun."
           />
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
-            {activities.map((act) => {
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-12 gap-4 sm:gap-5">
+            {activities.map((act, index) => {
               const Icon = act.icon;
+              const spanClass = index < 4 ? "lg:col-span-3" : "lg:col-span-4";
               return (
                 <div
                   key={act.name}
-                  className="group flex flex-col items-center justify-center text-center p-5 sm:p-6 rounded-2xl border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                  className={`group flex flex-col items-center justify-center text-center p-5 sm:p-6 rounded-2xl border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ${spanClass}`}
                 >
                   <div className="w-12 h-12 rounded-xl bg-indigo-50 text-[#4b3df5] flex items-center justify-center mb-3 group-hover:scale-110 group-hover:bg-[#4b3df5] group-hover:text-white transition-all duration-300">
                     <Icon size={24} />
