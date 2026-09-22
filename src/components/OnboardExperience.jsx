@@ -18,7 +18,7 @@ const OnboardExperience = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-7 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {onboardActivities.map((a) => {
             const Icon = iconMap[a.icon];
             return (
