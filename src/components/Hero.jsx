@@ -49,9 +49,9 @@ const Hero = () => {
           
           {/* Left Hero Text Column */}
           <div className="z-10 lg:col-span-7 xl:col-span-7 pr-0 lg:pr-4">
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#4b3df5]/10 backdrop-blur-md border border-[#4b3df5]/20 text-[#4b3df5] font-extrabold text-[12px] tracking-[0.18em] uppercase shadow-sm mb-4">
+            <p className="text-[13px] sm:text-[14px] font-black tracking-[0.16em] text-[#4b3df5] uppercase mb-3">
               WELCOME ABOARD
-            </span>
+            </p>
 
             <h1 className="text-[38px] sm:text-[48px] lg:text-[54px] xl:text-[58px] font-black text-[#1a1a3a] leading-[1.06] tracking-tight">
               A Signature<br />
@@ -63,21 +63,19 @@ const Hero = () => {
               Sail into a world of luxury, entertainment, and unforgettable moments. Everything you need for the perfect getaway — all in one place.
             </p>
 
-            {/* 3 Horizontal Feature Badges */}
-            <div className="mt-6 flex flex-wrap items-center gap-3 sm:gap-3.5">
+            {/* 3 Horizontal Features (Icon in white circle + text beside it) */}
+            <div className="mt-7 flex flex-wrap items-center gap-5 sm:gap-6">
               {heroFeatures.map((f) => {
                 const Icon = iconMap[f.icon] || Sparkles;
                 return (
-                  <div
-                    key={f.title}
-                    className="flex items-center gap-2.5 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full border border-gray-200/90 shadow-sm hover:shadow transition-all"
-                  >
-                    <div className="w-6 h-6 rounded-full bg-indigo-50 text-[#4b3df5] flex items-center justify-center shrink-0">
-                      <Icon size={14} strokeWidth={2.2} />
+                  <div key={f.title} className="flex items-center gap-2.5">
+                    <div className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-[#4b3df5] shrink-0">
+                      <Icon size={20} strokeWidth={2} />
                     </div>
-                    <p className="text-[13px] font-bold text-[#1a1a3a] whitespace-nowrap">
-                      {f.title} {f.subtitle}
-                    </p>
+                    <div className="leading-tight">
+                      <p className="text-[13px] sm:text-[14px] font-bold text-[#1a1a3a]">{f.title}</p>
+                      <p className="text-[13px] sm:text-[14px] font-bold text-[#1a1a3a]">{f.subtitle}</p>
+                    </div>
                   </div>
                 );
               })}
