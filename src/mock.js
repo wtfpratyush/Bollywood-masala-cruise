@@ -354,7 +354,6 @@ export const testimonials = [
 ];
 
 export const benefits = [
-  { icon: "CircleDollarSign", title: "$100 USD", subtitle: "Onboard Credit" },
   { icon: "Wifi", title: "WiFi Access", subtitle: "150 mins" },
   { icon: "Compass", title: "$50 Per Port", subtitle: "Shore Excursion" },
   { icon: "Camera", title: "10 Photo Package", subtitle: "Worth 199 USD" },
