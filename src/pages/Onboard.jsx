@@ -25,10 +25,10 @@ const LazyImg = ({ src, alt, className }) => {
 
 /* ─── Section label + heading ─── */
 const SectionHead = ({ label, title, subtitle, light = false, center = true }) => (
-  <div className={`mb-10 ${center ? "text-center" : ""}`}>
-    <p className={`text-[11px] font-black tracking-[0.22em] uppercase mb-2 ${light ? "text-amber-300" : "text-[#4b3df5]"}`}>{label}</p>
-    <h2 className={`text-[26px] sm:text-[34px] font-black leading-tight ${light ? "text-white" : "text-[#1a1a3a]"}`}>{title}</h2>
-    {subtitle && <p className={`mt-3 text-[15px] max-w-2xl ${center ? "mx-auto" : ""} leading-relaxed ${light ? "text-white/70" : "text-gray-500"}`}>{subtitle}</p>}
+  <div className={`mb-12 ${center ? "text-center" : ""}`}>
+    <p className={`text-[12px] font-black tracking-[0.2em] uppercase mb-2.5 ${light ? "text-amber-300" : "text-[#4b3df5]"}`}>{label}</p>
+    <h2 className={`text-[28px] sm:text-[38px] lg:text-[42px] font-extrabold tracking-tight leading-tight ${light ? "text-white" : "text-[#1a1a3a]"}`}>{title}</h2>
+    {subtitle && <p className={`mt-3.5 text-[15px] max-w-2xl ${center ? "mx-auto" : ""} leading-relaxed ${light ? "text-white/70" : "text-gray-500"}`}>{subtitle}</p>}
   </div>
 );
 
@@ -41,45 +41,40 @@ const Stars = ({ n = 5 }) => (
 
 /* ─── Data ─── */
 const activities = [
-  { icon: "🪷", name: "Mehndi Night", desc: "Adorn your hands with beautiful henna art and bond with fellow travellers." },
+  { icon: "🪷", name: "Mehndi", desc: "Enjoy the culture" },
   { icon: "🎵", name: "Antakshari", desc: "Sing your heart out in this beloved Bollywood song competition." },
-  { icon: "🎲", name: "Tambola", desc: "Try your luck with exciting prizes up for grabs during scheduled game sessions." },
-  { icon: "💃", name: "Dance Showcase", desc: "Watch incredible choreographed Bollywood performances by talented artists." },
-  { icon: "🎉", name: "Bollywood Party", desc: "Dance the night away under the stars to your favourite Bollywood beats." },
+  { icon: "💃", name: "Dance Showcase & Workshops", desc: "Watch incredible Bollywood performances and learn dance steps in fun workshops." },
+  { icon: "🎉", name: "Bollywood Party", desc: "Dance the moment away under the stars to your favourite Bollywood beats." },
   { icon: "🎤", name: "Open Mic & Karaoke", desc: "Step on stage and show off your singing talent in front of a live crowd." },
-  { icon: "🕹️", name: "Games Night", desc: "Enjoy fun classic party games and challenges with new friends." },
+  { icon: "🏆", name: "Games & Fun", desc: "Watch & participate in fun challenges and interactive games with friends." },
   { icon: "🌅", name: "Sunrise Deck Walk", desc: "Start your mornings with a peaceful scenic walk on the open deck." },
-  { icon: "🎭", name: "Live Comedy Show", desc: "Laugh out loud at stand-up sets by top Indian comedians." },
-  { icon: "🏆", name: "Talent Show", desc: "Compete or cheer on guests in the ultimate onboard talent competition." },
-  { icon: "🌺", name: "Garba on Deck", desc: "Celebrate with traditional garba dancing under the open sky." },
-  { icon: "🍹", name: "Welcome Cocktail", desc: "Kick off your voyage with a signature welcome drink and mixer party." },
 ];
 
 const diningOptions = [
   {
-    name: "Indian Buffet",
-    desc: "An elaborate spread of authentic North and South Indian vegetarian dishes prepared fresh every day.",
-    tag: "Vegetarian",
+    name: "Authentic Indian Buffet",
+    desc: "An elaborate spread of authentic vegetarian and non-vegetarian Indian dishes prepared fresh daily.",
+    tag: "Veg & Non-Veg",
     tagColor: "bg-green-100 text-green-700",
     image: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?crop=entropy&cs=srgb&fm=jpg&q=80&w=600",
   },
   {
-    name: "Non-Veg Grill",
-    desc: "Succulent tandoori, tikkas, kebabs, and coastal seafood prepared by our master chefs.",
-    tag: "Non-Veg",
+    name: "Pizza, Burgers & More",
+    desc: "Freshly made stone-baked pizzas, gourmet burgers, snacks, and casual crowd favourites around the clock.",
+    tag: "Casual Bites",
     tagColor: "bg-red-100 text-red-700",
-    image: "https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg?auto=compress&cs=tinysrgb&w=600",
+    image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?crop=entropy&cs=srgb&fm=jpg&q=80&w=600",
   },
   {
-    name: "International Cuisine",
-    desc: "A global menu featuring continental favourites, Asian delicacies, and Jain-friendly options.",
-    tag: "International",
-    tagColor: "bg-blue-100 text-blue-700",
+    name: "Themed Dinner Nights",
+    desc: "Special celebratory dinner nights featuring regional culinary showcases, music, and festive flavours.",
+    tag: "Themed Nights",
+    tagColor: "bg-purple-100 text-purple-700",
     image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?crop=entropy&cs=srgb&fm=jpg&q=80&w=600",
   },
   {
-    name: "Dessert & Chai Bar",
-    desc: "Indulge in Indian sweets, gulab jamun, kheer, and unlimited masala chai at any hour.",
+    name: "Dessert & Sweets Bar",
+    desc: "Indulge in Indian sweets, gulab jamun, kheer, pastries, and delectable sweet treats.",
     tag: "Sweet Corner",
     tagColor: "bg-amber-100 text-amber-700",
     image: "https://images.unsplash.com/photo-1546173159-315724a31696?crop=entropy&cs=srgb&fm=jpg&q=80&w=600",
@@ -97,15 +92,48 @@ const amenities = [
 ];
 
 const schedule = [
-  { time: "7:00 AM", event: "Sunrise Yoga & Deck Walk", icon: "🌅", type: "wellness" },
-  { time: "8:30 AM", event: "Breakfast Buffet Opens", icon: "🍳", type: "dining" },
-  { time: "11:00 AM", event: "Pool Party & Deck Games", icon: "🏊", type: "fun" },
-  { time: "1:00 PM", event: "Lunch Service", icon: "🍽️", type: "dining" },
-  { time: "3:00 PM", event: "Tambola / Antakshari", icon: "🎲", type: "fun" },
-  { time: "5:30 PM", event: "Sunset Cocktail Hour", icon: "🌇", type: "social" },
-  { time: "7:30 PM", event: "Gala Dinner & Bollywood Melodies", icon: "🎶", type: "dining" },
-  { time: "9:30 PM", event: "Bollywood Dance Party / Show", icon: "💃", type: "fun" },
-  { time: "11:30 PM", event: "Late Night Chai & Snacks", icon: "🍹", type: "dining" },
+  {
+    time: "Morning",
+    event: "Deck Walk & Morning Ocean Views",
+    desc: "Start your morning with scenic open-deck views, fresh sea breeze, and peaceful relaxation.",
+    icon: "🌅",
+    type: "wellness",
+  },
+  {
+    time: "Breakfast",
+    event: "Breakfast Buffet Spread",
+    desc: "Savour fresh Indian breakfast items, continental favorites, and morning beverages.",
+    icon: "🍳",
+    type: "dining",
+  },
+  {
+    time: "Mid-Day",
+    event: "Poolside Relaxation & Deck Fun",
+    desc: "Lounge by the pool deck, enjoy the music, and take in the vibrant cruise atmosphere.",
+    icon: "🏊",
+    type: "fun",
+  },
+  {
+    time: "Lunch",
+    event: "Multi-Cuisine Lunch Buffet",
+    desc: "Feast on authentic vegetarian and non-vegetarian Indian dishes and global specialties.",
+    icon: "🍽️",
+    type: "dining",
+  },
+  {
+    time: "Afternoon",
+    event: "Antakshari & Afternoon Leisure",
+    desc: "Sing your favorite Bollywood hits in friendly musical sessions and enjoy quality downtime.",
+    icon: "🎵",
+    type: "social",
+  },
+  {
+    time: "Evening",
+    event: "Sunset Views & Dinner Service",
+    desc: "Catch the golden hour over the ocean followed by a delicious multi-course dinner spread.",
+    icon: "🌇",
+    type: "dining",
+  },
 ];
 
 const typeColors = {
@@ -116,12 +144,12 @@ const typeColors = {
 };
 
 const testimonials = [
-  { name: "Sanjay & Kavitha", avatar: "https://i.pravatar.cc/80?img=15", rating: 5, text: "The Bollywood party on night 3 was absolutely electric. The DJ kept the crowd going till 2 AM! Best cruise experience we've ever had." },
-  { name: "Priya Mehta", avatar: "https://i.pravatar.cc/80?img=47", rating: 5, text: "Mehndi night was so beautifully organised. Made so many friends. The food was out of this world — especially the chai bar!" },
-  { name: "Rohan Verma", avatar: "https://i.pravatar.cc/80?img=12", rating: 5, text: "Tambola at sea — who knew?! We won a prize too. The curated entertainment lineup was amazing. Truly unforgettable." },
-  { name: "Ananya S.", avatar: "https://i.pravatar.cc/80?img=25", rating: 5, text: "Sunrise yoga on the deck with the ocean breeze is something I'll never forget. Perfectly balanced between relaxation and non-stop fun." },
-  { name: "Deepak Nair", avatar: "https://i.pravatar.cc/80?img=11", rating: 5, text: "The live comedy show had us in tears of laughter. Everything was so well curated — felt like a 5-star Bollywood festival at sea!" },
-  { name: "Meera Iyer", avatar: "https://i.pravatar.cc/80?img=44", rating: 5, text: "My parents joined us and they absolutely loved the garba on deck. The crew made every single person feel so special and welcome." },
+  { name: "Sanjay & Kavitha", avatar: "/images/gallery/679a8d0562e328e0efdcb262.jpeg", rating: 5, text: "The Bollywood party on night 3 was absolutely electric. The DJ kept the crowd going till 2 AM! Best cruise experience we've ever had." },
+  { name: "Priya Mehta", avatar: "/images/gallery/679a8d0580145c27ccf9f0ba.jpeg", rating: 5, text: "Mehndi was so beautifully organised. Made so many friends. The food was out of this world — especially the dessert spread!" },
+  { name: "Rohan Verma", avatar: "/images/gallery/66998414b998f5f12bd19c6e.jpeg", rating: 5, text: "The Antakshari and open mic sessions were so much fun! The curated entertainment lineup was amazing. Truly unforgettable." },
+  { name: "Ananya S.", avatar: "/images/gallery/679a8d0535f5ca5b8c111611.jpeg", rating: 5, text: "Sunrise yoga on the deck with the ocean breeze is something I'll never forget. Perfectly balanced between relaxation and non-stop fun." },
+  { name: "Deepak Nair", avatar: "/images/gallery/679a8d054f0aeb1852623064.jpeg", rating: 5, text: "The entertainment lineup had us singing and dancing all trip. Everything was so well curated — felt like a 5-star Bollywood festival at sea!" },
+  { name: "Meera Iyer", avatar: "/images/gallery/66998877f3f1c49f6af40c40.webp", rating: 5, text: "My parents joined us and they absolutely loved the deck celebrations. The crew made every single person feel so special and welcome." },
 ];
 
 const galleryItems = [
@@ -147,22 +175,22 @@ const Onboard = () => {
       {/* ═══════════════════════════════════════════════
           1. ACTIVITIES GRID
       ═══════════════════════════════════════════════ */}
-      <section className="bg-white py-16">
+      <section className="bg-white py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHead
             label="ONBOARD ACTIVITIES"
             title="All This and More Awaits You on Our Itinerary!"
             subtitle="Every day at sea is packed with handpicked experiences that blend Bollywood magic with unforgettable fun."
           />
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
             {activities.map((act) => (
               <div
                 key={act.name}
-                className="group flex flex-col items-center text-center p-6 rounded-2xl border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                className="group flex flex-col items-center justify-center text-center p-5 sm:p-6 rounded-2xl border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               >
-                <span className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">{act.icon}</span>
-                <p className="text-[15px] font-bold text-[#1a1a3a] mb-1">{act.name}</p>
-                <p className="text-[12px] text-gray-500 leading-snug">{act.desc}</p>
+                <span className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300 flex items-center justify-center">{act.icon}</span>
+                <p className="text-[14px] sm:text-[15px] font-bold text-[#1a1a3a] mb-1 text-center leading-snug">{act.name}</p>
+                <p className="text-[12px] text-gray-500 leading-snug text-center">{act.desc}</p>
               </div>
             ))}
           </div>
@@ -172,28 +200,29 @@ const Onboard = () => {
       {/* ═══════════════════════════════════════════════
           2. DAILY SCHEDULE TIMELINE
       ═══════════════════════════════════════════════ */}
-      <section className="bg-[#f7f7ff] py-16">
+      <section className="bg-[#f7f7ff] py-14">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHead
-            label="YOUR DAY AT SEA"
-            title="A Typical Day on the Bollywood Masala Cruise"
-            subtitle="No two days are the same, but here's a taste of what a perfect day aboard looks like."
+            label="A DAY AT SEA"
+            title="A Typical Day on the Cruise"
+            subtitle="While special events and theme nights vary by sailing, here is a general rhythm of how a day at sea unfolds."
           />
           <div className="relative">
             {/* Vertical line */}
             <div className="absolute left-[calc(50%-1px)] top-0 bottom-0 w-0.5 bg-indigo-100 hidden sm:block" />
-            <div className="space-y-5">
+            <div className="space-y-4 sm:space-y-5">
               {schedule.map((item, idx) => {
                 const isLeft = idx % 2 === 0;
                 return (
                   <div key={item.event} className={`flex gap-4 items-center sm:items-stretch ${isLeft ? "sm:flex-row" : "sm:flex-row-reverse"}`}>
                     {/* Content card */}
                     <div className={`flex-1 flex ${isLeft ? "sm:justify-end" : "sm:justify-start"}`}>
-                      <div className={`flex items-start gap-3 bg-white rounded-2xl border px-5 py-4 shadow-sm max-w-sm w-full hover:shadow-md transition-all ${typeColors[item.type]}`}>
+                      <div className={`flex items-start gap-3 bg-white rounded-2xl border px-5 py-3.5 shadow-sm max-w-sm w-full hover:shadow-md transition-all ${typeColors[item.type]}`}>
                         <span className="text-2xl mt-0.5 shrink-0">{item.icon}</span>
                         <div>
                           <p className="text-[11px] font-black tracking-widest uppercase opacity-60 mb-0.5">{item.time}</p>
-                          <p className="text-[15px] font-bold text-[#1a1a3a]">{item.event}</p>
+                          <p className="text-[14px] font-bold text-[#1a1a3a] mb-1">{item.event}</p>
+                          {item.desc && <p className="text-[12px] text-gray-500 leading-relaxed">{item.desc}</p>}
                         </div>
                       </div>
                     </div>
@@ -210,29 +239,35 @@ const Onboard = () => {
               })}
             </div>
           </div>
+
+          <div className="mt-8 text-center">
+            <p className="text-[12px] sm:text-[13px] text-gray-500 max-w-xl mx-auto bg-white border border-gray-100 rounded-full py-2 px-5 shadow-sm inline-block">
+              ✨ <span className="font-semibold text-gray-700">Sample Day:</span> Specific entertainment, theme parties, and timings vary by itinerary and are announced daily onboard.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* ═══════════════════════════════════════════════
           3. DINING SECTION
       ═══════════════════════════════════════════════ */}
-      <section className="bg-white py-16">
+      <section className="bg-white py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHead
             label="FOOD & DINING"
             title="Delicious Dining — A Feast for Every Craving"
             subtitle="From authentic Indian meals to international cuisine, every dish is crafted with love and served with warmth."
           />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {diningOptions.map((item) => (
               <div key={item.name} className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group">
-                <div className="h-48 overflow-hidden bg-gray-100">
+                <div className="h-40 overflow-hidden bg-gray-100">
                   <LazyImg src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 </div>
-                <div className="p-5">
-                  <span className={`text-[11px] font-bold px-2.5 py-1 rounded-full ${item.tagColor} mb-3 inline-block`}>{item.tag}</span>
-                  <h3 className="text-[17px] font-black text-[#1a1a3a] mb-2">{item.name}</h3>
-                  <p className="text-[13px] text-gray-500 leading-relaxed">{item.desc}</p>
+                <div className="p-4 sm:p-5">
+                  <span className={`text-[10px] font-bold px-2.5 py-0.5 rounded-full ${item.tagColor} mb-2 inline-block`}>{item.tag}</span>
+                  <h3 className="text-[16px] font-black text-[#1a1a3a] mb-1.5">{item.name}</h3>
+                  <p className="text-[12px] text-gray-500 leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -253,11 +288,11 @@ const Onboard = () => {
               </h2>
               <p className="text-[15px] text-white/70 leading-relaxed mb-7">
                 As the sun dips below the horizon, the ship comes alive with vibrant Bollywood entertainment. From energetic DJ 
-                sets spinning your favourite tracks to breathtaking dance performances, mehndi celebrations, garba on the deck, and themed 
-                parties — our curated events create an unforgettable celebration at sea.
+                sets spinning your favourite tracks to breathtaking dance performances, Mehndi celebrations, deck parties, and themed 
+                celebrations — our curated events create an unforgettable celebration at sea.
               </p>
               <ul className="space-y-3 mb-8">
-                {["Bollywood DJ Nights & Dance Floor", "Special Guest Performances", "Mehndi & Sangeet Celebrations", "Garba Under the Open Sky", "Comedy & Talent Shows", "Themed Bollywood Parties"].map((f) => (
+                {["Bollywood DJ Nights & Dance Floor", "Special Guest Performances", "Mehndi & Sangeet Celebrations", "Live Cultural Shows", "Talent Showcases & Contests", "Themed Bollywood Parties"].map((f) => (
                   <li key={f} className="flex items-center gap-3 text-[14px] text-white/80">
                     <span className="w-5 h-5 rounded-full bg-amber-400/20 text-amber-300 flex items-center justify-center shrink-0 text-[10px] font-black">✓</span>
                     {f}
@@ -367,9 +402,9 @@ const Onboard = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {[
-              { num: "10,000+", label: "Happy Cruisers", icon: "😄" },
-              { num: "50+", label: "Cruises Organised", icon: "🚢" },
-              { num: "12+", label: "Destinations Visited", icon: "🗺️" },
+              { num: "5,000+", label: "Happy Cruisers", icon: "😄" },
+              { num: "10+", label: "Cruises Organised", icon: "🚢" },
+              { num: "15+", label: "Destinations Visited", icon: "🗺️" },
               { num: "4.9 / 5", label: "Average Rating", icon: "⭐" },
             ].map((s) => (
               <div key={s.label} className="flex flex-col items-center">

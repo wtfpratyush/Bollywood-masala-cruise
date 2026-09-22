@@ -57,10 +57,12 @@ const PopularCruises = () => {
                   </ul>
                   <div className="flex items-end justify-between flex-wrap gap-2">
                     <div>
-                      <p className="text-[24px] font-bold text-[#4b3df5] leading-none">
-                        <span className="text-[14px] font-medium text-gray-500">From </span>{c.price}
+                      <p className="text-[22px] font-bold text-[#4b3df5] leading-none">
+                        <span className="text-[14px] font-medium text-gray-500">From </span>
+                        {c.price}{" "}
+                        <span className="text-[13px] font-medium text-gray-500">/ Person</span>
                       </p>
-                      <p className="text-[12px] text-gray-400">Per Person</p>
+                      <p className="text-[11px] font-medium text-gray-400 mt-1">Prices are in USD</p>
                     </div>
                     <div className="flex gap-2">
                       {c.details && (

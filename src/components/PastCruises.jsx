@@ -13,7 +13,7 @@ const PastCruises = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-7 gap-5 lg:gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5 lg:gap-4 max-w-6xl mx-auto">
             {pastCruises.map((c, i) => (
               <div key={i} className="flex flex-col items-center text-center group">
                 <div className="w-24 h-24 lg:w-[104px] lg:h-[104px] rounded-full overflow-hidden ring-4 ring-white shadow-lg mb-3">
@@ -32,9 +32,9 @@ const PastCruises = () => {
           </div>
 
           <div className="flex justify-center mt-9">
-            <button className="rounded-lg border border-[#4b3df5]/40 px-6 py-2.5 text-[14px] font-semibold text-[#4b3df5] hover:bg-[#4b3df5] hover:text-white transition-all">
+            <a href="/packages" className="rounded-lg border border-[#4b3df5]/40 px-6 py-2.5 text-[14px] font-semibold text-[#4b3df5] hover:bg-[#4b3df5] hover:text-white transition-all">
               View All Cruises
-            </button>
+            </a>
           </div>
         </div>
       </div>

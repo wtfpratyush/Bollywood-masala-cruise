@@ -160,7 +160,7 @@ const About = () => {
                         {img.caption}
                       </p>
                       <p className="text-[11px] text-gray-500 mt-0.5">
-                        Bollywood Masala Voyage
+                        Bollywood Masala Cruise
                       </p>
                     </div>
                   </div>
@@ -174,11 +174,11 @@ const About = () => {
                     <Sparkles size={24} className="text-amber-300" />
                   </div>
                   <div>
-                    <p className="text-[18px] font-extrabold leading-tight">
-                      15+ Years of Oceanic Magic
+                    <p className="text-[17px] font-extrabold leading-tight">
+                      Exotik Excursions &amp; Masala Cruise
                     </p>
-                    <p className="text-[12px] text-white/80">
-                      Over 50,000+ Happy Cruisers Celebrated At Sea
+                    <p className="text-[12px] text-white/85 mt-0.5">
+                      Over 5,000+ Happy Cruisers Celebrated At Sea
                     </p>
                   </div>
                 </div>
@@ -215,7 +215,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {aboutCoreValues.values.map((val) => {
               const Icon = valueIconMap[val.icon] || Sparkles;
               return (
@@ -262,9 +262,11 @@ const About = () => {
       <section className="bg-[#fbfbfe] py-18 lg:py-22">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <p className="text-[13px] font-bold tracking-[0.2em] text-[#4b3df5] uppercase mb-2">
-              {aboutAgents.eyebrow}
-            </p>
+            {aboutAgents.eyebrow ? (
+              <p className="text-[13px] font-bold tracking-[0.2em] text-[#4b3df5] uppercase mb-2">
+                {aboutAgents.eyebrow}
+              </p>
+            ) : null}
             <h2 className="text-[32px] sm:text-[40px] font-black text-[#1a1a3a] leading-tight">
               {aboutAgents.title}
             </h2>
@@ -469,8 +471,8 @@ const About = () => {
             </h2>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {aboutMilestones.map((m, idx) => (
+          <div className="grid sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {aboutMilestones.map((m) => (
               <div
                 key={m.year}
                 className="p-6 rounded-2xl bg-white border border-gray-100 shadow-md relative hover:shadow-xl transition-all"
@@ -495,14 +497,14 @@ const About = () => {
       {/* ========================================================================= */}
       <section className="bg-[#1a1a3a] py-16 text-white relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
-          <span className="inline-block px-3 py-1 rounded-full bg-[#f5a623] text-black text-[12px] font-black tracking-wider uppercase">
-            Join the Next Voyage
+          <span className="inline-block px-4 py-1.5 rounded-full bg-[#f5a623] text-black text-[12px] font-black tracking-wider uppercase">
+            Join Bollywood Masala Cruise
           </span>
           <h2 className="text-[32px] sm:text-[44px] font-black leading-tight max-w-3xl mx-auto">
             Ready to Experience the Magic of Bollywood at Sea?
           </h2>
           <p className="text-[16px] text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            Staterooms are filling fast for our upcoming Caribbean and Bahamas voyages. Lock in early bird pricing and signature perks today.
+            Staterooms are filling fast for our upcoming Caribbean, Bahamas, and Alaska sailings. Lock in early bird pricing and signature perks today.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 pt-2">

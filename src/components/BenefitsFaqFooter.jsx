@@ -1,5 +1,5 @@
 import React from "react";
-import { CircleDollarSign, Tag, Wifi, BadgeCheck, ShieldCheck, Phone, Mail, Facebook, Instagram, Youtube, ChevronDown } from "lucide-react";
+import { CircleDollarSign, Wifi, Compass, Camera, Phone, Mail, Facebook, Instagram, Youtube, ChevronDown } from "lucide-react";
 import { benefits, faqs, contact, navLinks } from "../mock";
 import {
   Accordion,
@@ -8,7 +8,7 @@ import {
   AccordionTrigger,
 } from "./ui/accordion";
 
-const benefitIconMap = { CircleDollarSign, Tag, Wifi, BadgeCheck, ShieldCheck };
+const benefitIconMap = { CircleDollarSign, Wifi, Compass, Camera };
 
 const BenefitsFaqFooter = () => {
   return (
@@ -29,7 +29,7 @@ const BenefitsFaqFooter = () => {
           <h2 className="text-center text-[24px] sm:text-[28px] font-bold text-white mb-8">
             Book Now and Get Exclusive Benefits!
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {benefits.map((b) => {
               const Icon = benefitIconMap[b.icon];
               return (
@@ -98,7 +98,9 @@ const BenefitsFaqFooter = () => {
             <div className="flex items-center gap-5">
               <a href="https://www.facebook.com/profile.php?id=61560687726948" target="_blank" rel="noopener noreferrer" className="text-[#1877f2] hover:opacity-70 transition-opacity" aria-label="Facebook"><Facebook size={22} fill="#1877f2" strokeWidth={0} /></a>
               <a href="https://www.instagram.com/bollywoodmasalacruise/" target="_blank" rel="noopener noreferrer" className="text-[#e1306c] hover:opacity-70 transition-opacity" aria-label="Instagram"><Instagram size={22} /></a>
-              <a href="https://www.youtube.com/@Bollywoodmasalacruise/shorts" target="_blank" rel="noopener noreferrer" className="text-[#ff0000] hover:opacity-70 transition-opacity" aria-label="YouTube"><Youtube size={24} fill="#ff0000" strokeWidth={0} /></a>
+              <a href="https://www.youtube.com/@Bollywoodmasalacruise/shorts" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity flex items-center" aria-label="YouTube">
+                <img src="/images/icons/youtube-icon.png" alt="YouTube" className="w-[26px] h-[26px] object-contain" />
+              </a>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-6 text-[14px] text-gray-600">

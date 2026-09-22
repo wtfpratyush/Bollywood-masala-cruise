@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, Clock } from "lucide-react";
 import Layout from "../components/Layout";
 import PageBanner from "../components/PageBanner";
 import { contact } from "../mock";
@@ -20,8 +20,7 @@ const Contact = () => {
   const info = [
     { icon: Phone, label: "Call Us", value: contact.phone, href: `tel:${contact.phone}` },
     { icon: Mail, label: "Email Us", value: contact.email, href: `mailto:${contact.email}` },
-    { icon: MapPin, label: "Visit Us", value: "1200 Ocean Drive, Miami, FL 33139", href: "#" },
-    { icon: Clock, label: "Working Hours", value: "Mon \u2013 Sat, 9:00 AM \u2013 8:00 PM", href: "#" },
+    { icon: Clock, label: "Working Hours", value: "Mon – Sat, 9:00 AM – 8:00 PM", href: "#" },
   ];
 
   return (
@@ -42,18 +41,30 @@ const Contact = () => {
             <p className="mt-4 text-[16px] text-gray-600 leading-relaxed">
               Reach out for pricing, custom itineraries, group bookings or anything else. We usually respond within a few hours.
             </p>
-            <div className="mt-8 grid sm:grid-cols-2 gap-5">
-              {info.map((it) => (
-                <a key={it.label} href={it.href} className="flex items-start gap-3 rounded-2xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition-all">
-                  <div className="w-11 h-11 rounded-xl bg-[#eeeafe] text-[#4b3df5] flex items-center justify-center shrink-0">
-                    <it.icon size={20} />
-                  </div>
-                  <div>
-                    <p className="text-[13px] font-semibold text-gray-400">{it.label}</p>
-                    <p className="text-[15px] font-medium text-[#1a1a3a]">{it.value}</p>
-                  </div>
-                </a>
-              ))}
+            <div className="mt-8 flex flex-col gap-4">
+              {info.map((it) => {
+                const isLink = it.href && it.href !== "#";
+                const Component = isLink ? "a" : "div";
+                return (
+                  <Component
+                    key={it.label}
+                    href={isLink ? it.href : undefined}
+                    className={`flex items-center gap-4 rounded-2xl border border-gray-100 shadow-sm p-4 sm:p-5 transition-all bg-white ${
+                      isLink ? "hover:shadow-md hover:border-gray-200" : ""
+                    }`}
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-[#eeeafe] text-[#4b3df5] flex items-center justify-center shrink-0">
+                      <it.icon size={22} />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <p className="text-[13px] font-semibold text-gray-400">{it.label}</p>
+                      <p className="text-[15px] sm:text-[16px] font-medium text-[#1a1a3a] break-all sm:break-words">
+                        {it.value}
+                      </p>
+                    </div>
+                  </Component>
+                );
+              })}
             </div>
           </div>
 

@@ -45,7 +45,7 @@ const ChatWidgets = () => {
             </div>
             <div className="p-4 space-y-3">
               <div className="bg-gray-100 rounded-lg rounded-tl-none p-3 text-[13px] text-gray-700">
-                Welcome to Masala Cruise! Ask us anything about our signature Bollywood cruise packages.
+                Welcome to Bollywood Masala Cruise! Ask us anything about our signature Bollywood cruise packages.
               </div>
               <input
                 type="text"

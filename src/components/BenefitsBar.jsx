@@ -1,9 +1,9 @@
 import React from "react";
-import { CircleDollarSign, Tag, Wifi, BadgeCheck, ShieldCheck } from "lucide-react";
+import { CircleDollarSign, Wifi, Compass, Camera } from "lucide-react";
 import { Link } from "react-router-dom";
 import { benefits } from "../mock";
 
-const benefitIconMap = { CircleDollarSign, Tag, Wifi, BadgeCheck, ShieldCheck };
+const benefitIconMap = { CircleDollarSign, Wifi, Compass, Camera };
 
 const BenefitsBar = () => (
   <section className="relative overflow-hidden">
@@ -21,7 +21,7 @@ const BenefitsBar = () => (
       <h2 className="text-center text-[24px] sm:text-[28px] font-bold text-white mb-8">
         Book Now and Get Exclusive Benefits!
       </h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
         {benefits.map((b) => {
           const Icon = benefitIconMap[b.icon];
           return (

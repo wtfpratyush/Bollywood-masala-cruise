@@ -87,9 +87,11 @@ const FoodTestimonials = () => {
                         loading="lazy"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
-                      <span className="absolute inset-0 bg-black/30 flex items-center justify-center transition-colors group-hover:bg-black/40">
-                        <span className="w-11 h-11 rounded-full bg-red-600 shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                          <Play size={18} fill="white" className="text-white ml-0.5" />
+                      <span className="absolute inset-0 bg-black/20 flex items-center justify-center transition-colors group-hover:bg-black/35">
+                        <span className="w-11 h-7.5 rounded-[9px] bg-[#FF0000] shadow-md flex items-center justify-center group-hover:scale-110 transition-transform">
+                          <svg className="w-3.5 h-3.5 fill-white ml-0.5" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
                         </span>
                       </span>
                     </button>

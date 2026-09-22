@@ -35,9 +35,11 @@ const Testimonials = () => {
                     decoding="async"
                     className="w-full h-full object-cover"
                   />
-                  <span className="absolute inset-0 bg-black/25 flex items-center justify-center">
-                    <span className="w-12 h-12 rounded-full bg-red-600 flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Play size={18} fill="white" className="text-white ml-0.5" />
+                  <span className="absolute inset-0 bg-black/20 flex items-center justify-center transition-colors group-hover:bg-black/35">
+                    <span className="w-13 h-9 rounded-[10px] bg-[#FF0000] shadow-md flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <svg className="w-4 h-4 fill-white ml-0.5" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
                     </span>
                   </span>
                 </button>

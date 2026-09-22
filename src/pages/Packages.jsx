@@ -62,7 +62,7 @@ const Packages = () => {
                   </span>
                   {c.details?.ship && (
                     <span className="absolute bottom-4 left-4 text-[12px] font-semibold text-white/90 bg-black/40 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
-                      🚢 {c.details.ship}
+                      {c.details.ship}
                     </span>
                   )}
                 </div>
@@ -93,10 +93,13 @@ const Packages = () => {
 
                   <div className="pt-6 border-t border-gray-100 flex items-center justify-between flex-wrap gap-4">
                     <div>
-                      <p className="text-[12px] font-medium text-gray-400 uppercase tracking-wider">Starting Rate</p>
-                      <p className="text-[28px] font-extrabold text-[#4b3df5] leading-none mt-0.5">
-                        {c.price} <span className="text-[13px] font-medium text-gray-500">/ Person</span>
+                      <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider mb-1">Starting Rate</p>
+                      <p className="text-[26px] font-extrabold text-[#4b3df5] leading-none">
+                        <span className="text-[15px] font-medium text-gray-500">From </span>
+                        {c.price}{" "}
+                        <span className="text-[14px] font-medium text-gray-500">/ Person</span>
                       </p>
+                      <p className="text-[11px] font-medium text-gray-400 mt-1">Prices are in USD</p>
                     </div>
                     <div className="flex items-center gap-2.5">
                       <Link

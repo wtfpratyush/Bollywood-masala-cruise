@@ -217,21 +217,22 @@ const CruiseDetailModal = ({ cruise, onClose, onBook }) => {
           <div
             id="cruise-section-Entertainment"
             style={{ backgroundImage: "url('/images/gallery/gallery-night-deck.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
-            className="relative px-5 sm:px-8 py-12 border-b border-gray-800"
+            className="relative px-5 sm:px-8 py-10 border-b border-gray-800"
           >
-            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/80 to-black/70" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#2b044d]/90 via-[#4a084f]/85 to-[#1a0033]/90" />
             <div className="relative z-10">
-              <div className="text-center mb-8">
+              <div className="text-center mb-7">
+                <p className="text-[11px] font-black tracking-[0.2em] uppercase text-amber-300 mb-1">ENTERTAINMENT</p>
                 <h3 className="text-[22px] sm:text-[28px] font-black text-white">
                   All This and More Awaits<br />You on Our Itinerary!
                 </h3>
               </div>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3.5">
                 {d.activities.map((act) => (
-                  <div key={act.name} className="flex flex-col items-center text-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-4 hover:bg-white/20 transition-all">
-                    <span className="text-3xl mb-2">{act.icon}</span>
-                    <p className="text-[14px] font-bold text-white">{act.name}</p>
-                    <p className="text-[11px] text-white/70 mt-1 leading-tight">{act.desc}</p>
+                  <div key={act.name} className="flex flex-col items-center justify-center text-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-4 hover:bg-white/20 transition-all shadow-sm">
+                    <span className="text-3xl mb-2 flex items-center justify-center">{act.icon}</span>
+                    <p className="text-[13px] font-bold text-white text-center leading-snug">{act.name}</p>
+                    <p className="text-[11px] text-white/75 mt-1 leading-tight text-center">{act.desc}</p>
                   </div>
                 ))}
               </div>
@@ -239,13 +240,13 @@ const CruiseDetailModal = ({ cruise, onClose, onBook }) => {
           </div>
 
           {/* ── 5. Dining ── */}
-          <div id="cruise-section-Dining" className="px-5 sm:px-8 py-10 border-b border-gray-100">
+          <div id="cruise-section-Dining" className="px-5 sm:px-8 py-8 border-b border-gray-100">
             <div className="mb-2">
               <p className="text-[12px] font-black tracking-[0.2em] text-[#4b3df5] uppercase">FOOD</p>
               <h3 className="text-[22px] font-black text-[#1a1a3a]">Delicious Dining Options</h3>
             </div>
-            <div className="flex flex-col sm:flex-row gap-5 mt-5 rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
-              <div className="sm:w-[45%] aspect-[4/3] sm:aspect-auto overflow-hidden bg-gray-100">
+            <div className="flex flex-col sm:flex-row gap-5 mt-4 rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
+              <div className="sm:w-[38%] min-h-[180px] sm:min-h-[200px] overflow-hidden bg-gray-100">
                 <img
                   src={d.diningImage}
                   alt="Dining"
@@ -254,17 +255,23 @@ const CruiseDetailModal = ({ cruise, onClose, onBook }) => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="flex-1 flex flex-col justify-center p-6">
-                <p className="text-[15px] text-gray-600 leading-relaxed mb-5">{d.diningDesc}</p>
-                <ul className="space-y-2 mb-5">
-                  {["Authentic Indian Vegetarian Menu", "Non-Vegetarian & Jain Options", "International Gourmet Cuisine", "24-Hour Room Service", "Themed Dinner Nights"].map((item) => (
+              <div className="flex-1 flex flex-col justify-center p-5 sm:p-6">
+                <p className="text-[14px] text-gray-600 leading-relaxed mb-4">{d.diningDesc}</p>
+                <ul className="space-y-2 mb-4">
+                  {[
+                    "Authentic Indian Vegetarian & Non-Vegetarian",
+                    "Halal & Vegan Friendly Options",
+                    "Pizza, Burgers & More",
+                    "Themed Dinner Nights",
+                    "Room Service",
+                  ].map((item) => (
                     <li key={item} className="flex items-center gap-2 text-[13px] text-gray-700">
-                      <span className="w-4 h-4 rounded-full bg-[#4b3df5]/10 text-[#4b3df5] flex items-center justify-center text-[10px] shrink-0">✓</span>
+                      <span className="w-4 h-4 rounded-full bg-[#4b3df5]/10 text-[#4b3df5] flex items-center justify-center text-[10px] shrink-0 font-bold">✓</span>
                       {item}
                     </li>
                   ))}
                 </ul>
-                <button onClick={onBook} className="self-start rounded-xl bg-[#f5a623] px-5 py-2.5 text-[13px] font-bold text-white hover:bg-[#e5981a] transition-all">
+                <button onClick={onBook} className="self-start rounded-xl bg-[#f5a623] px-5 py-2.5 text-[13px] font-bold text-white hover:bg-[#e5981a] transition-all shadow-md">
                   Request Pricing
                 </button>
               </div>
@@ -348,8 +355,11 @@ const CruiseDetailModal = ({ cruise, onClose, onBook }) => {
         {/* ── Sticky Bottom Book Bar ── */}
         <div className="shrink-0 bg-white border-t border-gray-100 px-5 sm:px-8 py-4 flex items-center justify-between">
           <div>
-            <p className="text-[12px] text-gray-400">Starting from</p>
-            <p className="text-[24px] font-black text-[#4b3df5] leading-none">{cruise.price} <span className="text-[13px] font-medium text-gray-400">per person</span></p>
+            <p className="text-[11px] text-gray-400">Starting from</p>
+            <p className="text-[22px] font-black text-[#4b3df5] leading-none">
+              {cruise.price} <span className="text-[13px] font-medium text-gray-500">/ Person</span>
+            </p>
+            <p className="text-[11px] font-medium text-gray-400 mt-1">Prices are in USD</p>
           </div>
           <div className="flex gap-3">
             <button onClick={onClose} className="px-4 py-2.5 rounded-xl border border-gray-200 text-[13px] font-semibold text-gray-600 hover:border-[#4b3df5] hover:text-[#4b3df5] transition-all">

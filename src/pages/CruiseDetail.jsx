@@ -351,11 +351,11 @@ const CruiseDetail = () => {
       <LazyBgSection
         id="cs-Entertainment"
         imageUrl="https://images.unsplash.com/photo-1628336707631-68131ca720c3?crop=entropy&cs=srgb&fm=jpg&q=80&w=1200"
-        className="relative py-16"
+        className="relative py-14"
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/80 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#2b044d]/90 via-[#4a084f]/85 to-[#1a0033]/90" />
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
+          <div className="text-center mb-9">
             <p className="text-[11px] font-black tracking-[0.22em] uppercase text-amber-300 mb-1">ENTERTAINMENT</p>
             <h2 className="text-[26px] sm:text-[32px] font-black text-white">
               All This and More Awaits<br />You on Our Itinerary!
@@ -365,11 +365,11 @@ const CruiseDetail = () => {
             {d.activities.map((act) => (
               <div
                 key={act.name}
-                className="flex flex-col items-center text-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 hover:bg-white/20 transition-all"
+                className="flex flex-col items-center justify-center text-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 hover:bg-white/20 transition-all shadow-sm"
               >
-                <span className="text-4xl mb-3">{act.icon}</span>
-                <p className="text-[14px] font-bold text-white">{act.name}</p>
-                <p className="text-[12px] text-white/70 mt-1 leading-snug">{act.desc}</p>
+                <span className="text-4xl mb-3 flex items-center justify-center">{act.icon}</span>
+                <p className="text-[14px] font-bold text-white text-center leading-snug">{act.name}</p>
+                <p className="text-[12px] text-white/75 mt-1 leading-snug text-center">{act.desc}</p>
               </div>
             ))}
           </div>
@@ -379,25 +379,25 @@ const CruiseDetail = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* ── 5. DINING ── */}
-        <section id="cs-Dining" className="py-14 border-b border-gray-100">
+        <section id="cs-Dining" className="py-10 border-b border-gray-100">
           <SectionHeading label="FOOD" title="Delicious Dining Options" center={false} />
-          <div className="flex flex-col sm:flex-row rounded-2xl overflow-hidden border border-gray-100 shadow-sm mt-4">
-            <div className="sm:w-[45%] min-h-[240px] overflow-hidden bg-gray-100">
+          <div className="flex flex-col sm:flex-row rounded-2xl overflow-hidden border border-gray-100 shadow-sm mt-3">
+            <div className="sm:w-[38%] min-h-[190px] sm:min-h-[210px] overflow-hidden bg-gray-100">
               <LazyImg src={d.diningImage} alt="Dining" className="w-full h-full object-cover" />
             </div>
-            <div className="flex-1 flex flex-col justify-center p-7 sm:p-10">
-              <p className="text-[15px] text-gray-600 leading-relaxed mb-6">{d.diningDesc}</p>
-              <ul className="space-y-2.5 mb-6">
+            <div className="flex-1 flex flex-col justify-center p-5 sm:p-7">
+              <p className="text-[14px] text-gray-600 leading-relaxed mb-4">{d.diningDesc}</p>
+              <ul className="space-y-2 mb-5">
                 {[
-                  "Authentic Indian Vegetarian Menu",
-                  "Non-Vegetarian & Jain Options",
-                  "International Gourmet Cuisine",
-                  "24-Hour Room Service",
+                  "Authentic Indian Vegetarian & Non-Vegetarian",
+                  "Halal & Vegan Friendly Options",
+                  "Pizza, Burgers & More",
                   "Themed Dinner Nights",
+                  "Room Service",
                 ].map((item) => (
-                  <li key={item} className="flex items-center gap-2.5 text-[14px] text-gray-700">
-                    <span className="w-5 h-5 rounded-full bg-indigo-100 text-[#4b3df5] flex items-center justify-center shrink-0">
-                      <Check size={12} strokeWidth={3} />
+                  <li key={item} className="flex items-center gap-2.5 text-[13px] text-gray-700">
+                    <span className="w-4.5 h-4.5 rounded-full bg-indigo-100 text-[#4b3df5] flex items-center justify-center shrink-0">
+                      <Check size={11} strokeWidth={3} />
                     </span>
                     {item}
                   </li>
@@ -405,7 +405,7 @@ const CruiseDetail = () => {
               </ul>
               <button
                 onClick={book}
-                className="self-start rounded-xl bg-[#f5a623] px-6 py-3 text-[14px] font-bold text-white hover:bg-[#e5981a] transition-all"
+                className="self-start rounded-xl bg-[#f5a623] px-5 py-2.5 text-[13px] font-bold text-white hover:bg-[#e5981a] transition-all shadow-md"
               >
                 Request Pricing
               </button>
@@ -507,11 +507,12 @@ const CruiseDetail = () => {
       <div className="sticky bottom-0 z-40 bg-white border-t border-gray-200 shadow-lg px-4 sm:px-10 py-4">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div>
-            <p className="text-[12px] text-gray-400">Starting from</p>
-            <p className="text-[26px] font-black text-[#4b3df5] leading-none">
+            <p className="text-[11px] text-gray-400">Starting from</p>
+            <p className="text-[24px] font-black text-[#4b3df5] leading-none">
               {cruise.price}{" "}
-              <span className="text-[13px] font-medium text-gray-400">per person</span>
+              <span className="text-[13px] font-medium text-gray-500">/ Person</span>
             </p>
+            <p className="text-[11px] font-medium text-gray-400 mt-1">Prices are in USD</p>
           </div>
           <div className="flex gap-3 items-center">
             <Link

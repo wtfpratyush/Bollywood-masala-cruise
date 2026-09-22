@@ -1,18 +1,21 @@
 import React from "react";
-import { Footprints, Music2, Dices, Drama, PartyPopper, Mic, Gamepad2 } from "lucide-react";
+import { Footprints, Music2, Dices, Drama, PartyPopper, Mic, Trophy, Sparkles } from "lucide-react";
 import { onboardActivities } from "../mock";
 
-const iconMap = { Footprints, Music2, Dices, Drama, PartyPopper, Mic, Gamepad2 };
+const iconMap = { Footprints, Music2, Dices, Drama, PartyPopper, Mic, Trophy, Sparkles };
 
 const OnboardExperience = () => {
   return (
-    <section id="onboard" className="bg-white py-8 lg:py-10">
+    <section id="onboard" className="bg-white py-12 lg:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-9">
-          <p className="text-[13px] font-bold tracking-[0.15em] text-[#4b3df5] mb-1">ONBOARD EXPERIENCE</p>
-          <h2 className="text-[26px] sm:text-[34px] font-bold text-[#1a1a3a]">
-            All This and More Awaitts You On Our Itinerary!
+        <div className="text-center mb-12 max-w-3xl mx-auto">
+          <p className="text-[12px] font-black tracking-[0.2em] text-[#4b3df5] uppercase mb-2">ONBOARD EXPERIENCE</p>
+          <h2 className="text-[28px] sm:text-[38px] lg:text-[42px] font-extrabold text-[#1a1a3a] tracking-tight leading-tight">
+            All This and More Awaits You On Our Itinerary!
           </h2>
+          <p className="mt-3 text-[15px] text-gray-500 leading-relaxed">
+            Handpicked entertainment and cultural moments crafted to bring Bollywood magic to the open ocean.
+          </p>
         </div>
 
         <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-7 gap-6">
