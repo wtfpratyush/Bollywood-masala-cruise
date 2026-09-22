@@ -14,7 +14,7 @@ export const navLinks = [
 export const heroFeatures = [
   { icon: "ShieldCheck", title: "Best Price", subtitle: "Guarantee" },
   { icon: "Ticket", title: "Signature", subtitle: "Packages" },
-  { icon: "Headset", title: "24/7 Guest", subtitle: "Support" },
+  { icon: "Sparkles", title: "Dedicated", subtitle: "Guest Support" },
 ];
 
 export const cruiseOptions = [

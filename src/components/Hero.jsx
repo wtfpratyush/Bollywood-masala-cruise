@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import { ShieldCheck, Ticket, Headset, ChefHat, BedDouble, Music, Users } from "lucide-react";
+import { ShieldCheck, Ticket, Headset, ChefHat, BedDouble, Music, Users, Sparkles, HeartHandshake, UserCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { heroFeatures, featureStrip, heroImage } from "../mock";
 
-const iconMap = { ShieldCheck, Ticket, Headset };
+const iconMap = { ShieldCheck, Ticket, Headset, Sparkles, HeartHandshake, UserCheck };
 const featureIconMap = { ChefHat, BedDouble, Music, Users };
 
 const QuoteForm = () => {
