@@ -7,14 +7,15 @@ import { contact } from "../mock";
 const Contact = () => {
   useEffect(() => {
     const scriptId = "msgsndr-form-embed";
-    let script = document.getElementById(scriptId);
-    if (!script) {
-      script = document.createElement("script");
-      script.id = scriptId;
-      script.src = "https://link.msgsndr.com/js/form_embed.js";
-      script.async = true;
-      document.body.appendChild(script);
+    const existingScript = document.getElementById(scriptId);
+    if (existingScript) {
+      existingScript.remove();
     }
+    const script = document.createElement("script");
+    script.id = scriptId;
+    script.src = "https://link.msgsndr.com/js/form_embed.js";
+    script.async = true;
+    document.body.appendChild(script);
   }, []);
 
   const info = [
@@ -69,10 +70,10 @@ const Contact = () => {
           </div>
 
           {/* Form - appears above info on mobile, on right on desktop */}
-          <div className="order-1 lg:order-2 bg-[#f6f7fc] rounded-3xl p-4 sm:p-6 border border-gray-100 min-h-[640px] flex flex-col justify-center">
+          <div className="order-1 lg:order-2 bg-[#f6f7fc] rounded-3xl p-4 sm:p-6 border border-gray-100 min-h-[640px] flex flex-col justify-center overflow-hidden">
             <iframe
               src="https://api.leadconnectorhq.com/widget/form/8LYQHo3CuLbis8cNAyyD"
-              style={{ width: "100%", height: "100%", minHeight: "622px", border: "none", borderRadius: "8px" }}
+              style={{ width: "100%", height: "100%", minHeight: "626px", border: "none", borderRadius: "0px" }}
               id="inline-8LYQHo3CuLbis8cNAyyD"
               data-layout="{'id':'INLINE'}"
               data-trigger-type="alwaysShow"
@@ -82,7 +83,7 @@ const Contact = () => {
               data-deactivation-type="neverDeactivate"
               data-deactivation-value=""
               data-form-name="Contact form new website"
-              data-height="622"
+              data-height="626"
               data-layout-iframe-id="inline-8LYQHo3CuLbis8cNAyyD"
               data-form-id="8LYQHo3CuLbis8cNAyyD"
               data-cookie-consent="true"

@@ -9,21 +9,22 @@ const featureIconMap = { ChefHat, BedDouble, Music, Users };
 const QuoteForm = () => {
   useEffect(() => {
     const scriptId = "msgsndr-form-embed";
-    let script = document.getElementById(scriptId);
-    if (!script) {
-      script = document.createElement("script");
-      script.id = scriptId;
-      script.src = "https://link.msgsndr.com/js/form_embed.js";
-      script.async = true;
-      document.body.appendChild(script);
+    const existingScript = document.getElementById(scriptId);
+    if (existingScript) {
+      existingScript.remove();
     }
+    const script = document.createElement("script");
+    script.id = scriptId;
+    script.src = "https://link.msgsndr.com/js/form_embed.js";
+    script.async = true;
+    document.body.appendChild(script);
   }, []);
 
   return (
-    <div className="w-full bg-white rounded-2xl shadow-2xl shadow-indigo-900/10 p-2 sm:p-4 border border-gray-100 min-h-[640px] flex flex-col justify-center">
+    <div className="w-full bg-white rounded-2xl shadow-2xl shadow-indigo-900/10 p-2 sm:p-4 border border-gray-100 min-h-[640px] flex flex-col justify-center overflow-hidden">
       <iframe
         src="https://api.leadconnectorhq.com/widget/form/8LYQHo3CuLbis8cNAyyD"
-        style={{ width: "100%", height: "100%", minHeight: "622px", border: "none", borderRadius: "8px" }}
+        style={{ width: "100%", height: "100%", minHeight: "626px", border: "none", borderRadius: "0px" }}
         id="inline-8LYQHo3CuLbis8cNAyyD"
         data-layout="{'id':'INLINE'}"
         data-trigger-type="alwaysShow"
@@ -33,7 +34,7 @@ const QuoteForm = () => {
         data-deactivation-type="neverDeactivate"
         data-deactivation-value=""
         data-form-name="Contact form new website"
-        data-height="622"
+        data-height="626"
         data-layout-iframe-id="inline-8LYQHo3CuLbis8cNAyyD"
         data-form-id="8LYQHo3CuLbis8cNAyyD"
         data-cookie-consent="true"
