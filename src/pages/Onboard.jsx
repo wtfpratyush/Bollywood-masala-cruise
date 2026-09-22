@@ -340,11 +340,15 @@ const Onboard = () => {
             title="Everything You Need, Right Onboard"
             subtitle="World-class facilities so you never have to think about anything except making memories."
           />
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
-            {amenities.map((a) => {
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-12 gap-5">
+            {amenities.map((a, index) => {
               const Icon = a.icon;
+              const spanClass = index < 4 ? "lg:col-span-3" : "lg:col-span-4";
               return (
-                <div key={a.title} className="flex flex-col gap-3 p-6 rounded-2xl border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/30 hover:shadow-lg transition-all group">
+                <div
+                  key={a.title}
+                  className={`flex flex-col gap-3 p-6 rounded-2xl border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/30 hover:shadow-lg transition-all group ${spanClass}`}
+                >
                   <div className="w-12 h-12 rounded-xl bg-indigo-50 flex items-center justify-center text-[#4b3df5] group-hover:bg-[#4b3df5] group-hover:text-white transition-all">
                     <Icon size={22} strokeWidth={1.6} />
                   </div>
