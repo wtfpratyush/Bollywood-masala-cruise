@@ -566,7 +566,7 @@ export const dining = {
   image: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBmb29kfGVufDB8fHx8MTc4Nzc0ODMwN3ww&ixlib=rb-4.1.0&q=85",
 };
 
-export const heroImage = "/images/hero/hero-bliss.jpg";
+export const heroImage = "/images/hero-cruise-ship.jpg";
 export const heroVideo = "/videos/hero-passengers.mp4";
 export const heroVideoFallback = "https://assets.mixkit.co/videos/22597/22597-720.mp4";
 
