@@ -197,12 +197,12 @@ const About = () => {
       {/* ========================================================================= */}
       {/* 2. CORE VALUES SECTION (Image 2) */}
       {/* ========================================================================= */}
-      <section className="bg-gradient-to-br from-[#170e5c] via-[#24177d] to-[#4b3df5] py-20 text-white relative overflow-hidden">
+      <section className="bg-gradient-to-br from-[#170e5c] via-[#24177d] to-[#4b3df5] py-16 sm:py-20 lg:py-24 text-white relative overflow-hidden">
         {/* Subtle patterned overlay */}
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-14">
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
             <p className="text-[13px] font-bold tracking-[0.2em] text-[#f5a623] uppercase mb-2">
               {aboutCoreValues.eyebrow}
             </p>
@@ -259,9 +259,9 @@ const About = () => {
       {/* ========================================================================= */}
       {/* 3. AGENTS / CRUISE SPECIALISTS SECTION (Image 3) */}
       {/* ========================================================================= */}
-      <section className="bg-[#fbfbfe] py-18 lg:py-22">
+      <section className="bg-[#f8f9fd] py-16 sm:py-20 lg:py-24 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-14">
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
             {aboutAgents.eyebrow ? (
               <p className="text-[13px] font-bold tracking-[0.2em] text-[#4b3df5] uppercase mb-2">
                 {aboutAgents.eyebrow}
@@ -329,7 +329,7 @@ const About = () => {
                     </div>
                   </div>
 
-                  {/* Direct Contact Links matching screenshot */}
+                  {/* Direct Contact Links */}
                   <div className="pt-4 border-t border-gray-100 space-y-2.5">
                     <a
                       href={`tel:${agent.phone.replace(/[^0-9]/g, "")}`}
@@ -362,10 +362,10 @@ const About = () => {
             ))}
           </div>
 
-          <div className="text-center mt-10">
-            <p className="text-[14px] text-gray-500">
+          <div className="text-center mt-12 pt-2">
+            <p className="text-[14px] sm:text-[15px] text-gray-500">
               Need immediate assistance? You can also{" "}
-              <Link to="/contact" className="text-[#4b3df5] font-bold underline">
+              <Link to="/contact" className="text-[#4b3df5] font-bold underline hover:text-[#382bcc]">
                 fill out our 60-Second Quote Form
               </Link>{" "}
               for instant response.
@@ -377,9 +377,9 @@ const About = () => {
       {/* ========================================================================= */}
       {/* 4. GALLERY & CRUISE MOMENTS (Image 4) */}
       {/* ========================================================================= */}
-      <section className="bg-white py-18 lg:py-22">
+      <section className="bg-white py-16 sm:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-10">
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
             <p className="text-[13px] font-bold tracking-[0.2em] text-[#4b3df5] uppercase mb-2">
               {aboutGalleryMoments.eyebrow}
             </p>
@@ -409,7 +409,7 @@ const About = () => {
           </div>
 
           {/* Gallery Grid matching Image 4 */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
             {filteredPhotos.map((photo, idx) => (
               <div
                 key={photo.title + idx}
@@ -446,7 +446,7 @@ const About = () => {
           </div>
 
           {/* Link to Full Gallery Page */}
-          <div className="text-center mt-12">
+          <div className="text-center mt-12 sm:mt-14">
             <Link
               to="/gallery"
               className="inline-flex items-center gap-2 rounded-xl bg-[#1a1a3a] text-white px-8 py-3.5 font-bold text-[15px] hover:bg-[#4b3df5] transition-all hover:shadow-lg"
@@ -460,9 +460,9 @@ const About = () => {
       {/* ========================================================================= */}
       {/* 5. MILESTONES & TIMELINE (Enriched Information) */}
       {/* ========================================================================= */}
-      <section className="bg-[#f6f5fe] py-16 lg:py-20 border-t border-b border-indigo-50">
+      <section className="bg-[#f6f5fe] py-16 sm:py-20 lg:py-24 border-t border-b border-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
             <p className="text-[13px] font-bold tracking-[0.2em] text-[#4b3df5] uppercase mb-2">
               OUR MILESTONES
             </p>
@@ -495,7 +495,7 @@ const About = () => {
       {/* ========================================================================= */}
       {/* 6. CALL TO ACTION BANNER */}
       {/* ========================================================================= */}
-      <section className="bg-[#1a1a3a] py-16 text-white relative overflow-hidden">
+      <section className="bg-[#1a1a3a] py-16 sm:py-20 text-white relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
           <span className="inline-block px-4 py-1.5 rounded-full bg-[#f5a623] text-black text-[12px] font-black tracking-wider uppercase">
             Join Bollywood Masala Cruise
