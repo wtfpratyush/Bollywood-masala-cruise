@@ -46,6 +46,11 @@ export const galleryImages = [
   { src: "/images/gallery/679a33c6714dc02b0d0f2278.jpeg", alt: "Cruise Moments" },
   { src: "/images/gallery/66998e36fe542b2ec2454dcf.webp", alt: "Cruise Party Celebration" },
   { src: "/images/gallery/679a8d052ee4855ceec2e4d4.jpeg", alt: "Happy Cruisers" },
+  { src: "/images/gallery/alaska-welcome-juneau.jpg", alt: "Juneau Alaska Capital City Destination" },
+  { src: "/images/gallery/alaska-sunset-harbor.jpg", alt: "Alaska Sunset Harbor & Mountains" },
+  { src: "/images/gallery/alaska-glacier-iceberg.jpg", alt: "Alaska Glacier and Iceberg Sailing" },
+  { src: "/images/gallery/alaska-fjord-mountains.jpg", alt: "Alaska Fjord and Mountain Scenery" },
+  { src: "/images/gallery/alaska-cruise-port-flag.jpg", alt: "Alaska Cruise Port Ship" },
   { src: "/images/gallery/67aa34929957468281070998.jpeg", alt: "Destinations & Shore Excursions" },
   { src: "/images/gallery/67aa352337cca1ead0205ad5.jpeg", alt: "Tropical Port Destinations" },
   { src: "/images/gallery/667df7e30ec82103ea6bd236.webp", alt: "Island Coastal Views" },
@@ -200,12 +205,12 @@ export const onboardActivities = [
 ];
 
 export const pastCruises = [
-  { date: "MAY 2024", title: "Alaska Cruise", image: "https://images.unsplash.com/photo-1554254648-2d58a1bc3fd5?auto=format&fit=crop&w=800&q=75" },
+  { date: "MAY 2024", title: "Alaska Cruise", image: "/images/gallery/alaska-sunset-harbor.jpg" },
   { date: "DEC 2024", title: "Caribbean Cruise", image: "https://images.pexels.com/photos/29146142/pexels-photo-29146142.jpeg?auto=compress&cs=tinysrgb&w=800" },
-  { date: "MAY 2025", title: "Alaska Cruise", image: "https://images.unsplash.com/photo-1554254464-7046778097bf?auto=format&fit=crop&w=800&q=75" },
+  { date: "MAY 2025", title: "Alaska Cruise", image: "/images/gallery/alaska-glacier-iceberg.jpg" },
   { date: "DEC 2025", title: "Mexican Cruise", image: "https://images.pexels.com/photos/33270055/pexels-photo-33270055.jpeg?auto=compress&cs=tinysrgb&w=800" },
   { date: "MAR 2026", title: "Holi Cruise (Caribbean)", image: "https://images.unsplash.com/photo-1511316695145-4992006ffddb?auto=format&fit=crop&w=800&q=75" },
-  { date: "JUL 2026", title: "Alaska Cruise", image: "https://images.pexels.com/photos/5022610/pexels-photo-5022610.jpeg?auto=compress&cs=tinysrgb&w=800" },
+  { date: "JUL 2026", title: "Alaska Cruise", image: "/images/gallery/alaska-welcome-juneau.jpg" },
 ];
 
 export const testimonials = [
