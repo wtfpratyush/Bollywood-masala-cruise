@@ -45,7 +45,10 @@ const BenefitsFaqFooter = () => {
               );
             })}
           </div>
-          <div className="flex justify-center mt-8">
+          <p className="text-center text-[12px] sm:text-[13px] text-white/85 mt-6 max-w-xl mx-auto">
+            Without Drink Package in Balcony Room. Offer valid on select sailings.
+          </p>
+          <div className="flex justify-center mt-6">
             <a
               href="#contact"
               className="rounded-lg bg-[#f5a623] px-8 py-3 text-[15px] font-semibold text-white hover:bg-[#e5981a] transition-all hover:-translate-y-0.5"
