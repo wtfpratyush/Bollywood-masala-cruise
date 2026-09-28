@@ -6,419 +6,615 @@ import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 /* ─── All local images from public/images/gallery ─── */
 const galleryImages = [
   {
-    "src": "/images/gallery/679a8cc62ee48554e2c2e4a4.jpeg",
-    "cat": "Moments"
+    "src": "/images/gallery/Destination/1.jpg",
+    "cat": "Destinations"
   },
   {
-    "src": "/images/gallery/1 copy 4.jpg",
+    "src": "/images/gallery/Destination/2.jpg",
+    "cat": "Destinations"
+  },
+  {
+    "src": "/images/gallery/Destination/3.jpg",
+    "cat": "Destinations"
+  },
+  {
+    "src": "/images/gallery/Destination/4.jpg",
+    "cat": "Destinations"
+  },
+  {
+    "src": "/images/gallery/Destination/5.jpg",
+    "cat": "Destinations"
+  },
+  {
+    "src": "/images/gallery/Destination/6.jpg",
+    "cat": "Destinations"
+  },
+  {
+    "src": "/images/gallery/Destination/7.jpg",
+    "cat": "Destinations"
+  },
+  {
+    "src": "/images/gallery/Destination/8.jpg",
+    "cat": "Destinations"
+  },
+  {
+    "src": "/images/gallery/Destination/9.jpg",
+    "cat": "Destinations"
+  },
+  {
+    "src": "/images/gallery/Entertainment/20260722_172827.jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/20260723_175458.jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/20260725_113455.jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/20260725_171352.jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/20260726_173957.jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/20260726_175716.jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/BMC-106.jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/BMC-207 (1).jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/BMC-235.jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/BMC-255.jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/BMC-304.jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/BMC-308.jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/BMC-312.jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/BMC-344 (1).jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/BMC-382 (1).jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/BMC-413.jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/BMC-421.jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/BMC-460.jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/BMC-528.jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/BMC-577 (1).jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/BMC-589.jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/BMC-600 (1).jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/BMC-645.jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/BMC-725 (1).jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/BMC-729.jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/BMC-801.jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/BMC-838.jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/BMC-841.jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/BMC-95.jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/IMG_3732.jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/IMG_3972.jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/IMG_3975.jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/IMG_4001.jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/IMG_4314.jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/IMG_4367.jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Entertainment/IMG_5286(1).jpg",
+    "cat": "Entertainment"
+  },
+  {
+    "src": "/images/gallery/Event/1.jpg",
     "cat": "Events"
   },
   {
-    "src": "/images/gallery/alaska-glacier-iceberg.jpg",
-    "cat": "Destinations"
-  },
-  {
-    "src": "/images/gallery/679a8d050d9c75a573a6694c.jpeg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/66998414fe542b83044544f8.jpeg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/10.jpg",
-    "cat": "Entertainment"
-  },
-  {
-    "src": "/images/gallery/11 copy 2.jpg",
-    "cat": "Entertainment"
-  },
-  {
-    "src": "/images/gallery/66998414fe542bab6d4544f7.jpeg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/11 copy.jpg",
-    "cat": "Entertainment"
-  },
-  {
-    "src": "/images/gallery/11.jpg",
-    "cat": "Entertainment"
-  },
-  {
-    "src": "/images/gallery/679a8d052ee4855ceec2e4d4.jpeg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/679a35aa6018454facd93efb.jpeg",
+    "src": "/images/gallery/Event/10.jpg",
     "cat": "Events"
   },
   {
-    "src": "/images/gallery/669711015f08bcfca7889e47.webp",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/12.jpg",
-    "cat": "Entertainment"
-  },
-  {
-    "src": "/images/gallery/679a8d054f0aeb1852623064.jpeg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/669984144d63031abcfccf7d.jpeg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/13.jpg",
-    "cat": "Entertainment"
-  },
-  {
-    "src": "/images/gallery/679a8d059dbb375851064d18.jpeg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/669984144d63030143fccf7a.jpeg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/14.jpg",
-    "cat": "Entertainment"
-  },
-  {
-    "src": "/images/gallery/679a8d0535f5ca5b8c111611.jpeg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/15 copy 4.jpg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/15.jpg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/679a8d0562e328e0efdcb262.jpeg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/669984145f2569065123e031.jpeg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/16.jpg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/679a8d0562e3282ebfdcb264.jpeg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/669984145f2569691523e032.jpeg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/17.jpg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/679a8d0562e328025bdcb260.jpeg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/66998414763d6d45cb01b9fb.jpeg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/18.jpg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/679a8d0562e3284617dcb263.jpeg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/6699841421005a380d50c378.jpeg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/19.jpg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/679a8cc69eedab2a756f4643.jpeg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/669991f5f3f1c409d5f4129f.webp",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/alaska-fjord-mountains.jpg",
-    "cat": "Destinations"
-  },
-  {
-    "src": "/images/gallery/679a8d0580145c5efff9f0bb.jpeg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/6699841480329d3a96849a50.jpeg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/20.jpg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/20260722_172827.jpg",
-    "cat": "Destinations"
-  },
-  {
-    "src": "/images/gallery/20260723_175458.jpg",
-    "cat": "Destinations"
-  },
-  {
-    "src": "/images/gallery/20260725_113455.jpg",
-    "cat": "Destinations"
-  },
-  {
-    "src": "/images/gallery/20260725_171352.jpg",
-    "cat": "Destinations"
-  },
-  {
-    "src": "/images/gallery/20260726_173957.jpg",
-    "cat": "Destinations"
-  },
-  {
-    "src": "/images/gallery/20260726_175716.jpg",
-    "cat": "Destinations"
-  },
-  {
-    "src": "/images/gallery/679a8d0580145c27ccf9f0ba.jpeg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/21 copy 4.jpg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/21.jpg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/679a8d056018454049d9afc6.jpeg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/22 copy 4.jpg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/22.jpg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/679a8d0531492731742fc0be.jpeg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/23 copy 4.jpg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/23.jpg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/24 copy 2.jpg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/24 copy 4.jpg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/24.jpg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/25 copy 2.jpg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/25 copy 4.jpg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/25.jpg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/26 copy 2.jpg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/26 copy 4.jpg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/26.jpg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/27 copy 2.jpg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/27 copy 4.jpg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/27.jpg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/28 copy 2.jpg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/28 copy 4.jpg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/28.jpg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/29 copy 2.jpg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/29 copy 4.jpg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/29.jpg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/679a8cc69eedab69d86f4644.jpeg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/669991fafaf1807b72bcf4ae.webp",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/3 copy.jpg",
+    "src": "/images/gallery/Event/11.jpg",
     "cat": "Events"
   },
   {
-    "src": "/images/gallery/alaska-welcome-juneau.jpg",
-    "cat": "Destinations"
-  },
-  {
-    "src": "/images/gallery/30 copy 2.jpg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/30 copy 4.jpg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/30.jpg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/31 copy 4.jpg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/31.jpg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/32 copy 4.jpg",
-    "cat": "Destinations"
-  },
-  {
-    "src": "/images/gallery/33 copy 4.jpg",
-    "cat": "Destinations"
-  },
-  {
-    "src": "/images/gallery/34 copy 4.jpg",
-    "cat": "Destinations"
-  },
-  {
-    "src": "/images/gallery/35 copy 4.jpg",
-    "cat": "Destinations"
-  },
-  {
-    "src": "/images/gallery/36 copy 4.jpg",
-    "cat": "Destinations"
-  },
-  {
-    "src": "/images/gallery/37 copy 4.jpg",
-    "cat": "Destinations"
-  },
-  {
-    "src": "/images/gallery/38 copy 4.jpg",
-    "cat": "Destinations"
-  },
-  {
-    "src": "/images/gallery/39 copy 4.jpg",
-    "cat": "Destinations"
-  },
-  {
-    "src": "/images/gallery/679a8cc70d9c7541f7a66914.jpeg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/669991ff21005a0fa550d71c.webp",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/4 copy.jpg",
+    "src": "/images/gallery/Event/12.jpg",
     "cat": "Events"
   },
   {
-    "src": "/images/gallery/alaska-cruise-port-flag.jpg",
-    "cat": "Destinations"
-  },
-  {
-    "src": "/images/gallery/679a8cc70d9c75855ba66915.jpeg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/6697125be1b559680b719358.webp",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/IMG_3732.jpg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/alaska-sunset-harbor.jpg",
-    "cat": "Destinations"
-  },
-  {
-    "src": "/images/gallery/679a8cc76018457ddcd9af9d.jpeg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/66998414b998f5f12bd19c6e.jpeg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/6 copy.jpg",
+    "src": "/images/gallery/Event/13.jpg",
     "cat": "Events"
   },
   {
-    "src": "/images/gallery/alaska-ship-green-mountains.jpg",
-    "cat": "Destinations"
+    "src": "/images/gallery/Event/14.jpg",
+    "cat": "Events"
+  },
+  {
+    "src": "/images/gallery/Event/15.jpg",
+    "cat": "Events"
+  },
+  {
+    "src": "/images/gallery/Event/16.jpg",
+    "cat": "Events"
+  },
+  {
+    "src": "/images/gallery/Event/17.jpg",
+    "cat": "Events"
+  },
+  {
+    "src": "/images/gallery/Event/18.jpg",
+    "cat": "Events"
+  },
+  {
+    "src": "/images/gallery/Event/19.jpg",
+    "cat": "Events"
+  },
+  {
+    "src": "/images/gallery/Event/2.jpg",
+    "cat": "Events"
+  },
+  {
+    "src": "/images/gallery/Event/20.jpg",
+    "cat": "Events"
+  },
+  {
+    "src": "/images/gallery/Event/21.jpg",
+    "cat": "Events"
+  },
+  {
+    "src": "/images/gallery/Event/22.jpg",
+    "cat": "Events"
+  },
+  {
+    "src": "/images/gallery/Event/23.jpg",
+    "cat": "Events"
+  },
+  {
+    "src": "/images/gallery/Event/24.jpg",
+    "cat": "Events"
+  },
+  {
+    "src": "/images/gallery/Event/25.jpg",
+    "cat": "Events"
+  },
+  {
+    "src": "/images/gallery/Event/26.jpg",
+    "cat": "Events"
+  },
+  {
+    "src": "/images/gallery/Event/27.jpg",
+    "cat": "Events"
+  },
+  {
+    "src": "/images/gallery/Event/28.jpg",
+    "cat": "Events"
+  },
+  {
+    "src": "/images/gallery/Event/29.jpg",
+    "cat": "Events"
+  },
+  {
+    "src": "/images/gallery/Event/3.jpg",
+    "cat": "Events"
+  },
+  {
+    "src": "/images/gallery/Event/30.jpg",
+    "cat": "Events"
+  },
+  {
+    "src": "/images/gallery/Event/31.jpg",
+    "cat": "Events"
+  },
+  {
+    "src": "/images/gallery/Event/4.jpg",
+    "cat": "Events"
+  },
+  {
+    "src": "/images/gallery/Event/6.jpg",
+    "cat": "Events"
+  },
+  {
+    "src": "/images/gallery/Event/7.jpg",
+    "cat": "Events"
+  },
+  {
+    "src": "/images/gallery/Event/8.jpg",
+    "cat": "Events"
+  },
+  {
+    "src": "/images/gallery/Event/9.jpg",
+    "cat": "Events"
+  },
+  {
+    "src": "/images/gallery/Moments/1.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/Moments/10.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/Moments/11.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/Moments/12.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/Moments/13.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/Moments/14.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/Moments/15.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/Moments/16.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/Moments/17.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/Moments/18.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/Moments/19.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/Moments/2.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/Moments/20.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/Moments/21.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/Moments/22.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/Moments/23.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/Moments/24.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/Moments/25.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/Moments/26.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/Moments/27.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/Moments/28.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/Moments/29.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/Moments/3.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/Moments/30.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/Moments/4.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/Moments/5.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/Moments/6.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/Moments/7.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/Moments/8.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/Moments/9.jpg",
+    "cat": "Moments"
+  },
+  {
+    "src": "/images/gallery/onboard/1.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/10.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/11.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/12.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/13.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/14.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/15.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/16.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/17.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/18.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/19.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/2.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/20.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/21.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/22.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/23.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/24.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/25.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/26.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/27.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/28.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/29.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/3.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/30.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/31.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/32.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/33.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/34.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/35.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/36.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/37.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/38.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/39.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/4.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/5.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/6.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/7.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/8.jpg",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/onboard/9.jpg",
+    "cat": "Onboard"
   },
   {
     "src": "/images/gallery/667df7e30ec82103ea6bd236.webp",
+    "cat": "Destinations"
+  },
+  {
+    "src": "/images/gallery/667f533096b757560a66b58f.webp",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/667f53da96b757e71a66b636.webp",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/667f554661f34bbba8d8c48d.webp",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/667f563c8145f81f6dda6c6a.webp",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/667f56d80ec821dfeb6e570b.webp",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/667f5d2f96b7577a3866f371 (1).webp",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/667f5d350ec821745b6e94e3.webp",
+    "cat": "Onboard"
+  },
+  {
+    "src": "/images/gallery/667f5da861f34b6129d90dfe.jpeg",
     "cat": "Onboard"
   },
   {
@@ -426,11 +622,7 @@ const galleryImages = [
     "cat": "Onboard"
   },
   {
-    "src": "/images/gallery/66998414b998f52b1dd19c6f.jpeg",
-    "cat": "Onboard"
-  },
-  {
-    "src": "/images/gallery/66998414f3f1c4052df406ee.jpeg",
+    "src": "/images/gallery/66998414763d6d45cb01b9fb.jpeg",
     "cat": "Onboard"
   },
   {
@@ -502,22 +694,6 @@ const galleryImages = [
     "cat": "Events"
   },
   {
-    "src": "/images/gallery/679a8d050d9c754a05a6694b.jpeg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/679a8d05c66ff74e2f1de138.jpeg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/679a8d05cdc648872f92af8f.jpeg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/679a8d05d6e977f48b43a8c8.jpeg",
-    "cat": "Moments"
-  },
-  {
     "src": "/images/gallery/67aa34929957468281070998.jpeg",
     "cat": "Destinations"
   },
@@ -526,156 +702,16 @@ const galleryImages = [
     "cat": "Destinations"
   },
   {
-    "src": "/images/gallery/7 copy.jpg",
-    "cat": "Entertainment"
-  },
-  {
-    "src": "/images/gallery/gallery-deck-guests.jpg",
+    "src": "/images/gallery/6838e91d66722b80f67a2b2b.webp",
     "cat": "Moments"
   },
   {
-    "src": "/images/gallery/8 copy.jpg",
-    "cat": "Entertainment"
-  },
-  {
-    "src": "/images/gallery/gallery-arrival-vibes.jpg",
+    "src": "/images/gallery/695415927ccb03bacd5609f6.webp",
     "cat": "Moments"
   },
   {
-    "src": "/images/gallery/9 copy.jpg",
-    "cat": "Entertainment"
-  },
-  {
-    "src": "/images/gallery/gallery-embarkation-crew.jpg",
-    "cat": "Events"
-  },
-  {
-    "src": "/images/gallery/BMC-106.jpg",
-    "cat": "Events"
-  },
-  {
-    "src": "/images/gallery/BMC-207 (1).jpg",
-    "cat": "Events"
-  },
-  {
-    "src": "/images/gallery/BMC-235.jpg",
-    "cat": "Events"
-  },
-  {
-    "src": "/images/gallery/BMC-255.jpg",
-    "cat": "Events"
-  },
-  {
-    "src": "/images/gallery/BMC-304.jpg",
-    "cat": "Entertainment"
-  },
-  {
-    "src": "/images/gallery/BMC-308.jpg",
-    "cat": "Entertainment"
-  },
-  {
-    "src": "/images/gallery/BMC-312.jpg",
-    "cat": "Entertainment"
-  },
-  {
-    "src": "/images/gallery/BMC-344 (1).jpg",
-    "cat": "Entertainment"
-  },
-  {
-    "src": "/images/gallery/BMC-382 (1).jpg",
-    "cat": "Entertainment"
-  },
-  {
-    "src": "/images/gallery/BMC-413.jpg",
-    "cat": "Entertainment"
-  },
-  {
-    "src": "/images/gallery/BMC-421.jpg",
-    "cat": "Entertainment"
-  },
-  {
-    "src": "/images/gallery/BMC-460.jpg",
-    "cat": "Entertainment"
-  },
-  {
-    "src": "/images/gallery/BMC-528.jpg",
-    "cat": "Entertainment"
-  },
-  {
-    "src": "/images/gallery/BMC-577 (1).jpg",
+    "src": "/images/gallery/695416a3ec06c51cf2ab1945.webp",
     "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/BMC-589.jpg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/BMC-600 (1).jpg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/BMC-645.jpg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/BMC-725 (1).jpg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/BMC-729.jpg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/BMC-801.jpg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/BMC-838.jpg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/BMC-841.jpg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/BMC-95.jpg",
-    "cat": "Events"
-  },
-  {
-    "src": "/images/gallery/IMG_0095.jpg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/IMG_3972.jpg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/IMG_3975.jpg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/IMG_4001.jpg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/IMG_4314.jpg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/IMG_4367.jpg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/IMG_5286(1).jpg",
-    "cat": "Moments"
-  },
-  {
-    "src": "/images/gallery/gallery-dance.jpg",
-    "cat": "Entertainment"
-  },
-  {
-    "src": "/images/gallery/gallery-night-deck.jpg",
-    "cat": "Entertainment"
   }
 ];
 
@@ -729,24 +765,19 @@ const Lightbox = ({ images, index, onClose, onPrev, onNext }) => {
   );
 };
 
-/* ─── Lazy image card ─── */
+/* ─── Immediate image card (lazy loading disabled) ─── */
 const GalleryCard = ({ src, index, onOpen }) => {
-  const [loaded, setLoaded] = useState(false);
   return (
     <div
-      className="relative group overflow-hidden rounded-2xl bg-gray-200 cursor-pointer shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 mb-4 break-inside-avoid"
+      className="relative group overflow-hidden rounded-2xl bg-gray-100 cursor-pointer shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 mb-4 break-inside-avoid"
       onClick={() => onOpen(index)}
     >
-      {!loaded && (
-        <div className="w-full h-48 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 animate-pulse rounded-2xl" />
-      )}
       <img
         src={src}
         alt={`Gallery ${index + 1}`}
-        loading="lazy"
-        decoding="async"
-        onLoad={() => setLoaded(true)}
-        className={`w-full object-cover transition-all duration-500 group-hover:scale-105 ${loaded ? "opacity-100" : "opacity-0 absolute inset-0"}`}
+        loading="eager"
+        decoding="sync"
+        className="w-full object-cover transition-all duration-500 group-hover:scale-105 block"
       />
       {/* Hover overlay */}
       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
