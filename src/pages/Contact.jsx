@@ -22,9 +22,9 @@ const Contact = () => {
       />
 
       <section className="bg-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid xl:grid-cols-12 gap-10 xl:gap-10 items-center">
           {/* Info - appears below form on mobile, on left on desktop */}
-          <div className="order-2 lg:order-1 lg:col-span-5">
+          <div className="order-2 xl:order-1 xl:col-span-4">
             <p className="text-[13px] font-bold tracking-[0.15em] text-[#4b3df5] mb-3">GET IN TOUCH</p>
             <h2 className="text-[30px] sm:text-[36px] font-extrabold text-[#1a1a3a] leading-tight">We'd Love to Hear From You</h2>
             <p className="mt-4 text-[16px] text-gray-600 leading-relaxed">
@@ -38,9 +38,8 @@ const Contact = () => {
                   <Component
                     key={it.label}
                     href={isLink ? it.href : undefined}
-                    className={`flex items-center gap-4 rounded-2xl border border-gray-100 shadow-sm p-4 sm:p-5 transition-all bg-white ${
-                      isLink ? "hover:shadow-md hover:border-gray-200" : ""
-                    }`}
+                    className={`flex items-center gap-4 rounded-2xl border border-gray-100 shadow-sm p-4 sm:p-5 transition-all bg-white ${isLink ? "hover:shadow-md hover:border-gray-200" : ""
+                      }`}
                   >
                     <div className="w-12 h-12 rounded-xl bg-[#eeeafe] text-[#4b3df5] flex items-center justify-center shrink-0">
                       <it.icon size={22} />
@@ -58,8 +57,8 @@ const Contact = () => {
           </div>
 
           {/* Form - appears above info on mobile, on right on desktop */}
-          <div className="order-1 lg:order-2 lg:col-span-7 flex lg:justify-end">
-            <div className="w-full max-w-[620px]">
+          <div className="order-1 xl:order-2 xl:col-span-8 flex justify-center xl:justify-end">
+            <div className="w-full max-w-[700px]">
               <QuickQuoteForm />
             </div>
           </div>
