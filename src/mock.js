@@ -33,6 +33,10 @@ export const featureStrip = [
 ];
 
 export const galleryImages = [
+  { src: "/images/gallery/gallery-embarkation-crew.jpg", alt: "Embarkation and Cruise Gathering" },
+  { src: "/images/gallery/gallery-arrival-vibes.jpg", alt: "Artist & Crew Excitement" },
+  { src: "/images/gallery/gallery-deck-guests.jpg", alt: "Happy Guests on Open Cruise Deck" },
+  { src: "/images/gallery/alaska-ship-green-mountains.jpg", alt: "Scenic Alaska Mountain Port Ship View" },
   { src: "/images/gallery/679a385f2ee48503a4c25175.jpeg", alt: "Bollywood Party and Cruise Gala" },
   { src: "/images/gallery/gallery-dance.jpg", alt: "Live Stage Dance Performance" },
   { src: "/images/gallery/679a3650323e37fe2412495b.jpeg", alt: "Guest Celebrations Onboard" },
