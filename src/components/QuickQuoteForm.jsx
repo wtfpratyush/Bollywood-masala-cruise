@@ -1,34 +1,41 @@
 import React, { useEffect } from "react";
 
-const FORM_ID = "8LYQHo3CuLbis8cNAyyD";
-const SCRIPT_SRC = "https://link.msgsndr.com/js/form_embed.js";
+const DEFAULT_FORM_ID = "8LYQHo3CuLbis8cNAyyD";
 
-const QuickQuoteForm = ({ className = "" }) => {
+const QuickQuoteForm = ({ className = "", formId = DEFAULT_FORM_ID }) => {
+  const activeFormId =
+    !formId || formId === "HERO_FORM_ID_PLACEHOLDER"
+      ? DEFAULT_FORM_ID
+      : formId;
+
   useEffect(() => {
-    const old = document.getElementById("ghl-form-embed-script");
-    if (old) old.remove();
-
+    // Ensure GoHighLevel form embed script is loaded
+    const scriptId = "ghl-form-embed-script";
+    const existingScript = document.getElementById(scriptId);
+    if (existingScript) {
+      existingScript.remove();
+    }
     const script = document.createElement("script");
-    script.id = "ghl-form-embed-script";
-    script.src = SCRIPT_SRC;
+    script.id = scriptId;
+    script.src = "https://link.msgsndr.com/js/form_embed.js";
     script.async = true;
     document.body.appendChild(script);
-  }, []);
+  }, [activeFormId]);
 
   return (
     <div
-      className={`w-full bg-white rounded-2xl shadow-xl shadow-indigo-950/10 border border-gray-100 p-1 sm:p-2 overflow-hidden ${className}`}
+      className={`bg-white rounded-2xl shadow-xl shadow-indigo-950/10 border border-gray-100 p-1 sm:p-2 overflow-hidden transition-all duration-300 ${className}`}
     >
       <iframe
-        src={"https://api.leadconnectorhq.com/widget/form/" + FORM_ID}
+        src={`https://api.leadconnectorhq.com/widget/form/${activeFormId}`}
         style={{
           width: "100%",
-          minHeight: "820px",
+          height: "560px",
           border: "none",
-          borderRadius: "0px",
           display: "block",
+          borderRadius: "0px",
         }}
-        id={"inline-" + FORM_ID}
+        id={`inline-${activeFormId}`}
         data-layout="{'id':'INLINE'}"
         data-trigger-type="alwaysShow"
         data-trigger-value=""
@@ -37,9 +44,9 @@ const QuickQuoteForm = ({ className = "" }) => {
         data-deactivation-type="neverDeactivate"
         data-deactivation-value=""
         data-form-name="Contact form new website"
-        data-height="820"
-        data-layout-iframe-id={"inline-" + FORM_ID}
-        data-form-id={FORM_ID}
+        data-height="560"
+        data-layout-iframe-id={`inline-${activeFormId}`}
+        data-form-id={activeFormId}
         data-cookie-consent="true"
         data-cookie-consent-provider="auto"
         title="Contact form new website"

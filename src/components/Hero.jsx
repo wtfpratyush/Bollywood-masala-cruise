@@ -45,10 +45,10 @@ const Hero = () => {
 
       {/* Main Hero Content Area */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 lg:pt-14 pb-6 w-full flex-1 flex items-center">
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-8 w-full">
-          
+        <div className="flex flex-col xl:flex-row justify-between items-center gap-8 w-full">
+
           {/* Left Hero Text Column - Framed to the left */}
-          <div className="w-full lg:max-w-[460px] xl:max-w-[490px] shrink-0">
+          <div className="w-full xl:max-w-[470px] shrink-0">
             <p className="text-[13px] sm:text-[14px] font-black tracking-[0.16em] text-[#4b3df5] uppercase mb-2 sm:mb-3">
               WELCOME ABOARD
             </p>
@@ -96,7 +96,7 @@ const Hero = () => {
           {/* Center Area: Fully open and unobstructed so the cruise ship is completely visible */}
 
           {/* Right Hero Form Column - Framed to the right */}
-          <div className="w-full lg:max-w-[420px] xl:max-w-[440px] shrink-0 lg:ml-auto">
+          <div className="w-full max-w-[700px] xl:w-[690px] shrink-0 xl:ml-auto">
             <QuickQuoteForm />
           </div>
 
