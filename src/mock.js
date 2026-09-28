@@ -33,34 +33,602 @@ export const featureStrip = [
 ];
 
 export const galleryImages = [
-  { src: "/images/gallery/gallery-embarkation-crew.jpg", alt: "Embarkation and Cruise Gathering" },
-  { src: "/images/gallery/gallery-arrival-vibes.jpg", alt: "Artist & Crew Excitement" },
-  { src: "/images/gallery/gallery-deck-guests.jpg", alt: "Happy Guests on Open Cruise Deck" },
-  { src: "/images/gallery/alaska-ship-green-mountains.jpg", alt: "Scenic Alaska Mountain Port Ship View" },
-  { src: "/images/gallery/679a385f2ee48503a4c25175.jpeg", alt: "Bollywood Party and Cruise Gala" },
-  { src: "/images/gallery/gallery-dance.jpg", alt: "Live Stage Dance Performance" },
-  { src: "/images/gallery/679a3650323e37fe2412495b.jpeg", alt: "Guest Celebrations Onboard" },
-  { src: "/images/gallery/gallery-night-deck.jpg", alt: "Night Deck Party" },
-  { src: "/images/gallery/679a35aa6018454facd93efb.jpeg", alt: "Cruising Horizons" },
-  { src: "/images/gallery/66998865f3f1c46064f40c3c.webp", alt: "Stage Concert Performance" },
-  { src: "/images/gallery/679a8cc62ee48554e2c2e4a4.jpeg", alt: "Onboard Fun and Memories" },
-  { src: "/images/gallery/66998871763d6d76ad01c07d.webp", alt: "Bollywood Dance Showcase" },
-  { src: "/images/gallery/679a8d050d9c754a05a6694b.jpeg", alt: "Deck Experience" },
-  { src: "/images/gallery/66998880763d6d69a601c07e.webp", alt: "Bollywood DJ Night" },
-  { src: "/images/gallery/679a33c6714dc02b0d0f2278.jpeg", alt: "Cruise Moments" },
-  { src: "/images/gallery/66998e36fe542b2ec2454dcf.webp", alt: "Cruise Party Celebration" },
-  { src: "/images/gallery/679a8d052ee4855ceec2e4d4.jpeg", alt: "Happy Cruisers" },
-  { src: "/images/gallery/alaska-welcome-juneau.jpg", alt: "Juneau Alaska Capital City Destination" },
-  { src: "/images/gallery/alaska-sunset-harbor.jpg", alt: "Alaska Sunset Harbor & Mountains" },
-  { src: "/images/gallery/alaska-glacier-iceberg.jpg", alt: "Alaska Glacier and Iceberg Sailing" },
-  { src: "/images/gallery/alaska-fjord-mountains.jpg", alt: "Alaska Fjord and Mountain Scenery" },
-  { src: "/images/gallery/alaska-cruise-port-flag.jpg", alt: "Alaska Cruise Port Ship" },
-  { src: "/images/gallery/67aa34929957468281070998.jpeg", alt: "Destinations & Shore Excursions" },
-  { src: "/images/gallery/67aa352337cca1ead0205ad5.jpeg", alt: "Tropical Port Destinations" },
-  { src: "/images/gallery/667df7e30ec82103ea6bd236.webp", alt: "Island Coastal Views" },
-  { src: "/images/gallery/669711015f08bcfca7889e47.webp", alt: "Bahamas Shoreline" },
-  { src: "/images/gallery/6697125be1b559680b719358.webp", alt: "Caribbean Island Scenery" },
-  { src: "/images/gallery/679a8cc76018457ddcd9af9d.jpeg", alt: "Excursion Ports & Beaches" },
+  {
+    "src": "/images/gallery/1.jpg",
+    "alt": "Bollywood Masala Cruise Events Experience"
+  },
+  {
+    "src": "/images/gallery/2.jpg",
+    "alt": "Bollywood Masala Cruise Events Experience"
+  },
+  {
+    "src": "/images/gallery/3.jpg",
+    "alt": "Bollywood Masala Cruise Events Experience"
+  },
+  {
+    "src": "/images/gallery/4.jpg",
+    "alt": "Bollywood Masala Cruise Events Experience"
+  },
+  {
+    "src": "/images/gallery/5.jpg",
+    "alt": "Bollywood Masala Cruise Events Experience"
+  },
+  {
+    "src": "/images/gallery/6.jpg",
+    "alt": "Bollywood Masala Cruise Events Experience"
+  },
+  {
+    "src": "/images/gallery/679a33c6714dc02b0d0f2278.jpeg",
+    "alt": "Bollywood Masala Cruise Events Experience"
+  },
+  {
+    "src": "/images/gallery/679a35aa6018454facd93efb.jpeg",
+    "alt": "Bollywood Masala Cruise Events Experience"
+  },
+  {
+    "src": "/images/gallery/679a3650323e37fe2412495b.jpeg",
+    "alt": "Bollywood Masala Cruise Events Experience"
+  },
+  {
+    "src": "/images/gallery/679a3650714dc0759b0f255d.jpeg",
+    "alt": "Bollywood Masala Cruise Events Experience"
+  },
+  {
+    "src": "/images/gallery/679a385f2ee48503a4c25175.jpeg",
+    "alt": "Bollywood Masala Cruise Events Experience"
+  },
+  {
+    "src": "/images/gallery/BMC-106.jpg",
+    "alt": "Bollywood Masala Cruise Events Experience"
+  },
+  {
+    "src": "/images/gallery/BMC-207 (1).jpg",
+    "alt": "Bollywood Masala Cruise Events Experience"
+  },
+  {
+    "src": "/images/gallery/BMC-235.jpg",
+    "alt": "Bollywood Masala Cruise Events Experience"
+  },
+  {
+    "src": "/images/gallery/BMC-255.jpg",
+    "alt": "Bollywood Masala Cruise Events Experience"
+  },
+  {
+    "src": "/images/gallery/BMC-95.jpg",
+    "alt": "Bollywood Masala Cruise Events Experience"
+  },
+  {
+    "src": "/images/gallery/gallery-embarkation-crew.jpg",
+    "alt": "Bollywood Masala Cruise Events Experience"
+  },
+  {
+    "src": "/images/gallery/10.jpg",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/11.jpg",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/12.jpg",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/13.jpg",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/14.jpg",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/66998865f3f1c46064f40c3c.webp",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/6699886b21005a9c3350cae3.webp",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/66998871763d6d76ad01c07d.webp",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/66998877f3f1c49f6af40c40.webp",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/66998880763d6d69a601c07e.webp",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/6699888ab998f5e924d1a252.webp",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/669988922477ef252404d49d.webp",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/66998e36fe542b2ec2454dcf.webp",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/66998e3cb998f5431ad1a538.webp",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/66998e4253a60300f4e4d145.webp",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/66998e4853a603e4afe4d15c.webp",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/66998e512477efbcc304d85d.webp",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/7.jpg",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/8.jpg",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/9.jpg",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/BMC-304.jpg",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/BMC-308.jpg",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/BMC-312.jpg",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/BMC-344 (1).jpg",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/BMC-382 (1).jpg",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/BMC-413.jpg",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/BMC-421.jpg",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/BMC-460.jpg",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/BMC-528.jpg",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/gallery-dance.jpg",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/gallery-night-deck.jpg",
+    "alt": "Bollywood Masala Cruise Entertainment Experience"
+  },
+  {
+    "src": "/images/gallery/15.jpg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/16.jpg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/17.jpg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/18.jpg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/19.jpg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/20.jpg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/21.jpg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/22.jpg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/23.jpg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/679a8cc62ee48554e2c2e4a4.jpeg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/679a8cc69eedab2a756f4643.jpeg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/679a8cc69eedab69d86f4644.jpeg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/679a8cc70d9c7541f7a66914.jpeg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/679a8cc70d9c75855ba66915.jpeg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/679a8cc76018457ddcd9af9d.jpeg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/679a8d050d9c754a05a6694b.jpeg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/679a8d050d9c75a573a6694c.jpeg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/679a8d052ee4855ceec2e4d4.jpeg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/679a8d0531492731742fc0be.jpeg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/679a8d0535f5ca5b8c111611.jpeg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/679a8d054f0aeb1852623064.jpeg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/679a8d056018454049d9afc6.jpeg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/679a8d0562e328025bdcb260.jpeg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/679a8d0562e3282ebfdcb264.jpeg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/679a8d0562e3284617dcb263.jpeg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/679a8d0562e328e0efdcb262.jpeg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/679a8d0580145c27ccf9f0ba.jpeg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/679a8d0580145c5efff9f0bb.jpeg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/679a8d059dbb375851064d18.jpeg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/679a8d05c66ff74e2f1de138.jpeg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/679a8d05cdc648872f92af8f.jpeg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/679a8d05d6e977f48b43a8c8.jpeg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/BMC-577 (1).jpg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/BMC-589.jpg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/BMC-600 (1).jpg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/BMC-645.jpg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/BMC-725 (1).jpg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/BMC-729.jpg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/BMC-801.jpg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/BMC-838.jpg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/BMC-841.jpg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/gallery-arrival-vibes.jpg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/gallery-deck-guests.jpg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/IMG_0095.jpg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/IMG_3732.jpg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/IMG_3972.jpg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/IMG_3975.jpg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/IMG_4001.jpg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/IMG_4314.jpg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/IMG_4367.jpg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/IMG_5286(1).jpg",
+    "alt": "Bollywood Masala Cruise Moments Experience"
+  },
+  {
+    "src": "/images/gallery/24.jpg",
+    "alt": "Bollywood Masala Cruise Onboard Experience"
+  },
+  {
+    "src": "/images/gallery/25.jpg",
+    "alt": "Bollywood Masala Cruise Onboard Experience"
+  },
+  {
+    "src": "/images/gallery/26.jpg",
+    "alt": "Bollywood Masala Cruise Onboard Experience"
+  },
+  {
+    "src": "/images/gallery/27.jpg",
+    "alt": "Bollywood Masala Cruise Onboard Experience"
+  },
+  {
+    "src": "/images/gallery/28.jpg",
+    "alt": "Bollywood Masala Cruise Onboard Experience"
+  },
+  {
+    "src": "/images/gallery/29.jpg",
+    "alt": "Bollywood Masala Cruise Onboard Experience"
+  },
+  {
+    "src": "/images/gallery/30.jpg",
+    "alt": "Bollywood Masala Cruise Onboard Experience"
+  },
+  {
+    "src": "/images/gallery/31.jpg",
+    "alt": "Bollywood Masala Cruise Onboard Experience"
+  },
+  {
+    "src": "/images/gallery/667df7e30ec82103ea6bd236.webp",
+    "alt": "Bollywood Masala Cruise Onboard Experience"
+  },
+  {
+    "src": "/images/gallery/669711015f08bcfca7889e47.webp",
+    "alt": "Bollywood Masala Cruise Onboard Experience"
+  },
+  {
+    "src": "/images/gallery/6697125be1b559680b719358.webp",
+    "alt": "Bollywood Masala Cruise Onboard Experience"
+  },
+  {
+    "src": "/images/gallery/6699841421005a380d50c378.jpeg",
+    "alt": "Bollywood Masala Cruise Onboard Experience"
+  },
+  {
+    "src": "/images/gallery/669984144d63030143fccf7a.jpeg",
+    "alt": "Bollywood Masala Cruise Onboard Experience"
+  },
+  {
+    "src": "/images/gallery/669984144d63031abcfccf7d.jpeg",
+    "alt": "Bollywood Masala Cruise Onboard Experience"
+  },
+  {
+    "src": "/images/gallery/669984144d63036856fccf7c.jpeg",
+    "alt": "Bollywood Masala Cruise Onboard Experience"
+  },
+  {
+    "src": "/images/gallery/669984145f2569065123e031.jpeg",
+    "alt": "Bollywood Masala Cruise Onboard Experience"
+  },
+  {
+    "src": "/images/gallery/669984145f2569691523e032.jpeg",
+    "alt": "Bollywood Masala Cruise Onboard Experience"
+  },
+  {
+    "src": "/images/gallery/66998414763d6d45cb01b9fb.jpeg",
+    "alt": "Bollywood Masala Cruise Onboard Experience"
+  },
+  {
+    "src": "/images/gallery/6699841480329d3a96849a50.jpeg",
+    "alt": "Bollywood Masala Cruise Onboard Experience"
+  },
+  {
+    "src": "/images/gallery/66998414b998f52b1dd19c6f.jpeg",
+    "alt": "Bollywood Masala Cruise Onboard Experience"
+  },
+  {
+    "src": "/images/gallery/66998414b998f5f12bd19c6e.jpeg",
+    "alt": "Bollywood Masala Cruise Onboard Experience"
+  },
+  {
+    "src": "/images/gallery/66998414f3f1c4052df406ee.jpeg",
+    "alt": "Bollywood Masala Cruise Onboard Experience"
+  },
+  {
+    "src": "/images/gallery/66998414faf180893ebce78d.jpeg",
+    "alt": "Bollywood Masala Cruise Onboard Experience"
+  },
+  {
+    "src": "/images/gallery/66998414fe542b83044544f8.jpeg",
+    "alt": "Bollywood Masala Cruise Onboard Experience"
+  },
+  {
+    "src": "/images/gallery/66998414fe542bab6d4544f7.jpeg",
+    "alt": "Bollywood Masala Cruise Onboard Experience"
+  },
+  {
+    "src": "/images/gallery/669991f5f3f1c409d5f4129f.webp",
+    "alt": "Bollywood Masala Cruise Onboard Experience"
+  },
+  {
+    "src": "/images/gallery/669991fafaf1807b72bcf4ae.webp",
+    "alt": "Bollywood Masala Cruise Onboard Experience"
+  },
+  {
+    "src": "/images/gallery/669991ff21005a0fa550d71c.webp",
+    "alt": "Bollywood Masala Cruise Onboard Experience"
+  },
+  {
+    "src": "/images/gallery/20260722_172827.jpg",
+    "alt": "Bollywood Masala Cruise Destinations Experience"
+  },
+  {
+    "src": "/images/gallery/20260723_175458.jpg",
+    "alt": "Bollywood Masala Cruise Destinations Experience"
+  },
+  {
+    "src": "/images/gallery/20260725_113455.jpg",
+    "alt": "Bollywood Masala Cruise Destinations Experience"
+  },
+  {
+    "src": "/images/gallery/20260725_171352.jpg",
+    "alt": "Bollywood Masala Cruise Destinations Experience"
+  },
+  {
+    "src": "/images/gallery/20260726_173957.jpg",
+    "alt": "Bollywood Masala Cruise Destinations Experience"
+  },
+  {
+    "src": "/images/gallery/20260726_175716.jpg",
+    "alt": "Bollywood Masala Cruise Destinations Experience"
+  },
+  {
+    "src": "/images/gallery/32 copy 4.jpg",
+    "alt": "Bollywood Masala Cruise Destinations Experience"
+  },
+  {
+    "src": "/images/gallery/33 copy 4.jpg",
+    "alt": "Bollywood Masala Cruise Destinations Experience"
+  },
+  {
+    "src": "/images/gallery/34 copy 4.jpg",
+    "alt": "Bollywood Masala Cruise Destinations Experience"
+  },
+  {
+    "src": "/images/gallery/35 copy 4.jpg",
+    "alt": "Bollywood Masala Cruise Destinations Experience"
+  },
+  {
+    "src": "/images/gallery/36 copy 4.jpg",
+    "alt": "Bollywood Masala Cruise Destinations Experience"
+  },
+  {
+    "src": "/images/gallery/37 copy 4.jpg",
+    "alt": "Bollywood Masala Cruise Destinations Experience"
+  },
+  {
+    "src": "/images/gallery/38 copy 4.jpg",
+    "alt": "Bollywood Masala Cruise Destinations Experience"
+  },
+  {
+    "src": "/images/gallery/39 copy 4.jpg",
+    "alt": "Bollywood Masala Cruise Destinations Experience"
+  },
+  {
+    "src": "/images/gallery/67aa34929957468281070998.jpeg",
+    "alt": "Bollywood Masala Cruise Destinations Experience"
+  },
+  {
+    "src": "/images/gallery/67aa352337cca1ead0205ad5.jpeg",
+    "alt": "Bollywood Masala Cruise Destinations Experience"
+  },
+  {
+    "src": "/images/gallery/alaska-cruise-port-flag.jpg",
+    "alt": "Bollywood Masala Cruise Destinations Experience"
+  },
+  {
+    "src": "/images/gallery/alaska-fjord-mountains.jpg",
+    "alt": "Bollywood Masala Cruise Destinations Experience"
+  },
+  {
+    "src": "/images/gallery/alaska-glacier-iceberg.jpg",
+    "alt": "Bollywood Masala Cruise Destinations Experience"
+  },
+  {
+    "src": "/images/gallery/alaska-ship-green-mountains.jpg",
+    "alt": "Bollywood Masala Cruise Destinations Experience"
+  },
+  {
+    "src": "/images/gallery/alaska-sunset-harbor.jpg",
+    "alt": "Bollywood Masala Cruise Destinations Experience"
+  },
+  {
+    "src": "/images/gallery/alaska-welcome-juneau.jpg",
+    "alt": "Bollywood Masala Cruise Destinations Experience"
+  }
 ];
 
 export const popularCruises = [
