@@ -4,8 +4,9 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Gallery = () => {
-  // Duplicate the list so the marquee loops seamlessly (train-like continuous motion)
-  const loop = [...galleryImages, ...galleryImages];
+  // Use a curated set of 24 top photos for the homepage marquee so it scrolls smoothly and calmly
+  const featured = galleryImages.slice(0, 24);
+  const loop = [...featured, ...featured];
 
   // Lightbox state
   const [lightboxIndex, setLightboxIndex] = useState(null);
@@ -16,7 +17,7 @@ const Gallery = () => {
   const minSwipeDistance = 45;
 
   const handleOpen = (index) => {
-    setLightboxIndex(index % galleryImages.length);
+    setLightboxIndex(index % featured.length);
   };
 
   const handleClose = useCallback(() => {
@@ -25,15 +26,15 @@ const Gallery = () => {
 
   const handlePrev = useCallback(() => {
     setLightboxIndex((prev) =>
-      prev !== null ? (prev - 1 + galleryImages.length) % galleryImages.length : 0
+      prev !== null ? (prev - 1 + featured.length) % featured.length : 0
     );
-  }, []);
+  }, [featured.length]);
 
   const handleNext = useCallback(() => {
     setLightboxIndex((prev) =>
-      prev !== null ? (prev + 1) % galleryImages.length : 0
+      prev !== null ? (prev + 1) % featured.length : 0
     );
-  }, []);
+  }, [featured.length]);
 
   // Prevent background page scrolling when lightbox is active
   useEffect(() => {
@@ -104,7 +105,7 @@ const Gallery = () => {
 
       {/* Full-bleed continuously moving track with square images */}
       <div className="relative">
-        <div className="marquee-track gap-4">
+        <div className="marquee-track gap-4" style={{ animationDuration: "90s" }}>
           {loop.map((img, i) => (
             <div
               key={i}
@@ -124,8 +125,8 @@ const Gallery = () => {
                 <img
                   src={img.src}
                   alt={img.alt}
-                  loading="lazy"
-                  decoding="async"
+                  loading="eager"
+                  decoding="sync"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
@@ -156,7 +157,7 @@ const Gallery = () => {
             {/* Top Bar: Counter & Close Button */}
             <div className="absolute top-4 sm:top-6 left-0 right-0 px-4 sm:px-8 flex items-center justify-between z-30 pointer-events-none">
               <div className="pointer-events-auto px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md text-white/90 text-[12px] sm:text-[13px] font-semibold tracking-wider">
-                {lightboxIndex + 1} / {galleryImages.length}
+                {lightboxIndex + 1} / {featured.length}
               </div>
 
               <button
