@@ -783,8 +783,8 @@ export const popularCruises = [
       diningImage: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=700&q=75",
       diningDesc: "Enjoy a range of meals onboard, including Indian vegetarian and non-vegetarian dishes, as well as international favorites.",
       testimonials: [
-        { name: "Priya S.", rating: 5, avatar: "/images/gallery/679a8d0562e328e0efdcb262.jpeg", text: "The best vacation ever! The food was amazing, the activities were non-stop fun, and the Bollywood events were a blast. Every day brought something new and exciting. The staff was incredibly friendly, and the accommodations were top-notch. Can't wait to book my next cruise!" },
-        { name: "Rahul M.", rating: 5, avatar: "/images/gallery/679a8d0580145c27ccf9f0ba.jpeg", text: "We had an unforgettable time! From the fantastic entertainment to the beautiful destinations, everything exceeded our expectations. The themed events, like Mehndi and the Bollywood dance party, made it even more special. Highly recommend this cruise to everyone looking for a unique and fun-filled getaway!" },
+        { name: "Priya S.", rating: 5, avatar: "/images/gallery/Moments/16.jpg", text: "The best vacation ever! The food was amazing, the activities were non-stop fun, and the Bollywood events were a blast. Every day brought something new and exciting. The staff was incredibly friendly, and the accommodations were top-notch. Can't wait to book my next cruise!" },
+        { name: "Rahul M.", rating: 5, avatar: "/images/gallery/Moments/20.jpg", text: "We had an unforgettable time! From the fantastic entertainment to the beautiful destinations, everything exceeded our expectations. The themed events, like Mehndi and the Bollywood dance party, made it even more special. Highly recommend this cruise to everyone looking for a unique and fun-filled getaway!" },
         { name: "Ananya K.", rating: 5, avatar: "/images/gallery/66998414b998f5f12bd19c6e.jpeg", text: "Perfect mix of relaxation and excitement. The exclusive events were a highlight, especially the Bollywood dance party and karaoke nights. We loved the variety of activities and the wonderful service. Exceptional value for money. We'll definitely be back for another cruise!" },
       ],
       gallery: [
@@ -793,8 +793,8 @@ export const popularCruises = [
         "https://images.pexels.com/photos/24643916/pexels-photo-24643916.jpeg?auto=compress&cs=tinysrgb&w=600",
         "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=75",
         "https://images.unsplash.com/photo-1579592672790-39239b6cbc31?auto=format&fit=crop&w=600&q=75",
-        "/images/gallery/gallery-dance.jpg",
-        "/images/gallery/gallery-night-deck.jpg",
+        "/images/gallery/Entertainment/BMC-460.jpg",
+        "/images/gallery/Entertainment/BMC-528.jpg",
         "/images/about/story-2.jpg",
       ],
       faqs: [
@@ -847,14 +847,14 @@ export const popularCruises = [
       diningImage: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=700&q=75",
       diningDesc: "Enjoy a range of meals onboard, including Indian vegetarian and non-vegetarian dishes, as well as international favorites.",
       testimonials: [
-        { name: "Sunita R.", rating: 5, avatar: "/images/gallery/679a8d0535f5ca5b8c111611.jpeg", text: "The Holi Cruise was absolutely magical! The food was phenomenal, especially the Indian buffet nights. We made lifelong friends on this trip. The entertainment team was incredible!" },
-        { name: "Deepak M.", rating: 5, avatar: "/images/gallery/679a8d054f0aeb1852623064.jpeg", text: "What a trip! The Holi celebration at sea was unlike anything we've ever experienced. Perfectly organized, no stress, just pure fun. Already booked for next year!" },
+        { name: "Sunita R.", rating: 5, avatar: "/images/gallery/Moments/15.jpg", text: "The Holi Cruise was absolutely magical! The food was phenomenal, especially the Indian buffet nights. We made lifelong friends on this trip. The entertainment team was incredible!" },
+        { name: "Deepak M.", rating: 5, avatar: "/images/gallery/Moments/13.jpg", text: "What a trip! The Holi celebration at sea was unlike anything we've ever experienced. Perfectly organized, no stress, just pure fun. Already booked for next year!" },
         { name: "Meera K.", rating: 5, avatar: "/images/gallery/66998877f3f1c49f6af40c40.webp", text: "Took my parents for their anniversary and they absolutely loved every moment. The staff was so attentive and warm. 5 stars without a doubt!" },
       ],
       gallery: [
-        "/images/gallery/gallery-night-deck.jpg",
+        "/images/gallery/Entertainment/BMC-528.jpg",
         "https://images.unsplash.com/photo-1628336707631-68131ca720c3?auto=format&fit=crop&w=600&q=75",
-        "/images/gallery/gallery-dance.jpg",
+        "/images/gallery/Entertainment/BMC-460.jpg",
         "https://images.unsplash.com/photo-1579592672790-39239b6cbc31?auto=format&fit=crop&w=600&q=75",
         "https://images.pexels.com/photos/24643916/pexels-photo-24643916.jpeg?auto=compress&cs=tinysrgb&w=600",
         "/images/about/story-1.jpg",
@@ -889,12 +889,12 @@ export const onboardActivities = [
 ];
 
 export const pastCruises = [
-  { date: "MAY 2024", title: "Alaska Cruise", image: "/images/gallery/alaska-sunset-harbor.jpg" },
+  { date: "MAY 2024", title: "Alaska Cruise", image: "/images/gallery/Destination/5.jpg" },
   { date: "DEC 2024", title: "Caribbean Cruise", image: "https://images.pexels.com/photos/29146142/pexels-photo-29146142.jpeg?auto=compress&cs=tinysrgb&w=800" },
-  { date: "MAY 2025", title: "Alaska Cruise", image: "/images/gallery/alaska-glacier-iceberg.jpg" },
+  { date: "MAY 2025", title: "Alaska Cruise", image: "/images/gallery/Destination/1.jpg" },
   { date: "DEC 2025", title: "Mexican Cruise", image: "https://images.pexels.com/photos/33270055/pexels-photo-33270055.jpeg?auto=compress&cs=tinysrgb&w=800" },
   { date: "MAR 2026", title: "Holi Cruise (Caribbean)", image: "https://images.unsplash.com/photo-1511316695145-4992006ffddb?auto=format&fit=crop&w=800&q=75" },
-  { date: "JUL 2026", title: "Alaska Cruise", image: "/images/gallery/alaska-welcome-juneau.jpg" },
+  { date: "JUL 2026", title: "Alaska Cruise", image: "/images/gallery/Destination/3.jpg" },
 ];
 
 export const testimonials = [
@@ -1410,13 +1410,13 @@ export const aboutGalleryMoments = {
   subtitle: "Relive the infectious excitement, vibrant performances, and unforgettable memories created aboard Bollywood Masala Cruise.",
   photos: [
     {
-      src: "/images/gallery/gallery-dance.jpg",
+      src: "/images/gallery/Entertainment/BMC-460.jpg",
       title: "Bollywood Stage Extravaganza",
       category: "Stage Shows",
       desc: "Live choreographed Bollywood dance performances with guest participation.",
     },
     {
-      src: "/images/gallery/gallery-night-deck.jpg",
+      src: "/images/gallery/Entertainment/BMC-528.jpg",
       title: "Starlight Neon Deck Party",
       category: "Nightlife",
       desc: "Open-air top deck dancing under the stars with celebrity DJs.",

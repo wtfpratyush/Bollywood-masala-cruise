@@ -243,7 +243,7 @@ const CruiseDetailModal = ({ cruise, onClose, onBook }) => {
           {/* ── 4. Entertainment / Activities ── */}
           <div
             id="cruise-section-Entertainment"
-            style={{ backgroundImage: "url('/images/gallery/gallery-night-deck.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
+            style={{ backgroundImage: "url('/images/gallery/Entertainment/BMC-528.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
             className="relative px-5 sm:px-8 py-10 border-b border-gray-800"
           >
             <div className="absolute inset-0 bg-gradient-to-b from-[#2b044d]/90 via-[#4a084f]/85 to-[#1a0033]/90" />

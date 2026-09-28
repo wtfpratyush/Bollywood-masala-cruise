@@ -145,18 +145,18 @@ const typeColors = {
 };
 
 const testimonials = [
-  { name: "Sanjay & Kavitha", avatar: "/images/gallery/679a8d0562e328e0efdcb262.jpeg", rating: 5, text: "The Bollywood party on night 3 was absolutely electric. The DJ kept the crowd going till 2 AM! Best cruise experience we've ever had." },
-  { name: "Priya Mehta", avatar: "/images/gallery/679a8d0580145c27ccf9f0ba.jpeg", rating: 5, text: "Mehndi was so beautifully organised. Made so many friends. The food was out of this world — especially the dessert spread!" },
-  { name: "Rohan Verma", avatar: "/images/gallery/66998414b998f5f12bd19c6e.jpeg", rating: 5, text: "The Antakshari and open mic sessions were so much fun! The curated entertainment lineup was amazing. Truly unforgettable." },
-  { name: "Ananya S.", avatar: "/images/gallery/679a8d0535f5ca5b8c111611.jpeg", rating: 5, text: "Sunrise yoga on the deck with the ocean breeze is something I'll never forget. Perfectly balanced between relaxation and non-stop fun." },
-  { name: "Deepak Nair", avatar: "/images/gallery/679a8d054f0aeb1852623064.jpeg", rating: 5, text: "The entertainment lineup had us singing and dancing all trip. Everything was so well curated — felt like a 5-star Bollywood festival at sea!" },
+  { name: "Sanjay & Kavitha", avatar: "/images/gallery/Moments/16.jpg", rating: 5, text: "The Bollywood party on night 3 was absolutely electric. The DJ kept the crowd going till 2 AM! Best cruise experience we've ever had." },
+  { name: "Priya Mehta", avatar: "/images/gallery/Moments/20.jpg", rating: 5, text: "Mehndi was so beautifully organised. Made so many friends. The food was out of this world — especially the dessert spread!" },
+  { name: "Rohan Verma", avatar: "/images/gallery/onboard/6.jpg", rating: 5, text: "The Antakshari and open mic sessions were so much fun! The curated entertainment lineup was amazing. Truly unforgettable." },
+  { name: "Ananya S.", avatar: "/images/gallery/Moments/15.jpg", rating: 5, text: "Sunrise yoga on the deck with the ocean breeze is something I'll never forget. Perfectly balanced between relaxation and non-stop fun." },
+  { name: "Deepak Nair", avatar: "/images/gallery/Moments/13.jpg", rating: 5, text: "The entertainment lineup had us singing and dancing all trip. Everything was so well curated — felt like a 5-star Bollywood festival at sea!" },
   { name: "Meera Iyer", avatar: "/images/gallery/66998877f3f1c49f6af40c40.webp", rating: 5, text: "My parents joined us and they absolutely loved the deck celebrations. The crew made every single person feel so special and welcome." },
 ];
 
 const galleryItems = [
   { src: "/images/gallery/679a385f2ee48503a4c25175.jpeg", label: "Mehndi & Sangeet Celebrations" },
   { src: "/images/gallery/66998871763d6d76ad01c07d.webp", label: "Pool Deck DJ Vibes" },
-  { src: "/images/gallery/679a8d050d9c754a05a6694b.jpeg", label: "Gourmet Cruise Dining" },
+  { src: "/images/gallery/Moments/1.jpg", label: "Gourmet Cruise Dining" },
   { src: "/images/gallery/6699888ab998f5e924d1a252.webp", label: "Deck Party Magic" },
   { src: "/images/gallery/669984145f2569065123e031.jpeg", label: "Sunset Ocean Deck" },
   { src: "/images/gallery/679a8cc62ee48554e2c2e4a4.jpeg", label: "Celebrations at Sea" },
@@ -316,8 +316,8 @@ const Onboard = () => {
             </div>
             <div className="lg:w-1/2 grid grid-cols-2 gap-4">
               {[
-                "/images/gallery/gallery-dance.jpg",
-                "/images/gallery/gallery-night-deck.jpg",
+                "/images/gallery/Entertainment/BMC-460.jpg",
+                "/images/gallery/Entertainment/BMC-528.jpg",
                 "/images/gallery/66998865f3f1c46064f40c3c.webp",
                 "/images/gallery/66998877f3f1c49f6af40c40.webp",
               ].map((src, i) => (
