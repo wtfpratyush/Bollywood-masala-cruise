@@ -69,7 +69,20 @@ const galleryImages = [
   { src: "/images/gallery/66998414fe542bab6d4544f7.jpeg", cat: "Onboard" },
   { src: "/images/gallery/67aa34929957468281070998.jpeg", cat: "Destinations" },
   { src: "/images/gallery/67aa352337cca1ead0205ad5.jpeg", cat: "Destinations" },
-  { src: "/images/gallery/679a8cc6714dc0200f23a601.jpeg", cat: "Destinations" },
+  { src: "/images/gallery/667df7e30ec82103ea6bd236.webp", cat: "Destinations" },
+  { src: "/images/gallery/669711015f08bcfca7889e47.webp", cat: "Destinations" },
+  { src: "/images/gallery/6697125be1b559680b719358.webp", cat: "Destinations" },
+  { src: "/images/gallery/679a35aa6018454facd93efb.jpeg", cat: "Destinations" },
+  { src: "/images/gallery/669984145f2569065123e031.jpeg", cat: "Destinations" },
+  { src: "/images/gallery/679a8cc70d9c7541f7a66914.jpeg", cat: "Destinations" },
+  { src: "/images/gallery/679a8cc70d9c75855ba66915.jpeg", cat: "Destinations" },
+  { src: "/images/gallery/679a8cc76018457ddcd9af9d.jpeg", cat: "Destinations" },
+  { src: "/images/gallery/679a8d05cdc648872f92af8f.jpeg", cat: "Destinations" },
+  { src: "/images/gallery/679a8d05d6e977f48b43a8c8.jpeg", cat: "Destinations" },
+  { src: "/images/gallery/669991f5f3f1c409d5f4129f.webp", cat: "Destinations" },
+  { src: "/images/gallery/669991fafaf1807b72bcf4ae.webp", cat: "Destinations" },
+  { src: "/images/gallery/669991ff21005a0fa550d71c.webp", cat: "Destinations" },
+  { src: "/images/gallery/6699841421005a380d50c378.jpeg", cat: "Destinations" },
 ];
 
 const CATEGORIES = ["All", "Events", "Entertainment", "Moments", "Onboard", "Destinations"];

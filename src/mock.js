@@ -46,8 +46,12 @@ export const galleryImages = [
   { src: "/images/gallery/679a33c6714dc02b0d0f2278.jpeg", alt: "Cruise Moments" },
   { src: "/images/gallery/66998e36fe542b2ec2454dcf.webp", alt: "Cruise Party Celebration" },
   { src: "/images/gallery/679a8d052ee4855ceec2e4d4.jpeg", alt: "Happy Cruisers" },
-  { src: "/images/gallery/66998e4853a603e4afe4d15c.webp", alt: "Celebrity Nights" },
   { src: "/images/gallery/67aa34929957468281070998.jpeg", alt: "Destinations & Shore Excursions" },
+  { src: "/images/gallery/67aa352337cca1ead0205ad5.jpeg", alt: "Tropical Port Destinations" },
+  { src: "/images/gallery/667df7e30ec82103ea6bd236.webp", alt: "Island Coastal Views" },
+  { src: "/images/gallery/669711015f08bcfca7889e47.webp", alt: "Bahamas Shoreline" },
+  { src: "/images/gallery/6697125be1b559680b719358.webp", alt: "Caribbean Island Scenery" },
+  { src: "/images/gallery/679a8cc76018457ddcd9af9d.jpeg", alt: "Excursion Ports & Beaches" },
 ];
 
 export const popularCruises = [
