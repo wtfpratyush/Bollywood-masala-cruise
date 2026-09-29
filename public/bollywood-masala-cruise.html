@@ -496,13 +496,15 @@
     /* Hero Form */
     .quote-form-card {
       background: var(--white);
-      border-radius: 1.25rem;
-      padding: 1.75rem;
+      border-radius: 1rem;
+      padding: 0;
       border: 1px solid #f3f4f6;
       box-shadow: 0 20px 40px rgba(20, 20, 82, 0.08);
       width: 100%;
-      max-width: 420px;
+      max-width: 510px;
       margin-left: auto;
+      overflow: hidden;
+      position: relative;
     }
     .quote-form-card h3 {
       font-size: 1.625rem;
@@ -876,7 +878,38 @@
       box-shadow: 0 4px 10px rgba(255, 0, 0, 0.4);
       transition: transform 0.2s;
     }
-    .testi-video-thumb:hover .play-btn-red { transform: scale(1.1); }
+    .play-btn-ig {
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 9999px;
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      box-shadow: 0 4px 12px rgba(220, 39, 67, 0.4);
+      transition: transform 0.2s;
+    }
+    .testi-video-thumb:hover .play-btn-red,
+    .testi-video-thumb:hover .play-btn-ig { transform: scale(1.1); }
+    .platform-tag {
+      position: absolute;
+      top: 0.625rem;
+      left: 0.625rem;
+      z-index: 5;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(4px);
+      color: white;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
 
     /* ==========================================================================
        9. BENEFITS BAR
@@ -1522,29 +1555,59 @@
             </div>
 
             <!-- Hero Right Form Card -->
-            <div>
-              <div class="quote-form-card" style="padding: 0.5rem; background: #fff; border-radius: 1.5rem; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);">
-                <iframe
-                  src="https://api.leadconnectorhq.com/widget/form/8LYQHo3CuLbis8cNAyyD"
-                  style="width:100%;height:470px;min-height:450px;max-height:490px;border:none;border-radius:0px"
-                  id="inline-8LYQHo3CuLbis8cNAyyD" 
-                  data-layout="{'id':'INLINE'}"
-                  data-trigger-type="alwaysShow"
-                  data-trigger-value=""
-                  data-activation-type="alwaysActivated"
-                  data-activation-value=""
-                  data-deactivation-type="neverDeactivate"
-                  data-deactivation-value=""
-                  data-form-name="Contact form new website"
-                  data-height="470"
-                  data-layout-iframe-id="inline-8LYQHo3CuLbis8cNAyyD"
-                  data-form-id="8LYQHo3CuLbis8cNAyyD"
-                  data-cookie-consent="true"
-                  data-cookie-consent-provider="auto"
-                  title="Contact form new website"
-                >
-                </iframe>
+            <div style="display: flex; align-items: center; justify-content: flex-end; width: 100%;">
+              <div class="quote-form-card" id="hero-ghl-container" style="padding: 0.85rem; background: #fff; border-radius: 1.25rem; box-shadow: 0 20px 35px -5px rgba(20, 20, 82, 0.1); border: 1px solid #f3f4f6; overflow: hidden; width: 100%; max-width: 510px;">
+                <div id="hero-ghl-scaler" style="width: 680px; transform-origin: top left; transform: scale(0.71); height: 560px;">
+                  <iframe
+                    src="https://api.leadconnectorhq.com/widget/form/8LYQHo3CuLbis8cNAyyD"
+                    style="width:100%;height:560px;border:none;display:block;border-radius:0px;"
+                    id="inline-8LYQHo3CuLbis8cNAyyD" 
+                    data-layout="{'id':'INLINE'}"
+                    data-trigger-type="alwaysShow"
+                    data-trigger-value=""
+                    data-activation-type="alwaysActivated"
+                    data-activation-value=""
+                    data-deactivation-type="neverDeactivate"
+                    data-deactivation-value=""
+                    data-form-name="Contact form new website"
+                    data-height="560"
+                    data-layout-iframe-id="inline-8LYQHo3CuLbis8cNAyyD"
+                    data-form-id="8LYQHo3CuLbis8cNAyyD"
+                    data-cookie-consent="true"
+                    data-cookie-consent-provider="auto"
+                    title="Contact form new website"
+                  >
+                  </iframe>
+                </div>
                 <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+                <script>
+                  (function() {
+                    function updateGHLScale() {
+                      var container = document.getElementById('hero-ghl-container');
+                      var scaler = document.getElementById('hero-ghl-scaler');
+                      if (!container || !scaler) return;
+                      var w = container.offsetWidth - 28;
+                      if (window.innerWidth < 480 || w < 340) {
+                        scaler.style.width = '100%';
+                        scaler.style.transform = 'none';
+                        scaler.style.height = 'auto';
+                        container.style.height = 'auto';
+                      } else {
+                        var baseW = 680;
+                        var baseH = 560;
+                        var scale = Math.min(1, Math.max(0.4, w / baseW));
+                        scaler.style.width = baseW + 'px';
+                        scaler.style.transform = 'scale(' + scale + ')';
+                        scaler.style.height = baseH + 'px';
+                        container.style.height = (Math.round(baseH * scale) + 28) + 'px';
+                      }
+                    }
+                    window.addEventListener('resize', updateGHLScale);
+                    window.addEventListener('DOMContentLoaded', updateGHLScale);
+                    setTimeout(updateGHLScale, 100);
+                    setTimeout(updateGHLScale, 500);
+                  })();
+                </script>
               </div>
             </div>
 
@@ -1889,58 +1952,64 @@
                 </div>
 
                 <div class="testimonial-card-grid">
-                  <!-- Review 1 -->
+                  <!-- Review 1 (Instagram) -->
                   <div class="card" style="overflow: hidden;">
-                    <div class="testi-video-thumb" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
-                      <img src="https://images.pexels.com/photos/39191539/pexels-photo-39191539.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Rajesh & Priya" />
+                    <div class="testi-video-thumb" onclick="openVideoModal('https://www.instagram.com/p/DdmdMGshJ27/embed/')">
+                      <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?crop=entropy&cs=srgb&fm=jpg&w=400" alt="Sunita & Cruisers" />
+                      <span class="platform-tag">
+                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                        Instagram Reel
+                      </span>
                       <div class="play-circle">
-                        <div class="play-btn-red">
-                          <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                        </div>
+                        <div class="play-btn-ig">▶</div>
                       </div>
                     </div>
                     <div style="padding: 0.875rem;">
-                      <p style="font-size: 0.75rem; color: #4b5563; line-height: 1.4; margin-bottom: 0.5rem; font-style: italic;">“REAL, FUN Feedback for Bollywood Masala Cruise”</p>
+                      <p style="font-size: 0.75rem; color: #4b5563; line-height: 1.4; margin-bottom: 0.5rem; font-style: italic;">“Real experiences, real memories. Hearing it from guests hits differently!”</p>
                       <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f3f4f6; padding-top: 0.375rem;">
-                        <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-dark);">Rajesh & Priya</span>
+                        <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-dark);">Sunita & Friends</span>
                         <span style="color: #f5a623; font-size: 0.75rem;">★★★★★</span>
                       </div>
                     </div>
                   </div>
 
-                  <!-- Review 2 -->
+                  <!-- Review 2 (Instagram) -->
                   <div class="card" style="overflow: hidden;">
-                    <div class="testi-video-thumb" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
-                      <img src="https://images.unsplash.com/photo-1556745753-b2904692b3cd?crop=entropy&cs=srgb&fm=jpg&w=400" alt="Anita" />
+                    <div class="testi-video-thumb" onclick="openVideoModal('https://www.instagram.com/p/DcKGpS0zyPh/embed/')">
+                      <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?crop=entropy&cs=srgb&fm=jpg&w=400" alt="Aman & Family" />
+                      <span class="platform-tag">
+                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                        Instagram Reel
+                      </span>
                       <div class="play-circle">
-                        <div class="play-btn-red">
-                          <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                        </div>
+                        <div class="play-btn-ig">▶</div>
                       </div>
                     </div>
                     <div style="padding: 0.875rem;">
-                      <p style="font-size: 0.75rem; color: #4b5563; line-height: 1.4; margin-bottom: 0.5rem; font-style: italic;">“Unmatched Bollywood parties and gourmet food!”</p>
+                      <p style="font-size: 0.75rem; color: #4b5563; line-height: 1.4; margin-bottom: 0.5rem; font-style: italic;">“Unmatched Bollywood parties, authentic Indian food, and laughter daily!”</p>
                       <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f3f4f6; padding-top: 0.375rem;">
-                        <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-dark);">Anita Sharma</span>
+                        <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-dark);">Aman & Family</span>
                         <span style="color: #f5a623; font-size: 0.75rem;">★★★★★</span>
                       </div>
                     </div>
                   </div>
 
-                  <!-- Review 3 -->
+                  <!-- Review 3 (Instagram) -->
                   <div class="card" style="overflow: hidden;">
-                    <div class="testi-video-thumb" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
-                      <img src="https://images.pexels.com/photos/39191539/pexels-photo-39191539.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Vikram" />
+                    <div class="testi-video-thumb" onclick="openVideoModal('https://www.instagram.com/p/DdMuhCvhaKq/embed/')">
+                      <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=entropy&cs=srgb&fm=jpg&w=400" alt="Meera & Dev" />
+                      <span class="platform-tag">
+                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                        Instagram Reel
+                      </span>
                       <div class="play-circle">
-                        <div class="play-btn-red">
-                          <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                        </div>
+                        <div class="play-btn-ig">▶</div>
                       </div>
                     </div>
                     <div style="padding: 0.875rem;">
-                      <p style="font-size: 0.75rem; color: #4b5563; line-height: 1.4; margin-bottom: 0.5rem; font-style: italic;">“Will definitely be booking again next season!”</p>
+                      <p style="font-size: 0.75rem; color: #4b5563; line-height: 1.4; margin-bottom: 0.5rem; font-style: italic;">“Three cruises with Masala Cruise! The best vacations make you return!”</p>
                       <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f3f4f6; padding-top: 0.375rem;">
-                        <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-dark);">Vikram Patel</span>
+                        <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-dark);">Meera & Dev</span>
                         <span style="color: #f5a623; font-size: 0.75rem;">★★★★★</span>
                       </div>
                     </div>
@@ -2465,39 +2534,145 @@
             @media (min-width: 640px) { style="grid-template-columns: repeat(2, 1fr);" }
             @media (min-width: 1024px) { style="grid-template-columns: repeat(3, 1fr);" }
 
-            <div class="card" style="overflow: hidden;">
-              <div class="testi-video-thumb" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
-                <img src="https://images.pexels.com/photos/39191539/pexels-photo-39191539.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Rajesh & Priya" />
-                <div class="play-circle"><div class="play-btn-red">▶</div></div>
+            <!-- Instagram Testimonial 1 -->
+            <div class="card" style="overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div class="testi-video-thumb" onclick="openVideoModal('https://www.instagram.com/p/DdmdMGshJ27/embed/')">
+                  <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?crop=entropy&cs=srgb&fm=jpg&w=600" alt="Sunita & Cruisers" />
+                  <span class="platform-tag">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                    Instagram Reel
+                  </span>
+                  <div class="play-circle"><div class="play-btn-ig">▶</div></div>
+                </div>
+                <div style="padding: 1.25rem;">
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.375rem;">
+                    <p style="color: #f5a623; margin: 0;">★★★★★</p>
+                    <span style="font-size: 0.75rem; color: #9ca3af; font-weight: 600;">@bollywoodmasalacruise</span>
+                  </div>
+                  <p style="font-size: 0.875rem; color: #4b5563; font-style: italic; line-height: 1.5;">“A vacation can look amazing in pictures, but hearing it from someone who lived it hits differently! Real experiences, real memories.”</p>
+                </div>
               </div>
-              <div style="padding: 1.25rem;">
-                <p style="color: #f5a623; margin-bottom: 0.375rem;">★★★★★</p>
-                <p style="font-size: 0.875rem; color: #4b5563; font-style: italic; line-height: 1.5;">“The best family vacation ever! The food was delicious, and the Bollywood themed parties were absolutely unmatched.”</p>
-                <p style="font-size: 0.9375rem; font-weight: 700; color: var(--text-dark); margin-top: 0.75rem;">Rajesh & Priya</p>
+              <div style="padding: 0 1.25rem 1.25rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f3f4f6; padding-top: 0.75rem; margin-top: 0.5rem;">
+                <p style="font-size: 0.9375rem; font-weight: 700; color: var(--text-dark); margin: 0;">Sunita & Friends</p>
+                <a href="https://www.instagram.com/p/DdmdMGshJ27/" target="_blank" rel="noopener" style="font-size: 0.75rem; color: var(--primary); font-weight: 600;">View Post ↗</a>
               </div>
             </div>
 
-            <div class="card" style="overflow: hidden;">
-              <div class="testi-video-thumb" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
-                <img src="https://images.unsplash.com/photo-1556745753-b2904692b3cd?crop=entropy&cs=srgb&fm=jpg&w=600" alt="Anita" />
-                <div class="play-circle"><div class="play-btn-red">▶</div></div>
+            <!-- Instagram Testimonial 2 -->
+            <div class="card" style="overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div class="testi-video-thumb" onclick="openVideoModal('https://www.instagram.com/p/DcKGpS0zyPh/embed/')">
+                  <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?crop=entropy&cs=srgb&fm=jpg&w=600" alt="Aman & Family" />
+                  <span class="platform-tag">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                    Instagram Reel
+                  </span>
+                  <div class="play-circle"><div class="play-btn-ig">▶</div></div>
+                </div>
+                <div style="padding: 1.25rem;">
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.375rem;">
+                    <p style="color: #f5a623; margin: 0;">★★★★★</p>
+                    <span style="font-size: 0.75rem; color: #9ca3af; font-weight: 600;">@bollywoodmasalacruise</span>
+                  </div>
+                  <p style="font-size: 0.875rem; color: #4b5563; font-style: italic; line-height: 1.5;">“From the entertainment and authentic food to the laughter and unforgettable moments, every journey leaves a story worth sharing.”</p>
+                </div>
               </div>
-              <div style="padding: 1.25rem;">
-                <p style="color: #f5a623; margin-bottom: 0.375rem;">★★★★★</p>
-                <p style="font-size: 0.875rem; color: #4b5563; font-style: italic; line-height: 1.5;">“Everything was seamless from embarkation to disembarkation. Indian chefs made sure we had warm, authentic meals daily!”</p>
-                <p style="font-size: 0.9375rem; font-weight: 700; color: var(--text-dark); margin-top: 0.75rem;">Anita Sharma</p>
+              <div style="padding: 0 1.25rem 1.25rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f3f4f6; padding-top: 0.75rem; margin-top: 0.5rem;">
+                <p style="font-size: 0.9375rem; font-weight: 700; color: var(--text-dark); margin: 0;">Aman & Family</p>
+                <a href="https://www.instagram.com/p/DcKGpS0zyPh/" target="_blank" rel="noopener" style="font-size: 0.75rem; color: var(--primary); font-weight: 600;">View Post ↗</a>
               </div>
             </div>
 
-            <div class="card" style="overflow: hidden;">
-              <div class="testi-video-thumb" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
-                <img src="https://images.pexels.com/photos/39191539/pexels-photo-39191539.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Vikram" />
-                <div class="play-circle"><div class="play-btn-red">▶</div></div>
+            <!-- Instagram Testimonial 3 -->
+            <div class="card" style="overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div class="testi-video-thumb" onclick="openVideoModal('https://www.instagram.com/p/DbglsGahfba/embed/')">
+                  <img src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?crop=entropy&cs=srgb&fm=jpg&w=600" alt="Deck Party Cruisers" />
+                  <span class="platform-tag">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                    Instagram Reel
+                  </span>
+                  <div class="play-circle"><div class="play-btn-ig">▶</div></div>
+                </div>
+                <div style="padding: 1.25rem;">
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.375rem;">
+                    <p style="color: #f5a623; margin: 0;">★★★★★</p>
+                    <span style="font-size: 0.75rem; color: #9ca3af; font-weight: 600;">@bollywoodmasalacruise</span>
+                  </div>
+                  <p style="font-size: 0.875rem; color: #4b5563; font-style: italic; line-height: 1.5;">“POV: You asked if Bollywood Masala Cruise is really worth it? Friendships over dinner and Bollywood nights that keep everyone dancing say it all!”</p>
+                </div>
               </div>
-              <div style="padding: 1.25rem;">
-                <p style="color: #f5a623; margin-bottom: 0.375rem;">★★★★★</p>
-                <p style="font-size: 0.875rem; color: #4b5563; font-style: italic; line-height: 1.5;">“Dancing under the stars was a bucket list experience. Can't wait for the Holi cruise in 2027!”</p>
-                <p style="font-size: 0.9375rem; font-weight: 700; color: var(--text-dark); margin-top: 0.75rem;">Vikram Patel</p>
+              <div style="padding: 0 1.25rem 1.25rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f3f4f6; padding-top: 0.75rem; margin-top: 0.5rem;">
+                <p style="font-size: 0.9375rem; font-weight: 700; color: var(--text-dark); margin: 0;">Deck Party Cruisers</p>
+                <a href="https://www.instagram.com/p/DbglsGahfba/" target="_blank" rel="noopener" style="font-size: 0.75rem; color: var(--primary); font-weight: 600;">View Post ↗</a>
+              </div>
+            </div>
+
+            <!-- Instagram Testimonial 4 -->
+            <div class="card" style="overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div class="testi-video-thumb" onclick="openVideoModal('https://www.instagram.com/p/DdMuhCvhaKq/embed/')">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=entropy&cs=srgb&fm=jpg&w=600" alt="Meera & Dev" />
+                  <span class="platform-tag">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                    Instagram Reel
+                  </span>
+                  <div class="play-circle"><div class="play-btn-ig">▶</div></div>
+                </div>
+                <div style="padding: 1.25rem;">
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.375rem;">
+                    <p style="color: #f5a623; margin: 0;">★★★★★</p>
+                    <span style="font-size: 0.75rem; color: #9ca3af; font-weight: 600;">@bollywoodmasalacruise</span>
+                  </div>
+                  <p style="font-size: 0.875rem; color: #4b5563; font-style: italic; line-height: 1.5;">“Three cruises! One love affair with the sea. Some vacations are good enough to do once; the best ones make you come back again and again.”</p>
+                </div>
+              </div>
+              <div style="padding: 0 1.25rem 1.25rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f3f4f6; padding-top: 0.75rem; margin-top: 0.5rem;">
+                <p style="font-size: 0.9375rem; font-weight: 700; color: var(--text-dark); margin: 0;">Meera & Dev (3-Time Cruiser)</p>
+                <a href="https://www.instagram.com/p/DdMuhCvhaKq/" target="_blank" rel="noopener" style="font-size: 0.75rem; color: var(--primary); font-weight: 600;">View Post ↗</a>
+              </div>
+            </div>
+
+            <!-- YouTube Review 1 -->
+            <div class="card" style="overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div class="testi-video-thumb" onclick="openVideoModal('https://www.youtube.com/embed/fBtenbhqcrQ')">
+                  <img src="https://img.youtube.com/vi/fBtenbhqcrQ/hqdefault.jpg" alt="Rajesh & Priya" />
+                  <span class="platform-tag">
+                    <span style="width: 8px; height: 8px; border-radius: 9999px; background: #FF0000; display: inline-block;"></span>
+                    YouTube
+                  </span>
+                  <div class="play-circle"><div class="play-btn-red">▶</div></div>
+                </div>
+                <div style="padding: 1.25rem;">
+                  <p style="color: #f5a623; margin-bottom: 0.375rem;">★★★★★</p>
+                  <p style="font-size: 0.875rem; color: #4b5563; font-style: italic; line-height: 1.5;">“The best family vacation ever! The food was delicious, and the Bollywood themed parties were absolutely unmatched.”</p>
+                </div>
+              </div>
+              <div style="padding: 0 1.25rem 1.25rem; border-top: 1px solid #f3f4f6; padding-top: 0.75rem; margin-top: 0.5rem;">
+                <p style="font-size: 0.9375rem; font-weight: 700; color: var(--text-dark); margin: 0;">Rajesh & Priya</p>
+              </div>
+            </div>
+
+            <!-- YouTube Review 2 -->
+            <div class="card" style="overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div class="testi-video-thumb" onclick="openVideoModal('https://www.youtube.com/embed/RRW6GZKJ8lg')">
+                  <img src="https://img.youtube.com/vi/RRW6GZKJ8lg/hqdefault.jpg" alt="Anita" />
+                  <span class="platform-tag">
+                    <span style="width: 8px; height: 8px; border-radius: 9999px; background: #FF0000; display: inline-block;"></span>
+                    YouTube
+                  </span>
+                  <div class="play-circle"><div class="play-btn-red">▶</div></div>
+                </div>
+                <div style="padding: 1.25rem;">
+                  <p style="color: #f5a623; margin-bottom: 0.375rem;">★★★★★</p>
+                  <p style="font-size: 0.875rem; color: #4b5563; font-style: italic; line-height: 1.5;">“Everything was seamless from embarkation to disembarkation. Indian chefs made sure we had warm, authentic meals daily!”</p>
+                </div>
+              </div>
+              <div style="padding: 0 1.25rem 1.25rem; border-top: 1px solid #f3f4f6; padding-top: 0.75rem; margin-top: 0.5rem;">
+                <p style="font-size: 0.9375rem; font-weight: 700; color: var(--text-dark); margin: 0;">Anita Sharma</p>
               </div>
             </div>
           </div>

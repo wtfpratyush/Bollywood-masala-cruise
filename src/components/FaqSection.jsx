@@ -53,6 +53,23 @@ const FaqSection = ({ showAll = false }) => {
     return filteredFaqs;
   }, [filteredFaqs, showAll, selectedCategory, searchQuery]);
 
+  // Structured data for the FAQs actually rendered on the page, using their exact Q/A text
+  const faqJsonLd = useMemo(() => {
+    if (!displayedFaqs.length) return null;
+    return {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: displayedFaqs.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: f.a,
+        },
+      })),
+    };
+  }, [displayedFaqs]);
+
   // Sub-component: Contact Card
   const ContactCard = () => (
     <div className="rounded-3xl bg-[#1b1c38] text-white p-6 sm:p-7 shadow-xl shadow-indigo-950/15 flex flex-col justify-between">
@@ -74,7 +91,7 @@ const FaqSection = ({ showAll = false }) => {
           className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-white/10 hover:bg-white/15 transition-colors group"
         >
           <div className="w-10 h-10 rounded-xl bg-[#4b3df5] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-            <Phone size={18} className="text-white" />
+            <Phone size={18} className="text-white" aria-hidden="true" />
           </div>
           <div>
             <div className="text-[11px] text-gray-300 font-bold uppercase tracking-wider">
@@ -91,7 +108,7 @@ const FaqSection = ({ showAll = false }) => {
           className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-white/10 hover:bg-white/15 transition-colors group"
         >
           <div className="w-10 h-10 rounded-xl bg-[#4b3df5] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-            <Mail size={18} className="text-white" />
+            <Mail size={18} className="text-white" aria-hidden="true" />
           </div>
           <div className="min-w-0">
             <div className="text-[11px] text-gray-300 font-bold uppercase tracking-wider">
@@ -129,6 +146,8 @@ const FaqSection = ({ showAll = false }) => {
             <img
               src={item.logo}
               alt={item.name}
+              loading="lazy"
+              decoding="async"
               className="max-h-12 max-w-full object-contain filter group-hover:scale-105 transition-transform duration-300"
             />
           </div>
@@ -139,12 +158,20 @@ const FaqSection = ({ showAll = false }) => {
 
   return (
     <section id="faq" className="bg-gradient-to-b from-white via-indigo-50/15 to-white py-16 lg:py-24">
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
+      )}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Centered Header Matching Reference */}
         <div className="text-center max-w-3xl mx-auto mb-10">
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-[#4b3df5] text-[12px] font-bold tracking-[0.14em] uppercase mb-3 shadow-xs">
-            <HelpCircle size={14} />
+            <HelpCircle size={14} aria-hidden="true" />
             FAQ
           </div>
           <h2 className="text-[32px] sm:text-[42px] font-extrabold text-[#1a1a3a] tracking-tight">
@@ -164,17 +191,22 @@ const FaqSection = ({ showAll = false }) => {
         {/* Search Bar Matching Reference */}
         <div className="max-w-2xl mx-auto mb-6">
           <div className="relative">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={17} />
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={17} aria-hidden="true" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search questions (e.g., booking, dining, kids, refund, etc)..."
+              aria-label="Search FAQs"
+              name="faq-search"
+              autoComplete="off"
               className="w-full pl-11 pr-4 py-3 rounded-full bg-white border border-gray-200 text-[14.5px] text-gray-800 placeholder:text-gray-400 shadow-xs hover:border-gray-300 focus:border-[#4b3df5] focus:ring-4 focus:ring-[#4b3df5]/10 outline-none transition-all"
             />
             {searchQuery && (
               <button
+                type="button"
                 onClick={() => setSearchQuery("")}
+                aria-label="Clear search"
                 className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[11px] font-bold text-gray-400 hover:text-gray-700 bg-gray-100 hover:bg-gray-200 px-2 py-0.5 rounded-full"
               >
                 Clear
@@ -190,7 +222,9 @@ const FaqSection = ({ showAll = false }) => {
             return (
               <button
                 key={cat}
+                type="button"
                 onClick={() => setSelectedCategory(cat)}
+                aria-pressed={isActive}
                 className={`px-6 sm:px-7 py-2.5 sm:py-3 rounded-full text-[13.5px] sm:text-[14px] font-semibold transition-all duration-200 cursor-pointer ${
                   cat === "All" ? "min-w-[72px] text-center" : ""
                 } ${
@@ -229,6 +263,7 @@ const FaqSection = ({ showAll = false }) => {
                     No matching questions found for "{searchQuery}".
                   </p>
                   <button
+                    type="button"
                     onClick={() => {
                       setSearchQuery("");
                       setSelectedCategory("All");
@@ -288,6 +323,7 @@ const FaqSection = ({ showAll = false }) => {
                     No matching questions found for "{searchQuery}".
                   </p>
                   <button
+                    type="button"
                     onClick={() => {
                       setSearchQuery("");
                       setSelectedCategory("All");

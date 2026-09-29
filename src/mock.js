@@ -899,6 +899,50 @@ export const pastCruises = [
 
 export const testimonials = [
   {
+    id: "ig-1",
+    name: "Sunita & Cruisers",
+    platform: "instagram",
+    thumb: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?crop=entropy&cs=srgb&fm=jpg&w=700",
+    quote: "A vacation can look amazing in pictures, but hearing it from someone who lived it hits differently! Real experiences, real memories.",
+    rating: 5,
+    video: "https://www.instagram.com/p/DdmdMGshJ27/embed/",
+    link: "https://www.instagram.com/p/DdmdMGshJ27/",
+    handle: "@bollywoodmasalacruise"
+  },
+  {
+    id: "ig-2",
+    name: "Aman & Family",
+    platform: "instagram",
+    thumb: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?crop=entropy&cs=srgb&fm=jpg&w=700",
+    quote: "From the entertainment and authentic food to the people, laughter and unforgettable moments, every journey leaves a story worth sharing.",
+    rating: 5,
+    video: "https://www.instagram.com/p/DcKGpS0zyPh/embed/",
+    link: "https://www.instagram.com/p/DcKGpS0zyPh/",
+    handle: "@bollywoodmasalacruise"
+  },
+  {
+    id: "ig-3",
+    name: "Deck Party Cruisers",
+    platform: "instagram",
+    thumb: "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?crop=entropy&cs=srgb&fm=jpg&w=700",
+    quote: "POV: You asked if Bollywood Masala Cruise is really worth it? Friendships over dinner and Bollywood nights that keep everyone dancing say it all!",
+    rating: 5,
+    video: "https://www.instagram.com/p/DbglsGahfba/embed/",
+    link: "https://www.instagram.com/p/DbglsGahfba/",
+    handle: "@bollywoodmasalacruise"
+  },
+  {
+    id: "ig-4",
+    name: "Meera & Dev (3-Time Cruiser)",
+    platform: "instagram",
+    thumb: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=entropy&cs=srgb&fm=jpg&w=700",
+    quote: "Three cruises! One love affair with the sea. Some vacations are good enough to do once; the best ones make you come back again and again.",
+    rating: 5,
+    video: "https://www.instagram.com/p/DdMuhCvhaKq/embed/",
+    link: "https://www.instagram.com/p/DdMuhCvhaKq/",
+    handle: "@bollywoodmasalacruise"
+  },
+  {
     name: "Rajesh & Priya",
     thumb: "https://img.youtube.com/vi/fBtenbhqcrQ/hqdefault.jpg",
     quote: "REAL, FUN Feedback for HMT 2.0 Bollywood Masala Cruise",

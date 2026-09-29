@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Layout from "../components/Layout";
 import PageBanner from "../components/PageBanner";
 import { Link } from "react-router-dom";
+import { responsiveImg } from "../lib/images";
 import {
   Footprints, Music2, Dices, Drama, PartyPopper, Mic, Gamepad2,
   ChefHat, Waves, Sunset, Sparkles, Users, Star, Heart, Camera,
@@ -10,13 +11,13 @@ import {
 } from "lucide-react";
 
 /* ─── Inline lazy image with shimmer ─── */
-const LazyImg = ({ src, alt, className }) => {
+const LazyImg = ({ src, alt, className, sizes }) => {
   const [loaded, setLoaded] = useState(false);
   return (
     <div className="relative w-full h-full">
       {!loaded && <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 animate-pulse" />}
       <img
-        src={src} alt={alt} loading="lazy" decoding="async"
+        {...(sizes ? responsiveImg(src, sizes) : { src })} alt={alt} loading="lazy" decoding="async"
         onLoad={() => setLoaded(true)}
         className={`${className} transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"}`}
       />
@@ -273,7 +274,7 @@ const Onboard = () => {
             {diningOptions.map((item) => (
               <div key={item.name} className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group">
                 <div className="h-40 overflow-hidden bg-gray-100">
-                  <LazyImg src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <LazyImg src={item.image} sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" alt={item.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div className="p-4 sm:p-5">
                   <span className={`text-[10px] font-bold px-2.5 py-0.5 rounded-full ${item.tagColor} mb-2 inline-block`}>{item.tag}</span>
@@ -322,7 +323,7 @@ const Onboard = () => {
                 "/images/gallery/66998877f3f1c49f6af40c40.webp",
               ].map((src, i) => (
                 <div key={i} className={`rounded-2xl overflow-hidden bg-gray-800 ${i === 0 ? "row-span-2 h-64 lg:h-auto" : "h-36"}`}>
-                  <LazyImg src={src} alt={`Night ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                  <LazyImg src={src} sizes="(min-width: 1024px) 25vw, 50vw" alt={`Night ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                 </div>
               ))}
             </div>
@@ -376,7 +377,7 @@ const Onboard = () => {
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
             {galleryItems.map((item, idx) => (
               <div key={idx} className={`group relative rounded-2xl overflow-hidden bg-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all ${idx === 0 ? "sm:col-span-2 sm:row-span-2" : ""}`} style={{ minHeight: idx === 0 ? "340px" : "180px" }}>
-                <LazyImg src={item.src} alt={item.label} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-600" />
+                <LazyImg src={item.src} sizes="(min-width: 640px) 66vw, 50vw" alt={item.label} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-600" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <p className="absolute bottom-4 left-4 text-white text-[13px] font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">{item.label}</p>
               </div>
@@ -401,7 +402,7 @@ const Onboard = () => {
                 <Stars n={t.rating} />
                 <p className="text-[14px] text-gray-600 leading-relaxed my-4">"{t.text}"</p>
                 <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
-                  <img src={t.avatar} alt={t.name} loading="lazy" decoding="async" className="w-10 h-10 rounded-full object-cover border-2 border-indigo-100" />
+                  <img {...responsiveImg(t.avatar, "40px")} alt={t.name} loading="lazy" decoding="async" className="w-10 h-10 rounded-full object-cover border-2 border-indigo-100" />
                   <p className="text-[14px] font-bold text-[#1a1a3a]">{t.name}</p>
                 </div>
               </div>

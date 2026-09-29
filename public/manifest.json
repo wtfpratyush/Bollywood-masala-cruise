@@ -1,0 +1,20 @@
+{
+  "short_name": "Masala Cruise",
+  "name": "Bollywood Masala Cruise",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#4b3df5",
+  "background_color": "#ffffff"
+}

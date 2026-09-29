@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useMemo, useRef, useEffect } from "react";
 import Layout from "../components/Layout";
 import PageBanner from "../components/PageBanner";
+import { responsiveImg } from "../lib/images";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 
 /* ─── All local images from public/images/gallery ─── */
@@ -717,17 +718,65 @@ const galleryImages = [
 
 const CATEGORIES = ["All", "Events", "Entertainment", "Moments", "Onboard", "Destinations"];
 
+/* Precomputed once — galleryImages is a static module-level list, so counts never change across renders */
+const CATEGORY_COUNTS = CATEGORIES.reduce((acc, cat) => {
+  acc[cat] = cat === "All" ? galleryImages.length : galleryImages.filter((i) => i.cat === cat).length;
+  return acc;
+}, {});
+
 /* ─── Lightbox ─── */
 const Lightbox = ({ images, index, onClose, onPrev, onNext }) => {
-  if (index === null) return null;
+  const closeBtnRef = useRef(null);
+  const containerRef = useRef(null);
+  const previouslyFocused = useRef(null);
+  const isOpen = index !== null;
+
+  // Focus management: move focus into the dialog on open, restore it on close.
+  useEffect(() => {
+    if (isOpen) {
+      previouslyFocused.current = document.activeElement;
+      closeBtnRef.current?.focus();
+    } else if (previouslyFocused.current) {
+      previouslyFocused.current.focus();
+      previouslyFocused.current = null;
+    }
+  }, [isOpen]);
+
+  if (!isOpen) return null;
+
+  const current = images[index];
+
+  // Keep Tab focus cycling within the dialog's three controls.
+  const handleKeyDown = (e) => {
+    if (e.key !== "Tab") return;
+    const focusable = containerRef.current?.querySelectorAll("button");
+    if (!focusable || focusable.length === 0) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  };
+
   return (
     <div
+      ref={containerRef}
+      role="dialog"
+      aria-modal="true"
+      aria-label={`${current.cat || "Gallery"} photo ${index + 1} of ${images.length}`}
       className="fixed inset-0 z-[9999] bg-black/95 flex items-center justify-center"
       onClick={onClose}
+      onKeyDown={handleKeyDown}
     >
       {/* Close */}
       <button
+        ref={closeBtnRef}
         onClick={onClose}
+        aria-label="Close lightbox"
         className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all z-10"
       >
         <X size={20} />
@@ -741,6 +790,7 @@ const Lightbox = ({ images, index, onClose, onPrev, onNext }) => {
       {/* Prev */}
       <button
         onClick={(e) => { e.stopPropagation(); onPrev(); }}
+        aria-label="Previous photo"
         className="absolute left-3 sm:left-6 w-11 h-11 rounded-full bg-white/10 hover:bg-white/25 flex items-center justify-center text-white transition-all"
       >
         <ChevronLeft size={24} />
@@ -748,8 +798,8 @@ const Lightbox = ({ images, index, onClose, onPrev, onNext }) => {
 
       {/* Image */}
       <img
-        src={images[index].src}
-        alt={`Gallery ${index + 1}`}
+        src={current.src}
+        alt={`${current.cat || "Gallery"} photo ${index + 1} of ${images.length}`}
         className="max-h-[88vh] max-w-[90vw] object-contain rounded-xl shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       />
@@ -757,6 +807,7 @@ const Lightbox = ({ images, index, onClose, onPrev, onNext }) => {
       {/* Next */}
       <button
         onClick={(e) => { e.stopPropagation(); onNext(); }}
+        aria-label="Next photo"
         className="absolute right-3 sm:right-6 w-11 h-11 rounded-full bg-white/10 hover:bg-white/25 flex items-center justify-center text-white transition-all"
       >
         <ChevronRight size={24} />
@@ -765,23 +816,35 @@ const Lightbox = ({ images, index, onClose, onPrev, onNext }) => {
   );
 };
 
-/* ─── Immediate image card (lazy loading disabled) ─── */
-const GalleryCard = ({ src, index, onOpen }) => {
+/* ─── Immediate image card (lazy loading deliberately disabled — see brief) ─── */
+const GalleryCard = ({ src, cat, index, onOpen }) => {
+  const isLowPriority = index >= 8;
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      onOpen(index);
+    }
+  };
   return (
     <div
       className="relative group overflow-hidden rounded-2xl bg-gray-100 cursor-pointer shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 mb-4 break-inside-avoid"
       onClick={() => onOpen(index)}
+      role="button"
+      tabIndex={0}
+      aria-label={`View ${cat || "gallery"} photo ${index + 1} in lightbox`}
+      onKeyDown={handleKeyDown}
     >
       <img
-        src={src}
-        alt={`Gallery ${index + 1}`}
+        {...responsiveImg(src, "(min-width: 1024px) 300px, (min-width: 640px) 33vw, 50vw")}
+        alt={`${cat || "Gallery"} photo ${index + 1}`}
         loading="eager"
-        decoding="sync"
+        decoding="async"
+        {...(isLowPriority ? { fetchPriority: "low" } : {})}
         className="w-full object-cover transition-all duration-500 group-hover:scale-105 block"
       />
       {/* Hover overlay */}
       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
-        <ZoomIn size={28} className="text-white opacity-0 group-hover:opacity-100 transition-all duration-300 drop-shadow-lg" />
+        <ZoomIn size={28} aria-hidden="true" className="text-white opacity-0 group-hover:opacity-100 transition-all duration-300 drop-shadow-lg" />
       </div>
     </div>
   );
@@ -792,9 +855,13 @@ const GalleryPage = () => {
   const [activeCategory, setActiveCategory] = useState("All");
   const [lightboxIndex, setLightboxIndex] = useState(null);
 
-  const filtered = activeCategory === "All"
-    ? galleryImages
-    : galleryImages.filter((img) => img.cat === activeCategory);
+  const filtered = useMemo(
+    () =>
+      activeCategory === "All"
+        ? galleryImages
+        : galleryImages.filter((img) => img.cat === activeCategory),
+    [activeCategory]
+  );
 
   const openLightbox = (idx) => setLightboxIndex(idx);
   const closeLightbox = () => setLightboxIndex(null);
@@ -802,7 +869,7 @@ const GalleryPage = () => {
   const nextImage = () => setLightboxIndex((i) => (i + 1) % filtered.length);
 
   // Keyboard navigation
-  React.useEffect(() => {
+  useEffect(() => {
     const handler = (e) => {
       if (lightboxIndex === null) return;
       if (e.key === "ArrowLeft") prevImage();
@@ -836,11 +903,13 @@ const GalleryPage = () => {
           </div>
 
           {/* Filter Tabs */}
-          <div className="flex flex-wrap gap-2 justify-center mb-10">
+          <div className="flex flex-wrap gap-2 justify-center mb-10" role="group" aria-label="Filter gallery photos by category">
             {CATEGORIES.map((cat) => (
               <button
                 key={cat}
+                type="button"
                 onClick={() => { setActiveCategory(cat); setLightboxIndex(null); }}
+                aria-pressed={activeCategory === cat}
                 className={`px-5 py-2 rounded-full text-[13px] font-bold transition-all duration-300 ${
                   activeCategory === cat
                     ? "bg-[#4b3df5] text-white shadow-lg shadow-indigo-300/30"
@@ -850,7 +919,7 @@ const GalleryPage = () => {
                 {cat}
                 {cat !== "All" && (
                   <span className={`ml-1.5 text-[11px] ${activeCategory === cat ? "text-white/70" : "text-gray-400"}`}>
-                    ({galleryImages.filter((i) => i.cat === cat).length})
+                    ({CATEGORY_COUNTS[cat]})
                   </span>
                 )}
               </button>
@@ -863,6 +932,7 @@ const GalleryPage = () => {
               <GalleryCard
                 key={img.src}
                 src={img.src}
+                cat={img.cat}
                 index={i}
                 onOpen={openLightbox}
               />

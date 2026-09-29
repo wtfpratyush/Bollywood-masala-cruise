@@ -39,6 +39,9 @@ const Hero = () => {
             src={heroImageMobile}
             alt="Luxury Bollywood Masala Cruise Ship sailing at sunset"
             className="w-full h-full object-cover object-[center_35%] sm:object-[center_50%] select-none"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
           />
         </picture>
       </div>
@@ -96,7 +99,7 @@ const Hero = () => {
           {/* Center Area: Fully open and unobstructed so the cruise ship is completely visible */}
 
           {/* Right Hero Form Column - Framed to the right */}
-          <div className="w-full max-w-[700px] xl:w-[690px] shrink-0 xl:ml-auto">
+          <div className="w-full max-w-[480px] sm:max-w-[500px] lg:max-w-[500px] xl:max-w-[520px] shrink-0 lg:ml-auto self-center flex items-center justify-center">
             <QuickQuoteForm />
           </div>
 

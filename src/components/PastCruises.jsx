@@ -1,5 +1,6 @@
 import React from "react";
 import { pastCruises } from "../mock";
+import { responsiveImg } from "../lib/images";
 
 const PastCruises = () => {
   return (
@@ -18,7 +19,7 @@ const PastCruises = () => {
               <div key={i} className="flex flex-col items-center text-center group">
                 <div className="w-24 h-24 lg:w-[104px] lg:h-[104px] rounded-full overflow-hidden ring-4 ring-white shadow-lg mb-3">
                   <img
-                    src={c.image}
+                    {...responsiveImg(c.image, "(min-width: 1024px) 104px, 96px")}
                     alt={c.title}
                     loading="lazy"
                     decoding="async"

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import {
   ShieldCheck,
@@ -19,7 +19,6 @@ import {
   UtensilsCrossed,
   Heart,
   Globe,
-  X,
 } from "lucide-react";
 import Layout from "../components/Layout";
 import PageBanner from "../components/PageBanner";
@@ -32,6 +31,7 @@ import {
   aboutStats,
 } from "../mock";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "../components/ui/dialog";
+import { responsiveImg } from "../lib/images";
 
 const valueIconMap = {
   UserCheck: UserCheck,
@@ -40,23 +40,26 @@ const valueIconMap = {
   ShieldCheck: ShieldCheck,
 };
 
+const categories = [
+  "All",
+  "Stage Shows",
+  "Nightlife",
+  "Celebration",
+  "Dining",
+  "Activities",
+];
+
 const About = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [activePhoto, setActivePhoto] = useState(null);
 
-  const categories = [
-    "All",
-    "Stage Shows",
-    "Nightlife",
-    "Celebration",
-    "Dining",
-    "Activities",
-  ];
-
-  const filteredPhotos =
-    selectedCategory === "All"
-      ? aboutGalleryMoments.photos
-      : aboutGalleryMoments.photos.filter((p) => p.category === selectedCategory);
+  const filteredPhotos = useMemo(
+    () =>
+      selectedCategory === "All"
+        ? aboutGalleryMoments.photos
+        : aboutGalleryMoments.photos.filter((p) => p.category === selectedCategory),
+    [selectedCategory]
+  );
 
   return (
     <Layout>
@@ -391,11 +394,13 @@ const About = () => {
             </p>
 
             {/* Category Filter Tabs */}
-            <div className="flex flex-wrap items-center justify-center gap-2 mt-7">
+            <div className="flex flex-wrap items-center justify-center gap-2 mt-7" role="group" aria-label="Filter gallery moments by category">
               {categories.map((cat) => (
                 <button
                   key={cat}
+                  type="button"
                   onClick={() => setSelectedCategory(cat)}
+                  aria-pressed={selectedCategory === cat}
                   className={`px-4 py-2 rounded-full text-[13px] font-bold transition-all ${
                     selectedCategory === cat
                       ? "bg-[#4b3df5] text-white shadow-md shadow-indigo-500/25"
@@ -414,11 +419,20 @@ const About = () => {
               <div
                 key={photo.title + idx}
                 onClick={() => setActivePhoto(photo)}
+                role="button"
+                tabIndex={0}
+                aria-label={`View ${photo.title} photo`}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    setActivePhoto(photo);
+                  }
+                }}
                 className="group relative rounded-2xl overflow-hidden shadow-md bg-gray-100 cursor-pointer border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
               >
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
-                    src={photo.src}
+                    {...responsiveImg(photo.src, "(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw")}
                     alt={photo.title}
                     loading="lazy"
                     decoding="async"
@@ -480,9 +494,9 @@ const About = () => {
                 <span className="text-[32px] font-black text-[#4b3df5] leading-none block mb-2">
                   {m.year}
                 </span>
-                <h4 className="text-[17px] font-bold text-[#1a1a3a] mb-2">
+                <h3 className="text-[17px] font-bold text-[#1a1a3a] mb-2">
                   {m.title}
-                </h4>
+                </h3>
                 <p className="text-[13px] text-gray-500 leading-relaxed">
                   {m.desc}
                 </p>

@@ -2,12 +2,35 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 
+const DEFAULT_BANNER = "https://images.unsplash.com/photo-1554254648-2d58a1bc3fd5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBjcnVpc2UlMjBzaGlwfGVufDB8fHx8MTc4Nzc0ODIwMXww&ixlib=rb-4.1.0&q=85";
+const BANNER_WIDTHS = [640, 1080, 1600, 2400];
+
+// Unsplash resizes on request: same photo, sized to the screen instead of the multi-MB original
+const unsplashAt = (url, width) => {
+  const u = new URL(url);
+  u.searchParams.set("w", width);
+  u.searchParams.set("auto", "format");
+  return u.toString();
+};
+
+const bannerImgProps = (url) =>
+  url.startsWith("https://images.unsplash.com/")
+    ? {
+        src: unsplashAt(url, 1600),
+        srcSet: BANNER_WIDTHS.map((w) => `${unsplashAt(url, w)} ${w}w`).join(", "),
+        sizes: "100vw",
+      }
+    : { src: url };
+
 const PageBanner = ({ title, subtitle, crumb, bgImage }) => (
   <section className="relative overflow-hidden">
     <div className="absolute inset-0">
       <img
-        src={bgImage || "https://images.unsplash.com/photo-1554254648-2d58a1bc3fd5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBjcnVpc2UlMjBzaGlwfGVufDB8fHx8MTc4Nzc0ODIwMXww&ixlib=rb-4.1.0&q=85"}
-        alt="Cruise banner"
+        {...bannerImgProps(bgImage || DEFAULT_BANNER)}
+        alt={crumb || title ? `${crumb || title} — Bollywood Masala Cruise` : "Cruise banner"}
+        loading="eager"
+        fetchPriority="high"
+        decoding="async"
         className="w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-[#141452]/90 via-[#141452]/70 to-[#4b3df5]/40" />

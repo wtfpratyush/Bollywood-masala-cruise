@@ -978,7 +978,37 @@
       box-shadow: 0 4px 10px rgba(255, 0, 0, 0.4);
       transition: transform 0.2s;
     }
-    .ghl-testi-thumb:hover .ghl-play-circle {
+    .ghl-play-ig {
+      width: 44px;
+      height: 30px;
+      border-radius: 8px;
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      box-shadow: 0 4px 10px rgba(220, 39, 67, 0.4);
+      transition: transform 0.2s;
+    }
+    .ghl-platform-tag {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(4px);
+      color: #ffffff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      z-index: 2;
+    }
+    .ghl-testi-thumb:hover .ghl-play-circle,
+    .ghl-testi-thumb:hover .ghl-play-ig {
       transform: scale(1.1);
     }
     .ghl-testi-body {
@@ -1485,29 +1515,59 @@
         </div>
 
         <!-- Right Quick Quote Card -->
-        <div id="quote-section">
-          <div class="ghl-quote-card" style="padding: 0.5rem; background: #fff; border-radius: 20px;">
-            <iframe
-              src="https://api.leadconnectorhq.com/widget/form/8LYQHo3CuLbis8cNAyyD"
-              style="width:100%;height:470px;min-height:450px;max-height:490px;border:none;border-radius:0px"
-              id="inline-8LYQHo3CuLbis8cNAyyD" 
-              data-layout="{'id':'INLINE'}"
-              data-trigger-type="alwaysShow"
-              data-trigger-value=""
-              data-activation-type="alwaysActivated"
-              data-activation-value=""
-              data-deactivation-type="neverDeactivate"
-              data-deactivation-value=""
-              data-form-name="Contact form new website"
-              data-height="470"
-              data-layout-iframe-id="inline-8LYQHo3CuLbis8cNAyyD"
-              data-form-id="8LYQHo3CuLbis8cNAyyD"
-              data-cookie-consent="true"
-              data-cookie-consent-provider="auto"
-              title="Contact form new website"
-            >
-            </iframe>
+        <div id="quote-section" style="display: flex; align-items: center; justify-content: flex-end; width: 100%;">
+          <div class="ghl-quote-card" id="ghl-full-container" style="padding: 0.85rem; background: #fff; border-radius: 20px; box-shadow: 0 20px 35px -5px rgba(20, 20, 82, 0.1); border: 1px solid #f3f4f6; overflow: hidden; width: 100%; max-width: 510px;">
+            <div id="ghl-full-scaler" style="width: 680px; transform-origin: top left; transform: scale(0.71); height: 560px;">
+              <iframe
+                src="https://api.leadconnectorhq.com/widget/form/8LYQHo3CuLbis8cNAyyD"
+                style="width:100%;height:560px;border:none;display:block;border-radius:0px;"
+                id="inline-8LYQHo3CuLbis8cNAyyD" 
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="Contact form new website"
+                data-height="560"
+                data-layout-iframe-id="inline-8LYQHo3CuLbis8cNAyyD"
+                data-form-id="8LYQHo3CuLbis8cNAyyD"
+                data-cookie-consent="true"
+                data-cookie-consent-provider="auto"
+                title="Contact form new website"
+              >
+              </iframe>
+            </div>
             <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+            <script>
+              (function() {
+                function updateGHLFullScale() {
+                  var container = document.getElementById('ghl-full-container');
+                  var scaler = document.getElementById('ghl-full-scaler');
+                  if (!container || !scaler) return;
+                  var w = container.offsetWidth - 28;
+                  if (window.innerWidth < 480 || w < 340) {
+                    scaler.style.width = '100%';
+                    scaler.style.transform = 'none';
+                    scaler.style.height = 'auto';
+                    container.style.height = 'auto';
+                  } else {
+                    var baseW = 680;
+                    var baseH = 560;
+                    var scale = Math.min(1, Math.max(0.4, w / baseW));
+                    scaler.style.width = baseW + 'px';
+                    scaler.style.transform = 'scale(' + scale + ')';
+                    scaler.style.height = baseH + 'px';
+                    container.style.height = (Math.round(baseH * scale) + 28) + 'px';
+                  }
+                }
+                window.addEventListener('resize', updateGHLFullScale);
+                window.addEventListener('DOMContentLoaded', updateGHLFullScale);
+                setTimeout(updateGHLFullScale, 100);
+                setTimeout(updateGHLFullScale, 500);
+              })();
+            </script>
           </div>
         </div>
       </div>
@@ -1849,9 +1909,85 @@
             </div>
 
             <div class="ghl-testi-grid">
+              <!-- Instagram Reel 1 -->
+              <div class="ghl-testi-item">
+                <div class="ghl-testi-thumb" onclick="ghlOpenVideoModal('https://www.instagram.com/p/DdmdMGshJ27/embed/')">
+                  <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?crop=entropy&cs=srgb&fm=jpg&w=400" alt="Sunita & Friends" />
+                  <span class="ghl-platform-tag">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                    Instagram
+                  </span>
+                  <div class="ghl-play-badge"><span class="ghl-play-ig">▶</span></div>
+                </div>
+                <div class="ghl-testi-body">
+                  <p class="ghl-testi-quote">“A vacation can look amazing in pictures, but hearing it from someone who lived it hits differently! Real experiences, real memories.”</p>
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: 11px; font-weight: 700; color: #1a1a3a;">Sunita &amp; Friends</span>
+                    <a href="https://www.instagram.com/p/DdmdMGshJ27/" target="_blank" rel="noopener" style="font-size: 10px; color: #4b3df5; font-weight: 600; text-decoration: none;">View Post ↗</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Instagram Reel 2 -->
+              <div class="ghl-testi-item">
+                <div class="ghl-testi-thumb" onclick="ghlOpenVideoModal('https://www.instagram.com/p/DcKGpS0zyPh/embed/')">
+                  <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?crop=entropy&cs=srgb&fm=jpg&w=400" alt="Aman & Family" />
+                  <span class="ghl-platform-tag">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                    Instagram
+                  </span>
+                  <div class="ghl-play-badge"><span class="ghl-play-ig">▶</span></div>
+                </div>
+                <div class="ghl-testi-body">
+                  <p class="ghl-testi-quote">“From the entertainment and authentic food to laughter and unforgettable moments, every journey leaves a story worth sharing.”</p>
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: 11px; font-weight: 700; color: #1a1a3a;">Aman &amp; Family</span>
+                    <a href="https://www.instagram.com/p/DcKGpS0zyPh/" target="_blank" rel="noopener" style="font-size: 10px; color: #4b3df5; font-weight: 600; text-decoration: none;">View Post ↗</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Instagram Reel 3 -->
+              <div class="ghl-testi-item">
+                <div class="ghl-testi-thumb" onclick="ghlOpenVideoModal('https://www.instagram.com/p/DbglsGahfba/embed/')">
+                  <img src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?crop=entropy&cs=srgb&fm=jpg&w=400" alt="Deck Party Cruisers" />
+                  <span class="ghl-platform-tag">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                    Instagram
+                  </span>
+                  <div class="ghl-play-badge"><span class="ghl-play-ig">▶</span></div>
+                </div>
+                <div class="ghl-testi-body">
+                  <p class="ghl-testi-quote">“POV: You asked if Bollywood Masala Cruise is really worth it? Friendships over dinner and Bollywood DJ nights say it all!”</p>
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: 11px; font-weight: 700; color: #1a1a3a;">Deck Party Cruisers</span>
+                    <a href="https://www.instagram.com/p/DbglsGahfba/" target="_blank" rel="noopener" style="font-size: 10px; color: #4b3df5; font-weight: 600; text-decoration: none;">View Post ↗</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Instagram Reel 4 -->
+              <div class="ghl-testi-item">
+                <div class="ghl-testi-thumb" onclick="ghlOpenVideoModal('https://www.instagram.com/p/DdMuhCvhaKq/embed/')">
+                  <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?crop=entropy&cs=srgb&fm=jpg&w=400" alt="Meera & Dev" />
+                  <span class="ghl-platform-tag">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                    Instagram
+                  </span>
+                  <div class="ghl-play-badge"><span class="ghl-play-ig">▶</span></div>
+                </div>
+                <div class="ghl-testi-body">
+                  <p class="ghl-testi-quote">“Our 3rd time sailing with Bollywood Masala Cruise and it only keeps getting better! Incredible vibe and hospitality.”</p>
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: 11px; font-weight: 700; color: #1a1a3a;">Meera &amp; Dev</span>
+                    <a href="https://www.instagram.com/p/DdMuhCvhaKq/" target="_blank" rel="noopener" style="font-size: 10px; color: #4b3df5; font-weight: 600; text-decoration: none;">View Post ↗</a>
+                  </div>
+                </div>
+              </div>
+
               <!-- Review 1 -->
               <div class="ghl-testi-item">
-                <div class="ghl-testi-thumb" onclick="ghlOpenVideoModal()">
+                <div class="ghl-testi-thumb" onclick="ghlOpenVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
                   <img src="https://images.pexels.com/photos/39191539/pexels-photo-39191539.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Rajesh & Priya" />
                   <div class="ghl-play-badge"><span class="ghl-play-circle">▶</span></div>
                 </div>
@@ -1866,7 +2002,7 @@
 
               <!-- Review 2 -->
               <div class="ghl-testi-item">
-                <div class="ghl-testi-thumb" onclick="ghlOpenVideoModal()">
+                <div class="ghl-testi-thumb" onclick="ghlOpenVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
                   <img src="https://images.unsplash.com/photo-1556745753-b2904692b3cd?crop=entropy&cs=srgb&fm=jpg&w=400" alt="Anita Sharma" />
                   <div class="ghl-play-badge"><span class="ghl-play-circle">▶</span></div>
                 </div>
@@ -1874,21 +2010,6 @@
                   <p class="ghl-testi-quote">“Unforgettable trip! The Bollywood artists made it truly feel like a festival at sea.”</p>
                   <div style="display: flex; justify-content: space-between; align-items: center;">
                     <span style="font-size: 11px; font-weight: 700; color: #1a1a3a;">Anita Sharma</span>
-                    <span class="ghl-testi-stars">★★★★★</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Review 3 -->
-              <div class="ghl-testi-item">
-                <div class="ghl-testi-thumb" onclick="ghlOpenVideoModal()">
-                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=srgb&fm=jpg&w=400" alt="Vikram Patel" />
-                  <div class="ghl-play-badge"><span class="ghl-play-circle">▶</span></div>
-                </div>
-                <div class="ghl-testi-body">
-                  <p class="ghl-testi-quote">“Took my parents for their 30th anniversary. Exceptional service and heartwarming hospitality!”</p>
-                  <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <span style="font-size: 11px; font-weight: 700; color: #1a1a3a;">Vikram Patel</span>
                     <span class="ghl-testi-stars">★★★★★</span>
                   </div>
                 </div>
@@ -2317,11 +2438,17 @@
   }
 
   // Video Player Modal
-  function ghlOpenVideoModal() {
+  function ghlOpenVideoModal(videoUrl) {
     var modal = document.getElementById('ghl-video-modal');
     var frame = document.getElementById('ghl-video-frame');
     if (modal && frame) {
-      frame.src = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1";
+      var src = videoUrl || "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1";
+      if (src.indexOf('instagram.com') !== -1 && src.indexOf('/embed') === -1) {
+        src = src.replace(/\/?$/, '/embed/');
+      } else if (src.indexOf('youtube.com') !== -1 && src.indexOf('autoplay=1') === -1) {
+        src += (src.indexOf('?') !== -1 ? '&' : '?') + 'autoplay=1';
+      }
+      frame.src = src;
       modal.classList.add('open');
     }
   }

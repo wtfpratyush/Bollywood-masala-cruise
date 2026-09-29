@@ -57,3 +57,18 @@ html {
 img {
   content-visibility: auto;
 }
+
+/* Accessibility: respect the OS-level reduced-motion preference by slowing
+   the decorative marquee to a near-stop and skipping the scroll-reveal
+   fade/slide-in, without changing the default design for anyone who hasn't
+   asked for reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation-duration: 300s;
+  }
+  .reveal {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

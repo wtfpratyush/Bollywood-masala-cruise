@@ -3,7 +3,8 @@ import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { navLinks } from "../mock";
 
-const LOGO_URL = "https://customer-assets-cm19k8pv.emergentagent.net/job_cruise-ui-rebuild/artifacts/sygz0ryx_6703ef1648d826625eaf84ea.png";
+// Local 168px copy (3x display size) of the original 1080px, 650 KB remote logo
+const LOGO_URL = "/images/logo-header.png";
 
 const Logo = () => (
   <div className="flex items-center select-none">
@@ -12,6 +13,8 @@ const Logo = () => (
       alt="Bollywood Masala Cruise"
       className="h-14 w-auto object-contain"
       loading="eager"
+      width="56"
+      height="56"
     />
   </div>
 );
@@ -49,7 +52,7 @@ const Header = () => {
             <Logo />
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-7">
+          <nav aria-label="Primary navigation" className="hidden lg:flex items-center gap-7">
             {navLinks.map((link) => {
               const isActive = pathname === link.to;
               return (
@@ -79,9 +82,12 @@ const Header = () => {
           </div>
 
           <button
+            type="button"
             className="lg:hidden p-2 text-[#1a1a3a]"
             onClick={() => setOpen(!open)}
-            aria-label="Toggle menu"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            aria-controls="mobile-menu"
           >
             {open ? <X size={26} /> : <Menu size={26} />}
           </button>
@@ -90,11 +96,12 @@ const Header = () => {
 
       {/* Mobile menu */}
       <div
+        id="mobile-menu"
         className={`lg:hidden overflow-hidden transition-all duration-300 bg-white border-t border-gray-100 ${
           open ? "max-h-[520px]" : "max-h-0"
         }`}
       >
-        <nav className="flex flex-col px-5 py-3">
+        <nav aria-label="Mobile navigation" className="flex flex-col px-5 py-3">
           {navLinks.map((link) => (
             <Link
               key={link.label}

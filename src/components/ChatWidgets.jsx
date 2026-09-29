@@ -30,8 +30,10 @@ const ChatWidgets = () => {
             <div className="bg-[#4b3df5] p-4 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <img
-                  src="https://images.unsplash.com/photo-1556745753-b2904692b3cd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHw0fHxjdXN0b21lciUyMGZlZWRiYWNrfGVufDB8fHx8MTc4Nzc0ODMwN3ww&ixlib=rb-4.1.0&q=85"
+                  src="https://images.unsplash.com/photo-1556745753-b2904692b3cd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHw0fHxjdXN0b21lciUyMGZlZWRiYWNrfGVufDB8fHx8MTc4Nzc0ODMwN3ww&ixlib=rb-4.1.0&q=85&w=200&auto=format"
                   alt="Agent"
+                  loading="lazy"
+                  decoding="async"
                   className="w-9 h-9 rounded-full object-cover ring-2 ring-white/50"
                 />
                 <div className="text-white text-[13px] leading-tight">
@@ -39,7 +41,12 @@ const ChatWidgets = () => {
                   <p>we help you today?</p>
                 </div>
               </div>
-              <button onClick={() => setChatOpen(false)} className="text-white/80 hover:text-white">
+              <button
+                type="button"
+                onClick={() => setChatOpen(false)}
+                className="text-white/80 hover:text-white"
+                aria-label="Close chat"
+              >
                 <X size={18} />
               </button>
             </div>
@@ -49,20 +56,25 @@ const ChatWidgets = () => {
               </div>
               <input
                 type="text"
+                name="chatMessage"
+                autoComplete="off"
                 placeholder="Type your message..."
+                aria-label="Type your message"
                 className="w-full h-10 rounded-lg border border-gray-200 px-3 text-[14px] focus:outline-none focus:border-[#4b3df5]"
               />
             </div>
           </div>
         ) : (
           <button
+            type="button"
             onClick={() => setChatOpen(true)}
             className="flex items-center gap-3 bg-white rounded-full shadow-xl border border-gray-100 pl-2 pr-4 py-2 hover:shadow-2xl transition-all"
           >
             <span className="relative">
               <img
-                src="https://images.unsplash.com/photo-1556745753-b2904692b3cd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHw0fHxjdXN0b21lciUyMGZlZWRiYWNrfGVufDB8fHx8MTc4Nzc0ODMwN3ww&ixlib=rb-4.1.0&q=85"
+                src="https://images.unsplash.com/photo-1556745753-b2904692b3cd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHw0fHxjdXN0b21lciUyMGZlZWRiYWNrfGVufDB8fHx8MTc4Nzc0ODMwN3ww&ixlib=rb-4.1.0&q=85&w=200&auto=format"
                 alt="Agent"
+                decoding="async"
                 className="w-9 h-9 rounded-full object-cover"
               />
               <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-red-500 text-white text-[10px] font-bold flex items-center justify-center">1</span>

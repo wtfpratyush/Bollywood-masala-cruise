@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Check, Ship, CircleDollarSign, Camera, Users } from "lucide-react";
 import { popularCruises, cruiseTrust } from "../mock";
+import { responsiveImg } from "../lib/images";
 import { useToast } from "../hooks/use-toast";
 
 const trustIconMap = { Ship, CircleDollarSign, Camera, Users };
@@ -35,7 +36,7 @@ const PopularCruises = () => {
               <div key={c.title} className="bg-white rounded-2xl overflow-hidden flex flex-col sm:flex-row">
                 <div className="sm:w-[42%] relative overflow-hidden">
                   <img
-                    src={c.image}
+                    {...responsiveImg(c.image, "(min-width: 768px) 21vw, (min-width: 640px) 42vw, 100vw")}
                     alt={c.title}
                     loading="lazy"
                     decoding="async"
@@ -51,7 +52,7 @@ const PopularCruises = () => {
                   <ul className="space-y-1.5 mb-4">
                     {c.features.map((f) => (
                       <li key={f} className="flex items-center gap-2 text-[14px] text-gray-700">
-                        <Check size={15} className="text-[#4b3df5]" strokeWidth={3} /> {f}
+                        <Check size={15} className="text-[#4b3df5]" strokeWidth={3} aria-hidden="true" /> {f}
                       </li>
                     ))}
                   </ul>
@@ -74,6 +75,7 @@ const PopularCruises = () => {
                         </Link>
                       )}
                       <button
+                        type="button"
                         onClick={() => book(c.title)}
                         className="rounded-lg bg-[#f5a623] px-4 py-2 text-[13px] font-semibold text-white hover:bg-[#e5981a] transition-all"
                       >
@@ -92,7 +94,7 @@ const PopularCruises = () => {
               return (
                 <div key={t.title} className="flex items-center gap-3">
                   <div className="w-11 h-11 rounded-full border border-white/25 flex items-center justify-center text-white shrink-0">
-                    <Icon size={20} strokeWidth={1.6} />
+                    <Icon size={20} strokeWidth={1.6} aria-hidden="true" />
                   </div>
                   <div className="leading-tight">
                     <p className="text-[14px] font-semibold text-white">{t.title}</p>

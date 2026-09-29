@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef, useId } from "react";
 import {
   X, Star, ChevronDown, Phone, Ship, Calendar, MapPin, Utensils, BedDouble, Zap,
   Image as ImageIcon, Music, Sparkles, Music2, Drama, PartyPopper, Mic, Trophy, Palette, Sun
@@ -25,9 +25,9 @@ const activityIconMap = {
 };
 
 const StarRating = ({ count = 5 }) => (
-  <span className="flex gap-0.5">
+  <span className="flex gap-0.5" role="img" aria-label={`${count} out of 5 stars`}>
     {Array.from({ length: count }).map((_, i) => (
-      <Star key={i} size={14} fill="#f5a623" className="text-[#f5a623]" />
+      <Star key={i} size={14} fill="#f5a623" className="text-[#f5a623]" aria-hidden="true" />
     ))}
   </span>
 );
@@ -45,20 +45,33 @@ const SectionTitle = ({ label, title, light = false }) => (
 
 const FaqItem = ({ q, a }) => {
   const [open, setOpen] = useState(false);
+  const reactId = useId();
+  const panelId = `cruise-faq-panel-${reactId}`;
+  const buttonId = `cruise-faq-button-${reactId}`;
   return (
     <div className="border border-gray-200 rounded-xl overflow-hidden">
       <button
+        id={buttonId}
+        type="button"
         onClick={() => setOpen(!open)}
+        aria-expanded={open}
+        aria-controls={panelId}
         className="w-full flex items-center justify-between p-4 text-left bg-white hover:bg-gray-50 transition-all"
       >
         <span className="text-[14px] font-semibold text-[#1a1a3a] pr-4">{q}</span>
         <ChevronDown
           size={18}
+          aria-hidden="true"
           className={`shrink-0 text-[#4b3df5] transition-transform duration-300 ${open ? "rotate-180" : ""}`}
         />
       </button>
       {open && (
-        <div className="px-4 pb-4 text-[13px] text-gray-600 leading-relaxed border-t border-gray-100 pt-3 bg-gray-50">
+        <div
+          id={panelId}
+          role="region"
+          aria-labelledby={buttonId}
+          className="px-4 pb-4 text-[13px] text-gray-600 leading-relaxed border-t border-gray-100 pt-3 bg-gray-50"
+        >
           {a}
         </div>
       )}
@@ -69,9 +82,11 @@ const FaqItem = ({ q, a }) => {
 const CruiseDetailModal = ({ cruise, onClose, onBook }) => {
   // All hooks must be before any early returns
   const [activeSection, setActiveSection] = useState("Overview");
+  const dialogRef = useRef(null);
+  const previouslyFocusedRef = useRef(null);
+  const titleId = useId();
 
   const d = cruise.details;
-  if (!d) return null;
 
   // Sections for sticky nav
   const sections = ["Overview", "Itinerary", "Accommodation", "Entertainment", "Dining", "Testimonials", "Gallery", "FAQ"];
@@ -82,21 +97,64 @@ const CruiseDetailModal = ({ cruise, onClose, onBook }) => {
     setActiveSection(id);
   };
 
+  // Escape closes the modal; focus moves into the dialog on open and is restored on close
+  useEffect(() => {
+    if (!d) return;
+
+    previouslyFocusedRef.current = document.activeElement;
+    const raf = requestAnimationFrame(() => {
+      dialogRef.current?.focus();
+    });
+
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("keydown", handleKeyDown);
+      if (previouslyFocusedRef.current && typeof previouslyFocusedRef.current.focus === "function") {
+        previouslyFocusedRef.current.focus();
+      }
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [d, onClose]);
+
+  if (!d) return null;
+
   return (
-    <div className="fixed inset-0 z-[9999] flex items-end sm:items-center justify-center bg-black/80 backdrop-blur-sm p-0 sm:p-4 overflow-hidden">
+    <div
+      className="fixed inset-0 z-[9999] flex items-end sm:items-center justify-center bg-black/80 backdrop-blur-sm p-0 sm:p-4 overflow-hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby={titleId}
+      ref={dialogRef}
+      tabIndex={-1}
+    >
       <div className="relative bg-white w-full max-w-4xl max-h-screen sm:max-h-[92vh] rounded-t-3xl sm:rounded-3xl flex flex-col shadow-2xl overflow-hidden">
 
         {/* ── Hero Banner ── */}
         <div className="relative h-52 sm:h-60 shrink-0 overflow-hidden">
-          <img src={d.banner} alt={cruise.title} className="w-full h-full object-cover" />
+          <img
+            src={d.banner}
+            alt={cruise.title}
+            loading="eager"
+            decoding="async"
+            className="w-full h-full object-cover"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
 
           {/* Close button */}
           <button
+            type="button"
             onClick={onClose}
+            aria-label="Close cruise details"
             className="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/60 backdrop-blur-sm flex items-center justify-center text-white hover:bg-black/80 transition-all z-10"
           >
-            <X size={18} />
+            <X size={18} aria-hidden="true" />
           </button>
 
           {/* Banner content */}
@@ -112,7 +170,7 @@ const CruiseDetailModal = ({ cruise, onClose, onBook }) => {
                 <Ship size={11} /> {d.ship}
               </span>
             </div>
-            <h2 className="text-[24px] sm:text-[30px] font-black text-white leading-tight">
+            <h2 id={titleId} className="text-[24px] sm:text-[30px] font-black text-white leading-tight">
               {cruise.title}
             </h2>
             <p className="text-[13px] text-white/80 mt-1 max-w-2xl line-clamp-2">{d.tagline}</p>
@@ -125,7 +183,9 @@ const CruiseDetailModal = ({ cruise, onClose, onBook }) => {
             {sections.map((s) => (
               <button
                 key={s}
+                type="button"
                 onClick={() => scrollTo(s)}
+                aria-current={activeSection === s ? "true" : undefined}
                 className={`px-3.5 py-1.5 rounded-full text-[12px] font-bold whitespace-nowrap transition-all ${
                   activeSection === s
                     ? "bg-[#4b3df5] text-white"
@@ -317,7 +377,13 @@ const CruiseDetailModal = ({ cruise, onClose, onBook }) => {
               {d.testimonials.map((t) => (
                 <div key={t.name} className="rounded-2xl border border-gray-100 p-5 hover:shadow-lg hover:-translate-y-1 transition-all">
                   <div className="flex items-center gap-3 mb-4">
-                    <img src={t.avatar} alt={t.name} className="w-12 h-12 rounded-full object-cover border-2 border-indigo-100" />
+                    <img
+                      src={t.avatar}
+                      alt={t.name}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-12 h-12 rounded-full object-cover border-2 border-indigo-100"
+                    />
                     <div>
                       <p className="text-[14px] font-bold text-[#1a1a3a]">{t.name}</p>
                       <StarRating count={t.rating} />

@@ -1,12 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+/* Poppins is loaded via the <link rel="stylesheet"> + preconnect in
+   public/index.html (discovered immediately by the browser, before this
+   bundle even downloads); importing it again here would only add a
+   redundant, render-blocking round trip. */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Arial tuned to Poppins' metrics, used only until Poppins arrives, so the
+   font swap doesn't reflow the hero and shift the quote form (CLS). */
+@font-face {
+  font-family: 'Poppins Fallback';
+  src: local('Arial');
+  ascent-override: 92.33%;
+  descent-override: 30.78%;
+  line-gap-override: 8.79%;
+  size-adjust: 113.73%;
+}
+
 body {
   margin: 0;
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Poppins', 'Poppins Fallback', -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #1a1a3a;
@@ -47,5 +61,21 @@ code {
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Visible outline for keyboard users only — mouse/touch focus is
+     unaffected, so this never changes the default look. Components that
+     already ship their own focus ring (e.g. shadcn/radix inputs using
+     focus-visible:ring-*) live in the Tailwind "utilities" layer, which is
+     emitted after "base" and wins automatically. */
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }

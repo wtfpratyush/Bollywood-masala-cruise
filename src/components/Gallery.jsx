@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import { galleryImages } from "../mock";
+import { responsiveImg } from "../lib/images";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -10,6 +11,8 @@ const Gallery = () => {
 
   // Lightbox state
   const [lightboxIndex, setLightboxIndex] = useState(null);
+  const dialogRef = useRef(null);
+  const previouslyFocusedRef = useRef(null);
 
   // Touch state for swipe handling on mobile
   const [touchStart, setTouchStart] = useState(null);
@@ -65,6 +68,21 @@ const Gallery = () => {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [lightboxIndex, handleClose, handlePrev, handleNext]);
 
+  // Move focus into the dialog when it opens, and restore it on close
+  useEffect(() => {
+    if (lightboxIndex !== null) {
+      previouslyFocusedRef.current = document.activeElement;
+      const raf = requestAnimationFrame(() => {
+        dialogRef.current?.focus();
+      });
+      return () => cancelAnimationFrame(raf);
+    }
+    if (previouslyFocusedRef.current && typeof previouslyFocusedRef.current.focus === "function") {
+      previouslyFocusedRef.current.focus();
+      previouslyFocusedRef.current = null;
+    }
+  }, [lightboxIndex]);
+
   // Touch swipe handlers
   const onTouchStart = (e) => {
     setTouchEnd(null);
@@ -106,37 +124,41 @@ const Gallery = () => {
       {/* Full-bleed continuously moving track with square images */}
       <div className="relative">
         <div className="marquee-track gap-4" style={{ animationDuration: "90s" }}>
-          {loop.map((img, i) => (
-            <div
-              key={i}
-              className="shrink-0 w-44 sm:w-56 md:w-60 group cursor-pointer"
-              onClick={() => handleOpen(i)}
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  e.preventDefault();
-                  handleOpen(i);
-                }
-              }}
-              aria-label={`Open photo: ${img.alt || "Cruise memory"}`}
-            >
-              <div className="overflow-hidden rounded-2xl aspect-square shadow-md border border-gray-100 bg-gray-100 relative">
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  loading="eager"
-                  decoding="sync"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
-                  <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/60 backdrop-blur-sm text-white text-[12px] font-semibold px-3 py-1 rounded-full shadow-lg">
-                    View
-                  </span>
+          {loop.map((img, i) => {
+            const isDuplicate = i >= featured.length;
+            return (
+              <div
+                key={i}
+                className="shrink-0 w-44 sm:w-56 md:w-60 group cursor-pointer"
+                onClick={() => handleOpen(i)}
+                role="button"
+                tabIndex={isDuplicate ? -1 : 0}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    handleOpen(i);
+                  }
+                }}
+                aria-label={`Open photo: ${img.alt || "Cruise memory"}`}
+                aria-hidden={isDuplicate ? "true" : undefined}
+              >
+                <div className="overflow-hidden rounded-2xl aspect-square shadow-md border border-gray-100 bg-gray-100 relative">
+                  <img
+                    {...responsiveImg(img.src, "240px")}
+                    alt={img.alt}
+                    loading="eager"
+                    decoding="async"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+                    <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/60 backdrop-blur-sm text-white text-[12px] font-semibold px-3 py-1 rounded-full shadow-lg">
+                      View
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 
@@ -153,6 +175,11 @@ const Gallery = () => {
             onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Photo gallery viewer"
+            ref={dialogRef}
+            tabIndex={-1}
           >
             {/* Top Bar: Counter & Close Button */}
             <div className="absolute top-4 sm:top-6 left-0 right-0 px-4 sm:px-8 flex items-center justify-between z-30 pointer-events-none">

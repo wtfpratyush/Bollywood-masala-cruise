@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import Layout from "../components/Layout";
 import { popularCruises, allPackages } from "../mock";
+import { responsiveImg } from "../lib/images";
 import { useToast } from "../hooks/use-toast";
 
 const activityIconMap = {
@@ -54,7 +55,7 @@ const LazyBgSection = ({ imageUrl, className, children, id }) => {
 };
 
 /* ── Lazy image with blur-up placeholder ── */
-const LazyImg = ({ src, alt, className, eager = false }) => {
+const LazyImg = ({ src, alt, className, eager = false, sizes }) => {
   const [loaded, setLoaded] = useState(false);
   return (
     <div className="relative w-full h-full">
@@ -63,7 +64,7 @@ const LazyImg = ({ src, alt, className, eager = false }) => {
         <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 animate-pulse rounded-inherit" />
       )}
       <img
-        src={src}
+        {...(sizes ? responsiveImg(src, sizes) : { src })}
         alt={alt}
         loading={eager ? "eager" : "lazy"}
         decoding="async"
@@ -117,14 +118,29 @@ const SectionHeading = ({ label, title, light = false, center = true }) => (
   </div>
 );
 
+/* ── Parse existing "MON DD, YYYY" style date text into ISO (no invented dates, no TZ drift) ── */
+const MONTH_ABBR = { JAN: 1, FEB: 2, MAR: 3, APR: 4, MAY: 5, JUN: 6, JUL: 7, AUG: 8, SEP: 9, OCT: 10, NOV: 11, DEC: 12 };
+const toIsoDate = (text) => {
+  if (!text) return null;
+  const match = text.trim().match(/^([A-Za-z]{3})[A-Za-z]*\s+(\d{1,2}),?\s*(\d{4})$/);
+  if (!match) return null;
+  const month = MONTH_ABBR[match[1].toUpperCase()];
+  if (!month) return null;
+  return `${match[3]}-${String(month).padStart(2, "0")}-${match[2].padStart(2, "0")}`;
+};
+
+const SECTION_NAMES = ["Overview", "Itinerary", "Accommodation", "Entertainment", "Dining", "Testimonials", "Gallery", "FAQ"];
+
+/* All cruises are static mock data — combine once at module scope instead of on every render */
+const ALL_CRUISES = [...(popularCruises || []), ...(allPackages || [])];
+
 /* ─────────────────────────────────────────────────────── */
 const CruiseDetail = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
   const { toast } = useToast();
 
-  const all = [...(popularCruises || []), ...(allPackages || [])];
-  const cruise = all.find(
+  const cruise = ALL_CRUISES.find(
     (c) => c.title.toLowerCase().replace(/\s+/g, "-").replace(/[()]/g, "") === slug
   );
 
@@ -148,15 +164,35 @@ const CruiseDetail = () => {
   }
 
   const d = cruise.details;
-  const sections = ["Overview", "Itinerary", "Accommodation", "Entertainment", "Dining", "Testimonials", "Gallery", "FAQ"];
+  const sections = SECTION_NAMES;
 
   const scrollTo = (id) => {
     const el = document.getElementById(`cs-${id}`);
     if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
+  // Structured data built only from fields that already exist on this cruise's mock data.
+  const [startRaw, endRaw] = (d.dates || "").split(/[–-]/).map((s) => s && s.trim());
+  const startDate = toIsoDate(startRaw);
+  const endDate = toIsoDate(endRaw);
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    name: cruise.title,
+    description: d.tagline,
+    image: d.banner ? [d.banner] : undefined,
+    ...(startDate ? { startDate } : {}),
+    ...(endDate ? { endDate } : {}),
+    ...(d.ship ? { provider: { "@type": "Organization", name: d.ship } } : {}),
+  };
+
   return (
     <Layout>
+      <script
+        type="application/ld+json"
+        // Structured data uses only fields already present in this cruise's mock data (title, tagline, banner, dates, ship).
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* ── Hero Banner — eager loaded (above fold) ── */}
       <div className="relative h-[55vh] min-h-[360px] overflow-hidden bg-gray-900">
         <img
@@ -164,7 +200,7 @@ const CruiseDetail = () => {
           alt={cruise.title}
           loading="eager"
           decoding="async"
-          fetchpriority="high"
+          fetchPriority="high"
           className="w-full h-full object-cover scale-105"
           style={{ transformOrigin: "center top" }}
         />
@@ -348,7 +384,7 @@ const CruiseDetail = () => {
                 className={`flex flex-col ${idx % 2 === 0 ? "sm:flex-row" : "sm:flex-row-reverse"} rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all`}
               >
                 <div className="sm:w-[45%] min-h-[220px] overflow-hidden bg-gray-100">
-                  <LazyImg src={room.image} alt={room.name} className="w-full h-full object-cover" />
+                  <LazyImg src={room.image} sizes="(min-width: 640px) 45vw, 100vw" alt={room.name} className="w-full h-full object-cover" />
                 </div>
                 <div className="flex-1 flex flex-col justify-center p-7 sm:p-10">
                   <h3 className="text-[22px] font-black text-[#1a1a3a] mb-3">{room.name}</h3>
@@ -413,7 +449,7 @@ const CruiseDetail = () => {
           <SectionHeading label="FOOD" title="Delicious Dining Options" center={false} />
           <div className="flex flex-col sm:flex-row rounded-2xl overflow-hidden border border-gray-100 shadow-sm mt-3">
             <div className="sm:w-[38%] min-h-[190px] sm:min-h-[210px] overflow-hidden bg-gray-100">
-              <LazyImg src={d.diningImage} alt="Dining" className="w-full h-full object-cover" />
+              <LazyImg src={d.diningImage} sizes="(min-width: 640px) 38vw, 100vw" alt="Dining" className="w-full h-full object-cover" />
             </div>
             <div className="flex-1 flex flex-col justify-center p-5 sm:p-7">
               <p className="text-[14px] text-gray-600 leading-relaxed mb-4">{d.diningDesc}</p>
@@ -456,6 +492,7 @@ const CruiseDetail = () => {
                   <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-indigo-100 shrink-0 bg-gray-100">
                     <LazyImg
                       src={t.avatar}
+                      sizes="48px"
                       alt={t.name}
                       className="w-full h-full object-cover"
                     />
@@ -522,6 +559,7 @@ const CruiseDetail = () => {
               >
                 <LazyImg
                   src={src}
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
                   alt={`Gallery ${idx + 1}`}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />

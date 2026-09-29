@@ -4,6 +4,7 @@ import { Check, Ship, CircleDollarSign, Camera, Users, Calendar, ArrowRight, Anc
 import Layout from "../components/Layout";
 import PageBanner from "../components/PageBanner";
 import { popularCruises, pastCruises, cruiseTrust } from "../mock";
+import { responsiveImg } from "../lib/images";
 import { useToast } from "../hooks/use-toast";
 
 const trustIconMap = { Ship, CircleDollarSign, Camera, Users };
@@ -50,7 +51,7 @@ const Packages = () => {
               >
                 <div className="relative h-64 sm:h-72 overflow-hidden">
                   <img
-                    src={c.image}
+                    {...responsiveImg(c.image, "(min-width: 768px) 50vw, 100vw")}
                     alt={c.title}
                     loading="lazy"
                     decoding="async"
@@ -146,7 +147,7 @@ const Packages = () => {
               >
                 <div className="relative h-44 sm:h-48 overflow-hidden bg-gray-100">
                   <img
-                    src={c.image}
+                    {...responsiveImg(c.image, "(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw")}
                     alt={c.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     loading="lazy"

@@ -24,7 +24,7 @@ const OnboardExperience = () => {
             return (
               <div key={a.title} className="flex flex-col items-center text-center group">
                 <div className="text-[#4b3df5] mb-3 transition-transform duration-300 group-hover:-translate-y-1">
-                  <Icon size={40} strokeWidth={1.4} />
+                  <Icon size={40} strokeWidth={1.4} aria-hidden="true" />
                 </div>
                 <p className="text-[15px] font-bold text-[#1a1a3a]">{a.title}</p>
                 <p className="text-[12px] text-gray-500 leading-snug mt-1">{a.desc}</p>

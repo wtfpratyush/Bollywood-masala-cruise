@@ -22,9 +22,9 @@ const Contact = () => {
       />
 
       <section className="bg-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid xl:grid-cols-12 gap-10 xl:gap-10 items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Info - appears below form on mobile, on left on desktop */}
-          <div className="order-2 xl:order-1 xl:col-span-4">
+          <div className="order-2 lg:order-1 lg:col-span-7">
             <p className="text-[13px] font-bold tracking-[0.15em] text-[#4b3df5] mb-3">GET IN TOUCH</p>
             <h2 className="text-[30px] sm:text-[36px] font-extrabold text-[#1a1a3a] leading-tight">We'd Love to Hear From You</h2>
             <p className="mt-4 text-[16px] text-gray-600 leading-relaxed">
@@ -57,8 +57,8 @@ const Contact = () => {
           </div>
 
           {/* Form - appears above info on mobile, on right on desktop */}
-          <div className="order-1 xl:order-2 xl:col-span-8 flex justify-center xl:justify-end">
-            <div className="w-full max-w-[700px]">
+          <div className="order-1 lg:order-2 lg:col-span-5 flex justify-center lg:justify-end">
+            <div className="w-full max-w-[480px] lg:max-w-[490px] xl:max-w-[500px]">
               <QuickQuoteForm />
             </div>
           </div>
