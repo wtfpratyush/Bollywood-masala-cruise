@@ -58,7 +58,7 @@ const Contact = () => {
 
           {/* Form - appears above info on mobile, on right on desktop */}
           <div className="order-1 lg:order-2 lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="w-full max-w-[480px] lg:max-w-[490px] xl:max-w-[500px]">
+            <div className="w-full max-w-[520px] lg:max-w-[540px]">
               <QuickQuoteForm />
             </div>
           </div>
