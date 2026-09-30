@@ -374,18 +374,18 @@ const CruiseDetailModal = ({ cruise, onClose, onBook }) => {
           <div id="cruise-section-Testimonials" className="bg-white px-5 sm:px-8 py-10 border-b border-gray-100">
             <SectionTitle label="TESTIMONIALS" title="What Our Guests Have to Say" />
             <div className="grid sm:grid-cols-3 gap-5">
-              {d.testimonials.map((t) => (
-                <div key={t.name} className="rounded-2xl border border-gray-100 p-5 hover:shadow-lg hover:-translate-y-1 transition-all">
+              {d.testimonials.map((t, idx) => (
+                <div key={idx} className="rounded-2xl border border-gray-100 p-5 hover:shadow-lg hover:-translate-y-1 transition-all">
                   <div className="flex items-center gap-3 mb-4">
                     <img
                       src={t.avatar}
-                      alt={t.name}
+                      alt="Verified Cruiser"
                       loading="lazy"
                       decoding="async"
                       className="w-12 h-12 rounded-full object-cover border-2 border-indigo-100"
                     />
                     <div>
-                      <p className="text-[14px] font-bold text-[#1a1a3a]">{t.name}</p>
+                      <p className="text-[14px] font-bold text-[#1a1a3a]">Verified Cruiser</p>
                       <StarRating count={t.rating} />
                     </div>
                   </div>

@@ -33,10 +33,10 @@ const Testimonials = () => {
               return (
                 <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all flex flex-col justify-between">
                   <div>
-                    <button onClick={() => setActive(t)} aria-label={`${ig ? "Instagram Reel" : "YouTube Short"}: view testimonial from ${t.name}`} className="relative block w-full aspect-video group cursor-pointer overflow-hidden">
+                    <button onClick={() => setActive(t)} aria-label="Watch video testimonial" className="relative block w-full aspect-video group cursor-pointer overflow-hidden">
                       <img
                         src={t.thumb}
-                        alt={t.name}
+                        alt="Video testimonial"
                         loading="lazy"
                         decoding="async"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -50,7 +50,9 @@ const Testimonials = () => {
                           </span>
                         ) : (
                           <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[11px] font-bold text-white shadow-sm border border-white/20">
-                            <span className="w-2 h-2 rounded-full bg-[#FF0000]" />
+                            <svg className="w-3 h-3 fill-[#FF0000]" viewBox="0 0 24 24">
+                              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
                             YouTube Short
                           </span>
                         )}
@@ -78,21 +80,20 @@ const Testimonials = () => {
                           ))}
                         </div>
                         <span className="text-[12px] font-semibold text-gray-400">
-                          {ig ? t.handle || "Verified Guest" : "Verified Guest"}
+                          Verified Guest
                         </span>
                       </div>
                       <p className="text-[14px] text-gray-700 leading-snug font-medium">“{t.quote}”</p>
                     </div>
                   </div>
 
-                  <div className="px-5 pb-5 pt-0 flex items-center justify-between border-t border-gray-50 mt-2">
-                    <span className="text-[13px] font-bold text-[#1a1a3a]">{t.name}</span>
+                  <div className="px-5 pb-5 pt-0 flex items-center justify-end border-t border-gray-50 mt-2">
                     {t.link && (
                       <a
                         href={t.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-[12px] font-semibold text-[#4b3df5] hover:underline"
+                        className="inline-flex items-center gap-1 text-[12px] font-semibold text-[#4b3df5] hover:underline pt-3"
                         onClick={(e) => e.stopPropagation()}
                       >
                         <span>{ig ? "View Post" : "Watch"}</span>
@@ -123,7 +124,7 @@ const Testimonials = () => {
                       : `${active.video?.replace(/\/+$/, "")}/embed/`
                     : `${active.video}?autoplay=1&rel=0`
                 }
-                title={active.name}
+                title={active.name || "Guest Testimonial"}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 loading="lazy"

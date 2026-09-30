@@ -397,13 +397,13 @@ const Onboard = () => {
             subtitle="Real stories from real guests — this is why people come back year after year."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {testimonials.map((t) => (
-              <div key={t.name} className="rounded-2xl border border-gray-100 p-6 hover:shadow-lg hover:-translate-y-1 transition-all bg-white">
+            {testimonials.map((t, idx) => (
+              <div key={idx} className="rounded-2xl border border-gray-100 p-6 hover:shadow-lg hover:-translate-y-1 transition-all bg-white">
                 <Stars n={t.rating} />
                 <p className="text-[14px] text-gray-600 leading-relaxed my-4">"{t.text}"</p>
                 <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
-                  <img {...responsiveImg(t.avatar, "40px")} alt={t.name} loading="lazy" decoding="async" className="w-10 h-10 rounded-full object-cover border-2 border-indigo-100" />
-                  <p className="text-[14px] font-bold text-[#1a1a3a]">{t.name}</p>
+                  <img {...responsiveImg(t.avatar, "40px")} alt="Verified Cruiser" loading="lazy" decoding="async" className="w-10 h-10 rounded-full object-cover border-2 border-indigo-100" />
+                  <p className="text-[14px] font-bold text-[#1a1a3a]">Verified Cruiser</p>
                 </div>
               </div>
             ))}

@@ -137,18 +137,18 @@ const FaqSection = ({ showAll = false }) => {
           Exotik Excursions is a certified and bonded travel partner with over 10 years of reliable group cruise operations.
         </p>
       </div>
-      <div className={`grid ${showAll ? "grid-cols-2 sm:grid-cols-4" : "grid-cols-2"} gap-3`}>
+      <div className="grid grid-cols-2 gap-3.5 sm:gap-4">
         {accreditations.map((item) => (
           <div
             key={item.name}
-            className="h-16 sm:h-20 px-3 py-2 flex items-center justify-center rounded-2xl bg-white border border-gray-100 shadow-xs hover:border-indigo-200 hover:shadow-md transition-all duration-300 group"
+            className="h-20 sm:h-24 px-4 py-3 flex items-center justify-center rounded-2xl bg-white border border-gray-100 shadow-xs hover:border-indigo-200 hover:shadow-md transition-all duration-300 group"
           >
             <img
               src={item.logo}
               alt={item.name}
               loading="lazy"
               decoding="async"
-              className="max-h-12 max-w-full object-contain filter group-hover:scale-105 transition-transform duration-300"
+              className="max-h-14 sm:max-h-16 max-w-full object-contain filter group-hover:scale-105 transition-transform duration-300"
             />
           </div>
         ))}

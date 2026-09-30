@@ -900,9 +900,8 @@ export const pastCruises = [
 export const testimonials = [
   {
     id: "ig-1",
-    name: "Sunita & Cruisers",
     platform: "instagram",
-    thumb: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?crop=entropy&cs=srgb&fm=jpg&w=700",
+    thumb: "/images/gallery/Moments/16.jpg",
     quote: "A vacation can look amazing in pictures, but hearing it from someone who lived it hits differently! Real experiences, real memories.",
     rating: 5,
     video: "https://www.instagram.com/p/DdmdMGshJ27/embed/",
@@ -911,9 +910,8 @@ export const testimonials = [
   },
   {
     id: "ig-2",
-    name: "Aman & Family",
     platform: "instagram",
-    thumb: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?crop=entropy&cs=srgb&fm=jpg&w=700",
+    thumb: "/images/gallery/Moments/20.jpg",
     quote: "From the entertainment and authentic food to the people, laughter and unforgettable moments, every journey leaves a story worth sharing.",
     rating: 5,
     video: "https://www.instagram.com/p/DcKGpS0zyPh/embed/",
@@ -922,9 +920,8 @@ export const testimonials = [
   },
   {
     id: "ig-3",
-    name: "Deck Party Cruisers",
     platform: "instagram",
-    thumb: "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?crop=entropy&cs=srgb&fm=jpg&w=700",
+    thumb: "/images/gallery/Entertainment/BMC-460.jpg",
     quote: "POV: You asked if Bollywood Masala Cruise is really worth it? Friendships over dinner and Bollywood nights that keep everyone dancing say it all!",
     rating: 5,
     video: "https://www.instagram.com/p/DbglsGahfba/embed/",
@@ -933,9 +930,8 @@ export const testimonials = [
   },
   {
     id: "ig-4",
-    name: "Meera & Dev (3-Time Cruiser)",
     platform: "instagram",
-    thumb: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=entropy&cs=srgb&fm=jpg&w=700",
+    thumb: "/images/gallery/Moments/15.jpg",
     quote: "Three cruises! One love affair with the sea. Some vacations are good enough to do once; the best ones make you come back again and again.",
     rating: 5,
     video: "https://www.instagram.com/p/DdMuhCvhaKq/embed/",
@@ -943,150 +939,166 @@ export const testimonials = [
     handle: "@bollywoodmasalacruise"
   },
   {
-    name: "Rajesh & Priya",
-    thumb: "https://img.youtube.com/vi/fBtenbhqcrQ/hqdefault.jpg",
-    quote: "REAL, FUN Feedback for HMT 2.0 Bollywood Masala Cruise",
-    rating: 5,
-    video: "https://www.youtube.com/embed/fBtenbhqcrQ",
-    link: "https://www.youtube.com/shorts/fBtenbhqcrQ?feature=share"
-  },
-  {
     id: "yt-1",
-    name: "Anita Sharma",
+    platform: "youtube",
     thumb: "https://img.youtube.com/vi/RRW6GZKJ8lg/hqdefault.jpg",
     quote: "Unbelievable experience, the Indian food and entertainment were 10/10!",
     rating: 5,
     video: "https://www.youtube.com/embed/RRW6GZKJ8lg",
-    link: "https://www.youtube.com/shorts/RRW6GZKJ8lg?feature=share"
+    link: "https://www.youtube.com/shorts/RRW6GZKJ8lg"
   },
   {
     id: "yt-2",
-    name: "Vikram & Family",
+    platform: "youtube",
     thumb: "https://img.youtube.com/vi/0wxp2QyJLZs/hqdefault.jpg",
     quote: "The Bollywood night deck party and music were absolute highlights!",
     rating: 5,
     video: "https://www.youtube.com/embed/0wxp2QyJLZs",
-    link: "https://www.youtube.com/shorts/0wxp2QyJLZs?feature=share"
+    link: "https://www.youtube.com/shorts/0wxp2QyJLZs"
   },
   {
-    name: "Sanjay & Neha",
+    id: "yt-3",
+    platform: "youtube",
+    thumb: "https://img.youtube.com/vi/fBtenbhqcrQ/hqdefault.jpg",
+    quote: "Unforgettable Bollywood voyage! The hospitality, music, and parties were out of this world.",
+    rating: 5,
+    video: "https://www.youtube.com/embed/fBtenbhqcrQ",
+    link: "https://www.youtube.com/shorts/fBtenbhqcrQ"
+  },
+  {
+    id: "yt-4",
+    platform: "youtube",
     thumb: "https://img.youtube.com/vi/74xpoSbSWj8/hqdefault.jpg",
     quote: "Best family vacation ever! Non-stop music, luxury rooms, and great vibes.",
     rating: 5,
     video: "https://www.youtube.com/embed/74xpoSbSWj8",
-    link: "https://www.youtube.com/shorts/74xpoSbSWj8?feature=share"
+    link: "https://www.youtube.com/shorts/74xpoSbSWj8"
   },
   {
-    name: "Pooja & Amit",
+    id: "yt-5",
+    platform: "youtube",
     thumb: "https://img.youtube.com/vi/ti995Kz3rtg/hqdefault.jpg",
     quote: "From morning breakfast to midnight DJ sets, Masala Cruise exceeded everything!",
     rating: 5,
     video: "https://www.youtube.com/embed/ti995Kz3rtg",
-    link: "https://www.youtube.com/shorts/ti995Kz3rtg?feature=share"
+    link: "https://www.youtube.com/shorts/ti995Kz3rtg"
   },
   {
-    name: "Rohan & Sneha",
+    id: "yt-6",
+    platform: "youtube",
     thumb: "https://img.youtube.com/vi/OUJd9KOAXiA/hqdefault.jpg",
     quote: "Celebrated our anniversary onboard. The hospitality was truly royal!",
     rating: 5,
     video: "https://www.youtube.com/embed/OUJd9KOAXiA",
-    link: "https://www.youtube.com/shorts/OUJd9KOAXiA?feature=share"
+    link: "https://www.youtube.com/shorts/OUJd9KOAXiA"
   },
   {
-    name: "Kavita & Group",
+    id: "yt-7",
+    platform: "youtube",
     thumb: "https://img.youtube.com/vi/ybEE9zg_g9I/hqdefault.jpg",
     quote: "Our group of 14 had the time of our lives. We are booking again next year!",
     rating: 5,
     video: "https://www.youtube.com/embed/ybEE9zg_g9I",
-    link: "https://www.youtube.com/shorts/ybEE9zg_g9I?feature=share"
+    link: "https://www.youtube.com/shorts/ybEE9zg_g9I"
   },
   {
-    name: "Manish & Divya",
+    id: "yt-8",
+    platform: "youtube",
     thumb: "https://img.youtube.com/vi/jjxm-Igkslo/hqdefault.jpg",
     quote: "Pure Bollywood magic in the middle of the ocean! Highly recommend.",
     rating: 5,
     video: "https://www.youtube.com/embed/jjxm-Igkslo",
-    link: "https://www.youtube.com/shorts/jjxm-Igkslo?feature=share"
+    link: "https://www.youtube.com/shorts/jjxm-Igkslo"
   },
   {
-    name: "Arjun & Ritu",
+    id: "yt-9",
+    platform: "youtube",
     thumb: "https://img.youtube.com/vi/i6-uF6o2h9Q/hqdefault.jpg",
     quote: "The food options, vegetarian delicacies, and live performances were unmatched!",
     rating: 5,
     video: "https://www.youtube.com/embed/i6-uF6o2h9Q",
-    link: "https://www.youtube.com/shorts/i6-uF6o2h9Q?feature=share"
+    link: "https://www.youtube.com/shorts/i6-uF6o2h9Q"
   },
   {
-    name: "Deepak & Swati",
+    id: "yt-10",
+    platform: "youtube",
     thumb: "https://img.youtube.com/vi/Ux1uG0wPhak/hqdefault.jpg",
     quote: "Never experienced a themed cruise with this level of detail and excitement.",
     rating: 5,
     video: "https://www.youtube.com/embed/Ux1uG0wPhak",
-    link: "https://www.youtube.com/shorts/Ux1uG0wPhak?feature=share"
+    link: "https://www.youtube.com/shorts/Ux1uG0wPhak"
   },
   {
-    name: "Aakash & Megha",
+    id: "yt-11",
+    platform: "youtube",
     thumb: "https://img.youtube.com/vi/NnSOdThRIVQ/hqdefault.jpg",
     quote: "So much fun for both kids and grandparents. Truly memorable voyage!",
     rating: 5,
     video: "https://www.youtube.com/embed/NnSOdThRIVQ",
-    link: "https://www.youtube.com/shorts/NnSOdThRIVQ?feature=share"
+    link: "https://www.youtube.com/shorts/NnSOdThRIVQ"
   },
   {
-    name: "Gaurav & Simran",
+    id: "yt-12",
+    platform: "youtube",
     thumb: "https://img.youtube.com/vi/cy0A09JE1j0/hqdefault.jpg",
     quote: "The open mic, karaoke and dance battles made the entertainment electric!",
     rating: 5,
     video: "https://www.youtube.com/embed/cy0A09JE1j0",
-    link: "https://www.youtube.com/shorts/cy0A09JE1j0?feature=share"
+    link: "https://www.youtube.com/shorts/cy0A09JE1j0"
   },
   {
-    name: "Sunil & Rekha",
+    id: "yt-13",
+    platform: "youtube",
     thumb: "https://img.youtube.com/vi/-yL5eq1B2MU/hqdefault.jpg",
     quote: "Stress-free booking, fabulous ports, and outstanding entertainment onboard.",
     rating: 5,
     video: "https://www.youtube.com/embed/-yL5eq1B2MU",
-    link: "https://www.youtube.com/shorts/-yL5eq1B2MU?feature=share"
+    link: "https://www.youtube.com/shorts/-yL5eq1B2MU"
   },
   {
-    name: "Varun & Anjali",
+    id: "yt-14",
+    platform: "youtube",
     thumb: "https://img.youtube.com/vi/SpcEiuFDnYo/hqdefault.jpg",
     quote: "Such a vibrant atmosphere! Bollywood songs 24/7 and luxurious cruise cabins.",
     rating: 5,
     video: "https://www.youtube.com/embed/SpcEiuFDnYo",
-    link: "https://www.youtube.com/shorts/SpcEiuFDnYo?feature=share"
+    link: "https://www.youtube.com/shorts/SpcEiuFDnYo"
   },
   {
-    name: "Naveen & Tanvi",
+    id: "yt-15",
+    platform: "youtube",
     thumb: "https://img.youtube.com/vi/hL6v2Dt8OEQ/hqdefault.jpg",
     quote: "Loved every single moment. The staff took care of every small detail!",
     rating: 5,
     video: "https://www.youtube.com/embed/hL6v2Dt8OEQ",
-    link: "https://www.youtube.com/shorts/hL6v2Dt8OEQ?feature=share"
+    link: "https://www.youtube.com/shorts/hL6v2Dt8OEQ"
   },
   {
-    name: "Karan & Isha",
+    id: "yt-16",
+    platform: "youtube",
     thumb: "https://img.youtube.com/vi/TebzXQV3VyQ/hqdefault.jpg",
     quote: "The themed dress nights and pool deck celebrations were unforgettable!",
     rating: 5,
     video: "https://www.youtube.com/embed/TebzXQV3VyQ",
-    link: "https://www.youtube.com/shorts/TebzXQV3VyQ?feature=share"
+    link: "https://www.youtube.com/shorts/TebzXQV3VyQ"
   },
   {
-    name: "Vivek & Preeti",
+    id: "yt-17",
+    platform: "youtube",
     thumb: "https://img.youtube.com/vi/Q8xrXkMgHg4/hqdefault.jpg",
     quote: "Everything was perfectly curated. Can't wait for the next Masala voyage!",
     rating: 5,
     video: "https://www.youtube.com/embed/Q8xrXkMgHg4",
-    link: "https://www.youtube.com/shorts/Q8xrXkMgHg4?feature=share"
+    link: "https://www.youtube.com/shorts/Q8xrXkMgHg4"
   },
   {
-    name: "Harish & Geeta",
+    id: "yt-18",
+    platform: "youtube",
     thumb: "https://img.youtube.com/vi/tX_gHKlDqKg/hqdefault.jpg",
     quote: "World-class cruise ship with authentic Desi hospitality. 5 stars all the way!",
     rating: 5,
     video: "https://www.youtube.com/embed/tX_gHKlDqKg",
-    link: "https://www.youtube.com/shorts/tX_gHKlDqKg?feature=share"
+    link: "https://www.youtube.com/shorts/tX_gHKlDqKg"
   },
 ];
 

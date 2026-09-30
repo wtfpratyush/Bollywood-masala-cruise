@@ -71,78 +71,76 @@ const FoodTestimonials = () => {
 
               {/* Swipable on mobile, grid on tablet/desktop */}
               <div className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth gap-3 pb-2 hide-scrollbar sm:grid sm:grid-cols-3 sm:overflow-visible sm:pb-0 sm:gap-4">
-                {testimonials.slice(0, 3).map((t, i) => {
-                  const ig = t.platform === "instagram" || t.video?.includes("instagram.com") || t.link?.includes("instagram.com");
-                  return (
-                    <div
-                      key={i}
-                      className="shrink-0 w-[82%] sm:w-auto snap-center bg-white rounded-2xl overflow-hidden shadow-xs border border-gray-100 flex flex-col justify-between hover:shadow-md transition-all"
-                    >
-                      <div>
-                        <button
-                          type="button"
-                          onClick={() => setActive(t)}
-                          className="relative block w-full aspect-video group overflow-hidden cursor-pointer"
-                          aria-label={`${ig ? "Instagram Reel" : "YouTube"}: watch testimonial by ${t.name}`}
-                        >
-                          <img
-                            src={t.thumb}
-                            alt=""
-                            aria-hidden="true"
-                            loading="lazy"
-                            decoding="async"
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                          />
-                          <span className="absolute top-2.5 left-2.5 z-10">
-                            {ig ? (
-                              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white shadow-sm border border-white/20">
-                                <span className="w-1.5 h-1.5 rounded-full bg-[#f58529]" />
-                                Instagram Reel
+                {testimonials
+                  .filter(
+                    (t) =>
+                      t.platform === "youtube" ||
+                      t.video?.includes("youtube.com") ||
+                      t.link?.includes("youtube.com") ||
+                      (!t.platform?.includes("instagram") && !t.video?.includes("instagram.com"))
+                  )
+                  .slice(0, 3)
+                  .map((t, i) => {
+                    const ig = t.platform === "instagram" || t.video?.includes("instagram.com") || t.link?.includes("instagram.com");
+                    return (
+                      <div
+                        key={i}
+                        className="shrink-0 w-[82%] sm:w-auto snap-center bg-white rounded-2xl overflow-hidden shadow-xs border border-gray-100 flex flex-col justify-between hover:shadow-md transition-all"
+                      >
+                        <div>
+                          <button
+                            type="button"
+                            onClick={() => setActive(t)}
+                            className="relative block w-full aspect-video group overflow-hidden cursor-pointer"
+                            aria-label="YouTube Short: watch guest video review"
+                          >
+                            <img
+                              src={t.thumb}
+                              alt=""
+                              aria-hidden="true"
+                              loading="lazy"
+                              decoding="async"
+                              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            />
+                            <span className="absolute top-2.5 left-2.5 z-10">
+                              <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-black/65 backdrop-blur-md text-[10px] font-bold text-white shadow-sm border border-white/20">
+                                <svg className="w-2.5 h-2.5 fill-[#FF0000]" viewBox="0 0 24 24">
+                                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                                YouTube Short
                               </span>
-                            ) : (
-                              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white shadow-sm border border-white/20">
-                                <span className="w-1.5 h-1.5 rounded-full bg-[#FF0000]" />
-                                YouTube
-                              </span>
-                            )}
-                          </span>
+                            </span>
 
-                          <span className="absolute inset-0 bg-black/20 flex items-center justify-center transition-colors group-hover:bg-black/35">
-                            {ig ? (
-                              <span className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] shadow-md flex items-center justify-center group-hover:scale-110 transition-transform text-white font-bold text-[16px]">
-                                ▶
-                              </span>
-                            ) : (
-                              <span className="w-11 h-7.5 rounded-[9px] bg-[#FF0000] shadow-md flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <span className="absolute inset-0 bg-black/20 flex items-center justify-center transition-colors group-hover:bg-black/35">
+                              <span className="w-11 h-7.5 rounded-[8px] bg-[#FF0000] shadow-md flex items-center justify-center group-hover:scale-110 transition-transform">
                                 <svg className="w-3.5 h-3.5 fill-white ml-0.5" viewBox="0 0 24 24">
                                   <path d="M8 5v14l11-7z" />
                                 </svg>
                               </span>
-                            )}
-                          </span>
-                        </button>
-                        <div className="p-3.5">
-                          <p className="text-[12px] text-gray-700 leading-snug font-medium mb-2 line-clamp-2">
-                            “{t.quote}”
-                          </p>
+                            </span>
+                          </button>
+                          <div className="p-3.5">
+                            <p className="text-[12px] text-gray-700 leading-snug font-medium mb-2 line-clamp-2">
+                              “{t.quote}”
+                            </p>
+                          </div>
                         </div>
-                      </div>
 
-                      <div className="px-3.5 pb-3.5 pt-1 border-t border-gray-50 flex items-center justify-between">
-                        <span className="text-[11px] font-bold text-[#1a1a3a] truncate max-w-[120px]">{t.name}</span>
-                        <div
-                          className="flex gap-0.5 shrink-0"
-                          role="img"
-                          aria-label={`${t.rating || 5} out of 5 stars`}
-                        >
-                          {Array.from({ length: t.rating || 5 }).map((_, s) => (
-                            <Star key={s} size={11} className="text-[#f5a623]" fill="#f5a623" aria-hidden="true" />
-                          ))}
+                        <div className="px-3.5 pb-3.5 pt-1 border-t border-gray-50 flex items-center justify-between">
+                          <span className="text-[11px] font-semibold text-gray-400">Verified Guest</span>
+                          <div
+                            className="flex gap-0.5 shrink-0"
+                            role="img"
+                            aria-label={`${t.rating || 5} out of 5 stars`}
+                          >
+                            {Array.from({ length: t.rating || 5 }).map((_, s) => (
+                              <Star key={s} size={11} className="text-[#f5a623]" fill="#f5a623" aria-hidden="true" />
+                            ))}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  );
-                })}
+                    );
+                  })}
               </div>
             </div>
 
@@ -175,7 +173,7 @@ const FoodTestimonials = () => {
                       : `${active.video?.replace(/\/+$/, "")}/embed/`
                     : `${active.video}?autoplay=1&rel=0`
                 }
-                title={active.name}
+                title={active.name || "Guest Testimonial"}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               />

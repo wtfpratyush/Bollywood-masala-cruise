@@ -483,9 +483,9 @@ const CruiseDetail = () => {
         <section id="cs-Testimonials" className="py-14 border-b border-gray-100">
           <SectionHeading label="TESTIMONIALS" title="What Our Guests Have to Say" />
           <div className="grid sm:grid-cols-3 gap-5">
-            {d.testimonials.map((t) => (
+            {d.testimonials.map((t, idx) => (
               <div
-                key={t.name}
+                key={idx}
                 className="rounded-2xl border border-gray-100 p-6 hover:shadow-lg hover:-translate-y-1 transition-all bg-white"
               >
                 <div className="flex items-center gap-3 mb-4">
@@ -493,12 +493,12 @@ const CruiseDetail = () => {
                     <LazyImg
                       src={t.avatar}
                       sizes="48px"
-                      alt={t.name}
+                      alt="Verified Cruiser"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div>
-                    <p className="text-[14px] font-bold text-[#1a1a3a]">{t.name}</p>
+                    <p className="text-[14px] font-bold text-[#1a1a3a]">Verified Cruiser</p>
                     <StarRow count={t.rating} />
                   </div>
                 </div>
