@@ -314,16 +314,16 @@ const CruiseDetailModal = ({ cruise, onClose, onBook }) => {
                   All This and More Awaits<br />You on Our Itinerary!
                 </h3>
               </div>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3.5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {d.activities.map((act) => {
                   const Icon = activityIconMap[act.icon] || activityIconMap[act.name] || Sparkles;
                   return (
-                    <div key={act.name} className="flex flex-col items-center justify-center text-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-4 hover:bg-white/20 transition-all shadow-sm group">
-                      <div className="w-10 h-10 rounded-xl bg-white/15 text-amber-300 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform duration-300">
-                        <Icon size={20} />
+                    <div key={act.name} className="flex flex-col items-center justify-center text-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 hover:bg-white/20 transition-all shadow-sm group">
+                      <div className="w-12 h-12 rounded-xl bg-white/15 text-amber-300 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+                        <Icon size={22} />
                       </div>
-                      <p className="text-[13px] font-bold text-white text-center leading-snug">{act.name}</p>
-                      <p className="text-[11px] text-white/75 mt-1 leading-tight text-center">{act.desc}</p>
+                      <p className="text-[14px] font-bold text-white text-center leading-snug">{act.name}</p>
+                      <p className="text-[12px] text-white/75 mt-1 leading-snug text-center">{act.desc}</p>
                     </div>
                   );
                 })}

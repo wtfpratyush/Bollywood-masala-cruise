@@ -184,20 +184,19 @@ const Onboard = () => {
             title="All This and More Awaits You on Our Itinerary!"
             subtitle="Every day at sea is packed with handpicked experiences that blend Bollywood magic with unforgettable fun."
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-12 gap-4 sm:gap-5">
-            {activities.map((act, index) => {
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+            {activities.map((act) => {
               const Icon = act.icon;
-              const spanClass = index < 4 ? "lg:col-span-3" : "lg:col-span-4";
               return (
                 <div
                   key={act.name}
-                  className={`group flex flex-col items-center justify-center text-center p-5 sm:p-6 rounded-2xl border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ${spanClass}`}
+                  className="group flex flex-col items-center justify-center text-center p-6 rounded-2xl border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-indigo-50 text-[#4b3df5] flex items-center justify-center mb-3 group-hover:scale-110 group-hover:bg-[#4b3df5] group-hover:text-white transition-all duration-300">
+                  <div className="w-13 h-13 rounded-2xl bg-indigo-50 text-[#4b3df5] flex items-center justify-center mb-3 group-hover:scale-110 group-hover:bg-[#4b3df5] group-hover:text-white transition-all duration-300">
                     <Icon size={24} />
                   </div>
-                  <p className="text-[14px] sm:text-[15px] font-bold text-[#1a1a3a] mb-1 text-center leading-snug">{act.name}</p>
-                  <p className="text-[12px] text-gray-500 leading-snug text-center">{act.desc}</p>
+                  <p className="text-[15px] sm:text-[16px] font-bold text-[#1a1a3a] mb-1 text-center leading-snug">{act.name}</p>
+                  <p className="text-[13px] text-gray-500 leading-relaxed text-center">{act.desc}</p>
                 </div>
               );
             })}
