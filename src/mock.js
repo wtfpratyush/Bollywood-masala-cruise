@@ -774,7 +774,7 @@ export const popularCruises = [
       ],
       activities: [
         { icon: "Sparkles", name: "Mehndi", desc: "Enjoy the culture" },
-        { icon: "Music2", name: "Antakshari", desc: "Sing along to your favorite Bollywood hits" },
+        { icon: "Music2", name: "Musical Sessions", desc: "Sing along to your favorite Bollywood hits" },
         { icon: "Drama", name: "Dance Showcase & Workshops", desc: "Watch & learn Bollywood dance" },
         { icon: "PartyPopper", name: "Bollywood Dance Party", desc: "Dance the moment away" },
         { icon: "Mic", name: "Open Mic & Karaoke", desc: "Show off your singing talent on stage" },
@@ -799,7 +799,7 @@ export const popularCruises = [
       ],
       faqs: [
         { q: "What are the room options and their prices?", a: "We offer Inside Rooms, Balcony Rooms, and Club Balcony Suites. Prices vary based on room type and the number of guests in one room. Contact our agents for personalized pricing." },
-        { q: "Are special dietary requirements or vegan meals available?", a: "Yes, our onboard dining includes dedicated vegetarian, vegan, and special dietary meal options curated with authentic Indian flavors." },
+        { q: "Are special dietary requirements available?", a: "Yes, our onboard dining includes dedicated vegetarian and special dietary meal options curated with authentic Indian flavors." },
         { q: "What are the check-in and boarding procedures?", a: "Check-in typically opens 3-4 hours before departure. You'll need a valid passport, booking confirmation, and online check-in completed in advance." },
         { q: "Are there any additional costs I should be aware of?", a: "Our packages cover accommodations, delicious daily buffet meals, Bollywood parties, and onboard entertainment. Gratuities, drink packages, specialty dining, spa treatments, ship service charges, and shore excursions are extra and carry additional charges." },
         { q: "Can I bring children on the cruise?", a: "Yes! Our cruises are family-friendly with dedicated kids' programs and activities. Please note that children must be at least 6 months of age at the time of sailing." },
@@ -838,7 +838,7 @@ export const popularCruises = [
       activities: [
         { icon: "Sparkles", name: "Mehndi", desc: "Enjoy the culture" },
         { icon: "Palette", name: "Holi Celebration", desc: "Celebrate the festival of colours at sea" },
-        { icon: "Music2", name: "Antakshari", desc: "Sing along to your favorite Bollywood songs" },
+        { icon: "Music2", name: "Musical Sessions", desc: "Sing along to your favorite Bollywood songs" },
         { icon: "Drama", name: "Dance Showcase & Workshops", desc: "Watch & learn Bollywood dance" },
         { icon: "PartyPopper", name: "Bollywood Dance Party", desc: "Dance the moment away" },
         { icon: "Mic", name: "Open Mic & Karaoke", desc: "Show off your singing talent on stage" },
@@ -863,7 +863,7 @@ export const popularCruises = [
       ],
       faqs: [
         { q: "What are the room options and their prices?", a: "We offer Inside Rooms, Balcony Rooms, and Club Balcony Suites. Prices vary based on room type and the number of guests in one room. Contact our agents for personalized pricing." },
-        { q: "Are special dietary requirements or vegan meals available?", a: "Yes, our onboard dining includes dedicated vegetarian, vegan, and special dietary meal options curated with authentic Indian flavors." },
+        { q: "Are special dietary requirements available?", a: "Yes, our onboard dining includes dedicated vegetarian and special dietary meal options curated with authentic Indian flavors." },
         { q: "What are the check-in and boarding procedures?", a: "Check-in typically opens 3-4 hours before departure. You'll need a valid passport, booking confirmation, and online check-in completed in advance." },
         { q: "Are there any additional costs I should be aware of?", a: "Our packages cover accommodations, delicious daily buffet meals, Bollywood parties, and onboard entertainment. Gratuities, drink packages, specialty dining, spa treatments, ship service charges, and shore excursions are extra and carry additional charges." },
         { q: "Can I bring children on the cruise?", a: "Yes! Our cruises are family-friendly with dedicated kids' programs and activities. Please note that children must be at least 6 months of age at the time of sailing." },
@@ -881,7 +881,7 @@ export const cruiseTrust = [
 
 export const onboardActivities = [
   { icon: "Footprints", title: "Mindful Walks", desc: "Relax with scenic ocean walks" },
-  { icon: "Music2", title: "Antakshari", desc: "Sing your heart out with loved ones" },
+  { icon: "Music2", title: "Musical Jams", desc: "Sing your heart out with loved ones" },
   { icon: "Drama", title: "Dance Showcase & Workshops", desc: "Watch & learn Bollywood dance" },
   { icon: "PartyPopper", title: "Bollywood Party", desc: "Dance the moment away" },
   { icon: "Mic", title: "Open Mic & Karaoke", desc: "Show off your talent on stage" },
@@ -1127,7 +1127,7 @@ export const faqs = [
     category: "Onboard Experience",
     featured: true,
     q: "What entertainment and activities are provided by BMC?",
-    a: "Guests enjoy exclusive Bollywood-themed dance parties, celebrity DJ nights, Mehndi ceremonies, Antakshari competitions, interactive family games, Bingo, Open Mic talent showcases, and cultural dance workshops.",
+    a: "Guests enjoy exclusive Bollywood-themed dance parties, celebrity DJ nights, Mehndi ceremonies, interactive family games, Bingo, Open Mic talent showcases, and cultural dance workshops.",
   },
   {
     category: "Onboard Experience",
@@ -1164,8 +1164,8 @@ export const faqs = [
   {
     category: "Food & Dining",
     featured: true,
-    q: "Do you offer Indian Vegetarian, Non-Vegetarian & Halal food?",
-    a: "Yes! Delicious authentic Indian food is served alongside diverse international multi-cuisine options throughout the sailing, including dedicated Vegetarian, Non-Vegetarian, Vegan, and Halal options.",
+    q: "Do you offer Indian Vegetarian & Non-Vegetarian food?",
+    a: "Yes! Delicious authentic Indian food is served alongside diverse international multi-cuisine options throughout the sailing, including dedicated Vegetarian and Non-Vegetarian options.",
   },
   {
     category: "Food & Dining",

@@ -44,7 +44,7 @@ const Stars = ({ n = 5 }) => (
 /* ─── Data ─── */
 const activities = [
   { icon: Sparkles, name: "Mehndi", desc: "Enjoy the culture" },
-  { icon: Music2, name: "Antakshari", desc: "Sing your heart out in this beloved Bollywood song competition." },
+  { icon: Music2, name: "Bollywood Musical Sessions", desc: "Sing your heart out in fun Bollywood musical challenges." },
   { icon: Drama, name: "Dance Showcase & Workshops", desc: "Watch incredible Bollywood performances and learn dance steps in fun workshops." },
   { icon: PartyPopper, name: "Bollywood Party", desc: "Dance the moment away under the stars to your favourite Bollywood beats." },
   { icon: Mic, name: "Open Mic & Karaoke", desc: "Step on stage and show off your singing talent in front of a live crowd." },
@@ -124,7 +124,7 @@ const schedule = [
   },
   {
     time: "Afternoon",
-    event: "Antakshari & Afternoon Leisure",
+    event: "Music & Afternoon Leisure",
     desc: "Sing your favorite Bollywood hits in friendly musical sessions and enjoy quality downtime.",
     icon: Music,
     type: "social",
@@ -148,7 +148,7 @@ const typeColors = {
 const testimonials = [
   { name: "Sanjay & Kavitha", avatar: "/images/gallery/Moments/16.jpg", rating: 5, text: "The Bollywood party on night 3 was absolutely electric. The DJ kept the crowd going till 2 AM! Best cruise experience we've ever had." },
   { name: "Priya Mehta", avatar: "/images/gallery/Moments/20.jpg", rating: 5, text: "Mehndi was so beautifully organised. Made so many friends. The food was out of this world — especially the dessert spread!" },
-  { name: "Rohan Verma", avatar: "/images/gallery/onboard/6.jpg", rating: 5, text: "The Antakshari and open mic sessions were so much fun! The curated entertainment lineup was amazing. Truly unforgettable." },
+  { name: "Rohan Verma", avatar: "/images/gallery/onboard/6.jpg", rating: 5, text: "The musical jams and open mic sessions were so much fun! The curated entertainment lineup was amazing. Truly unforgettable." },
   { name: "Ananya S.", avatar: "/images/gallery/Moments/15.jpg", rating: 5, text: "Sunrise yoga on the deck with the ocean breeze is something I'll never forget. Perfectly balanced between relaxation and non-stop fun." },
   { name: "Deepak Nair", avatar: "/images/gallery/Moments/13.jpg", rating: 5, text: "The entertainment lineup had us singing and dancing all trip. Everything was so well curated — felt like a 5-star Bollywood festival at sea!" },
   { name: "Meera Iyer", avatar: "/images/gallery/66998877f3f1c49f6af40c40.webp", rating: 5, text: "My parents joined us and they absolutely loved the deck celebrations. The crew made every single person feel so special and welcome." },

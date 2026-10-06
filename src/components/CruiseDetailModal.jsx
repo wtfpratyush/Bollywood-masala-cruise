@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 
 const activityIconMap = {
   "Mehndi": Sparkles,
+  "Musical Sessions": Music2,
+  "Musical Jams": Music2,
   "Antakshari": Music2,
   "Dance Showcase & Workshops": Drama,
   "Bollywood Dance Party": PartyPopper,
@@ -352,7 +354,7 @@ const CruiseDetailModal = ({ cruise, onClose, onBook }) => {
                 <ul className="space-y-2 mb-4">
                   {[
                     "Authentic Indian Vegetarian & Non-Vegetarian",
-                    "Halal & Vegan Friendly Options",
+                    "Special Dietary Friendly Options",
                     "Pizza, Burgers & More",
                     "Themed Dinner Nights",
                     "Room Service",
